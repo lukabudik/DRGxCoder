@@ -45,6 +45,31 @@
     width: 100%;
 }
 
+.coderSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-2) 0 var(--spacing-4);
+}
+
+.coderHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-3);
+}
+
+.coderTitle {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.coderHint {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}
+
 .column {
     display: flex;
     flex-direction: column;

@@ -14,6 +14,7 @@ export const HomePage: React.FC = () => {
     const [inputText, setInputText] = useState('');
     const [result, setResult] = useState<CaseResult | null>(null);
     const [activeHighlightId, setActiveHighlightId] = useState<string | null>(null);
+    const [showCoderForm, setShowCoderForm] = useState(false);
 
     const { mutate: analyze, isPending, error } = useAnalyzeText();
 
@@ -89,7 +90,24 @@ export const HomePage: React.FC = () => {
                         />
                     )}
 
-                    {result && <CoderForm result={result} />}
+                    {result && (
+                        <div className={styles.coderSection}>
+                            <div className={styles.coderHeader}>
+                                <div>
+                                    <h3 className={styles.coderTitle}>Coder Repair</h3>
+                                    <p className={styles.coderHint}>Rozbalte, pokud chcete upravit hodnoty a odeslat opravu.</p>
+                                </div>
+                                <Button
+                                    variant="secondary"
+                                    onClick={() => setShowCoderForm((prev) => !prev)}
+                                >
+                                    {showCoderForm ? 'Skrýt' : 'Zobrazit'}
+                                </Button>
+                            </div>
+
+                            {showCoderForm && <CoderForm result={result} />}
+                        </div>
+                    )}
 
                     {!result && !isPending && !error && (
                         <div className={styles.emptyState}>
