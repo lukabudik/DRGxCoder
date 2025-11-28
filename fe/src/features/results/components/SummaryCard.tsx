@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card } from '../../../shared/ui/Card';
-import { Badge } from '../../../shared/ui/Badge';
 import type { CaseResult } from '../../../core/types';
 import styles from './Components.module.css';
 
@@ -16,7 +15,6 @@ export const SummaryCard: React.FC<SummaryCardProps> = ({ result }) => {
                     <div className={styles.drgLabel}>DRG {result.drgCode}</div>
                     <h2 className={styles.drgName}>{result.drgName}</h2>
                 </div>
-                <Badge variant="info">AI Suggestion</Badge>
             </div>
 
             <div className={styles.metricsGrid}>

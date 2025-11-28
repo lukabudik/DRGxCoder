@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card } from '../../../shared/ui/Card';
-import { Badge } from '../../../shared/ui/Badge';
 import type { Diagnosis } from '../../../core/types';
 import styles from './Components.module.css';
 import clsx from 'clsx';
@@ -25,9 +24,6 @@ export const DiagnosisList: React.FC<DiagnosisListProps> = ({ diagnoses, onHover
                     >
                         <div className={styles.itemHeader}>
                             <span className={styles.code}>{d.code}</span>
-                            <Badge variant={d.source === 'ai' ? 'info' : 'neutral'} size="sm">
-                                {d.source === 'ai' ? 'AI' : 'Coder'}
-                            </Badge>
                         </div>
                         <div className={styles.itemName}>{d.name}</div>
                         <div className={styles.itemMeta}>

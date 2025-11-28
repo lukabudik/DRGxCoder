@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card } from '../../../shared/ui/Card';
-import { Badge } from '../../../shared/ui/Badge';
 import type { Procedure } from '../../../core/types';
 import styles from './Components.module.css';
 import clsx from 'clsx';
@@ -25,9 +24,6 @@ export const ProcedureList: React.FC<ProcedureListProps> = ({ procedures, onHove
                     >
                         <div className={styles.itemHeader}>
                             <span className={styles.code}>{p.code}</span>
-                            <Badge variant={p.source === 'ai' ? 'info' : 'neutral'} size="sm">
-                                {p.source === 'ai' ? 'AI' : 'Coder'}
-                            </Badge>
                         </div>
                         <div className={styles.itemName}>{p.name}</div>
                         <div className={styles.itemMeta}>
