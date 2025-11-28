@@ -3,6 +3,7 @@ import { AnalyzerForm } from '../../features/analyzer/AnalyzerForm';
 import { ResultsPanel } from '../../features/results/ResultsPanel';
 import { HighlightText } from '../../features/results/HighlightText';
 import { useAnalyzeText } from '../../features/analyzer/useAnalyzeText';
+import { CoderForm } from '../../features/coder/CoderForm';
 import { Button } from '../../shared/ui/Button';
 import { Card } from '../../shared/ui/Card';
 import { Skeleton } from '../../shared/ui/Skeleton';
@@ -87,6 +88,8 @@ export const HomePage: React.FC = () => {
                             activeId={activeHighlightId}
                         />
                     )}
+
+                    {result && <CoderForm result={result} />}
 
                     {!result && !isPending && !error && (
                         <div className={styles.emptyState}>
