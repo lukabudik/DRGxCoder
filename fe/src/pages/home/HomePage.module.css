@@ -1,0 +1,167 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 var(--spacing-6);
+}
+
+.header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-8);
+}
+
+.logo {
+    font-size: 1.125rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+    letter-spacing: -0.02em;
+}
+
+.badge {
+    font-size: 0.7rem;
+    background-color: var(--color-surface-hover);
+    color: var(--color-text-secondary);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 500;
+    border: 1px solid var(--color-border);
+}
+
+.main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: var(--spacing-8);
+    padding-bottom: var(--spacing-12);
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.coderSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-2) 0 var(--spacing-4);
+}
+
+.coderHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-3);
+}
+
+.coderTitle {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.coderHint {
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+}
+
+.inputCard {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0 !important;
+}
+
+.inputHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-4);
+}
+
+.cardTitle {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.highlightContainer {
+    flex: 1;
+    padding: var(--spacing-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: transparent;
+    min-height: 200px;
+}
+
+.loadingState {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+}
+
+.skeleton {
+    width: 100%;
+    background-color: var(--color-surface-hover);
+}
+
+.errorCard {
+    border-color: var(--color-error);
+    background-color: rgba(235, 87, 87, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-3);
+    align-items: flex-start;
+}
+
+.errorTitle {
+    color: var(--color-error);
+    font-weight: 600;
+}
+
+.emptyState {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-tertiary);
+    border: 1px dashed var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-12);
+    text-align: center;
+    background-color: var(--color-surface-hover);
+}
+
+.emptyIllustration {
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-border);
+    border-radius: 50%;
+    margin-bottom: var(--spacing-4);
+    opacity: 0.5;
+}
+
+.footer {
+    padding: var(--spacing-8) 0;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    color: var(--color-text-tertiary);
+    font-size: var(--font-size-sm);
+}

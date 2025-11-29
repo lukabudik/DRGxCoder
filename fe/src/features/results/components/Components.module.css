@@ -1,0 +1,125 @@
+.summaryCard {
+    background: transparent;
+    border: 1px solid var(--color-border);
+}
+
+.summaryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--spacing-6);
+}
+
+.drgLabel {
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: var(--spacing-1);
+}
+
+.drgName {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+}
+
+.metricsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-6);
+    padding-top: var(--spacing-6);
+    border-top: 1px solid var(--color-border);
+}
+
+.metric {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-1);
+}
+
+.metricLabel {
+    font-size: 0.75rem;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.metricValue {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    font-variant-numeric: tabular-nums;
+}
+
+.listCard {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0 !important;
+    /* Override Card padding */
+}
+
+.cardTitle {
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: var(--spacing-2);
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    /* For border separation if using background */
+}
+
+.listItem {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: var(--spacing-4);
+    align-items: center;
+    padding: var(--spacing-3) var(--spacing-2);
+    border-bottom: 1px solid var(--color-border);
+    background-color: transparent;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.listItem:hover,
+.activeItem {
+    background-color: var(--color-surface-hover);
+}
+
+.itemHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-3);
+}
+
+.code {
+    font-family: 'JetBrains Mono', monospace;
+    /* Monospace for codes */
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--color-text-primary);
+    background-color: var(--color-surface-hover);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.itemName {
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+}
+
+.itemMeta {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-tertiary);
+    font-variant-numeric: tabular-nums;
+}

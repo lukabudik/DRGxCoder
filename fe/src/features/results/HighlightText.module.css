@@ -1,0 +1,23 @@
+.container {
+    white-space: pre-wrap;
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--color-text-primary);
+}
+
+.highlight {
+    background-color: rgba(37, 99, 235, 0.15);
+    /* Primary light */
+    color: inherit;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    padding: 0 2px;
+    margin: 0 -2px;
+}
+
+.highlight:hover,
+.active {
+    background-color: rgba(37, 99, 235, 0.3);
+    border-bottom: 2px solid var(--color-primary);
+}

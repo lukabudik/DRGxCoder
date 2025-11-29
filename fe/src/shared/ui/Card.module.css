@@ -1,0 +1,30 @@
+.card {
+    background-color: var(--color-surface);
+    /* Removed border and shadow for a cleaner look, or kept very subtle */
+    /* border: 1px solid var(--color-border); */
+    border-radius: var(--radius-lg);
+    /* box-shadow: var(--shadow-sm); */
+    overflow: hidden;
+    transition: background-color 0.2s ease;
+}
+
+/* Optional: Add a subtle border only if needed for separation */
+.card.bordered {
+    border: 1px solid var(--color-border);
+}
+
+.padding-none {
+    padding: 0;
+}
+
+.padding-sm {
+    padding: var(--spacing-3);
+}
+
+.padding-md {
+    padding: var(--spacing-4);
+}
+
+.padding-lg {
+    padding: var(--spacing-6);
+}

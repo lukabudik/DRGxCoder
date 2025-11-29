@@ -1,0 +1,527 @@
+<form id="classifier-form" action="" method="get" class="classifier-form">
+    <div class="row" data-select2-id="12">
+        <ul class="accordion accordion--custom" data-accordion="" aria-multiselectable="true">
+            <li class="accordion-navigation active">
+                <a href="#panel1a" aria-expanded="true">Základní informace o hospitalizačním případu</a>
+                <div id="panel1a" class="content active">
+                    <div class="row semi-transparent">
+                        <div class="medium-6 columns" data-select2-id="11">
+                            <label><strong>Hlavní diagnóza případu *</strong></label>
+                            <select id="main-diagnosis" name="main-diagnosis" data-placeholder="Vyberte hlavní diagnózu"
+                                required="" data-select2-id="main-diagnosis" tabindex="-1"
+                                class="select2-hidden-accessible" aria-hidden="true">
+                            </select><span
+                                class="select2 select2-container select2-container--default select2-container--below"
+                                dir="ltr" data-select2-id="1" style="width: 476px;"><span class="selection"><span
+                                        class="select2-selection select2-selection--single" role="combobox"
+                                        aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false"
+                                        aria-labelledby="select2-main-diagnosis-container"><span
+                                            class="select2-selection__rendered" id="select2-main-diagnosis-container"
+                                            role="textbox" aria-readonly="true"><span
+                                                class="select2-selection__placeholder">Vyberte hlavní
+                                                diagnózu</span></span><span class="select2-selection__arrow"
+                                            role="presentation"><b role="presentation"></b></span></span></span><span
+                                    class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        </div>
+                        <div class="medium-6 columns">
+                            <label><strong>Ukončení hospitalizace</strong>
+                                <select id="hosp-end" name="hosp-end">
+                                    <option class="hosp-end" value="0">0 – Pokračuje ústavní péče na stejném lůžku
+                                    </option>
+                                    <option class="hosp-end" value="1" selected="">1 – Propuštěn do ambulantní péče
+                                    </option>
+                                    <option class="hosp-end" value="2">2 – Přeložen do ústavní péče – sociální péče
+                                    </option>
+                                    <option class="hosp-end" value="3">3 – Přeložen do ústavní péče – jiná odbornost,
+                                        stejné ZZ</option>
+                                    <option class="hosp-end" value="4">4 – Přeložen do ústavní péče – do LDN</option>
+                                    <option class="hosp-end" value="5">5 – Přeložen do ústavní péče – do jiného ZZ
+                                    </option>
+                                    <option class="hosp-end" value="6">6 – Propuštěn do ambulantní péče předčasně
+                                    </option>
+                                    <option class="hosp-end" value="7">7 – Zemřel, vystaven poukaz na pitvu</option>
+                                    <option class="hosp-end" value="8">8 – Zemřel, nevystaven poukaz na pitvu</option>
+                                    <option class="hosp-end" value="P">P – Technické ukončení hospitalizace</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row semi-transparent">
+                        <div class="medium-5 columns padding-right-no">
+                            <label><strong>Věk pacienta při přijetí *</strong>
+                                <input id="patient-age" type="number" min="0" max="120" value="18" pattern="\d*"
+                                    name="patient-age" required="">
+                            </label>
+                        </div>
+                        <div class="medium-3 columns padding-left-no">
+                            <label>&nbsp;
+                                <select id="patient-age-select" name="patient-age-select"
+                                    onchange="changeAgeBoundaries()">
+                                    <option class="patient-age-select" value="years">let</option>
+                                    <option class="patient-age-select" value="days">dnů</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="medium-4 columns">
+                            <label><strong>Porodní hmotnost</strong> (gramy)
+                                <input id="patient-weight" type="number" min="100" max="9999" pattern="\d*"
+                                    name="patient-weight" disabled="">
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="row semi-transparent">
+                        <div class="medium-3 columns">
+                            <label><strong>Pohlaví pacienta *</strong>
+                                <select id="patient-sex" name="patient-sex">
+                                    <option class="patient-sex" value="">Nezjistitelné/Nelze zjistit</option>
+                                    <option class="patient-sex" value="1" selected="">Muž</option>
+                                    <option class="patient-sex" value="2">Žena</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="medium-5 columns end">
+                            <label><strong>Délka připojení k umělé plicní ventilaci</strong> (hodiny)
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2am0" aria-describedby="tooltip-mijag2am0" title=""></a>
+                                <input id="ventilation-days" type="number" min="0" max="9999" pattern="\d*"
+                                    name="ventilation-days">
+                            </label>
+                        </div>
+                        <div class="medium-4 columns">
+                            <label><strong>Rok ukončení případu</strong>
+                                <select id="datum-pro" name="datum-pro">
+                                    <option class="patient-sex" value="2021">2021</option>
+                                    <option class="patient-sex" value="2019">2019</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+
+                    <p>
+                        * Povinný údaj. Povinné položky pro webový klasifikátor nejsou totožné s povinnými položkami pro
+                        vstupní datovou
+                        větu grouperu.
+                    </p>
+                </div>
+            </li>
+
+
+            <li class="accordion-navigation active">
+                <a href="#panel1b" aria-expanded="true">
+                    <i class="fa fa-plus-circle accordion-title-icon" aria-hidden="true"></i>Přidat informace pro
+                    přiřazení relativní váhy
+                    <i class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                        data-selector="tooltip-mijag2am1" aria-describedby="tooltip-mijag2am1" title=""></i>
+                </a>
+                <div id="panel1b" class="content active">
+
+                    <div class="row semi-transparent">
+                        <div class="medium-2 columns">
+                            <label><strong><br>Délka případu</strong> (dny)
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2am2" aria-describedby="tooltip-mijag2am2" title=""></a>
+                                <input id="hosp-days" type="number" min="1" max="9999" pattern="\d*" name="hosp-days">
+                            </label>
+                        </div>
+                        <div class="medium-3 columns">
+                            <label><strong><br>Přímé náklady HP</strong> (Kč)
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2am3" aria-describedby="tooltip-mijag2am3" title=""></a>
+                                <input id="primary-expenses" type="number" min="0" max="99999999" value="0"
+                                    pattern="\d*" name="primary-expenses">
+                            </label>
+                        </div>
+                        <div class="medium-6 columns">
+                            <label for="hospital"><strong><br>Zdravotnické zařízení</strong></label>
+                            <select id="hospital" name="facility" data-placeholder="Zadejte IČZ nebo název ZZ"
+                                data-select2-id="hospital" tabindex="-1" class="select2-hidden-accessible"
+                                aria-hidden="true">
+                                <option value="" data-select2-id="3"></option>
+                            </select><span class="select2 select2-container select2-container--default" dir="ltr"
+                                data-select2-id="2" style="width: 476px;"><span class="selection"><span
+                                        class="select2-selection select2-selection--single" role="combobox"
+                                        aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false"
+                                        aria-labelledby="select2-hospital-container"><span
+                                            class="select2-selection__rendered" id="select2-hospital-container"
+                                            role="textbox" aria-readonly="true"><span
+                                                class="select2-selection__placeholder">Zadejte IČZ nebo název
+                                                ZZ</span></span><span class="select2-selection__arrow"
+                                            role="presentation"><b role="presentation"></b></span></span></span><span
+                                    class="dropdown-wrapper" aria-hidden="true"></span></span>
+                        </div>
+                        <div class="medium-1 columns end">
+                            <a onclick="$('#hospital').val('').change();"><i class="fa fa-times margin-top-3"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </li>
+
+
+            <li class="accordion-navigation active">
+                <a href="#panel2a" aria-expanded="true"><i class="fa fa-plus-circle accordion-title-icon"
+                        aria-hidden="true"></i>Přidat informace o vedlejších diagnózách</a>
+                <div id="panel2a" class="content active">
+                    <div class="row">
+                        <div class="medium-9 columns">
+                            <label><strong>Vedlejší diagnózy</strong></label>
+                        </div>
+                        <div class="medium-3 columns">
+                            <label>
+                                <strong>Závažnost</strong>
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2am4" aria-describedby="tooltip-mijag2am4" title=""></a>
+                            </label>
+                        </div>
+                        <div id="other-diagnosis-form">
+                            <div id="od-1">
+                                <div class="medium-9 columns">
+                                    <select id="other-diagnosis-code-1" data-placeholder="Vyberte vedlejší diagnózu"
+                                        name="other-diagnosis-code-1" style="width: 100%;"
+                                        data-select2-id="other-diagnosis-code-1" tabindex="-1"
+                                        class="select2-hidden-accessible" aria-hidden="true">
+                                        <option value="" data-select2-id="5"></option>
+                                    </select><span class="select2 select2-container select2-container--default"
+                                        dir="ltr" data-select2-id="4" style="width: 100%;"><span class="selection"><span
+                                                class="select2-selection select2-selection--single" role="combobox"
+                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                aria-disabled="false"
+                                                aria-labelledby="select2-other-diagnosis-code-1-container"><span
+                                                    class="select2-selection__rendered"
+                                                    id="select2-other-diagnosis-code-1-container" role="textbox"
+                                                    aria-readonly="true"><span
+                                                        class="select2-selection__placeholder">Vyberte vedlejší
+                                                        diagnózu</span></span><span class="select2-selection__arrow"
+                                                    role="presentation"><b
+                                                        role="presentation"></b></span></span></span><span
+                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                                <div class="medium-2 columns">
+                                    <input id="other-diagnosis-weight-1" type="text" readonly="">
+                                </div>
+                                <div class="medium-1 columns">
+                                    <a onclick="resetOtherDiagnosisRow(1)"><i class="fa fa-times"
+                                            aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row margin-bottom-half">
+                        <div class="medium-6 columns">
+                            <a class="button tiny expand extra-tiny" onclick="addOtherDiagnosisRow()"
+                                id="clicker">Přidat vedlejší diagnózu</a>
+                        </div>
+                        <div class="medium-6 columns">
+                            <a class="button tiny expand extra-tiny" onclick="removeOtherDiagnosisRow()">Odebrat
+                                vedlejší
+                                diagnózu</a>
+                        </div>
+                    </div>
+
+                    <p class="warning-message">
+                        <strong>
+                            V případě akutní rehabilitace je klasifikace hospitalizačního případu závislá na pořadí
+                            zadaných vedlejších diagnóz. U hospitalizace probíhající na oddělení odbornosti 2H1 nebo 2F1
+                            je nutné
+                            na pozici 1. vedlejší diagnózy uvést indikaci akutní rehabilitace.
+                        </strong>
+                    </p>
+                </div>
+            </li>
+
+
+            <li class="accordion-navigation active">
+                <a href="#panel3a" aria-expanded="true">
+                    <i class="fa fa-plus-circle accordion-title-icon" aria-hidden="true"></i>Přidat informace o
+                    provedených výkonech
+                    <i class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                        data-selector="tooltip-mijag2am5" aria-describedby="tooltip-mijag2am5" title=""></i>
+                </a>
+                <div id="panel3a" class="content active">
+                    <div class="row">
+                        <div class="medium-11 columns">
+                            <label><strong>Výkony</strong></label>
+                        </div>
+                        <div class="medium-1 columns">
+                            <label><strong>Počet</strong></label>
+                        </div>
+                        <div id="interventions-form">
+                            <div id="intervention-1">
+                                <div class="medium-10 columns">
+                                    <select id="intervention-code-1" data-placeholder="Vyberte výkon"
+                                        name="intervention-code-1" style="width: 100%;"
+                                        data-select2-id="intervention-code-1" tabindex="-1"
+                                        class="select2-hidden-accessible" aria-hidden="true">
+                                        <option value="" data-select2-id="7"></option>
+                                    </select><span class="select2 select2-container select2-container--default"
+                                        dir="ltr" data-select2-id="6" style="width: 100%;"><span class="selection"><span
+                                                class="select2-selection select2-selection--single" role="combobox"
+                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                aria-disabled="false"
+                                                aria-labelledby="select2-intervention-code-1-container"><span
+                                                    class="select2-selection__rendered"
+                                                    id="select2-intervention-code-1-container" role="textbox"
+                                                    aria-readonly="true"><span
+                                                        class="select2-selection__placeholder">Vyberte
+                                                        výkon</span></span><span class="select2-selection__arrow"
+                                                    role="presentation"><b
+                                                        role="presentation"></b></span></span></span><span
+                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                                <div class="medium-1 columns">
+                                    <a onclick="$('#intervention-code-1').val('').change();"><i class="fa fa-times"
+                                            aria-hidden="true"></i></a>
+                                </div>
+                                <div class="medium-1 columns">
+                                    <input id="intervention-amount-1" type="number" name="intervention-amount-1" min="0"
+                                        max="999" value="1" pattern="\d*" style="margin: 2px 0px 0px 0px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row margin-bottom-half">
+                        <div class="medium-6 columns">
+                            <a class="button tiny expand extra-tiny" onclick="addInterventionRow()">Přidat výkon</a>
+                        </div>
+                        <div class="medium-6 columns">
+                            <a class="button tiny expand extra-tiny" onclick="removeInterventionRow()">Odebrat výkon</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="accordion-navigation active">
+                <a href="#panel4a" aria-expanded="true"><i class="fa fa-plus-circle accordion-title-icon"
+                        aria-hidden="true"></i>Přidat informace o počtu terapeutických dnů</a>
+                <div id="panel4a" class="content active">
+                    <div class="row">
+                        <div class="medium-6 columns">
+                            <label><strong>Počet ozařovacích dnů</strong>
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2am6" aria-describedby="tooltip-mijag2am6" title=""></a>
+                                <input id="radiation-days" type="number" min="0" max="99" pattern="\d*"
+                                    name="radiation-days">
+                            </label>
+                        </div>
+                        <div class="medium-6 columns">
+                            <label><strong
+                                    title="Počet dnů s endoskopickým nebo radiologickým výkonem na játrech a žlučových cestách">Počet
+                                    dnů s endoskopickým nebo radiologickým výkonem na játrech...</strong>
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2am7" aria-describedby="tooltip-mijag2am7" title=""></a>
+                                <input id="liver-days" type="number" min="0" max="99" pattern="\d*" name="liver-days">
+                            </label>
+                        </div>
+                        <div class="medium-6 columns">
+                            <label><strong>Počet dnů s operačním výkonem v dutině hrudní</strong>
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2am8" aria-describedby="tooltip-mijag2am8" title=""></a>
+                                <input id="chest-days" type="number" min="0" max="99" pattern="\d*" name="chest-days">
+                            </label>
+                        </div>
+
+                        <div class="medium-6 columns">
+                            <label><strong>Počet dnů akutní psychiatrické péče</strong>
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2am9" aria-describedby="tooltip-mijag2am9" title=""></a>
+                                <input id="psychotherapy-days" type="number" min="0" max="99" pattern="\d*"
+                                    name="psychotherapy-days">
+                            </label>
+                        </div>
+                        <div class="medium-6 columns">
+                            <label><strong>Počet dnů s výkonem hrudní drenáže</strong>
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2ama" aria-describedby="tooltip-mijag2ama" title=""></a>
+                                <input id="chest-2-days" type="number" min="0" max="99" pattern="\d*"
+                                    name="chest-2-days">
+                            </label>
+                        </div>
+
+                        <div class="medium-6 columns">
+                            <label><strong>Počet dnů s operačním výkonem na lebce nebo mozku</strong>
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2amb" aria-describedby="tooltip-mijag2amb" title=""></a>
+                                <input id="skull-days" type="number" min="0" max="99" pattern="\d*" name="skull-days">
+                            </label>
+                        </div>
+                        <div class="medium-6 columns">
+                            <label><strong>Počet dnů s výkonem na oku</strong>
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2amc" aria-describedby="tooltip-mijag2amc" title=""></a>
+                                <input id="eye-days" type="number" min="0" max="99" pattern="\d*" name="eye-days">
+                            </label>
+                        </div>
+
+                        <div class="medium-6 columns">
+                            <label><strong>Počet ošetř. dnů pro popáleninu nebo omrzlinu v celkové anestezii</strong>
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2amd" aria-describedby="tooltip-mijag2amd" title=""></a>
+                                <input id="burn-days" type="number" min="0" max="99" pattern="\d*" name="burn-days">
+                            </label>
+                        </div>
+                        <div class="medium-6 columns">
+                            <label><strong>Počet dnů s výkonem na srdci nebo aortě</strong>
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2ame" aria-describedby="tooltip-mijag2ame" title=""></a>
+                                <input id="hearth-days" type="number" min="0" max="99" pattern="\d*" name="hearth-days">
+                            </label>
+                        </div>
+
+                        <div class="medium-6 columns">
+                            <label><strong>Počet dnů s chirurgickým výkonem na měkkých nebo pojivových tkáních</strong>
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2amf" aria-describedby="tooltip-mijag2amf" title=""></a>
+                                <input id="tissue-days" type="number" min="0" max="99" pattern="\d*" name="tissue-days">
+                            </label>
+                        </div>
+                        <div class="medium-6 columns">
+                            <label><strong>Počet dnů s výkonem na periferních cévách a okolních strukturách</strong>
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2amg" aria-describedby="tooltip-mijag2amg" title=""></a>
+                                <input id="veins-days" type="number" min="0" max="99" pattern="\d*" name="veins-days">
+                            </label>
+                        </div>
+
+                        <div class="medium-6 columns">
+                            <label><strong>Počet dnů s operačním výkonem v dutině břišní a pánevní</strong>
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2amh" aria-describedby="tooltip-mijag2amh" title=""></a>
+                                <input id="pelvis-days" type="number" min="0" max="99" pattern="\d*" name="pelvis-days">
+                            </label>
+                        </div>
+                        <div class="medium-6 columns">
+                            <label><strong>Počet dnů s výkonem eliminačních metod krve</strong>
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2ami" aria-describedby="tooltip-mijag2ami" title=""></a>
+                                <input id="blood-days" type="number" min="0" max="99" pattern="\d*" name="blood-days">
+                            </label>
+                        </div>
+                        <div class="medium-6 columns">
+                            <label><strong>Počet dnů s ortopedickým operačním výkonem</strong>
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2amj" aria-describedby="tooltip-mijag2amj" title=""></a>
+                                <input id="orthopedic-days" type="number" min="0" max="99" pattern="\d*"
+                                    name="orthopedic-days">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+
+            <li class="accordion-navigation active">
+                <a href="#panel5a" aria-expanded="true"><i class="fa fa-plus-circle accordion-title-icon"
+                        aria-hidden="true"></i>Přidat informace o rehabilitaci</a>
+                <div id="panel5a" class="content active">
+                    <div class="row">
+                        <div class="medium-6 columns">
+                            <label><strong>Příjmová lůžková odbornost 2H1 nebo 2F1</strong>
+                                <select id="patient-bed" name="patient-bed">
+                                    <option class="patient-bed" value="1F1">ne</option>
+                                    <option class="patient-bed" value="2H1">ano</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="medium-6 columns">
+                            <label><strong>Počet rehabilitačních dnů</strong>
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2amk" aria-describedby="tooltip-mijag2amk" title=""></a>
+                                <input id="rehabilitation-days" type="number" min="0" max="99" pattern="\d*"
+                                    name="rehabilitation-days">
+                            </label>
+                        </div>
+                    </div>
+
+                    <p class="warning-message">
+                        <strong>
+                            V případě akutní rehabilitace je klasifikace hospitalizačního případu závislá na pořadí
+                            zadaných vedlejších diagnóz. U hospitalizace probíhající na oddělení odbornosti 2H1 nebo 2F1
+                            je nutné
+                            na pozici 1. vedlejší diagnózy uvést indikaci akutní rehabilitace.
+                        </strong>
+                    </p>
+                </div>
+            </li>
+
+
+            <li class="accordion-navigation active">
+                <a href="#panel6a" aria-expanded="true"><i class="fa fa-plus-circle accordion-title-icon"
+                        aria-hidden="true"></i>Přidat informace o zvlášť účtovaných položkách</a>
+                <div id="panel6a" class="content active">
+                    <div class="row">
+                        <div class="medium-11 columns">
+                            <label>
+                                <strong>Zvlášť účtované kritické položky</strong>
+                                <a href="#" class="fa fa-question-circle" data-tooltip="" aria-haspopup="true"
+                                    data-selector="tooltip-mijag2aml" aria-describedby="tooltip-mijag2aml" title=""></a>
+                            </label>
+                        </div>
+                        <div class="medium-1 columns">
+                            <label><strong>Množství</strong></label>
+                        </div>
+                        <div id="critical-items-form">
+                            <div id="ci-1">
+                                <div class="medium-10 columns">
+                                    <select id="critical-item-code-1" data-placeholder="Vyberte kritickou položku"
+                                        name="critical-item-code-1" style="width: 100%;"
+                                        data-select2-id="critical-item-code-1" tabindex="-1"
+                                        class="select2-hidden-accessible" aria-hidden="true">
+                                        <option value="" data-select2-id="9"></option>
+                                    </select><span class="select2 select2-container select2-container--default"
+                                        dir="ltr" data-select2-id="8" style="width: 100%;"><span class="selection"><span
+                                                class="select2-selection select2-selection--single" role="combobox"
+                                                aria-haspopup="true" aria-expanded="false" tabindex="0"
+                                                aria-disabled="false"
+                                                aria-labelledby="select2-critical-item-code-1-container"><span
+                                                    class="select2-selection__rendered"
+                                                    id="select2-critical-item-code-1-container" role="textbox"
+                                                    aria-readonly="true"><span
+                                                        class="select2-selection__placeholder">Vyberte kritickou
+                                                        položku</span></span><span class="select2-selection__arrow"
+                                                    role="presentation"><b
+                                                        role="presentation"></b></span></span></span><span
+                                            class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                </div>
+                                <div class="medium-1 columns">
+                                    <a onclick="$('#critical-item-code-1').val('').change();"><i class="fa fa-times"
+                                            aria-hidden="true"></i></a>
+                                </div>
+                                <div class="medium-1 columns">
+                                    <input id="critical-item-amount-1" type="number" name="critical-item-amount-1"
+                                        min="1" max="999" value="1" step="0.01" style="margin: 2px 0px 0px 0px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row margin-bottom-half">
+                        <div class="medium-6 columns">
+                            <a class="button tiny expand extra-tiny" onclick="addCriticalItemRow()">Přidat kritickou
+                                položku</a>
+                        </div>
+                        <div class="medium-6 columns">
+                            <a class="button tiny expand extra-tiny" onclick="removeCriticalItemRow()">Odebrat kritickou
+                                položku</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div class="row">
+            <div class="medium-12 columns">
+                <input type="number" min="1" max="25" id="number_of_interventions" name="number-of-interventions"
+                    value="1" style="display: none">
+                <input type="number" min="1" max="14" id="number_of_other_diagnosis" name="number-of-other-diagnosis"
+                    value="1" style="display: none">
+                <input type="number" min="1" max="15" id="number_of_critical_items" name="number-of-critical-items"
+                    value="1" style="display: none">
+                <input type="submit" class="button expand small" value="Klasifikovat případ">
+            </div>
+        </div>
+    </div>
+</form>
