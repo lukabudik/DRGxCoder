@@ -82,7 +82,7 @@ export const DiagnosisList: React.FC<DiagnosisListProps> = ({
                     >
                         <div className={styles.codeContainer}>
                             <span className={styles.code}>{d.code}</span>
-                            {d.probability && (
+                            {d.probability && !d.id.startsWith('custom-') && (
                                 <span className={styles.probability}>
                                     {percentFormatter.format(d.probability)}
                                 </span>
