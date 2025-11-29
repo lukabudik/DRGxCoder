@@ -19,34 +19,41 @@ export interface DiagnosisCode {
   reasoning?: string;
 }
 
-// Prediction
+// Prediction (matches backend PredictionResponse)
 export interface Prediction {
-  id: string;
+  prediction_id: string;
   case_id: string;
-  pac_id: string;
+  pac_id?: string;
   
   // Step 1
   selected_codes: string[];
-  selected_codes_reasoning: string;
+  step1_reasoning: string;
   
   // Step 2 - Main diagnosis
-  main_code: string;
-  main_name: string;
-  main_confidence: number;
-  main_reasoning: string;
-  
-  // Step 2 - Secondary diagnoses
-  secondary_codes: DiagnosisCode[];
+  main_diagnosis: DiagnosisCode;
+  secondary_diagnoses: DiagnosisCode[];
   
   // Metadata
   model_used: string;
   processing_time: number;
-  validated: boolean;
+  validated?: boolean;
   validated_at?: string;
   validated_by?: string;
   feedback_type?: 'approved' | 'rejected';
   feedback_comment?: string;
   corrections?: any;
+  created_at: string;
+}
+
+// Prediction List Item (matches backend PredictionListItem)
+export interface PredictionListItem {
+  id: string;
+  case_id: string;
+  pac_id?: string;
+  main_code: string;
+  main_name: string;
+  main_confidence: number;
+  validated: boolean;
   created_at: string;
 }
 
@@ -63,15 +70,13 @@ export interface PredictRequest {
 export interface PredictResponse {
   prediction_id: string;
   case_id: string;
-  main_diagnosis: {
-    code: string;
-    name: string;
-    confidence: number;
-    reasoning: string;
-  };
-  secondary_diagnoses: DiagnosisCode[];
   selected_codes: string[];
+  step1_reasoning: string;
+  main_diagnosis: DiagnosisCode;
+  secondary_diagnoses: DiagnosisCode[];
+  model_used: string;
   processing_time: number;
+  created_at: string;
 }
 
 // Feedback
@@ -91,9 +96,16 @@ export interface FeedbackSubmission {
   feedback_comment?: string;
 }
 
-// Paginated responses
-export interface PaginatedResponse<T> {
-  items: T[];
+// Paginated responses (matches backend)
+export interface PaginatedPredictions {
+  predictions: PredictionListItem[];
+  total: number;
+  page: number;
+  pages: number;
+}
+
+export interface PaginatedCases {
+  cases: PatientCase[];
   total: number;
   page: number;
   pages: number;
