@@ -1,14 +1,36 @@
-// Patient Case
+// Patient (demographics)
+export interface Patient {
+  id: string;
+  birth_number: string;
+  first_name: string;
+  last_name: string;
+  date_of_birth: string;
+  sex: string; // "M" or "F"
+  country_of_residence?: string;
+  created_at: string;
+  updated_at: string;
+}
+
+// Patient Case (hospital admission/episode)
 export interface PatientCase {
   id: string;
-  pac_id: string;
+  patient_id: string;
+  pac_id?: string;
+  hospital_patient_id?: string;
+  admission_date?: string;
+  discharge_date?: string;
   clinical_text: string;
   biochemistry?: string;
   hematology?: string;
   microbiology?: string;
   medication?: string;
+  raw_xml?: string;
   created_at: string;
+  updated_at: string;
   predictions_count?: number;
+  
+  // Relations
+  patient?: Patient;
 }
 
 // Diagnosis Code
@@ -55,6 +77,9 @@ export interface PredictionListItem {
   main_confidence: number;
   validated: boolean;
   created_at: string;
+  
+  // Relations
+  case?: PatientCase;
 }
 
 // API Request/Response types

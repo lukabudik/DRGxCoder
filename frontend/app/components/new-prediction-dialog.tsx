@@ -26,11 +26,10 @@ export function NewPredictionDialog({ open, onOpenChange }: NewPredictionDialogP
 
   const predictMutation = useMutation({
     mutationFn: async (file: File) => {
-      // Read file content
-      const text = await file.text();
-      // TODO: Parse XML and extract clinical_text, or send XML directly to backend
-      // For now, sending XML as clinical_text
-      return api.predict({ clinical_text: text });
+      // Read XML file content
+      const xmlContent = await file.text();
+      // Send raw XML to backend for parsing
+      return api.predictFromXml(xmlContent);
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['predictions'] });

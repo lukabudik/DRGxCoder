@@ -115,13 +115,52 @@ export function PredictionsDatabase() {
         enableHiding: false,
       },
       {
-        accessorKey: 'pac_id',
+        id: 'patient',
         header: 'Patient',
-        cell: ({ row }) => (
-          <span style={{ fontWeight: 500, color: 'var(--color-text-primary)', fontSize: 'var(--font-size-sm)' }}>
-            {row.getValue('pac_id') || 'N/A'}
-          </span>
-        ),
+        cell: ({ row }) => {
+          const patient = row.original.case?.patient;
+          if (!patient) return (
+            <span style={{ fontWeight: 500, color: 'var(--color-text-secondary)', fontSize: 'var(--font-size-sm)' }}>
+              {row.original.pac_id || 'N/A'}
+            </span>
+          );
+          return (
+            <span style={{ fontWeight: 500, color: 'var(--color-text-primary)', fontSize: 'var(--font-size-sm)' }}>
+              {patient.last_name}, {patient.first_name}
+            </span>
+          );
+        },
+      },
+      {
+        id: 'patient_age',
+        header: 'Age',
+        cell: ({ row }) => {
+          const patient = row.original.case?.patient;
+          if (!patient?.date_of_birth) return <span style={{ color: 'var(--color-text-secondary)' }}>-</span>;
+          const age = Math.floor(
+            (new Date().getTime() - new Date(patient.date_of_birth).getTime()) / 
+            (1000 * 60 * 60 * 24 * 365.25)
+          );
+          return (
+            <span style={{ fontWeight: 500, fontSize: 'var(--font-size-sm)' }}>
+              {age}
+            </span>
+          );
+        },
+        size: 60,
+      },
+      {
+        id: 'patient_sex',
+        header: 'Sex',
+        cell: ({ row }) => {
+          const sex = row.original.case?.patient?.sex;
+          return (
+            <span style={{ fontWeight: 500, fontSize: 'var(--font-size-sm)' }}>
+              {sex || '-'}
+            </span>
+          );
+        },
+        size: 50,
       },
       {
         accessorKey: 'main_code',

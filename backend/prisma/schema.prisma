@@ -33,24 +33,59 @@ model DiagnosisCode {
 
 // IcdCategory table removed - not needed for 2-step approach
 
-// Patient Cases
-model PatientCase {
-  id           String   @id @default(cuid())
-  pacId        String?  // Original patient ID (optional, not unique - can have multiple submissions)
-  
-  // Clinical data
-  clinicalText String   @db.Text
-  biochemistry String?  @db.Text
-  hematology   String?  @db.Text
-  microbiology String?  @db.Text
-  medication   String?  @db.Text
-  
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+// Patients (demographics stored once, linked to multiple cases)
+model Patient {
+  id                  String    @id @default(cuid())
+  birthNumber         String    @unique  // Rodné číslo (Czech birth number) - primary identifier
+  firstName           String
+  lastName            String
+  dateOfBirth         DateTime
+  sex                 String    // "M" or "F"
+  countryOfResidence  String?   // ISO country code (e.g., "CZE")
   
   // Relations
-  predictions  Prediction[]
+  cases               PatientCase[]
   
+  createdAt           DateTime  @default(now())
+  updatedAt           DateTime  @updatedAt
+  
+  @@index([lastName, firstName])
+  @@index([birthNumber])
+  @@map("patients")
+}
+
+// Patient Cases (hospital admissions/episodes linked to patient)
+model PatientCase {
+  id              String    @id @default(cuid())
+  patientId       String    // FK to Patient
+  
+  // Hospital-specific identifiers for this case
+  pacId           String?   // Hospital admission ID (from insurance)
+  hospitalPatientId String? // Hospital's internal patient ID (id_pac from XML)
+  
+  // Admission details
+  admissionDate   DateTime?
+  dischargeDate   DateTime?
+  
+  // Clinical data (specific to this case/admission)
+  clinicalText    String    @db.Text
+  biochemistry    String?   @db.Text
+  hematology      String?   @db.Text
+  microbiology    String?   @db.Text
+  medication      String?   @db.Text
+  
+  // Raw XML for reference and audit
+  rawXml          String?   @db.Text
+  
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  
+  // Relations
+  patient         Patient      @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  predictions     Prediction[]
+  
+  @@index([patientId])
+  @@index([pacId])
   @@map("patient_cases")
 }
 

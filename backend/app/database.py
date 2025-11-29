@@ -136,36 +136,133 @@ async def get_predictions_by_code(code: str, page: int = 1, limit: int = 20):
     }
 
 
+# ===== PATIENTS =====
+
+async def find_or_create_patient(
+    birth_number: str,
+    first_name: str,
+    last_name: str,
+    date_of_birth,  # datetime
+    sex: str,
+    country_of_residence: Optional[str] = None,
+):
+    """
+    Find existing patient by birth number or create new one
+    Returns: Patient object
+    """
+    # Try to find existing patient by birth number (unique identifier)
+    patient = await db.patient.find_unique(
+        where={"birthNumber": birth_number}
+    )
+    
+    if patient:
+        logger.info(f"Found existing patient: {patient.id} ({patient.firstName} {patient.lastName})")
+        
+        # Update demographics if they've changed (rare, but possible for typos/corrections)
+        needs_update = False
+        update_data = {}
+        
+        if patient.firstName != first_name:
+            update_data["firstName"] = first_name
+            needs_update = True
+        if patient.lastName != last_name:
+            update_data["lastName"] = last_name
+            needs_update = True
+        if patient.dateOfBirth != date_of_birth:
+            update_data["dateOfBirth"] = date_of_birth
+            needs_update = True
+        if patient.sex != sex:
+            update_data["sex"] = sex
+            needs_update = True
+        if country_of_residence and patient.countryOfResidence != country_of_residence:
+            update_data["countryOfResidence"] = country_of_residence
+            needs_update = True
+        
+        if needs_update:
+            patient = await db.patient.update(
+                where={"id": patient.id},
+                data=update_data
+            )
+            logger.info(f"Updated patient demographics: {patient.id}")
+        
+        return patient
+    
+    # Create new patient
+    patient = await db.patient.create(
+        data={
+            "birthNumber": birth_number,
+            "firstName": first_name,
+            "lastName": last_name,
+            "dateOfBirth": date_of_birth,
+            "sex": sex,
+            "countryOfResidence": country_of_residence,
+        }
+    )
+    logger.info(f"Created new patient: {patient.id} ({first_name} {last_name})")
+    return patient
+
+
+async def get_patient(patient_id: str):
+    """Get patient by ID with all their cases"""
+    patient = await db.patient.find_unique(
+        where={"id": patient_id},
+        include={"cases": True}
+    )
+    return patient
+
+
+async def get_patient_by_birth_number(birth_number: str):
+    """Get patient by birth number"""
+    patient = await db.patient.find_unique(
+        where={"birthNumber": birth_number},
+        include={"cases": True}
+    )
+    return patient
+
+
 # ===== PATIENT CASES =====
 
 async def create_case(
+    patient_id: str,
     clinical_text: str,
     pac_id: Optional[str] = None,
+    hospital_patient_id: Optional[str] = None,
+    admission_date = None,
+    discharge_date = None,
     biochemistry: Optional[str] = None,
     hematology: Optional[str] = None,
     microbiology: Optional[str] = None,
     medication: Optional[str] = None,
+    raw_xml: Optional[str] = None,
 ) -> str:
     """Create a new patient case, returns case ID"""
     case = await db.patientcase.create(
         data={
+            "patientId": patient_id,
             "pacId": pac_id,
+            "hospitalPatientId": hospital_patient_id,
+            "admissionDate": admission_date,
+            "dischargeDate": discharge_date,
             "clinicalText": clinical_text,
             "biochemistry": biochemistry,
             "hematology": hematology,
             "microbiology": microbiology,
             "medication": medication,
+            "rawXml": raw_xml,
         }
     )
-    logger.info(f"Created case: {case.id}")
+    logger.info(f"Created case: {case.id} for patient: {patient_id}")
     return case.id
 
 
 async def get_case(case_id: str):
-    """Get case by ID with predictions"""
+    """Get case by ID with patient and predictions"""
     case = await db.patientcase.find_unique(
         where={"id": case_id},
-        include={"predictions": True}
+        include={
+            "patient": True,
+            "predictions": True
+        }
     )
     return case
 
@@ -184,6 +281,13 @@ async def list_cases(
             "OR": [
                 {"pacId": {"contains": search, "mode": "insensitive"}},
                 {"clinicalText": {"contains": search, "mode": "insensitive"}},
+                {"patient": {
+                    "OR": [
+                        {"firstName": {"contains": search, "mode": "insensitive"}},
+                        {"lastName": {"contains": search, "mode": "insensitive"}},
+                        {"birthNumber": {"contains": search}},
+                    ]
+                }},
             ]
         }
     
@@ -192,7 +296,10 @@ async def list_cases(
         skip=skip,
         take=limit,
         order={"createdAt": "desc"},
-        include={"predictions": True}
+        include={
+            "patient": True,
+            "predictions": True
+        }
     )
     
     total = await db.patientcase.count(where=where)

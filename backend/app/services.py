@@ -94,45 +94,49 @@ async def step1_select_codes(
     # Build prompt
     codes_text = "\n".join([f"- {c['code']}: {c['name']}" for c in all_codes])
     
-    prompt = f"""# Task
-Analyze the clinical case and select the TOP-LEVEL ICD-10 codes (3-character codes) that are relevant.
-
-# Available Top-Level Codes
+    prompt = f"""# Dostupné kódy nejvyšší úrovně (3-znakové kódy MKN-10)
 {codes_text}
 
-# Clinical Assessment
+# Klinické hodnocení
 {clinical_text}
 """
     
     if biochemistry:
-        prompt += f"\n# Biochemistry Results\n{biochemistry}\n"
+        prompt += f"\n# Biochemie\n{biochemistry}\n"
     
     if hematology:
-        prompt += f"\n# Hematology Results\n{hematology}\n"
+        prompt += f"\n# Hematologie\n{hematology}\n"
     
     if microbiology:
-        prompt += f"\n# Microbiology Results\n{microbiology}\n"
+        prompt += f"\n# Mikrobiologie\n{microbiology}\n"
     
     if medication:
-        prompt += f"\n# Medications\n{medication}\n"
+        prompt += f"\n# Medikace\n{medication}\n"
     
     prompt += """
-# Instructions
-1. Identify the PRIMARY and SECONDARY diagnoses mentioned in the clinical text
-2. Select 5-15 TOP-LEVEL codes that match these diagnoses
-3. Choose the most specific codes available
-4. Provide brief reasoning
+# Tvůj úkol
+1. Zamysli se hluboce nad pacientovými daty (klinický text, biochemie, hematologie, mikrobiologie, medikace)
+2. Identifikuj HLAVNÍ diagnózu (primární důvod hospitalizace) a VEDLEJŠÍ diagnózy
+3. Vyber 5-15 kódů nejvyšší úrovně (3-znakové), které odpovídají těmto diagnózám
+4. Zaměř se na nejspecifičtější dostupné kódy
+5. Uveď stručné zdůvodnění výběru
 
-# Output Format (JSON)
+# Výstupní formát (JSON)
 {
     "selected_codes": ["I21", "I50", "J18", "N17", "G93"],
-    "reasoning": "Patient has acute MI (I21), heart failure (I50), pneumonia (J18), acute kidney injury (N17), and brain edema (G93)"
+    "reasoning": "Pacient má akutní infarkt myokardu (I21), srdeční selhání (I50), pneumonii (J18), akutní selhání ledvin (N17) a edém mozku (G93)"
 }
 """
     
-    system_prompt = """You are a medical coding expert. Your task is to select the relevant TOP-LEVEL ICD-10 codes (3-character codes) for the given clinical case.
-Focus on the PRIMARY and SECONDARY diagnoses mentioned in the clinical text.
-Select 5-15 codes that are most relevant. Be specific but comprehensive."""
+    system_prompt = """Jsi expert na kódování diagnóz pro DRG (Diagnosis Related Groups) v českém zdravotnictví podle metodiky MKN-10.
+
+Tvým úkolem je analyzovat klinická data pacienta a vybrat relevantní kódy nejvyšší úrovně (3-znakové kódy MKN-10).
+
+Metodika:
+- Hlavním podkladem pro kódování je zdravotní dokumentace o hospitalizaci
+- Zaměř se na HLAVNÍ diagnózu (primárně odpovědná za potřebu léčby) a VEDLEJŠÍ diagnózy
+- Vyber 5-15 nejrelevantnějších kódů nejvyšší úrovně
+- Buď specifický ale komplexní"""
     
     response = await llm.generate_json(
         prompt=prompt,
@@ -154,6 +158,8 @@ Select 5-15 codes that are most relevant. Be specific but comprehensive."""
 async def step2_predict_codes(
     clinical_text: str,
     selected_codes: List[str],
+    patient_age: int = None,
+    patient_sex: str = None,
     biochemistry: str = None,
     hematology: str = None,
     microbiology: str = None,
@@ -191,60 +197,104 @@ async def step2_predict_codes(
         for code_str in code_list[:50]:  # Limit per category
             codes_text += f"{code_str}\n"
     
-    prompt = f"""# Task
-Based on the clinical data, assign the MAIN diagnosis code and SECONDARY diagnosis codes.
-
-# Available Codes
+    prompt = f"""# Dostupné kódy MKN-10
 {codes_text}
 
-# Complete Clinical Data
-
-## Clinical Assessment
+# Kompletní klinická data pacienta
+"""
+    
+    # Add patient demographics if available
+    if patient_age and patient_sex:
+        prompt += f"""
+## Informace o pacientovi
+- Věk: {patient_age} let
+- Pohlaví: {patient_sex}
+"""
+    
+    prompt += f"""
+## Klinické hodnocení
 {clinical_text}
 """
     
     if biochemistry:
-        prompt += f"\n## Biochemistry\n{biochemistry[:3000]}\n"
+        prompt += f"\n## Biochemie\n{biochemistry[:3000]}\n"
     
     if hematology:
-        prompt += f"\n## Hematology\n{hematology[:2000]}\n"
+        prompt += f"\n## Hematologie\n{hematology[:2000]}\n"
     
     if microbiology:
-        prompt += f"\n## Microbiology\n{microbiology[:2000]}\n"
+        prompt += f"\n## Mikrobiologie\n{microbiology[:2000]}\n"
     
     if medication:
-        prompt += f"\n## Medication\n{medication[:1000]}\n"
+        prompt += f"\n## Medikace\n{medication[:1000]}\n"
     
     prompt += """
-# Coding Rules
-1. **Main diagnosis**: The PRIMARY reason for hospitalization/treatment
-2. **Secondary diagnoses**: Relevant comorbidities or complications (max 5)
-3. Choose the MOST SPECIFIC code available
-4. Provide confidence score (0.0-1.0) for each code
-5. Provide brief reasoning for each selection
+# Pravidla kódování diagnóz pro DRG
 
-# Output Format (JSON)
+## Hlavní diagnóza
+Hlavní diagnóza označuje stav, který byl na konci období léčebné péče určen jako primárně odpovědný za potřebu nemocného léčit se nebo být vyšetřován.
+Ve výjimečných případech, kdy existuje více takových stavů, označí se jako hlavní ten, který je nejvíce zodpovědný za čerpání prostředků.
+
+## Vedlejší diagnózy
+Onemocnění nebo potíže existující současně s hlavní diagnózou nebo se vyvíjející až během epizody léčebné péče, které mají prokazatelně vliv na péči o pacienta.
+Ovlivňují léčbu pacienta takovým způsobem, že je potřebný kterýkoliv z uvedených faktorů:
+1. Klinické vyšetření
+2. Terapeutický zásah nebo léčba
+3. Diagnostické výkony
+4. Zvýšená ošetřovatelská péče a/nebo monitorování
+
+## Směrnice pro chemoterapii a radioterapii
+- Je-li účelem hospitalizace provedení chemoterapie nebo radioterapie pro maligní novotvar, stanovte chemoterapii Z51.1 nebo radioterapii Z51.0 jako hlavní diagnózu
+- Jestliže je během hospitalizace provedeno chirurgické odstranění nádoru následované chemoterapií nebo radioterapií, stanovte maligní novotvar jako hlavní diagnózu
+- Jestliže je pacient hospitalizován k provedení chemoterapeutického nebo radioterapeutického cyklu a během hospitalizace dojde ke komplikacím, uveďte jako hlavní diagnózu chemoterapii Z51.1 nebo radioterapii Z51.0 následovanou uvedenými komplikacemi
+
+# Tvůj úkol
+1. Zamysli se hluboce nad všemi pacientovými daty
+2. Urči HLAVNÍ DIAGNÓZU (kód MKN-10 a název)
+3. Uveď důvod pro výběr hlavní diagnózy a odhadni pravděpodobnost správnosti (0.0-1.0)
+4. Navrhni další potenciální hlavní diagnózy, pokud existují
+5. Urči VEDLEJŠÍ DIAGNÓZY (maximálně 14)
+6. Pro každou vedlejší diagnózu uveď důvod (vždy také jak se vázala k přímo k průběhu léčby a potenciální důvod proč by se nemusela uznat) a odhadni pravděpodobnost
+
+# Výstupní formát (JSON)
 {
     "main_diagnosis": {
         "code": "I460",
         "name": "Srdeční zástava s úspěšnou resuscitací",
         "confidence": 0.95,
-        "reasoning": "Patient presented with cardiac arrest, elevated troponin"
+        "reasoning": "Pacient byl přijat s náhlou srdeční zástavou, úspěšná resuscitace po 8 minutách. Elevace troponinu potvrzuje srdeční příhodu jako primární důvod hospitalizace."
     },
+    "other_potential_main_diagnoses": [
+        {
+            "code": "I219",
+            "name": "Akutní infarkt myokardu, nespecifikovaný",
+            "confidence": 0.30,
+            "reasoning": "Elevace troponinu naznačuje možný infarkt, ale primární příčinou hospitalizace byla srdeční zástava"
+        }
+    ],
     "secondary_diagnoses": [
         {
             "code": "G931",
             "name": "Anoxické poškození mozku",
             "confidence": 0.87,
-            "reasoning": "CT showed anoxic brain damage"
+            "reasoning": "CT prokázalo anoxické poškození mozku po srdeční zástavě. Vyžadovalo zvýšenou neurologickou péči a monitorování. Mohlo by být zpochybněno pokud by nebylo jasně dokumentováno v CT nálezu."
         }
     ]
 }
 """
     
-    system_prompt = """You are a professional medical coder assigning ICD-10 diagnosis codes.
-Your task is to select the MOST SPECIFIC and ACCURATE codes from the provided list.
-Always choose the main diagnosis (primary reason for hospitalization) and relevant secondary diagnoses."""
+    system_prompt = """Jsi expert na kódování diagnóz pro DRG (Diagnosis Related Groups) v českém zdravotnictví.
+Tvým úkolem je analyzovat klinická data pacienta a určit hlavní diagnózu a vedlejší diagnózy podle metodiky MKN-10 a pravidel pro DRG.
+
+Metodika kódování diagnóz určuje Instrukční příručka MKN-10 a úvody abecedního a tabelárního seznamu MKN-10.
+
+Hlavním podkladem pro kódování je zdravotní dokumentace o hospitalizaci. Obsah propouštěcí zprávy musí mít oporu v ostatní dokumentaci (výsledky vyšetření, operační protokol, denní záznamy, atd.).
+
+Tvá úloha:
+- Vyber NEJSPECIFIČTĚJŠÍ a NEJPŘESNĚJŠÍ kódy z poskytnutého seznamu
+- Vždy zvol hlavní diagnózu (primární důvod hospitalizace) a relevantní vedlejší diagnózy
+- Poskytni detailní zdůvodnění pro každý výběr
+- Odhadni pravděpodobnost správnosti každého kódu"""
     
     response = await llm.generate_json(
         prompt=prompt,
@@ -257,9 +307,10 @@ Always choose the main diagnosis (primary reason for hospitalization) and releva
         raise ValueError("LLM response missing 'main_diagnosis' field")
     
     main = response["main_diagnosis"]
+    other_potential = response.get("other_potential_main_diagnoses", [])
     secondary = response.get("secondary_diagnoses", [])
     
-    logger.info(f"Step 2: Main={main.get('code')}, Secondary={len(secondary)}")
+    logger.info(f"Step 2: Main={main.get('code')}, Other potential={len(other_potential)}, Secondary={len(secondary)}")
     
     return response
 
@@ -268,6 +319,8 @@ Always choose the main diagnosis (primary reason for hospitalization) and releva
 
 async def predict_diagnosis(
     clinical_text: str,
+    patient_age: int = None,
+    patient_sex: str = None,
     pac_id: str = None,
     biochemistry: str = None,
     hematology: str = None,
@@ -295,6 +348,7 @@ async def predict_diagnosis(
     step2_result = await step2_predict_codes(
         clinical_text,
         step1_result["selected_codes"],
+        patient_age, patient_sex,
         biochemistry, hematology, microbiology, medication
     )
     

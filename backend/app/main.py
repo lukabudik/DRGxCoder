@@ -1,7 +1,7 @@
 """FastAPI main application"""
 
 from typing import List
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Body
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from loguru import logger
@@ -23,6 +23,7 @@ from app.models import (
 from app.database import (
     connect_db,
     disconnect_db,
+    find_or_create_patient,
     create_case,
     get_case,
     list_cases,
@@ -35,6 +36,8 @@ from app.database import (
     get_predictions_by_code,
 )
 from app.services import predict_diagnosis
+from app.parsers import parse_medical_xml
+from app.utils import calculate_age
 from app.core.config import settings
 
 
@@ -95,19 +98,130 @@ async def health():
 
 # ===== PREDICTION =====
 
+@app.post("/api/predict/xml")
+async def create_prediction_from_xml(xml_content: str = Body(..., media_type="text/plain")):
+    """
+    Create prediction from XML file
+    
+    Expects raw XML content as text/plain in request body
+    
+    1. Parses XML to extract demographics and clinical data
+    2. Finds or creates patient
+    3. Creates case linked to patient
+    4. Runs 2-step prediction pipeline with patient context
+    5. Saves prediction
+    """
+    try:
+        logger.info("Received XML upload")
+        
+        # Step 1: Parse XML
+        parsed = await parse_medical_xml(xml_content)
+        logger.info(f"Parsed XML for patient: {parsed.first_name} {parsed.last_name}")
+        
+        # Step 2: Find or create patient
+        patient = await find_or_create_patient(
+            birth_number=parsed.birth_number,
+            first_name=parsed.first_name,
+            last_name=parsed.last_name,
+            date_of_birth=parsed.date_of_birth,
+            sex=parsed.sex,
+            country_of_residence=parsed.country_of_residence,
+        )
+        
+        # Calculate patient age
+        patient_age = calculate_age(patient.dateOfBirth)
+        logger.info(f"Patient: {patient.id}, Age: {patient_age}, Sex: {patient.sex}")
+        
+        # Step 3: Create case linked to patient
+        case_id = await create_case(
+            patient_id=patient.id,
+            pac_id=parsed.pac_id,
+            hospital_patient_id=parsed.patient_id,
+            clinical_text=parsed.clinical_text,
+            biochemistry=parsed.biochemistry,
+            hematology=parsed.hematology,
+            microbiology=parsed.microbiology,
+            medication=parsed.medication,
+            raw_xml=parsed.raw_xml,
+        )
+        
+        # Step 4: Run prediction with patient context
+        result = await predict_diagnosis(
+            clinical_text=parsed.clinical_text,
+            patient_age=patient_age,
+            patient_sex=patient.sex,
+            pac_id=parsed.pac_id,
+            biochemistry=parsed.biochemistry,
+            hematology=parsed.hematology,
+            microbiology=parsed.microbiology,
+            medication=parsed.medication,
+        )
+        
+        # Step 5: Save prediction
+        main_diag = result["step2"]["main_diagnosis"]
+        secondary_diags = result["step2"].get("secondary_diagnoses", [])
+        
+        prediction_id = await create_prediction(
+            case_id=case_id,
+            selected_codes=result["step1"]["selected_codes"],
+            step1_reasoning=result["step1"]["reasoning"],
+            main_code=main_diag["code"],
+            main_name=main_diag["name"],
+            main_confidence=main_diag["confidence"],
+            main_reasoning=main_diag.get("reasoning"),
+            secondary_codes=secondary_diags,
+            model_used=result["model_used"],
+            processing_time=result["processing_time"],
+        )
+        
+        # Get prediction with created_at
+        pred = await get_prediction(prediction_id)
+        
+        return PredictionResponse(
+            prediction_id=prediction_id,
+            case_id=case_id,
+            selected_codes=result["step1"]["selected_codes"],
+            step1_reasoning=result["step1"]["reasoning"],
+            main_diagnosis=DiagnosisCode(**main_diag),
+            secondary_diagnoses=[DiagnosisCode(**d) for d in secondary_diags],
+            model_used=result["model_used"],
+            processing_time=result["processing_time"],
+            created_at=pred.createdAt,
+        )
+        
+    except ValueError as e:
+        logger.error(f"XML parsing error: {e}")
+        raise HTTPException(status_code=400, detail=f"Invalid XML: {str(e)}")
+    except Exception as e:
+        logger.error(f"Prediction error: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 @app.post("/api/predict", response_model=PredictionResponse)
 async def create_prediction_endpoint(input: ClinicalInput):
     """
-    Create new prediction
+    Create new prediction from structured input (legacy/testing)
     
-    1. Saves case to database
-    2. Runs 2-step prediction pipeline
-    3. Saves prediction to database
-    4. Returns complete result
+    Note: Use /api/predict/xml for production XML uploads
     """
     try:
+        # For legacy/testing: create dummy patient if needed
+        # In production, this endpoint might be deprecated
+        logger.warning("Using legacy /api/predict endpoint - consider using /api/predict/xml")
+        
+        # Create minimal patient (no demographics)
+        from datetime import datetime
+        patient = await find_or_create_patient(
+            birth_number=input.pac_id or "UNKNOWN",
+            first_name="Unknown",
+            last_name="Patient",
+            date_of_birth=datetime(1970, 1, 1),
+            sex="U",
+        )
+        
         # Create case
         case_id = await create_case(
+            patient_id=patient.id,
             clinical_text=input.clinical_text,
             pac_id=input.pac_id,
             biochemistry=input.biochemistry,
@@ -116,7 +230,7 @@ async def create_prediction_endpoint(input: ClinicalInput):
             medication=input.medication,
         )
         
-        # Run prediction
+        # Run prediction (without patient context)
         result = await predict_diagnosis(
             clinical_text=input.clinical_text,
             pac_id=input.pac_id,
