@@ -61,7 +61,15 @@ export const ResultsPanel: React.FC<ResultsPanelProps> = ({
 
     return (
         <div className={styles.container}>
-            <SummaryCard result={result} principalDiagnosis={principalDiagnosis} />
+            <SummaryCard 
+                result={result} 
+                principalDiagnosis={principalDiagnosis}
+                secondaryDiagnoses={result.otherDiagnoses}
+                onAddSecondary={() => openSearch('secondary')}
+                onRemoveSecondary={onRemoveSecondary}
+                onHover={onHover}
+                activeId={activeId}
+            />
 
             <div className={styles.potentialContainer}>
                 <div className={styles.potentialHeader}>
@@ -101,15 +109,17 @@ export const ResultsPanel: React.FC<ResultsPanelProps> = ({
                 <DiagnosisSearch onSelect={handleCustomSelect} excludedCodes={excludedCodes} />
             </Modal>
 
-            <DiagnosisList
-                title={t('results.diagnoses.secondary')}
-                diagnoses={result.otherDiagnoses}
-                onHover={onHover}
-                activeId={activeId}
-                collapsible={false}
-                onRemove={onRemoveSecondary}
-                onAdd={() => openSearch('secondary')}
-            />
+            {/* {result.otherDiagnoses.length > 0 && (
+                <DiagnosisList
+                    title={t('results.diagnoses.secondary')}
+                    diagnoses={result.otherDiagnoses}
+                    onHover={onHover}
+                    activeId={activeId}
+                    collapsible={false}
+                    onRemove={onRemoveSecondary}
+                    onAdd={() => openSearch('secondary')}
+                />
+            )} */}
 
             {/* {result.procedures.length > 0 && (
                 <ProcedureList

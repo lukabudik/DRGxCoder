@@ -2,14 +2,28 @@ import React, { useMemo } from 'react';
 import { Card } from '../../../shared/ui/Card';
 import type { CaseResult, Diagnosis } from '../../../core/types';
 import { useTranslation } from '../../../shared/i18n';
+import { DiagnosisList } from './DiagnosisList';
 import styles from './Components.module.css';
 
 interface SummaryCardProps {
     result: CaseResult;
     principalDiagnosis: Diagnosis;
+    secondaryDiagnoses: Diagnosis[];
+    onAddSecondary?: () => void;
+    onRemoveSecondary?: (id: string) => void;
+    onHover: (id: string | null) => void;
+    activeId: string | null;
 }
 
-export const SummaryCard: React.FC<SummaryCardProps> = ({ result, principalDiagnosis }) => {
+export const SummaryCard: React.FC<SummaryCardProps> = ({
+    result,
+    principalDiagnosis,
+    secondaryDiagnoses,
+    onAddSecondary,
+    onRemoveSecondary,
+    onHover,
+    activeId
+}) => {
     const { t, locale } = useTranslation();
 
     const numberLocale = locale === 'cs' ? 'cs-CZ' : 'en-US';
@@ -63,6 +77,18 @@ export const SummaryCard: React.FC<SummaryCardProps> = ({ result, principalDiagn
                     <span className={styles.metricLabel}>{t('results.summary.revenue')}</span>
                     <span className={styles.metricValue}>{currencyFormatter.format(result.revenue)}</span>
                 </div>
+            </div>
+
+            <div className={styles.secondaryDiagnosesContainer}>
+                <DiagnosisList
+                    title={t('results.diagnoses.secondary')}
+                    diagnoses={secondaryDiagnoses}
+                    onHover={onHover}
+                    activeId={activeId}
+                    collapsible={false}
+                    onRemove={onRemoveSecondary}
+                    onAdd={onAddSecondary}
+                />
             </div>
         </Card>
     );
