@@ -15,29 +15,35 @@
 .potentialHeader {
     display: flex;
     align-items: center;
-    gap: var(--spacing-4);
+    gap: var(--spacing-3);
+    padding-bottom: var(--spacing-2);
+    border-bottom: 1px solid var(--color-border);
 }
 
 .potentialTitle {
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-sm);
     font-weight: 600;
-    color: var(--color-text-primary);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     margin: 0;
 }
 
 .potentialButton {
     background: none;
-    border: 1px solid var(--color-border);
-    padding: var(--spacing-1) var(--spacing-3);
+    border: none;
+    padding: 0;
     font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
+    font-weight: 500;
+    color: var(--color-primary);
     cursor: pointer;
-    border-radius: var(--radius-md);
     transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .potentialButton:hover {
-    background-color: var(--color-surface-hover);
-    color: var(--color-text-primary);
-    border-color: var(--color-text-secondary);
+    color: var(--color-primary-hover);
+    text-decoration: none;
+    opacity: 0.8;
 }
