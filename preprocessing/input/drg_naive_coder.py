@@ -133,9 +133,13 @@ def main():
     
     # Generate output filename if not provided
     if not args.output:
+        output_dir = "results_drg_naive_coder"
+        os.makedirs(output_dir, exist_ok=True)
+        
         sanitized_model = args.model.replace("/", "_").replace(":", "_")
         limit_str = f"_limit{args.limit}" if args.limit else ""
-        args.output = f"drg_results_{sanitized_model}{limit_str}.json"
+        filename = f"drg_results_{sanitized_model}{limit_str}.json"
+        args.output = os.path.join(output_dir, filename)
     
     api_key = args.api_key or os.environ.get("OPENROUTER_API_KEY")
     if not api_key:
