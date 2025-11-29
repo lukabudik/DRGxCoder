@@ -45,8 +45,8 @@ export const analyzeText = async (text: string): Promise<CaseResult> => {
 
                 // Lists
                 otherDiagnoses: [
-                    { id: 'd2', code: 'R06.02', name: 'Shortness of breath', probability: 0.88, source: 'ai', weight: 1 },
-                    { id: 'd3', code: 'E11.9', name: 'Type 2 diabetes mellitus without complications', probability: 0.75, source: 'human', weight: 1 }
+                    { id: 'd2', code: 'R06.02', name: 'Shortness of breath', probability: 0.88, source: 'ai', weight: 1, reason: 'Patient reported difficulty breathing upon admission.' },
+                    { id: 'd3', code: 'E11.9', name: 'Type 2 diabetes mellitus without complications', probability: 0.75, source: 'human', weight: 1, reason: 'History of T2DM noted in patient records.' }
                 ],
                 procedures: [
                     { id: 'p1', code: '3E0234Z', name: 'Introduction of Serum/Toxoid into Muscle', probability: 0.65, source: 'ai', amount: 1 }
@@ -96,9 +96,9 @@ export const analyzeText = async (text: string): Promise<CaseResult> => {
 
                 // Highlights
                 diagnoses: [
-                    { id: 'd1', code: 'J18.9', name: 'Pneumonia, unspecified organism', probability: 0.92, source: 'ai' },
-                    { id: 'd2', code: 'R06.02', name: 'Shortness of breath', probability: 0.88, source: 'ai' },
-                    { id: 'd3', code: 'E11.9', name: 'Type 2 diabetes mellitus without complications', probability: 0.75, source: 'human' }
+                    { id: 'd1', code: 'J18.9', name: 'Pneumonia, unspecified organism', probability: 0.92, source: 'ai', reason: 'Chest X-ray shows consolidation consistent with pneumonia.' },
+                    { id: 'd2', code: 'R06.02', name: 'Shortness of breath', probability: 0.88, source: 'ai', reason: 'Patient reported difficulty breathing upon admission.' },
+                    { id: 'd3', code: 'E11.9', name: 'Type 2 diabetes mellitus without complications', probability: 0.75, source: 'human', reason: 'History of T2DM noted in patient records.' }
                 ],
                 highlights
             });

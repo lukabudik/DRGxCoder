@@ -9,6 +9,7 @@ export interface Diagnosis {
     code: string;
     name: string;
     probability?: number;
+    reason?: string;
     source?: 'ai' | 'human';
     severity?: string;
     ccLevel?: string;
