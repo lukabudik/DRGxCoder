@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="13_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="13">
+      <dsip:rodcis>1299444235</dsip:rodcis>
+      <dsip:jmeno>Jana</dsip:jmeno>
+      <dsip:prijmeni>Nováková</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>F</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2024-12-29T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>1299444235</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>1299444235</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="CLEXANE" typ_med="P">
+          <dsip:dat_od format="D">2024-12-29</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="NEURONTIN" typ_med="P">
+          <dsip:dat_od format="D">2024-12-29</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="LIPANTHYL M" typ_med="P">
+          <dsip:dat_od format="D">2024-12-29</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="STACYL" typ_med="P">
+          <dsip:dat_od format="D">2024-12-29</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ELICEA" typ_med="P">
+          <dsip:dat_od format="D">2024-12-29</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="GLUCOPHAGE" typ_med="P">
+          <dsip:dat_od format="D">2024-12-29</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="BISOPROLOL PMCS" typ_med="P">
+          <dsip:dat_od format="D">2024-12-29</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="AESCIN TEVA" typ_med="P">
+          <dsip:dat_od format="D">2024-12-29</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="OMEPRAZOLE OLIKLA" typ_med="P">
+          <dsip:dat_od format="D">2024-12-29</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="SMECTA" typ_med="P">
+          <dsip:dat_od format="D">2024-12-29</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ENTEROL" typ_med="P">
+          <dsip:dat_od format="D">2024-12-29</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PLASMALYTE" typ_med="P">
+          <dsip:dat_od format="D">2024-12-29</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="METRONIDAZOL B. BRAUN" typ_med="P">
+          <dsip:dat_od format="D">2024-12-29</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ENTIZOL" typ_med="P">
+          <dsip:dat_od format="D">2024-12-29</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="VANCOMYCIN MYLAN" typ_med="P">
+          <dsip:dat_od format="D">2024-12-29</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.13.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-10T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2024-12-29T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-10T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-10T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">68letá pacientka po nadávne osteosyntéze bimalleolárne zlomenině levého hlezna přijata na infekční oddělení pro průjem, febrilie a křečovité bolesti břicha.  V úvodní laboratoři vysoká elevace zánětlivých markerů, leukocytóza, jinak bez větších odchylek. Moč bez patologie. Zavedena rehydratační parenterální a symptomatická terapie, empiricky zahájena službou celková ATB léčba (metronidazol). Kultivačně stolice bez průkazu patogenů, viry negativní. Potvrzena klostridiová kolitida. Pokračuje ATB, izolační režim. Dieta. Na zavedené léčbě velmi pomalé odeznívání průjmovitých stolic. V kontrolních odběrech úprava hodnot do normy. 7. den z důvodu četnýc stolic (7+ kašovitých denně) přidán do kombinace Vankomycin. Po stabilizaci stavu, ustupu prujmu, propustena do domaci peče ve stabilizovanem stavu
+
+Biochemie:
+29.12.2024: MO 6.2 mmol/L | KR 82.0 umol/l | GFR 1.06 ml/s/1,73 m2 | KM 371.0 umol/l | NA 131.0 mmol/L | KA 4.98 mmol/L | CL 94.0 mmol/L | FIB4 1.11 - | BI 12.5 umol/l | AL 1.95 ukat/l | AS 0.92 ukat/l | GM 3.52 ukat/l | AF 1.76 ukat/l | CH 3.12 mmol/L | GL 9.14 mmol/L | AB 36.7 g/L | CRP 264.0 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS | VÝSLEDKY text 29.12.2024: UCOL jantarová | UCLA mírně zak. | UPH 5.0 - | USH 1.018 - | UBILK 1.0 arb.j. | UGK-S 0.0 | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 69.0 10^6/L | UERY 2.0 10^6/L | UKEPI 1.0 10^6/L | UBAK něco | UVALH 10.0 10^6/L | UHLEN něco | REPT_NTS 30.12.2024: MO 5.6 mmol/L | KR 86.0 umol/l | GFR 1.0 ml/s/1,73 m2 | NA 132.0 mmol/L | KA 4.8 mmol/L | PCT 0.51 ug/l | FIB4 0.47 - | BI 10.6 umol/l | AL 1.01 ukat/l | AS 0.33 ukat/l | GM 2.21 ukat/l | AF 1.29 ukat/l | CRP 267.0 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 31.12.2024: MO 5.1 mmol/L | KR 68.0 umol/l | GFR 1.32 ml/s/1,73 m2 | NA 135.0 mmol/L | KA 4.3 mmol/L | CL 97.0 mmol/L | CRP 214.6 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 05.01.2025: MO 4.3 mmol/L | KR 59.0 umol/l | GFR 1.51 ml/s/1,73 m2 | NA 139.0 mmol/L | KA 4.43 mmol/L | CL 106.0 mmol/L | CRP 10.0 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS
+
+Hematologie:
+29.12.2024: WBC 18.4 x10^9/L | RBC 5.3 x10^12/L | HGB 138.0 g/L | HCT 42.2 % | MCV 79.0 fL | MCH 25.8 pg | MCHC 327.0 g/L | PLT 314.0 x10^9/L | PDW 15.5 fL | NRBC 0.0 | NRBC% 0.0 | PT-INR 1.01 1 | PT-R 1.01 1 | PT-T 14.4 s | REPT_NTS 30.12.2024: WBC 18.3 x10^9/L | RBC 5.2 x10^12/L | HGB 134.0 g/L | HCT 41.6 % | MCV 80.5 fL | MCH 25.9 pg | MCHC 322.0 g/L | PLT 371.0 x10^9/L | PDW 14.7 fL | NRBC 0.0 | NRBC% 0.0 | PT-INR 1.02 1 | PT-R 1.02 1 | PT-T 14.4 s | REPT_NTS 31.12.2024: WBC 13.8 x10^9/L | RBC 4.7 x10^12/L | HGB 122.0 g/L | HCT 38.0 % | MCV 80.7 fL | MCH 25.9 pg | MCHC 321.0 g/L | PLT 359.0 x10^9/L | PCT 0.42 % | MPV 11.6 fL | RDW 13.8 % | NRBC 0.0 | NRBC% 0.0 | NE 72.6 % | LY 14.7 % | MON 11.1 % | EO 1.2 % | BA 0.4 % | NEABS 10.03 x10^9/L | LYABS 2.0 x10^9/L | MOABS 1.5 x10^9/L | EOABS 0.17 x10^9/L | BAABS 0.06 x10^9/L | NEUM 61.0 % | TYCM 5.0 % | LYM 16.0 % | MOM 18.0 % | EOM 0.0 | BAM 0.0 | MMYM 0.0 | MYM 0.0 | PMYM 0.0 | MYBLM 0.0 | PLBM 0.0 | PLYM 0.0 | NEDBBM 0.0 | NEDBLM 0.0 | NRBCM 0.0 | MLEU text | MERYM Makrocytóza.,Polychromázie. | MPLTM Makrotrombocyty. | Podpis Kolaczek | DOORDINA text | REPT_NTS 05.01.2025: WBC 10.4 x10^9/L | RBC 4.7 x10^12/L | HGB 121.0 g/L | HCT 37.6 % | MCV 80.5 fL | MCH 25.9 pg | MCHC 322.0 g/L | PLT 402.0 x10^9/L | PCT 0.43 % | MPV 10.6 fL | RDW 13.9 % | NRBC 0.0 | NRBC% 0.0 | NE 64.1 % | LY 24.2 % | MON 9.8 % | EO 1.3 % | BA 0.6 % | NEABS 6.67 x10^9/L | LYABS 2.5 x10^9/L | MOABS 1.0 x10^9/L | EOABS 0.13 x10^9/L | BAABS 0.06 x10^9/L | REPT_NTS
+
+Mikrobiologie:
+Datum: 30.12.2024 07:00 Diagnóza: A09 - Jiná gastroenteritida a kolitida infekčního a NS původu Výsledek: Q_STOLIC: Příjem: 30.12.2024 Laboratorní číslo:STO-02474 Vyšetření: Výtěr z konečníku Aerobní kultivace: Nález: Běžná flóra stolice BV+C I   Poznámka: BV+C I ------------------- Datum: 30.12.2024 07:00 Diagnóza: A09 - Jiná gastroenteritida a kolitida infekčního a NS původu Výsledek: Q_STORAN: Příjem: 30.12.2024 Laboratorní číslo:STV-01036 Vyšetření: Přímý průkaz antigenů virů ve stolici: ROTAVIRUS: negativní ADENOVIRUS: negativní NOROVIRUS: negativní ASTROVIRUS: negativní MemoViry Omezení používaných testů: Vzorky je nutné odebírat v období výskytu symptomů (průjem, zvracení). Negativní výsledek testů nevylučuje možnou infekci způsobenou viry. Důvodem může být přerušované vylučování viru, nízká virová nálož, špatný odběr vzorku nebo nevhodné transportní podmínky.   -------------------- Datum: 30.12.2024 07:00 Diagnóza: A09 - Jiná gastroenteritida a kolitida infekčního a NS původu Výsledek: Q_STOLIC: Příjem: 30.12.2024 Laboratorní číslo:STO-02475 Vyšetření: Výtěr z konečníku Aerobní kultivace: Nález: Běžná flóra stolice BV + C II   Poznámka: BV + C II -------------------- Datum: 30.12.2024 07:00 Diagnóza: A09 - Jiná gastroenteritida a kolitida infekčního a NS původu Výsledek: Q_CLD: Příjem: 30.12.2024 Laboratorní číslo:CLO-00650 Vyšetření: Přímý průkaz antigenu a toxinu Clostridium difficile ve stolici Antigen CLDI: POZITIVNÍ Toxin A/B CLDI: POZITIVNÍ prvotní nález MemoCD Upozornění: Test není vhodný k monitoraci léčby. -------------------- Datum: 31.12.2024 07:00 Diagnóza: A09 - Jiná gastroenteritida a kolitida infekčního a NS původu Výsledek: Q_STOLIC: Příjem: 31.12.2024 Laboratorní číslo:STO-02492 Vyšetření: Výtěr z konečníku Aerobní kultivace: Nález: Běžná flóra stolice BV + C III   Poznámka: BV + C III</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="894840" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

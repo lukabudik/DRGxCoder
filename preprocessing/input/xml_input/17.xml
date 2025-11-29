@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="17_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="17">
+      <dsip:rodcis>1482486442</dsip:rodcis>
+      <dsip:jmeno>Jan</dsip:jmeno>
+      <dsip:prijmeni>Novák</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>M</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-07T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>1482486442</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>1482486442</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="užívá potravinové doplňky - vit C" typ_med="P">
+          <dsip:dat_od format="D">2025-01-07</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="D" typ_med="P">
+          <dsip:dat_od format="D">2025-01-07</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="B" typ_med="P">
+          <dsip:dat_od format="D">2025-01-07</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="hořčík" typ_med="P">
+          <dsip:dat_od format="D">2025-01-07</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="Essentiale" typ_med="P">
+          <dsip:dat_od format="D">2025-01-07</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.17.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-08T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-07T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-08T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-08T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">43-letý muž přijat na interní oddělení pro akutní intoxikaci alkoholem. Při příjmu 4,23 promile. Nalezen ležící v parku, podchlazení. Vzhledem k rozsáhlému hematomu v oblasti L páteře doplněn RTG LS páteře a pánve. Dále CT mozku - vše bez traumatických změn. 7.1.14:45 pacient odchází z oddělení, kontaktována PČR. Pacient přiveden na INT JIP, nutná kurtace. Pacient výrazně agresivní. Po vystřízlivění KP kompenzovaný propuštěný do domácí a ambulantní péče.    EKG AS reg., SR, TF 63/min, osa horizont., PQ 160 ms, QRS 80 ms, ST izoel., T pozit., PZ V4, bez známek akutní ischemie či arytmie.   Pac. předáváme do ambulantní péče, kontrola u PL do tří dnů. Kontrola ve spádové interní ambulanci dle plánu.   Poučen o svém zdravotním stavu a medikaci.   Odvoz vlastní   Předpis léků po jednom balení:0
+
+Biochemie:
+07.01.2025: MO 3.5 mmol/L | KR 62.0 umol/l | GFR 1.91 ml/s/1,73 m2 | KM 363.0 umol/l | NA 142.0 mmol/L | KA 4.09 mmol/L | CL 101.0 mmol/L | FIB4 1.84 - | BI 16.2 umol/l | AL 1.09 ukat/l | AS 1.28 ukat/l | GM 0.48 ukat/l | AF 1.7 ukat/l | CH 5.31 mmol/L | GL 6.17 mmol/L | AB 42.3 g/L | CRP 2.4 mg/L | ETA 4.21 g/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | UCOL bezbarvá | UCLA bez zákalu | UPH 7.0 - | USH 1.003 - | UBILK 0.0 | UGK-S 0.0 | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 0.0 | UERY 0.0 | UMTD negativní | UBZO negativní | UCOC negativní | UAMP negativní | UEXT negativní | UTHC negativní | UOPI negativní | UBAR negativní | UTCA negativní | REPT_NTS 07.01.2025: NA 149.0 mmol/L | KA 3.56 mmol/L | CL 104.0 mmol/L | GL 6.41 mmol/L | ČAS_MĚŘ. 17:35 | TYP_ODB arteriální
+
+Hematologie:
+07.01.2025: WBC 7.9 x10^9/L | RBC 4.9 x10^12/L | HGB 148.0 g/L | HCT 43.7 % | MCV 89.0 fL | MCH 30.1 pg | MCHC 339.0 g/L | PLT 227.0 x10^9/L | PDW 12.3 fL | NRBC 0.0 | NRBC% 0.0 | DDI 2.83 mg/L FEU | REPT_NTS 
+ 
+Medikace: PLASMALYTE, HEMINEVRIN</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="268050" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

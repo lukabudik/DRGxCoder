@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="3_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="3">
+      <dsip:rodcis>6822659329</dsip:rodcis>
+      <dsip:jmeno>Jan</dsip:jmeno>
+      <dsip:prijmeni>Novák</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>M</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2024-12-13T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>6822659329</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>6822659329</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="TEZEFORT" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="BISOPROLOL MYLAN" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="JARDIANCE" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="LATANOPROST STADA" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="SIMBRINZA" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="CLEXANE" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PARACETAMOL ACCORD" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="NOVALGIN" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="INDOMETACIN BERLIN-CHEMIE" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="NEODOLPASSE" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PANTOPRAZOL +PHARMA" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PANTOPRAZOLE ZENTIVA" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="IBUMAX" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="THIAMIN LÉČIVA" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="DIPIDOLOR" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ACC INJEKT" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="AMOXICILLIN/CLAVULANIC ACID OLIKLA" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="RIVOTRIL" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="KETONAL" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="CONCOR COR" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ATROVENT" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="GENTAMICIN LEK" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ENAP" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="MEROPENEM APTAPHARMA" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ALBUNORM" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="MOVENTIG" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="DEGAN" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="QUETIAPINE POLPHARMA" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="FUROSEMID HAMELN" typ_med="P">
+          <dsip:dat_od format="D">2024-12-13</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.3.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-02T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2024-12-13T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-02T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-02T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">77letý pacient přijat na ARO Kyjov z CHZ3 14.12.2024. Hospitalizován od 13.12. na chirurgii k observaci pro fr VI-VII žebra vlevo po pádu z kola v ebrietě. Při příjmu UZ břicha a CT mozku bez patologie, na RTG fr.žeber. 14.12. v 10:45 náhlé lapavé dýchání, bulby stočeny nahoru, ztráta vědomí - ihned zahájena KPCR - přivolán ARO tým. Po příchodu na EKG FIKO, zajištěny DC OTK, podán 2x výboj 200J, podán 1mg Adrenalinu, 150mg Amiodaronu. ROSC 7 min. K sedaci podán Apaurin 10mg + Rocuronium 50mg. Převoz na ARO oddělení. Příjem v 11:00. EKG bez akutních změn, troponin 39..76, hypokalemie 3,2, hypomagnezemie, orientační ECHO bez zjevné segmentální poruchy kinetiky, bez přetížení PK, etiologie v.s. hypokalemie + kontuze myokardu. Vzhledem ke stabilitě oběhu, neagresivní UPV a tendenci k buzení již po ROSC vysazena sedace a pacient při dobrém kontaktu ve 14h extubován. 15.12. lucidní, afebrilní, neopioidní analgezie, SV s O2 4l/min, oběh stabilní - nepodán BB při SR 50/min, laboratoř bez pozoruhodností. Po domluvě z kapacitních důvodů přeložen k monitoraci vit. fcí na CHIR JIP. Zde monitorace vitálních funkcí, pro neklid nutná sedace, pro progresi zahlenění zahájena ATB terapie Amoksiklavem. Dne 16.12. nutné navýšení sedace i analgezie, ATB terapie Amoksiklavem posílena o Gentamicin. Dne 17.12. výrazné zlepšení stavu, pacient zklidněn, výrazná regrese zahlenění při bronchopneumonii, doplněno CT hrudníku pro susp. nestabilní žebra vlevo. Zde bilaterální fraktury žeber ve ventrálních a axilárních čarách, nejýraznější nález vlevo na II-V. žebru, kde i zkrácení. Dle hodnocemí traumatologa ke stabilizaci. Dne 19.12. stav beze změny, ráno přechodně pacient desaturuje s postupnou spontánní úpravou, kontrolní RTG S+P s progresí výpotků oboustranně. Následně dne 19.12. přistoupeno v celkové anestezii k operační stabilizaci žeber - stabilizace 2., 3., 4., 6. žebra vlevo, peroperačně nutná podpora oběhu Noradrenalinem v menší dávce. Po výkonu zaveden hrudní drén vlevo. Po operaci pacient ponechán v analgosedaci, na řízené ventilaci a po domluvě uložen na ARO. Zde farmakologicky sedován, napojen na UPV v režimu řízené ventilace. Hrudní dren zpočátku s leakem vzduchu, ten záhy ustává, následně rozvoj podkožního emfyzemu vlevo - dren utlačen obvazem po uvolnění opět masívní leak vzduchu. Oběhově nestabilní, mírně se navyšující podpora Noradrenalinem, opakovaně bolusy tekutin s efektem. Diureza po volumoterapii obnovena.  Kultivačně ze sputa Enterobacter cloacae susp. ESBL, Meropenem dle citlivosti, izolace. 20.12. přes neagresivní parametry UPV stacionární výrazný airleak, Enterobacter s ampC ne ESBL, izolace ukončena. Dne 21.12 stav setrvalý, mírně regreduje airleak z hrudní drenáže, kontrola chirurgem, nadále ponechán v sedaci, 23.12- po domluvě s chirurgem redony ex., AS ponecháno, kontrolní CT hrudníku s významným výpotkem vpravo- zaveden Pleuracan, odvádí slámovou tekutinu. Nadále hluboká sedace. Dle výsledku CT zaveden chirurgem nový hrudní drén- pod ránou l.sin, zatím zvýšen podtlak na 15cmH2O.  24.12. ráno propofol STOP, pacient se budí do omezeného kontaktu, výrazná HT, třes. Proto do medikace Dexmedetomidin, převádím na podpůrnou ventilaci, bez obtíží, eupnoický, klidný.  26.12. snižujeme sedaci, převeden na podpůrnou ventilaci, ale ventilační parametry během dne spíše hraniční - večer pro tachypnoi sedace navýšena a převeden na řízenou ventilaci. Hrudní dren bez leaku vzduchu. 27.12. provedena operační tracheostomie. Výkon bez komplikací. 28.12. ukončena ATB terapie, započato s pozvolným snižováním analgosedace. 30.12. vytaženy hrudní dreny. Pacient závislý na UPV pozvolně se daří snižovat onspirační podporu. Bez známnek akutního infektu, proto nadále bez ATB. Převládá chronická ošetřovatelská péče a management intermitebtního neklidu. 2.1.2025 dle domluvy přeložen na NIP Surgal Clinic.
+
+Biochemie:
+Všechny: 19.12.2024: MO 6.3 mmol/L | KR 67.0 umol/l | GFR 1.46 ml/s/1,73 m2 | NA 140.0 mmol/L | KA 3.82 mmol/L | PCT 0.22 ug/l | CL 106.0 mmol/L | GL 8.13 mmol/L | CRP 162.4 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | KPH 7.345 - | KPC 6.86 kPa | KPO 13.65 kPa | KAC 27.5 mmol/L | KBE 0.9 mmol/L | KSB 1.8 mmol/L | KSC 24.7 mmol/L | KSA 97.5 % | ČAS_MĚŘ. 05:08 | KOMENTÁŘ text | REPT_NTS | TYP_ODB arteriální 19.12.2024: KPH 7.388 - | KPC 6.6 kPa | KPO 6.19 kPa | KAC 29.1 mmol/L | KBE 3.1 mmol/L | KSB 4.1 mmol/L | KSC 26.7 mmol/L | KSA 81.9 % | ČAS_MĚŘ. 07:33 | REPT_NTS | TYP_ODB arteriální 19.12.2024: NA 139.0 mmol/L | KA 3.62 mmol/L | CL 101.0 mmol/L | GL 8.98 mmol/L | KPH 7.39 - | KPC 6.11 kPa | KPO 8.81 kPa | KAC 27.1 mmol/L | KBE 1.6 mmol/L | KSB 2.2 mmol/L | KSC 25.5 mmol/L | KSA 92.6 % | ČAS_MĚŘ. 12:51 | REPT_NTS | TYP_ODB arteriální 19.12.2024: NA 141.0 mmol/L | KA 3.91 mmol/L | CL 102.0 mmol/L | GL 6.64 mmol/L | KPH 7.433 - | KPC 5.56 kPa | KPO 11.84 kPa | KAC 27.2 mmol/L | KBE 2.7 mmol/L | KSB 2.9 mmol/L | KSC 26.4 mmol/L | KSA 97.2 % | ČAS_MĚŘ. 18:58 | REPT_NTS | TYP_ODB arteriální 19.12.2024: NA 138.0 mmol/L | KA 3.78 mmol/L | CL 102.0 mmol/L | GL 6.02 mmol/L | KPH 7.395 - | KPC 6.28 kPa | KPO 9.68 kPa | KAC 28.2 mmol/L | KBE 2.6 mmol/L | KSB 3.3 mmol/L | KSC 26.3 mmol/L | KSA 94.4 % | ČAS_MĚŘ. 23:36 | REPT_NTS | TYP_ODB arteriální 20.12.2024: MO 5.7 mmol/L | KR 74.0 umol/l | GFR 1.4 ml/s/1,73 m2 | NA 142.0 mmol/L | KA 4.57 mmol/L | PCT 0.27 ug/l | CL 107.0 mmol/L | CA 1.84 mmol/L | CA-KOR 2.3 mmol/L | PA 0.89 mmol/L | MG 0.86 mmol/L | FIB4 2.53 - | BI 14.0 umol/l | BP 7.6 umol/l | AL 0.28 ukat/l | AS 0.55 ukat/l | GM 1.16 ukat/l | AF 0.65 ukat/l | AM 1.15 ukat/l | LIP 1.63 ukat/l | CH 3.4 mmol/L | HDL 1.05 mmol/L | LDL 1.95 mmol/L | TR 1.94 mmol/L | NONHDL 2.35 mmol/L | GL 4.97 mmol/L | PREA 0.125 g/L | AB 21.7 g/L | CRP 158.9 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | KPH 7.387 - | KPC 6.78 kPa | KPO 9.23 kPa | KAC 29.9 mmol/L | KBE 3.7 mmol/L | KSB 4.9 mmol/L | KSC 27.1 mmol/L | KSA 93.5 % | SODIK 142.0 mmol/L | CLKOR 105.0 mmol/L | UAKOR 4.7 mmol/L | PI 1.61 mmol/L | ALBI 6.0 g/L | SID 37.5 mmol/L | AG 9.7 mmol/L | AGKOR 14.3 mmol/L | UCOL sv.jantar. | UCLA bez zákalu | UPH 5.0 - | USH 1.031 - | UBILK 0.0 | UGK-S 0.0 | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 15.0 10^6/L | UERY 10.0 10^6/L | UKEPI &lt; 1 | UHLEN oj. | ČAS_MĚŘ. | KOMENTÁŘ text | REPT_NTS | TYP_ODB arteriální 20.12.2024: GL 6.36 mmol/L | ČAS_MĚŘ. 16:54 | REPT_NTS | TYP_ODB arteriální 20.12.2024: NA 140.0 mmol/L | KA 3.83 mmol/L | CL 103.0 mmol/L | GL 6.45 mmol/L | KPH 7.438 - | KPC 5.79 kPa | KPO 9.36 kPa | KAC 28.7 mmol/L | KBE 3.9 mmol/L | KSB 4.5 mmol/L | KSC 27.5 mmol/L | KSA 94.7 % | ČAS_MĚŘ. 18:32 | REPT_NTS | TYP_ODB arteriální 01.01.2025: NA 142.0 mmol/L | KA 3.72 mmol/L | CL 106.0 mmol/L | GL 7.51 mmol/L | KPH 7.461 - | KPC 4.9 kPa | KPO 11.12 kPa | KAC 25.6 mmol/L | KBE 2.0 mmol/L | KSB 1.8 mmol/L | KSC 26.0 mmol/L | KSA 96.9 % | ČAS_MĚŘ. 18:50 | TYP_ODB arteriální 02.01.2025: MO 12.7 mmol/L | KR 75.0 umol/l | GFR 1.39 ml/s/1,73 m2 | NA 143.0 mmol/L | KA 4.68 mmol/L | PCT 0.11 ug/l | CL 111.0 mmol/L | CA 2.12 mmol/L | CA-KOR 2.45 mmol/L | PA 1.07 mmol/L | MG 0.76 mmol/L | FIB4 0.8 - | BI 9.3 umol/l | BP 3.4 umol/l | AL 0.49 ukat/l | AS 0.5 ukat/l | GM 2.94 ukat/l | AF 2.08 ukat/l | AM 0.87 ukat/l | LIP 1.14 ukat/l | CH 2.74 mmol/L | HDL 0.74 mmol/L | LDL 1.72 mmol/L | TR 1.16 mmol/L | NONHDL 2.0 mmol/L | GL 6.39 mmol/L | AB 26.8 g/L | CRP 48.8 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | KPH 7.422 - | KPC 5.49 kPa | KPO 12.81 kPa | KAC 26.2 mmol/L | KBE 1.6 mmol/L | KSB 1.8 mmol/L | KSC 25.6 mmol/L | KSA 97.6 % | SODIK 143.0 mmol/L | CLKOR 109.0 mmol/L | UAKOR 3.8 mmol/L | PI 1.95 mmol/L | ALBI 7.5 g/L | SID 35.7 mmol/L | AG 10.5 mmol/L | AGKOR 13.8 mmol/L | UCOL žlutá | UCLA bez zákalu | UPH 8.5 - | USH 1.021 - | UBILK 1.0 arb.j. | UGK-S 0.0 | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 8.0 10^6/L | UERY 4.0 10^6/L | ČAS_MĚŘ. | KOMENTÁŘ text | TYP_ODB arteriální
+
+Hematologie:
+Všechny: 19.12.2024: WBC 8.4 x10^9/L | RBC 2.9 x10^12/L | HGB 98.0 g/L | HCT 30.6 % | MCV 106.6 fL | MCH 34.1 pg | MCHC 320.0 g/L | PLT 213.0 x10^9/L | PDW 13.4 fL | NRBC 0.0 | NRBC% 0.0 | PT-INR 0.87 1 | PT-R 0.88 1 | PT-T 12.5 s | B_BGAB0R 0 Rh(D) pozitivní | P_EABQ_* negativní | REPT_NTS | S_EABQ_A negativní 19.12.2024: WBC 8.9 x10^9/L | RBC 2.6 x10^12/L | HGB 88.0 g/L | HCT 27.1 % | MCV 105.0 fL | MCH 34.1 pg | MCHC 325.0 g/L | PLT 217.0 x10^9/L | PDW 12.1 fL | NRBC 0.01 x10^9/L | NRBC% 0.1 % | APTT-T 44.9 s | aPTT-R 1.38 1 | PT-INR 0.9 1 | PT-R 0.91 1 | PT-T 12.9 s | FIB 6.47 g/L | REPT_NTS | Poznámka text 20.12.2024: WBC 8.6 x10^9/L | RBC 2.8 x10^12/L | HGB 94.0 g/L | HCT 29.8 % | MCV 107.2 fL | MCH 33.8 pg | MCHC 315.0 g/L | PLT 248.0 x10^9/L | PCT 0.28 % | MPV 11.4 fL | RDW 15.4 % | NRBC 0.01 x10^9/L | NRBC% 0.1 % | NE 68.6 % | LY 12.3 % | MON 13.3 % | EO 5.2 % | BA 0.6 % | APTT-T 47.0 s | aPTT-R 1.45 1 | NEABS 5.93 x10^9/L | LYABS 1.1 x10^9/L | MOABS 1.1 x10^9/L | EOABS 0.45 x10^9/L | BAABS 0.05 x10^9/L | PT-INR 0.91 1 | PT-R 0.91 1 | PT-T 13.0 s | REPT_NTS | Poznámka text 01.01.2025: WBC 13.8 x10^9/L | RBC 2.9 x10^12/L | HGB 95.0 g/L | HCT 29.7 % | MCV 103.5 fL | MCH 33.1 pg | MCHC 320.0 g/L | PLT 604.0 x10^9/L | PDW 14.6 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS | Poznámka text 02.01.2025: WBC 13.9 x10^9/L | RBC 2.7 x10^12/L | HGB 88.0 g/L | HCT 27.6 % | MCV 102.6 fL | MCH 32.7 pg | MCHC 319.0 g/L | PLT 541.0 x10^9/L | PCT 0.63 % | MPV 11.6 fL | RDW 15.0 % | NRBC 0.0 | NRBC% 0.0 | NE 72.9 % | LY 15.7 % | MON 6.6 % | EO 3.9 % | BA 0.9 % | APTT-T 45.0 s | aPTT-R 1.34 1 | NEABS 10.09 x10^9/L | LYABS 2.2 x10^9/L | MOABS 0.9 x10^9/L | EOABS 0.54 x10^9/L | BAABS 0.12 x10^9/L | PT-INR 1.0 1 | PT-R 1.0 1 | PT-T 14.2 s | REPT_NTS | Poznámka text
+
+Mikrobiologie:
+Q_MRSA-K: Příjem: 14.12.2024 Laboratorní číslo:KLK-05454 Vyšetření: Výtěr z krku (+ MRSA) Aerobní kultivace: Nález: Běžná orofaryngeální flóra Nález: Staphylococcus aureus + : Oxacilin (1) CIT Clindamycin CIT Erytromycin (Azitromycin,Klaritromycin) CIT Cotrimoxazol CIT Tetracyklin CIT Ciprofloxacin ZDC Gentamicin (7) CIT Rifampicin CIT Tigecyclin CIT Moxifloxacin CIT Linezolid CIT Neomycin (lokál.apl.) CIT Bacitracin (lokál.apl.) XX Mupirocin (lokál.apl.) CIT 1) Oxacilin - výsledek platí též pro Amoxicilin/klavulán.kys, Ampicilin/sulbactam a cefalosporiny 1. a 2.generace 7) Gentamicin, Amikacin - u systémových infekcí musí být používány v kombinaci s jinými účinnými antibiotiky. CIT=citlivé, ZDC=citlivé, při zvýšeném dávkovacím režimu nebo při koncentrování ATB v místě infekce. REZ=rezistentní, XX=výsledek pro konzultaci s ATB střediskem Nález: Enterobacter cloacae complex + : Ampicillin REZ Amoxicilin/klavul. REZ Ampicilin/sulbactam i.v. REZ Cefuroxim i.v. (2) XX Cotrimoxazol CIT Ciprofloxacin CIT Piperacillin/tazobactam CIT Cefotaxim CIT Ceftazidim CIT Gentamicin (7) CIT Amikacin (7) CIT Moxifloxacin CIT Meropenem CIT Ertapenem XX Cefepim CIT Tigecyclin XX Ceftazidim/avibactam CIT XX =výsledek pro konzultaci s ATB střediskem 2) Cefuroxim (pokud je uveden na výsledkovém listě) - platí pouze pro i.v. aplikaci. 7) Gentamicin, Amikacin - u systémových infekcí musí být používány v kombinaci s jinými účinnými antibiotiky. CIT=citlivé, REZ=rezistentní, XX=výsledek pro konzultaci s ATB střediskem Nález: Pseudomonas aeruginosa + : Ciprofloxacin ZDC Amikacin (7) CIT Ceftazidim ZDC Piperacillin/tazobactam ZDC Meropenem CIT Cefepim ZDC Ceftazidim/avibactam CIT 7) Amikacin - u systémových infekcí musí být používán v kombinaci s jinými účinnými antibiotiky. CIT=citlivé, ZDC=citlivé, při zvýšeném dávkovacím režimu nebo při koncentrování ATB v místě infekce. REZ=rezistentní, XX=výsledek pro konzultaci s ATB střediskem Cílená kultivace MRSA: Nález: NEGATIVNÍ vstupní screening Poznámka: vstupní screening
+Q_MOČ-PM: Příjem: 17.12.2024 Laboratorní číslo:MOC-08221 Vyšetření: Moč z PMK Aerobní kultivace: Nález: Bez průkazu mikroorganismů. PMK dnes 4. den ATB terapie: 3. den AMOXICILLIN/CLAVULAMIC 1,2g á 8hodin Poznámka: PMK dnes 4. den ATB terapie: 3. den AMOXICILLIN/CLAVULAMIC 1,2g á 8hodin
+Q_SPUTUM: Příjem: 18.12.2024 Laboratorní číslo:KLO-06513 Vyšetření: Sputum Mikroskopie: epitelie dlaž., leukocyty +++, g-tyčky Aerobní kultivace: Nález: Enterobacter cloacae complex + Kmen produkuje cefalosporinázu AmpC. Pro možné selhání je obecně doporučováno vyloučit z terapie cefalosporiny, i když se jeví in vitro jako citlivé (neplatí pro cefalosporiny 4.generace - cefepim). : Ampicillin REZ Amoxicilin/klavul. REZ Ampicilin/sulbactam i.v. REZ Cefuroxim i.v. (2) XX Cotrimoxazol REZ Ciprofloxacin CIT Piperacillin/tazobactam CIT Cefotaxim CIT Ceftazidim CIT Gentamicin (7) CIT Amikacin (7) CIT Moxifloxacin CIT Meropenem CIT Ertapenem XX Cefepim CIT Tigecyclin XX Ceftazidim/avibactam CIT XX =výsledek pro konzultaci s ATB střediskem 2) Cefuroxim (pokud je uveden na výsledkovém listě) - platí pouze pro i.v. aplikaci. 7) Gentamicin, Amikacin - u systémových infekcí musí být používány v kombinaci s jinými účinnými antibiotiky. CIT=citlivé, REZ=rezistentní, XX=výsledek pro konzultaci s ATB střediskem Amoxicilin/clavulanic acid 1,2g - 4. den Poznámka: Amoxicilin/clavulanic acid 1,2g - 4. den
+Q_ETAS: Příjem: 19.12.2024 Laboratorní číslo:KLO-06545 Vyšetření: Endotracheální aspirát Mikroskopie: dlaždicové epitelie Aerobní kultivace: Nález: Enterobacter cloacae complex + Kmen produkuje cefalosporinázu AmpC. Pro možné selhání je obecně doporučováno vyloučit z terapie cefalosporiny, i když se jeví in vitro jako citlivé (neplatí pro cefalosporiny 4.generace - cefepim). : Ampicillin REZ Amoxicilin/klavul. REZ Ampicilin/sulbactam i.v. REZ Cefuroxim i.v. (2) XX Cotrimoxazol CIT Ciprofloxacin CIT Piperacillin/tazobactam CIT Cefotaxim CIT Ceftazidim CIT Gentamicin (7) CIT Amikacin (7) CIT Moxifloxacin CIT Meropenem CIT Ertapenem XX Cefepim CIT Tigecyclin XX Ceftazidim/avibactam CIT XX =výsledek pro konzultaci s ATB střediskem 2) Cefuroxim (pokud je uveden na výsledkovém listě) - platí pouze pro i.v. aplikaci. 7) Gentamicin, Amikacin - u systémových infekcí musí být používány v kombinaci s jinými účinnými antibiotiky. CIT=citlivé, REZ=rezistentní, XX=výsledek pro konzultaci s ATB střediskem Cílená kultivace MRSA: Nález: NEGATIVNÍ vstupní screening ATB: Gentamicin, Amoxicillin Poznámka: vstupní screening ATB: Gentamicin, Amoxicillin
+Q_ETAS: Příjem: 23.12.2024 Laboratorní číslo:KLO-06581 Vyšetření: Endotracheální aspirát Mikroskopie: bez nálezu Aerobní kultivace: Nález: Bez průkazu mikroorganismů. ATB : Meropenem Poznámka: ATB : Meropenem
+Q_ETAS: Příjem: 26.12.2024 Laboratorní číslo:KLO-06604 Vyšetření: Endotracheální aspirát Mikroskopie: leukocyty+, epitelie++ Aerobní kultivace: Nález: Běžná orofaryngeální flóra (susp. kontaminace) atb: Meropenem (8. den) Poznámka: atb: Meropenem (8. den)
+Q_ETAS: Příjem: 30.12.2024 Laboratorní číslo:KLO-06652 Vyšetření: Endotracheální aspirát Mikroskopie: epitelie+,leukocyty++ Aerobní kultivace: Nález: Candida species oj. Nález: Staphylococcus spp. (koaguláza negativní) po pomnožení</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="269266" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

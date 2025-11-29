@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="9_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="9">
+      <dsip:rodcis>4664352437</dsip:rodcis>
+      <dsip:jmeno>Jan</dsip:jmeno>
+      <dsip:prijmeni>Novák</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>M</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-26T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>4664352437</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>4664352437</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PRESTARIUM NEO" typ_med="P">
+          <dsip:dat_od format="D">2025-01-26</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="CLEXANE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-26</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="AGEN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-26</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="AZEPO" typ_med="P">
+          <dsip:dat_od format="D">2025-01-26</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="BETADINE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-26</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.9.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-31T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-26T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-31T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-31T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">Pac. přijata k plánované operaci, ta provedena laparoskopicky asistovanou vaginální technikou. Po operaci monitorování na JIP, bez výraznějších komplikací, poté přeložena na standardní lůžko gyn. oddělení. Zvyklá prevence TEN, subj. bez výraznějších potíží. Při propuštění břicho klidné, nebolestivé, porty se hojí p.p., nekrvácí, přiměřený spotting. V celkově dobrém stavu poučena a propuštěna do domácí a ambulantní péče.
+
+Biochemie:
+27.01.2025: MO 3.5 mmol/L | NA 134.0 mmol/L | KA 4.14 mmol/L | CL 102.0 mmol/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 
+28.01.2025: MO 3.2 mmol/L | NA 135.0 mmol/L | KA 4.19 mmol/L | CL 102.0 mmol/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 
+30.01.2025: CRP 2.0 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | UCOL sv. žlutá | UCLA bez zákalu | UPH 6.0 - | USH 1.009 - | UBILK 0.0 | UGK-S 0.0 | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 1.0 10^6/L | UERY 0.0
+
+Hematologie:
+28.01.2025: WBC 9.3 x10^9/L | RBC 4.3 x10^12/L | HGB 126.0 g/L | HCT 37.2 % | MCV 86.7 fL | MCH 29.4 pg | MCHC 339.0 g/L | PLT 217.0 x10^9/L | PDW 10.5 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS 
+30.01.2025: WBC 4.8 x10^9/L | RBC 4.3 x10^12/L | HGB 128.0 g/L | HCT 37.2 % | MCV 87.1 fL | MCH 30.0 pg | MCHC 344.0 g/L | PLT 208.0 x10^9/L | PDW 10.7 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="554979" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

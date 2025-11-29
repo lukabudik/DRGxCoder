@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="28_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="28">
+      <dsip:rodcis>6580463469</dsip:rodcis>
+      <dsip:jmeno>Jan</dsip:jmeno>
+      <dsip:prijmeni>Novák</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>M</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-03T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>6580463469</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>6580463469</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="Kanavit i.m. t.č. nepodán" typ_med="P">
+          <dsip:dat_od format="D">2025-01-03</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.28.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-03T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-03T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-03T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-03T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">Donošený eutrofický novorozenec přijat na oddělení OPN pro rozvoj dyspnoe. Porod 38+6 t.g. spontánní, poloha záhlavím, zkalená plodová voda, poporodní adaptace komplikována rozvojem dyspnoe novorozence /ASTRUP ve 20 minutě - pH 7,12, pCO2 7,12 kPa, pO2 8,07, BE -12 mmol/l/. Zajištěn HFNO od 13.30h - na průtoku 6l a při frakci 40% saturace 92%. Dle RTG susp plášťový pneumothorax vlevo, obraz vlhké plíce. Stav konzultován ve FDN Brno, odd 56, Černopolní, domluven překlad na vyšší pracoviště. V laboratorních parametrech vysoká hodnota IL-6, IT index t.č není k dispozici, odebrány mikrob. odběry vč. hemokultury. Snaha o kanylaci neúspěšná.
+
+Biochemie:
+03.01.2025: MO 2.7 mmol/L | NA 135.0 mmol/L | KA 5.25 mmol/L | CL 105.0 mmol/L | FIB4 0.0 | BI 36.2 umol/l | BP 6.3 umol/l | AL 0.21 ukat/l | AS 0.96 ukat/l | GM 0.78 ukat/l | AF 2.63 ukat/l | GL 6.2 mmol/L | 
+IL6 956.4 ng/L |
+CRP 0.2 mg/L | 
+ASTRUP:
+12:08| KPH 7.12 - | KPC 7.23 kPa | KPO 8.07 kPa | KAC 17.2 mmol/L | KBE -12.4 mmol/L | KSB -12.1 mmol/L | KSC 14.8 mmol/L | KSA 78.4 % |
+14:25 
+KPH 7.28 - | KPC 6.44 kPa | KPO 5.29 kPa | KAC 22.6 mmol/L | KBE -4,3 mmol/L | KSB -4 mmol/L | KSC 20,6 mmol/L | KSA 66,4 % |
+
+Hematologie:
+03.01.2025: WBC 6.3 x10^9/L | RBC 5.0 x10^12/L | HGB 181.0 g/L | HCT 54.7 % | MCV 108.5 fL | MCH 35.9 pg | MCHC 331.0 g/L | PLT 247.0 x10^9/L | PDW 9.3 fL | NRBC 0.46 x10^9/L | NRBC% 7.3 % | NEUM dodáme | TYCM dodáme | LYM dodáme | MOM dodáme | EOM dodáme | BAM dodáme | MMYM dodáme | MYM dodáme | PMYM dodáme | MYBLM dodáme | PLBM dodáme | PLYM dodáme | NEDBBM dodáme | NEDBLM dodáme | NRBCM dodáme | MLEU dodáme | MERYM dodáme | MPLTM dodáme | Podpis dodáme</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="536584" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

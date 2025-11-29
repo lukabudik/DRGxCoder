@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="20_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="20">
+      <dsip:rodcis>5682802112</dsip:rodcis>
+      <dsip:jmeno>Jan</dsip:jmeno>
+      <dsip:prijmeni>Novák</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>M</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-08T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>5682802112</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>5682802112</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ATORVASTATIN RATIOPHARM GMBH" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ZELIFTAN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="DORZOGEN COMBI" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="IBUMAX" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.20.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-10T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-08T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-10T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-10T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">Pacient přijat plánovaně na kožní oddělení ke kryodestrukci ložiska při kořeni nosu dusíkem a současně zaléčení mykotického postižení nehtových plotének DKK. Vstupní odběry bez pozoruhodné patologie. Provedena kryalizace ložiska u kořene nosu
+a na levém nosním křídle. Výkon bez komplikací. Aplikováno krytí s antibiotikem. Následně aplikace obkladu vysoušecího roztoku hypermanganu. Na mykotické nehtové ploténky aplikujeme antimykotický roztok. K promazání kůže po těle zvoleno indiferentní krémové externum. Za této terapie došlo k mírnému zaschnutí projevů. přítomen reaktivní otok a zarudnutí v okolí. Při propuštění je pacient afebrilní, TK i KP kompenzovaný.
+
+Biochemie:
+08.01.2025: MO 8.0 mmol/L | KR 85.0 umol/l | GFR 1.23 ml/s/1,73 m2 | NA 138.0 mmol/L | KA 4.94 mmol/L | CL 108.0 mmol/L | FIB4 2.56 - | BI 10.9 umol/l | AL 0.33 ukat/l | AS 0.39 ukat/l | GM 0.3 ukat/l | AF 0.99 ukat/l | GL 5.72 mmol/L | CRP 1.9 mg/L | ASLO 188.0 kIU/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | UCOL žlutá | UCLA bez zákalu | UPH 5.0 - | USH 1.019 - | UBILK 0.0 | UGK-S 0.0 | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 1.0 10^6/L | UERY 3.0 10^6/L | UHLEN oj. | REPT_NTS
+
+Hematologie:
+08.01.2025: WBC 7.2 x10^9/L | RBC 4.1 x10^12/L | HGB 133.0 g/L | HCT 38.9 % | MCV 94.0 fL | MCH 32.1 pg | MCHC 342.0 g/L | PLT 165.0 x10^9/L | PDW 12.3 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="454824" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

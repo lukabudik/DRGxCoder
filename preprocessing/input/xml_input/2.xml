@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="2_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="2">
+      <dsip:rodcis>2650632490</dsip:rodcis>
+      <dsip:jmeno>Jana</dsip:jmeno>
+      <dsip:prijmeni>Nováková</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>F</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-02T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>2650632490</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>2650632490</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="Propofol" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="Sufentanil" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="Noradrenalin" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="krystaloidy" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="clexane" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="furosemid" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="humulin" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PANTOPRAZOLE ZENTIVA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PARACETAMOL ACCORD" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="LETROX" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.2.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-03T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-02T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-03T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-03T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">Polymorbidní 57letá pacientka přivezena 2.1.2025 na UP Nem. Kyjov RZP po 35min KPR, která v čekárně na zubním, inic. FiKo, po obnově oběhu konzultace KJ FNB, neindikují transport k nim. Při příjezdu sedována, intubována, NIBP 130/90 bez NRA, AS reg 128/min. Vzhledem k UPV indikováno převzetí k další péči na ARO Kyjov. Po příjmu dozajištěny invazivní vstupy, provedeno ECHO bez výrazné segm. poruchy kinetiky, dilatace více pravostranných oddílů, plicní HT, významná Tri reg. - v porovnání s ECHO na CKTCH bez větší progrese, Trop 9tis - konzultace Dr.Zatočil IKK KJ FNB - konz. postup. Při těžkém oxygenačním selhání doplněno CTAG plicnice - bez průkazu PE. Postupně klesající FiO2, oběh s podporou NRA.  Po vstupním poklesu laktátu v půrběhu odpoledne progrese metabolické acidozy, vzestup laktátu na původní hodnoty. Zajištěna dialyzační kanyla a pacientka napojena na CVVHD. Poté se oběhově mírně stabilizuje, pokles laktátu a normalizace acidozy. V odpoledních hodinách rozvoj bilaterállní mydriázy bez fotoreakce. 3.1. progrese jaterního selhání s kumulací citráru, perzistující anurie. Pro mydriázu provedeno CT mozku - maligní anoxický edém mozku, prognóza infaustní, informována rodina. Exitus laethalis v 11:05hod.
+
+Biochemie:
+Všechny: 02.01.2025: MO 4.8 mmol/L | KR 116.0 umol/l | GFR 0.75 ml/s/1,73 m2 | KM 636.0 umol/l | NA 136.0 mmol/L | KA 4.13 mmol/L | PCT 0.12 ug/l | CL 97.0 mmol/L | CA 2.12 mmol/L | CA-KOR 2.18 mmol/L | PA 3.33 mmol/L | MG 1.01 mmol/L | FIB4 5.58 - | BI 21.2 umol/l | AL 2.1 ukat/l | AS 4.47 ukat/l | GM 6.04 ukat/l | AF 4.02 ukat/l | AM 1.47 ukat/l | BNP 650.0 ng/L | TNI 9676.0 ng/L | MYO 4088.8 ug/l | CKMBM 76.87 ug/l | CK 9.62 ukat/l | CH 5.82 mmol/L | GL 19.88 mmol/L | PLAC 12.8 mmol/L | PREA 0.256 g/L | AB 37.6 g/L | CB 77.4 g/L | CRP 9.7 mg/L | TSH 6.32 mU/L | FT4 10.3 pmol/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | PHEMOL1 0.0 | PICTER1 0.0 | PLIPEM1 0.0 | B_HCT 41.3 % | B_HGB 137.7 g/L | KKH 1.4 % | KMH 0.7 % | KPH 7.114 - | KPC 6.5 kPa | KPO 9.58 kPa | KAC 15.3 mmol/L | KBE -14.1 mmol/L | KSB -14.2 mmol/L | KSC 13.7 mmol/L | KSA 85.2 % | SODIK 136.0 mmol/L | CLKOR 100.0 mmol/L | UAKOR 16.5 mmol/L | PI 5.76 mmol/L | ALBI 9.1 g/L | SID 30.2 mmol/L | AG 27.8 mmol/L | AGKOR 28.4 mmol/L | UCOL sv. žlutá | UCLA mírně zak. | UPH 7.0 - | USH 1.004 - | UBILK 4.0 arb.j. | UGK-S 4.0 arb.j. | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 37.0 10^6/L | UERY 14.0 10^6/L | UEPI 128.0 10^6/L | UKEPI &lt; 1 | UBAK něco | ČAS_MĚŘ. 09:36 | DOORDINA text | KOMENTÁŘ text | KOMENTÁŘ plazma (Li/Heparin) | REPT_NTS | TYP_ODB arteriální | VÝSLEDKY text 02.01.2025: NA 138.0 mmol/L | KA 4.33 mmol/L | CL 99.0 mmol/L | GL 9.64 mmol/L | PLAC 8.14 mmol/L | KPH 7.259 - | KPC 4.69 kPa | KPO 13.02 kPa | KAC 15.4 mmol/L | KBE -10.7 mmol/L | KSB -11.7 mmol/L | KSC 16.1 mmol/L | KSA 95.8 % | ČAS_MĚŘ. 12:30 | REPT_NTS | TYP_ODB arteriální 02.01.2025: NA 135.0 mmol/L | KA 5.8 mmol/L | CL 99.0 mmol/L | GL 5.0 mmol/L | PLAC 11.49 mmol/L | KPH 7.209 - | KPC 4.37 kPa | KPO 15.94 kPa | KAC 12.8 mmol/L | KBE -13.9 mmol/L | KSB -15.1 mmol/L | KSC 13.8 mmol/L | KSA 97.2 % | ČAS_MĚŘ. 15:52 | REPT_NTS | TYP_ODB arteriální 02.01.2025: TNI 134116.0 ng/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | KOMENTÁŘ plazma (Li/Heparin) | REPT_NTS 02.01.2025: CAI 0.189 mmol/L | ČAS_MĚŘ. 17:33 | KOMENTÁŘ okruh | REPT_NTS | TYP_ODB kapilární 02.01.2025: NA 137.0 mmol/L | KA 4.93 mmol/L | CL 99.0 mmol/L | CAI 0.889 mmol/L | GL 5.91 mmol/L | PLAC 11.23 mmol/L | KPH 7.162 - | KPC 4.82 kPa | KPO 17.13 kPa | KAC 12.6 mmol/L | KBE -15.1 mmol/L | KSB -16.0 mmol/L | KSC 13.1 mmol/L | KSA 97.3 % | ČAS_MĚŘ. 17:35 | KOMENTÁŘ systém | REPT_NTS | TYP_ODB arteriální 02.01.2025: CAI 0.143 mmol/L | ČAS_MĚŘ. 19:47 | KOMENTÁŘ okruh | REPT_NTS | TYP_ODB venózní 02.01.2025: CAI 0.756 mmol/L | ČAS_MĚŘ. 19:51 | KOMENTÁŘ systém | REPT_NTS | TYP_ODB arteriální 02.01.2025: CA 2.01 mmol/L | CA-KOR 2.12 mmol/L | AB 35.5 g/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | KOMENTÁŘ text | REPT_NTS 02.01.2025: CAI 0.184 mmol/L | ČAS_MĚŘ. 22:02 | KOMENTÁŘ okruh | TYP_ODB venózní 02.01.2025: NA 138.0 mmol/L | KA 3.51 mmol/L | CL 99.0 mmol/L | CAI 0.821 mmol/L | PLAC 5.03 mmol/L | KPH 7.403 - | KPC 3.7 kPa | KPO 30.53 kPa | KAC 16.9 mmol/L | KBE -6.1 mmol/L | KSB -7.8 mmol/L | KSC 19.4 mmol/L | KSA 99.8 % | ČAS_MĚŘ. 22:06 | KOMENTÁŘ systém | TYP_ODB arteriální 02.01.2025: KPH 7.406 - | KPC 3.91 kPa | KPO 26.89 kPa | KAC 18.0 mmol/L | KBE -5.2 mmol/L | KSB -6.7 mmol/L | KSC 20.1 mmol/L | KSA 99.7 % | ČAS_MĚŘ. 22:38 | TYP_ODB arteriální 03.01.2025: CAI 0.222 mmol/L | ČAS_MĚŘ. 00:48 | KOMENTÁŘ okruh | TYP_ODB venózní 03.01.2025: CAI 1.062 mmol/L | ČAS_MĚŘ. 00:50 | KOMENTÁŘ systém | TYP_ODB arteriální 03.01.2025: CAI 0.267 mmol/L | ČAS_MĚŘ. 04:51 | KOMENTÁŘ okruh | TYP_ODB venózní 03.01.2025: MO 5.6 mmol/L | KR 170.0 umol/l | GFR 0.47 ml/s/1,73 m2 | NA 138.0 mmol/L | KA 3.58 mmol/L | PCT 20.53 ug/l | CL 99.0 mmol/L | CA 2.9 mmol/L | CA-KOR 3.07 mmol/L | CAI 1.166 mmol/L | PA 1.95 mmol/L | MG 0.92 mmol/L | FIB4 61.56 - | BI 26.1 umol/l | BP 13.3 umol/l | AL 41.48 ukat/l | AS 181.77 ukat/l | GM 5.93 ukat/l | AF 4.34 ukat/l | TNI 105602.0 ng/L | GL 8.9 mmol/L | AB 33.4 g/L | CRP 40.2 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | KPH 7.371 - | KPC 5.13 kPa | KPO 22.04 kPa | KAC 21.8 mmol/L | KBE -3.1 mmol/L | KSB -3.5 mmol/L | KSC 21.8 mmol/L | KSA 99.4 % | SODIK 138.0 mmol/L | CLKOR 100.0 mmol/L | UAKOR 12.1 mmol/L | PI 3.53 mmol/L | ALBI 9.2 g/L | SID 34.5 mmol/L | AG 20.8 mmol/L | AGKOR 22.5 mmol/L | ČAS_MĚŘ. | DOORDINA text | KOMENTÁŘ plazma (Li/Heparin) | REPT_NTS | TYP_ODB arteriální | VÝSLEDKY text
+
+Hematologie:
+Všechny: 02.01.2025: WBC 16.5 x10^9/L | RBC 4.3 x10^12/L | HGB 134.0 g/L | HCT 43.1 % | MCV 100.7 fL | MCH 31.3 pg | MCHC 311.0 g/L | PLT 247.0 x10^9/L | PCT 0.27 % | MPV 10.8 fL | RDW 15.8 % | NRBC 0.06 x10^9/L | NRBC% 0.4 % | NE 73.7 % | LY 19.5 % | MON 5.2 % | EO 0.7 % | BA 0.9 % | APTT-T 36.7 s | aPTT-R 1.1 1 | NEABS 12.13 x10^9/L | LYABS 3.2 x10^9/L | MOABS 0.8 x10^9/L | EOABS 0.11 x10^9/L | BAABS 0.15 x10^9/L | NEUM 66.0 % | TYCM 4.0 % | LYM 22.0 % | MOM 4.0 % | EOM 0.0 | BAM 0.0 | MMYM 1.0 % | MYM 3.0 % | PMYM 0.0 | MYBLM 0.0 | PLBM 0.0 | PLYM 0.0 | NEDBBM 0.0 | NEDBLM 0.0 | NRBCM 0.0 | MLEU Reaktivní lymfocyty. | MERYM Beze změn | MPLTM Beze změn | PT-INR 1.25 1 | PT-R 1.23 1 | PT-T 17.5 s | FIB 4.75 g/L | DDI 14.14 mg/L FEU | Podpis Jurčíková | DOORDINA text | REPT_NTS | VÝSLEDKY text | Poznámka text 03.01.2025: WBC 17.0 x10^9/L | RBC 4.2 x10^12/L | HGB 133.0 g/L | HCT 40.2 % | MCV 96.6 fL | MCH 32.0 pg | MCHC 331.0 g/L | PLT 205.0 x10^9/L | PDW 13.1 fL | NRBC 0.09 x10^9/L | NRBC% 0.5 % | REPT_NTS | Poznámka text
+
+Mikrobiologie:
+Datum: 02.01.2025 09:30 Diagnóza: I460 - Srdeční zástava s úspěšnou resuscitací Výsledek: Q_MRSA-P: Příjem: 02.01.2025 Laboratorní číslo:KLO-00027 Vyšetření: Stěr z perinea (+MRSA) Aerobní kultivace: Nález: Staphylococcus spp. (koaguláza negativní) oj. Nález: Corynebacterium species + Nález: Streptococcus species + Cílená kultivace MRSA: Nález: NEGATIVNÍ Cílená kultivace VRE: Nález: NEGATIVNÍ vstupní screening- stěr perineum   Datum: 02.01.2025 09:30 Diagnóza: I460 - Srdeční zástava s úspěšnou resuscitací Výsledek: Q_MRSA-N: Příjem: 02.01.2025 Laboratorní číslo:KLK-00026 Vyšetření: Výtěr z nosu (+MRSA) Aerobní kultivace: Nález: Bez průkazu mikroorganismů. Cílená kultivace MRSA: Nález: NEGATIVNÍ vstupní screening -stěr nos.   Datum: 02.01.2025 09:30 Diagnóza: I460 - Srdeční zástava s úspěšnou resuscitací Výsledek: Q_MRSA-K: Příjem: 02.01.2025 Laboratorní číslo:KLK-00025 Vyšetření: Výtěr z krku (+ MRSA) Aerobní kultivace: Nález: Běžná orofaryngeální flóra Cílená kultivace MRSA: Nález: NEGATIVNÍ vstupní screening- stěr krk</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="842272" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

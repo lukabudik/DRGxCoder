@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="4_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="4">
+      <dsip:rodcis>1730631627</dsip:rodcis>
+      <dsip:jmeno>Jan</dsip:jmeno>
+      <dsip:prijmeni>Novák</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>M</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-16T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>1730631627</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>1730631627</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PYRIDOXIN LÉČIVA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-16</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="Transfuze" typ_med="P">
+          <dsip:dat_od format="D">2025-01-16</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="podáno 160 ml ERD ozářená" typ_med="P">
+          <dsip:dat_od format="D">2025-01-16</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="deleukotizovaná" typ_med="P">
+          <dsip:dat_od format="D">2025-01-16</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.4.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-17T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-16T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-17T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-17T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">11-měsíční chlapec přijatý k plánované transfuzi při konstituční aplastické anémii. Tč. chlapec s probíhajícím lehkým infektem HCD. Ve vstupních lab. parametrech hgl 91 HCT 26. Podáno 160ml ERD, bez nežádoucí reakce. Následný kontrolní KO s úpravou čerevené krevní řady / hgl 150  hct 41/. Výsledek předán ošetřujícímu hematologovi / Prim. MUDr. Mazánek/, domluven termín další hematologické kontroly.  Za hospitalizace toaleta HCD. 2. dne propuštěn v dobrém stavu do další ambulantní péče.
+
+Biochemie:
+16.01.2025:MO 3.5 mmol/L | NA 138.0 mmol/L | KA 5.08 mmol/L | CL 106.0 mmol/L | AL 0.68 ukat/l | GL 5.57 mmol/L | CRP 0.2 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 
+16.01.2025:
+UCOL žlutá | UCLA mírně zak. | UPH 8.5 - | USH 1.01 - | UBILK 0.0 | UGK-S 0.0 | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 1.0 10^6/L | UERY 3.0 10^6/L | UEPI &lt; 1 | UAS něco | REPT_NTS 
+17.01.2025:
+UCOL žlutá | UCLA zakaleno | UPH 8.0 - | USH 1.011 - | UBILK 0.0 | UGK-S 0.0 | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 0.0 | UERY 0.0 | UHLEN oj. | UAS oj. | REPT_NTS
+
+Hematologie:
+16.01.2025:WBC 12.5 x10^9/L | RBC 3.0 x10^12/L | HGB 91.0 g/L | HCT 26.1 % | MCV 86.1 fL | MCH 30.0 pg | MCHC 349.0 g/L | PLT 501.0 x10^9/L | PDW 10.9 fL | PCT 0.52 % | MPV 10.3 fL | RDW 14.1 % | NRBC 0.01 x10^9/L | NRBC% 0.1 % | NE 11.3 % | LY 78.8 % | MON 8.2 % | EO 1.3 % | BA 0.4 % | NEABS 1.42 x10^9/L | LYABS 9.9 x10^9/L | MOABS 1.0 x10^9/L | EOABS 0.16 x10^9/L | BAABS 0.05 x10^9/L | REPT_NTS 
+17.01.2025:
+WBC 12.3 x10^9/L | RBC 4.9 x10^12/L | HGB 150.0 g/L | HCT 41.1 % | MCV 83.7 fL | MCH 30.5 pg | MCHC 365.0 g/L | PLT 382.0 x10^9/L | PDW 11.0 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS
+Hmotnost: 8200g   Délka: 72 cm</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="346130" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

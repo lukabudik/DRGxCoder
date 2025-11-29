@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="32_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="32">
+      <dsip:rodcis>7832321543</dsip:rodcis>
+      <dsip:jmeno>Jana</dsip:jmeno>
+      <dsip:prijmeni>Nováková</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>F</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-06T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>7832321543</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>7832321543</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.32.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-09T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-06T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-09T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-09T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">Pacientka přijata k došetření za hospit. - odběry, MR slinných žláz. Za hospitalizace provedena MR slinných žláz s nálezem- vlevo při ventrálním okraji gl. parotis zevně při ramus mandibulae patrný cystoidní útvar vel. 29 x 13 x 25 mm s tenkou sytící se stěnou, bez restrikce difúze, v lumen patrné vícečetné oválné asignality vel. až 8 mm, okolní struktury neinfiltruje, pouze se vtlačuje z dorsální strany do m. masseter, nemá vzhled tumorózní léze, mohlo by jít o cystu vývodu gl. parotis (event. cysticky dilatovaná periferní větev parotického vývodu) s vícečetnou sialolitiázou. Bez průkazu patologických LU oboustranně na krku, jen nezvětšené Lu do 7 mm v krátké ose. Proto doporučeno sledování cystoidního útvaru, nejbližší kontrola o 3 měsíce. Při propuštění afebrilní, kardiopulmonálně kompenzována, přetrvávající rezistence v oblasti uhlu mandibuly vlevo- měkká, nebolestivá, stacionární velkosti asi 2 cm. V stabilizovaném stavu propuštena do domácí a ambulantní péče.
+
+Biochemie:
+06.01.2025: MO 4.0 mmol/L | KR 59.0 umol/l | GFR 1.58 ml/s/1,73 m2 | NA 138.0 mmol/L | KA 4.51 mmol/L | CL 105.0 mmol/L | FIB4 1.45 - | BI 9.8 umol/l | AL 0.29 ukat/l | AS 0.34 ukat/l | GM 0.25 ukat/l | AF 1.02 ukat/l | GL 5.36 mmol/L | CRP 0.9 mg/L | TSH 0.43 mU/L | FT3 4.88 pmol/L | FT4 11.7 pmol/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 
+06.01.2025: UCOL slámová | UCLA bez zákalu | UPH 7.0 - | USH 1.004 - | UBILK 0.0 | UGK-S 0.0 | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 1.0 10^6/L | UERY 0.0 | UEPI 15.0 10^6/L | UKEPI &lt; 1 | REPT_NTS
+
+Hematologie:
+06.01.2025: WBC 7.5 x10^9/L | RBC 4.6 x10^12/L | HGB 136.0 g/L | HCT 42.0 % | MCV 90.9 fL | MCH 29.4 pg | MCHC 324.0 g/L | PLT 208.0 x10^9/L | PCT 0.23 % | MPV 10.9 fL | RDW 13.2 % | NRBC 0.0 | NRBC% 0.0 | NE 73.6 % | LY 19.3 % | MON 5.7 % | EO 0.5 % | BA 0.9 % | APTT-T 30.2 s | aPTT-R 0.9 1 | NEABS 5.54 x10^9/L | LYABS 1.4 x10^9/L | MOABS 0.4 x10^9/L | EOABS 0.04 x10^9/L | BAABS 0.07 x10^9/L | PT-INR 0.93 1 | PT-R 0.94 1 | PT-T 13.3 s | REPT_NTS</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="767164" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

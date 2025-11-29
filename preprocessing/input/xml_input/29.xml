@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="29_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="29">
+      <dsip:rodcis>1720741283</dsip:rodcis>
+      <dsip:jmeno>Jan</dsip:jmeno>
+      <dsip:prijmeni>Novák</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>M</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-15T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>1720741283</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>1720741283</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PRESTARIUM NEO" typ_med="P">
+          <dsip:dat_od format="D">2025-01-15</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ATORVASTATIN MEDREG" typ_med="P">
+          <dsip:dat_od format="D">2025-01-15</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="AESCIN TEVA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-15</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="AGAPURIN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-15</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="CLEXANE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-15</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="KAPIDIN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-15</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.29.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-21T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-15T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-21T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-21T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">* Pacient byl přijat pro edém papily n.II. levého oka OS v.s. NAION k došetření a terapii.
+* Provedeny základní lab. odběry které s mírnou hyperlipidemií, mírnou neutrofilií, monocytemií a trombocytopatíí, FW 20/46, jinak v normě. Dále doplněny odběry na zoonozy ad IFCOR + revmat. blok FNUSA - t.č. výsl. nejsou k dispozici, Borrelie negativní, Toxoplasma IgM negativní, IgG pozitivní.  
+* Provedeno interní vyšetření viz výše - dop. navýšit hypolipidemickou léčbu a korekce hypertenze - do terapie přidán Kapidin 10mg1x1, poté navyšováno na 20mg 1x1.
+* Provedena FAG se zaměřením na OS:
+foto fundu - OS papila zr. nervu s neostrými okraji
+Po standartní premedikaci Prednisone 20mg a Dithiaden 2mg provedena FAG se zaměřením na OS
+OS A plnění v 15s, počátek V plnění v 20s, A-V plnění dokončeno v 30s, papila s novotv. cévami, v pozdních fázích papila s hyperfluorescencí, která se v čase zvýrazňuje, na ní hypofluorescenční ložisko odp. hemoragiím, cévy na fundu vinutější
+OD normální angiogram, cévy vinutější
+* Proveden perimetr full test s výpadkem v dolní polovině ZP na OS, kontrolní perimetr full nález vs idem. 
+* Provedena MR mozku a orbit s apl. kontr. látky viz výše - Z: V.s. poischemicko-degener. změny supratentoriálně (Fazekas I), drobná v.s. poischemická leze i v mozečku, jinak bez průkazu patol. změn.
+* Během hospitalizace zahájena celková vazodilatační ter. Agapurin inf. i.v, celkem podáváno 8 dní, dále profylaxe LMWH Clexane 0,8ml 1xd, pacient léčbu toleroval. 
+***************************************************************************
+V průběhu hospitalizace monitorován TK: 160/80..185/90; 180/109...144/84...160/90; 150/90...145/85...150/90; 160/90...140/75; 180/85..135/75..150/96; 140/100..146/87...150/94; 125/85..160/85...148/88; 160/80 mmHg
+Při propuštění:
+VOS: 0,4
+Tonopen: 16,15 mmhg
+Status praesens:
+OD: přední segment klidný, na fundu idem při příjmu
+OS: zevně klidné, rohovka hladká, lesklá, čirá, přední komora střední,čirá, iris klidná, PC IOL in loco, na fundu OS papila neohraničená, nad niveau s třískovitými hemoragiemi hl. nasálně, sítnice leží
+Pacient propuštěn v celkově uspokojivém stavu, kardiopulmonálně kompenzován, do domácí péče a ambulantních kontrol se zavedenou medikací a níže uvedeným doporučením.
+Pacient poučen o svém zdravotním stavu, prognóze i postupu další léčby.
+
+Biochemie:
+15.01.2025: MO 5.4 mmol/L | KR 93.0 umol/l | GFR 1.18 ml/s/1,73 m2 | KM 312.0 umol/l | NA 139.0 mmol/L | KA 4.62 mmol/L | CL 102.0 mmol/L | FIB4 3.0 - | BI 7.5 umol/l | AL 0.31 ukat/l | AS 0.39 ukat/l | GM 0.59 ukat/l | AF 1.3 ukat/l | CH 5.94 mmol/L | HDL 2.06 mmol/L | LDL 3.4 mmol/L | TR 1.5 mmol/L | NONHDL 3.88 mmol/L | HCY 11.4 umol/l | GL 5.88 mmol/L | AB 43.5 g/L | CRP 2.1 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS | S_BILEA_ OKB
+22.01.2025: HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | BORM 2.0 kU/L | BORG &lt; 5.0 | WBORM STORNO | WBORG STORNO | TOXOM &lt; 3.0 | TOXOG 45.2 kIU/L | KOMENTÁŘ text | REPT_NTS
+
+Hematologie:
+15.01.2025: WBC 5.8 x10^9/L | RBC 5.0 x10^12/L | HGB 143.0 g/L | HCT 45.1 % | MCV 89.5 fL | MCH 28.4 pg | MCHC 317.0 g/L | PLT 130.0 x10^9/L | PCT 0.17 % | MPV 13.4 fL | RDW 13.6 % | NRBC 0.0 | NRBC% 0.0 | NE 73.6 % | LY 11.6 % | MON 12.2 % | EO 1.9 % | BA 0.7 % | APTT-T 33.7 s | aPTT-R 1.01 1 | NEABS 4.24 x10^9/L | LYABS 0.7 x10^9/L | MOABS 0.7 x10^9/L | EOABS 0.11 x10^9/L | BAABS 0.04 x10^9/L | PT-INR 0.93 1 | PT-R 0.94 1 | PT-T 13.3 s | FIB 5.1 g/L | DDI 0.4 mg/L FEU | AT 96.0 % | REPT_NTS</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="926691" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="19_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="19">
+      <dsip:rodcis>1193592180</dsip:rodcis>
+      <dsip:jmeno>Jana</dsip:jmeno>
+      <dsip:prijmeni>Nováková</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>F</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2024-12-10T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>1193592180</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>1193592180</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="CLEXANE" typ_med="P">
+          <dsip:dat_od format="D">2024-12-10</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="OXAZEPAM LÉČIVA" typ_med="P">
+          <dsip:dat_od format="D">2024-12-10</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="CORYOL" typ_med="P">
+          <dsip:dat_od format="D">2024-12-10</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PANTOMYL" typ_med="P">
+          <dsip:dat_od format="D">2024-12-10</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="MEDROL" typ_med="P">
+          <dsip:dat_od format="D">2024-12-10</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="VEROSPIRON" typ_med="P">
+          <dsip:dat_od format="D">2024-12-10</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="JARDIANCE" typ_med="P">
+          <dsip:dat_od format="D">2024-12-10</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="NOVALGIN" typ_med="P">
+          <dsip:dat_od format="D">2024-12-10</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.19.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-10T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2024-12-10T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-10T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-10T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">Pacientka (st.p. bronchopneumonii, st.p. KPR - úvodní rytmus fibrilace komor, 2x výboj, maligní arytmie zřejmě v rámci dilatační kardiomyopatie, negativní nález na SKG, st.p. infekci Covid-19, pozitivita Mycopl. pn. komplikováno glob. respiračním selháním - UPV) 
+přeložena z interní kardiologické kliniky po implantaci ICD. Pacientka v dobrém klinickém stavu k observaci. Laboratorní a EKG kontroly. Zlepšení stavu, propuštěna v tlakově a KP komp. stavu domů.
+*** EKG: ne zcela pravidelný SR,. fr. 66/min, osa intermed, PQ 160ms, QRS 80ms, ploše negat T/I,aVL,V1,V2,V5,V6, ST izoel
+
+Biochemie:
+11.12.2024: MO 4.5 mmol/L | KR 33.0 umol/l | GFR 2.08 ml/s/1,73 m2 | NA 136.0 mmol/L | KA 3.52 mmol/L | PCT 0.31 ug/l | CL 101.0 mmol/L | CA 2.1 mmol/L | CA-KOR 2.38 mmol/L | PA 1.17 mmol/L | MG 0.6 mmol/L | FIB4 1.08 - | BI 9.3 umol/l | AL 1.08 ukat/l | AS 1.19 ukat/l | GM 4.18 ukat/l | AF 1.53 ukat/l | NTBNP 1195.0 ng/L | AB 28.8 g/L | CRP 225.9 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | KPH 7.409 - | KPC 4.42 kPa | KPO 4.26 kPa | KAC 20.5 mmol/L | KBE -3.2 mmol/L | KSB -4.2 mmol/L | KSC 21.7 mmol/L | KSA 61.2 % | SODIK 136.0 mmol/L | CLKOR 104.0 mmol/L | UAKOR 10.8 mmol/L | PI 2.13 mmol/L | ALBI 8.1 g/L | SID 30.7 mmol/L | AG 18.0 mmol/L | AGKOR 20.8 mmol/L | UCOL žlutá | UCLA bez zákalu | UPH 5.0 - | USH 1.021 - | UBILK 0.0 | UGK-S 0.0 | UAC 1.0 arb.j. | UROB 0.0 | UBIL 0.0 | ULEU 11.0 10^6/L | UERY 23.0 10^6/L | UEPI 2.0 10^6/L | UKEPI 1.0 10^6/L | UBAK něco | UHLEN něco | ČAS_MĚŘ. 07:00 | DOORDINA text | REPT_NTS | TYP_ODB kapilární | VÝSLEDKY text
+11.12.2024: KPH 7.204 - | KPC 7.07 kPa | KPO 13.01 kPa | KAC 20.4 mmol/L | KBE -8.0 mmol/L | KSB -7.5 mmol/L | KSC 17.9 mmol/L | KSA 95.2 % | ČAS_MĚŘ. 16:50 | REPT_NTS | TYP_ODB kapilární
+11.12.2024: KPH 7.08 - | KPC 9.89 kPa | KPO 11.44 kPa | KAC 21.5 mmol/L | KBE -10.0 mmol/L | KSB -8.5 mmol/L | KSC 16.2 mmol/L | KSA 90.0 % | ČAS_MĚŘ. 17:40 | REPT_NTS | TYP_ODB kapilární
+11.12.2024: MO 6.6 mmol/L | KR 50.0 umol/l | GFR 1.82 ml/s/1,73 m2 | KM 240.0 umol/l | NA 138.0 mmol/L | KA 3.38 mmol/L | PCT 0.42 ug/l | CL 104.0 mmol/L | CA 2.03 mmol/L | CA-KOR 2.33 mmol/L | PA 1.88 mmol/L | MG 0.62 mmol/L | FIB4 1.19 - | BI 6.0 umol/l | AL 1.04 ukat/l | AS 1.22 ukat/l | GM 3.4 ukat/l | AF 1.42 ukat/l | AM 1.65 ukat/l | BNP 395.0 ng/L | TNI 41.0 ng/L | MYO 25.9 ug/l | CKMBM 1.79 ug/l | CK 0.68 ukat/l | CH 3.94 mmol/L | GL 9.21 mmol/L | PLAC 1.1 mmol/L | PREA 0.069 g/L | AB 28.1 g/L | CB 59.2 g/L | CRP 166.6 mg/L | TSH 1.2 mU/L | FT3 4.23 pmol/L | FT4 12.5 pmol/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | PHEMOL1 0.0 | PICTER1 0.0 | PLIPEM1 0.0 | KPH 7.226 - | KPC 6.7 kPa | KPO 11.33 kPa | KAC 20.3 mmol/L | KBE -7.5 mmol/L | KSB -7.3 mmol/L | KSC 18.2 mmol/L | KSA 93.4 % | SODIK 138.0 mmol/L | CLKOR 106.0 mmol/L | UAKOR 9.3 mmol/L | PI 3.32 mmol/L | ALBI 7.2 g/L | SID 30.8 mmol/L | AG 17.1 mmol/L | AGKOR 20.1 mmol/L | UCOL žlutá | UCLA mírně zak. | UPH 5.0 - | USH 1.028 - | UBILK 1.0 arb.j. | UGK-S 0.0 | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 110.0 10^6/L | UERY 32.0 10^6/L | UEPI 2.0 10^6/L | UKEPI 1.0 10^6/L | UBAK něco | UVALH 3.0 10^6/L | UHLEN něco | ČAS_MĚŘ. 19:34 | DOORDINA text | KOMENTÁŘ plazma (Li/Heparin) | REPT_NTS | TYP_ODB arteriální
+12.12.2024: MO 4.3 mmol/L | KR 36.0 umol/l | GFR 2.02 ml/s/1,73 m2 | NA 141.0 mmol/L | KA 4.82 mmol/L | PCT 0.99 ug/l | CL 110.0 mmol/L | CA 2.04 mmol/L | CA-KOR 2.34 mmol/L | PA 1.28 mmol/L | MG 0.8 mmol/L | FIB4 0.7 - | BI 6.4 umol/l | BP 2.6 umol/l | AL 0.99 ukat/l | AS 0.93 ukat/l | GM 3.4 ukat/l | AF 1.38 ukat/l | AM 0.85 ukat/l | LIP 0.38 ukat/l | CH 4.21 mmol/L | HDL 0.71 mmol/L | LDL 2.99 mmol/L | TR 2.04 mmol/L | NONHDL 3.5 mmol/L | GL 8.27 mmol/L | PREA 0.075 g/L | AB 28.1 g/L | CRP 166.1 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | KPH 7.35 - | KPC 5.15 kPa | KPO 20.75 kPa | KAC 20.9 mmol/L | KBE -4.2 mmol/L | KSB -4.7 mmol/L | KSC 20.9 mmol/L | KSA 99.2 % | SODIK 141.0 mmol/L | CLKOR 109.0 mmol/L | UAKOR 7.7 mmol/L | PI 2.31 mmol/L | ALBI 7.7 g/L | SID 30.9 mmol/L | AG 14.9 mmol/L | AGKOR 17.9 mmol/L | WCHPNA negativní | WCHPNG pozitivní | WCHPSA negativní | WCHPSG negativní | MYCOM 17.0 index | MYCOG &lt; 0.1 | UCOL žlutá | UCLA bez zákalu | UPH 5.0 - | USH 1.021 - | UBILK 1.0 arb.j. | UGK-S 0.0 | UAC 1.0 arb.j. | UROB 0.0 | UBIL 0.0 | ULEU 42.0 10^6/L | UERY 337.0 10^6/L | UKEPI 1.0 10^6/L | UBAK něco | UVALH 1.0 10^6/L | UHLEN oj. | ČAS_MĚŘ. | KOMENTÁŘ text | REPT_NTS | TYP_ODB arteriální
+12.12.2024: NA 143.0 mmol/L | KA 3.78 mmol/L | CL 106.0 mmol/L | GL 9.49 mmol/L | KPH 7.403 - | KPC 5.28 kPa | KPO 11.07 kPa | KAC 24.1 mmol/L | KBE -0.4 mmol/L | KSB -0.6 mmol/L | KSC 23.9 mmol/L | KSA 96.1 % | ČAS_MĚŘ. 15:47 | REPT_NTS | TYP_ODB arteriální
+12.12.2024: NA 143.0 mmol/L | KA 4.09 mmol/L | CL 107.0 mmol/L | GL 9.8 mmol/L | KPH 7.464 - | KPC 4.62 kPa | KPO 14.96 kPa | KAC 24.3 mmol/L | KBE 1.1 mmol/L | KSB 0.6 mmol/L | KSC 25.3 mmol/L | KSA 98.7 % | ČAS_MĚŘ. 21:43 | REPT_NTS | TYP_ODB arteriální
+13.12.2024: MO 2.9 mmol/L | KR 32.0 umol/l | GFR 2.1 ml/s/1,73 m2 | NA 143.0 mmol/L | KA 4.79 mmol/L | CL 108.0 mmol/L | CA 2.1 mmol/L | CA-KOR 2.41 mmol/L | PA 0.81 mmol/L | MG 0.88 mmol/L | GL 7.38 mmol/L | AB 27.7 g/L | CRP 122.6 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | KPH 7.437 - | KPC 5.77 kPa | KPO 17.57 kPa | KAC 28.5 mmol/L | KBE 3.8 mmol/L | KSB 4.3 mmol/L | KSC 27.4 mmol/L | KSA 99.1 % | SODIK 143.0 mmol/L | CLKOR 106.0 mmol/L | UAKOR 4.8 mmol/L | PI 1.48 mmol/L | ALBI 7.8 g/L | SID 37.8 mmol/L | AG 11.3 mmol/L | AGKOR 14.4 mmol/L | ČAS_MĚŘ. | KOMENTÁŘ text | REPT_NTS | TYP_ODB arteriální
+13.12.2024: NA 141.0 mmol/L | KA 3.2 mmol/L | CL 102.0 mmol/L | GL 8.13 mmol/L | KPH 7.452 - | KPC 5.54 kPa | KPO 9.46 kPa | KAC 28.4 mmol/L | KBE 4.0 mmol/L | KSB 4.4 mmol/L | KSC 27.6 mmol/L | KSA 95.1 % | ČAS_MĚŘ. 18:51 | REPT_NTS | TYP_ODB arteriální
+14.12.2024: MO 4.4 mmol/L | KR 31.0 umol/l | GFR 2.13 ml/s/1,73 m2 | NA 140.0 mmol/L | KA 5.01 mmol/L | CL 106.0 mmol/L | CA 2.14 mmol/L | CA-KOR 2.47 mmol/L | PA 1.12 mmol/L | MG 0.77 mmol/L | GL 6.3 mmol/L | AB 27.0 g/L | CRP 63.0 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | KPH 7.424 - | KPC 5.54 kPa | KPO 9.69 kPa | KAC 26.6 mmol/L | KBE 2.0 mmol/L | KSB 2.2 mmol/L | KSC 25.9 mmol/L | KSA 94.9 % | SODIK 140.0 mmol/L | CLKOR 106.0 mmol/L | UAKOR 5.7 mmol/L | PI 2.04 mmol/L | ALBI 7.6 g/L | SID 36.2 mmol/L | AG 12.4 mmol/L | AGKOR 15.7 mmol/L | ČAS_MĚŘ. | KOMENTÁŘ text | REPT_NTS | TYP_ODB arteriální
+14.12.2024: NA 141.0 mmol/L | KA 3.27 mmol/L | CL 100.0 mmol/L | GL 7.15 mmol/L | KPH 7.476 - | KPC 5.08 kPa | KPO 9.62 kPa | KAC 27.5 mmol/L | KBE 3.9 mmol/L | KSB 3.9 mmol/L | KSC 27.6 mmol/L | KSA 95.6 % | ČAS_MĚŘ. 19:02 | REPT_NTS | TYP_ODB arteriální
+15.12.2024: MO 3.7 mmol/L | KR 29.0 umol/l | GFR 2.17 ml/s/1,73 m2 | NA 140.0 mmol/L | KA 4.87 mmol/L | CL 105.0 mmol/L | CA 2.06 mmol/L | CA-KOR 2.39 mmol/L | PA 1.42 mmol/L | MG 0.83 mmol/L | GL 8.71 mmol/L | AB 26.8 g/L | CRP 66.4 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | KPH 7.446 - | KPC 5.77 kPa | KPO 10.96 kPa | KAC 29.1 mmol/L | KBE 4.5 mmol/L | KSB 5.0 mmol/L | KSC 27.9 mmol/L | KSA 96.7 % | SODIK 140.0 mmol/L | CLKOR 105.0 mmol/L | UAKOR 3.4 mmol/L | PI 2.6 mmol/L | ALBI 7.6 g/L | SID 39.3 mmol/L | AG 10.8 mmol/L | AGKOR 14.1 mmol/L | ČAS_MĚŘ. | KOMENTÁŘ text | REPT_NTS | TYP_ODB arteriální
+15.12.2024: NA 140.0 mmol/L | KA 3.91 mmol/L | CL 102.0 mmol/L | GL 7.15 mmol/L | KPH 7.456 - | KPC 5.45 kPa | KPO 9.05 kPa | KAC 28.2 mmol/L | KBE 4.0 mmol/L | KSB 4.3 mmol/L | KSC 27.6 mmol/L | KSA 94.5 % | ČAS_MĚŘ. 18:39 | REPT_NTS | TYP_ODB arteriální
+16.12.2024: MO 3.7 mmol/L | KR 31.0 umol/l | GFR 2.12 ml/s/1,73 m2 | NA 139.0 mmol/L | KA 4.92 mmol/L | PCT 0.18 ug/l | CL 105.0 mmol/L | CA 2.14 mmol/L | CA-KOR 2.46 mmol/L | PA 1.45 mmol/L | MG 0.81 mmol/L | FIB4 0.49 - | BI 5.8 umol/l | BP 1.4 umol/l | AL 0.63 ukat/l | AS 0.61 ukat/l | GM 3.13 ukat/l | AF 1.54 ukat/l | AM 1.56 ukat/l | LIP 0.87 ukat/l | CH 4.45 mmol/L | HDL 0.96 mmol/L | LDL 3.17 mmol/L | TR 0.98 mmol/L | NONHDL 3.49 mmol/L | GL 7.74 mmol/L | PREA 0.205 g/L | AB 27.1 g/L | CRP 36.2 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | KPH 7.408 - | KPC 6.31 kPa | KPO 9.91 kPa | KAC 29.2 mmol/L | KBE 3.7 mmol/L | KSB 4.5 mmol/L | KSC 27.2 mmol/L | KSA 95.0 % | SODIK 139.0 mmol/L | CLKOR 106.0 mmol/L | UAKOR 2.5 mmol/L | PI 2.64 mmol/L | ALBI 7.6 g/L | SID 39.4 mmol/L | AG 9.7 mmol/L | AGKOR 12.9 mmol/L | UCOL slámová | UCLA bez zákalu | UPH 7.5 - | USH 1.011 - | UBILK 0.0 | UGK-S 0.0 | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 5.0 10^6/L | UERY 0.0 | UKEPI 1.0 10^6/L | ČAS_MĚŘ. | KOMENTÁŘ text | REPT_NTS | TYP_ODB arteriální
+16.12.2024: NA 137.0 mmol/L | KA 3.62 mmol/L | CL 100.0 mmol/L | GL 7.24 mmol/L | KPH 7.458 - | KPC 5.48 kPa | KPO 11.51 kPa | KAC 28.4 mmol/L | KBE 4.2 mmol/L | KSB 4.6 mmol/L | KSC 27.8 mmol/L | KSA 97.2 % | ČAS_MĚŘ. 18:42 | REPT_NTS | TYP_ODB arteriální
+17.12.2024: MO 3.8 mmol/L | KR 30.0 umol/l | GFR 2.15 ml/s/1,73 m2 | NA 137.0 mmol/L | KA 5.0 mmol/L | CL 103.0 mmol/L | CA 2.22 mmol/L | CA-KOR 2.48 mmol/L | PA 1.29 mmol/L | MG 0.73 mmol/L | GL 7.67 mmol/L | AB 29.5 g/L | CRP 21.8 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | KPH 7.456 - | KPC 5.41 kPa | KPO 10.81 kPa | KAC 28.0 mmol/L | KBE 3.8 mmol/L | KSB 4.1 mmol/L | KSC 27.4 mmol/L | KSA 96.6 % | SODIK 137.0 mmol/L | CLKOR 105.0 mmol/L | UAKOR 3.2 mmol/L | PI 2.37 mmol/L | ALBI 8.4 g/L | SID 38.8 mmol/L | AG 11.0 mmol/L | AGKOR 13.6 mmol/L | ČAS_MĚŘ. | KOMENTÁŘ text | REPT_NTS | TYP_ODB arteriální
+17.12.2024: NA 135.0 mmol/L | KA 3.1 mmol/L | CL 100.0 mmol/L | GL 6.05 mmol/L | KPH 7.449 - | KPC 5.1 kPa | KPO 15.82 kPa | KAC 25.9 mmol/L | KBE 2.0 mmol/L | KSB 1.9 mmol/L | KSC 26.0 mmol/L | KSA 98.8 % | ČAS_MĚŘ. 18:49 | TYP_ODB arteriální
+18.12.2024: MO 3.0 mmol/L | KR 25.0 umol/l | GFR 2.28 ml/s/1,73 m2 | NA 132.0 mmol/L | KA 4.41 mmol/L | CL 101.0 mmol/L | CA 2.11 mmol/L | CA-KOR 2.39 mmol/L | PA 1.24 mmol/L | MG 0.67 mmol/L | GL 7.36 mmol/L | AB 28.9 g/L | CRP 14.2 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | KPH 7.442 - | KPC 5.16 kPa | KPO 10.16 kPa | KAC 25.8 mmol/L | KBE 1.7 mmol/L | KSB 1.7 mmol/L | KSC 25.7 mmol/L | KSA 95.7 % | SODIK 132.0 mmol/L | CLKOR 107.0 mmol/L | UAKOR 2.0 mmol/L | PI 2.27 mmol/L | ALBI 8.2 g/L | SID 36.3 mmol/L | AG 9.6 mmol/L | AGKOR 12.4 mmol/L | ČAS_MĚŘ. | KOMENTÁŘ text | TYP_ODB arteriální18.12.2024: MO 3.0 mmol/L | KR 25.0 umol/l | GFR 2.28 ml/s/1,73 m2 | NA 132.0 mmol/L | KA 4.41 mmol/L | CL 101.0 mmol/L | CA 2.11 mmol/L | CA-KOR 2.39 mmol/L | PA 1.24 mmol/L | MG 0.67 mmol/L | GL 7.36 mmol/L | AB 28.9 g/L | CRP 14.2 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | KPH 7.442 - | KPC 5.16 kPa | KPO 10.16 kPa | KAC 25.8 mmol/L | KBE 1.7 mmol/L | KSB 1.7 mmol/L | KSC 25.7 mmol/L | KSA 95.7 % | SODIK 132.0 mmol/L | CLKOR 107.0 mmol/L | UAKOR 2.0 mmol/L | PI 2.27 mmol/L | ALBI 8.2 g/L | SID 36.3 mmol/L | AG 9.6 mmol/L | AGKOR 12.4 mmol/L | ČAS_MĚŘ. | KOMENTÁŘ text | REPT_NTS | TYP_ODB arteriální
+19.12.2024: MO 3.6 mmol/L | KR 33.0 umol/l | GFR 2.08 ml/s/1,73 m2 | KM 165.0 umol/l | NA 135.0 mmol/L | KA 4.36 mmol/L | PCT 0.07 ug/l | CL 101.0 mmol/L | FIB4 0.64 - | BI 10.5 umol/l | AL 0.62 ukat/l | AS 0.76 ukat/l | GM 2.72 ukat/l | AF 1.34 ukat/l | CH 6.05 mmol/L | TR 1.4 mmol/L | GL 6.78 mmol/L | AB 28.7 g/L | CB 59.3 g/L | CRP 11.3 mg/L | HEMOL 1.0 - | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 
+21.12.2024: MO 3.9 mmol/L | KR 32.0 umol/l | GFR 2.1 ml/s/1,73 m2 | KM 186.0 umol/l | NA 135.0 mmol/L | KA 3.73 mmol/L | CL 101.0 mmol/L | BI 10.8 umol/l | AL 0.71 ukat/l | AS 0.67 ukat/l | GM 2.59 ukat/l | AF 1.62 ukat/l | CH 6.62 mmol/L | TR 1.48 mmol/L | GL 6.88 mmol/L | AB 31.0 g/L | CB 62.6 g/L | CRP 11.6 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 
+23.12.2024: MO 2.2 mmol/L | KR 41.0 umol/l | GFR 1.94 ml/s/1,73 m2 | NA 139.0 mmol/L | KA 3.83 mmol/L | CL 106.0 mmol/L | CRP 14.2 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 
+25.12.2024: MO 3.6 mmol/L | KR 35.0 umol/l | GFR 2.04 ml/s/1,73 m2 | NA 134.0 mmol/L | KA 3.9 mmol/L | CL 102.0 mmol/L | CRP 14.3 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 
+27.12.2024: MO 3.9 mmol/L | KR 40.0 umol/l | GFR 1.95 ml/s/1,73 m2 | NA 136.0 mmol/L | KA 3.92 mmol/L | CL 103.0 mmol/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 
+29.12.2024: MO 4.3 mmol/L | KR 43.0 umol/l | GFR 1.91 ml/s/1,73 m2 | NA 137.0 mmol/L | KA 4.04 mmol/L | CL 105.0 mmol/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 
+02.01.2025: MO 3.2 mmol/L | KR 50.0 umol/l | GFR 1.82 ml/s/1,73 m2 | NA 139.0 mmol/L | KA 4.15 mmol/L | CL 105.0 mmol/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 
+03.01.2025: MO 3.3 mmol/L | KR 38.0 umol/l | GFR 1.99 ml/s/1,73 m2 | NA 138.0 mmol/L | KA 3.91 mmol/L | CL 106.0 mmol/L | FIB4 0.72 - | BI 5.3 umol/l | AL 0.53 ukat/l | AS 0.31 ukat/l | GM 0.92 ukat/l | AF 1.28 ukat/l | CRP 1.1 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS
+09.01.2025: MO 2.3 mmol/L | KR 40.0 umol/l | GFR 1.95 ml/s/1,73 m2 | NA 141.0 mmol/L | KA 4.68 mmol/L | CL 105.0 mmol/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS
+
+Hematologie:
+11.12.2024: WBC 14.3 x10^9/L | RBC 3.6 x10^12/L | HGB 87.0 g/L | HCT 28.6 % | MCV 78.8 fL | MCH 24.0 pg | MCHC 304.0 g/L | PLT 407.0 x10^9/L | PCT 0.44 % | MPV 10.8 fL | RDW 21.9 % | NRBC 0.0 | NRBC% 0.0 | NE 65.4 % | LY 13.9 % | MON 19.7 % | EO 0.6 % | BA 0.4 % | APTT-T 42.5 s | aPTT-R 1.31 1 | NEABS 9.33 x10^9/L | LYABS 2.0 x10^9/L | MOABS 2.8 x10^9/L | EOABS 0.09 x10^9/L | BAABS 0.06 x10^9/L | NEUM 69.0 % | TYCM 0.0 | LYM 13.0 % | MOM 18.0 % | EOM 0.0 | BAM 0.0 | MMYM 0.0 | MYM 0.0 | PMYM 0.0 | MYBLM 0.0 | PLBM 0.0 | PLYM 0.0 | NEDBBM 0.0 | NEDBLM 0.0 | NRBCM 0.0 | MLEU Beze změn | MERYM Anizocytóza erytrocytů. | MPLTM Anizocytóza.Makrotrombocyty. | PT-INR 1.01 1 | PT-R 1.01 1 | PT-T 14.4 s | Podpis Jurčíková | DOORDINA text | REPT_NTS 
+11.12.2024: WBC 16.7 x10^9/L | RBC 3.2 x10^12/L | HGB 76.0 g/L | HCT 25.4 % | MCV 79.9 fL | MCH 23.9 pg | MCHC 299.0 g/L | PLT 388.0 x10^9/L | PCT 0.4 % | MPV 10.4 fL | RDW 21.7 % | NRBC 0.01 x10^9/L | NRBC% 0.1 % | NE 80.6 % | LY 5.6 % | MON 13.1 % | EO 0.5 % | BA 0.2 % | APTT-T 40.9 s | aPTT-R 1.26 1 | NEABS 13.48 x10^9/L | LYABS 0.9 x10^9/L | MOABS 2.2 x10^9/L | EOABS 0.08 x10^9/L | BAABS 0.04 x10^9/L | PT-INR 1.05 1 | PT-R 1.05 1 | PT-T 14.9 s | REPT_NTS | Poznámka text
+12.12.2024: WBC 16.1 x10^9/L | RBC 3.1 x10^12/L | HGB 76.0 g/L | HCT 25.3 % | MCV 80.6 fL | MCH 24.2 pg | MCHC 300.0 g/L | PLT 513.0 x10^9/L | PCT 0.53 % | MPV 10.4 fL | RDW 21.6 % | NRBC 0.01 x10^9/L | NRBC% 0.1 % | NE 88.5 % | LY 6.2 % | MON 5.0 % | EO 0.1 % | BA 0.2 % | APTT-T 33.9 s | aPTT-R 1.04 1 | NEABS 14.22 x10^9/L | LYABS 1.0 x10^9/L | MOABS 0.8 x10^9/L | EOABS 0.01 x10^9/L | BAABS 0.04 x10^9/L | PT-INR 0.98 1 | PT-R 0.99 1 | PT-T 14.0 s | FIB 7.0 g/L | DDI 1.24 mg/L FEU | REPT_NTS | Poznámka text
+13.12.2024: WBC 19.1 x10^9/L | RBC 3.1 x10^12/L | HGB 74.0 g/L | HCT 24.7 % | MCV 79.9 fL | MCH 23.9 pg | MCHC 300.0 g/L | PLT 559.0 x10^9/L | PDW 11.9 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS | VÝSLEDKY text
+13.12.2024: B_BGAB0R B Rh(D) pozitivní | P_EABQ_* negativní | S_EABQ_A negativní
+14.12.2024: WBC 21.7 x10^9/L | RBC 4.1 x10^12/L | HGB 106.0 g/L | HCT 33.5 % | MCV 80.9 fL | MCH 25.6 pg | MCHC 316.0 g/L | PLT 530.0 x10^9/L | PDW 12.3 fL | NRBC 0.01 x10^9/L | NRBC% 0.0 | NEUM 85.0 % | TYCM 6.0 % | LYM 4.0 % | MOM 4.0 % | EOM 0.0 | BAM 0.0 | MMYM 1.0 % | MYM 0.0 | PMYM 0.0 | MYBLM 0.0 | PLBM 0.0 | PLYM 0.0 | NEDBBM 0.0 | NEDBLM 0.0 | NRBCM 0.0 | MLEU text | MERYM Mikrocytóza.Polychromázie. | MPLTM text | Podpis Maradová | DOORDINA text | REPT_NTS | Poznámka text
+15.12.2024: WBC 15.9 x10^9/L | RBC 4.0 x10^12/L | HGB 102.0 g/L | HCT 32.4 % | MCV 81.6 fL | MCH 25.7 pg | MCHC 315.0 g/L | PLT 553.0 x10^9/L | PDW 12.2 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS | Poznámka text
+16.12.2024: WBC 16.4 x10^9/L | RBC 4.0 x10^12/L | HGB 104.0 g/L | HCT 33.3 % | MCV 82.8 fL | MCH 25.9 pg | MCHC 312.0 g/L | PLT 600.0 x10^9/L | PCT 0.62 % | MPV 10.3 fL | RDW 21.1 % | NRBC 0.0 | NRBC% 0.0 | NE 89.6 % | LY 6.6 % | MON 3.7 % | EO 0.0 | BA 0.1 % | APTT-T 31.7 s | aPTT-R 0.98 1 | NEABS 14.72 x10^9/L | LYABS 1.1 x10^9/L | MOABS 0.6 x10^9/L | EOABS 0.0 | BAABS 0.02 x10^9/L | PT-INR 0.99 1 | PT-R 0.99 1 | PT-T 14.1 s | REPT_NTS | Poznámka text
+17.12.2024: WBC 15.9 x10^9/L | RBC 4.3 x10^12/L | HGB 109.0 g/L | HCT 34.9 % | MCV 81.5 fL | MCH 25.5 pg | MCHC 312.0 g/L | PLT 629.0 x10^9/L | PDW 12.2 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS | Poznámka text
+18.12.2024: WBC 10.8 x10^9/L | RBC 4.4 x10^12/L | HGB 109.0 g/L | HCT 35.2 % | MCV 79.6 fL | MCH 24.7 pg | MCHC 310.0 g/L | PLT 568.0 x10^9/L | PDW 12.7 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS | Poznámka text18.12.2024: WBC 10.8 x10^9/L | RBC 4.4 x10^12/L | HGB 109.0 g/L | HCT 35.2 % | MCV 79.6 fL | MCH 24.7 pg | MCHC 310.0 g/L | PLT 568.0 x10^9/L | PDW 12.7 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS | Poznámka text
+19.12.2024: WBC 11.8 x10^9/L | RBC 4.5 x10^12/L | HGB 113.0 g/L | HCT 35.5 % | MCV 78.7 fL | MCH 25.1 pg | MCHC 318.0 g/L | PLT 577.0 x10^9/L | PCT 0.6 % | MPV 10.5 fL | RDW 20.7 % | NRBC 0.0 | NRBC% 0.0 | NE 85.6 % | LY 8.8 % | MON 5.5 % | EO 0.0 | BA 0.1 % | NEABS 10.09 x10^9/L | LYABS 1.0 x10^9/L | MOABS 0.7 x10^9/L | EOABS 0.0 | BAABS 0.01 x10^9/L | PT-INR 0.98 1 | PT-R 0.98 1 | PT-T 13.9 s | REPT_NTS 
+21.12.2024: WBC 12.3 x10^9/L | RBC 4.6 x10^12/L | HGB 117.0 g/L | HCT 36.8 % | MCV 80.5 fL | MCH 25.6 pg | MCHC 318.0 g/L | PLT 453.0 x10^9/L | PDW 14.8 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS 
+25.12.2024: WBC 18.7 x10^9/L | RBC 4.6 x10^12/L | HGB 117.0 g/L | HCT 36.9 % | MCV 80.7 fL | MCH 25.6 pg | MCHC 317.0 g/L | PLT 291.0 x10^9/L | PDW 17.3 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS 
+27.12.2024: WBC 9.5 x10^9/L | RBC 4.3 x10^12/L | HGB 111.0 g/L | HCT 35.4 % | MCV 81.9 fL | MCH 25.7 pg | MCHC 314.0 g/L | PLT 277.0 x10^9/L | PCT 0.32 % | MPV 11.6 fL | RDW 21.1 % | NRBC 0.0 | NRBC% 0.0 | NE 50.9 % | LY 35.9 % | MON 11.1 % | EO 2.0 % | BA 0.1 % | NEABS 4.84 x10^9/L | LYABS 3.4 x10^9/L | MOABS 1.1 x10^9/L | EOABS 0.19 x10^9/L | BAABS 0.01 x10^9/L | REPT_NTS 
+29.12.2024: WBC 9.1 x10^9/L | RBC 4.7 x10^12/L | HGB 121.0 g/L | HCT 39.0 % | MCV 82.5 fL | MCH 25.6 pg | MCHC 310.0 g/L | PLT 254.0 x10^9/L | PDW 20.0 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS 
+02.01.2025: WBC 6.5 x10^9/L | RBC 4.8 x10^12/L | HGB 124.0 g/L | HCT 40.4 % | MCV 84.5 fL | MCH 25.9 pg | MCHC 307.0 g/L | PLT 264.0 x10^9/L | PDW 14.9 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS 
+03.01.2025: WBC 7.4 x10^9/L | RBC 4.4 x10^12/L | HGB 111.0 g/L | HCT 36.2 % | MCV 82.8 fL | MCH 25.4 pg | MCHC 307.0 g/L | PLT 228.0 x10^9/L | PDW 15.1 fL | NRBC 0.0 | NRBC% 0.0 | APTT-T 31.1 s | aPTT-R 0.93 1 | PT-INR 0.87 1 | PT-R 0.88 1 | PT-T 12.5 s | REPT_NTS
+09.01.2025: WBC 6.0 x10^9/L | RBC 4.5 x10^12/L | HGB 116.0 g/L | HCT 37.4 % | MCV 84.0 fL | MCH 26.1 pg | MCHC 310.0 g/L | PLT 189.0 x10^9/L | PDW 16.0 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS
+
+Mikrobiologie:
+Datum: 27.12.2024 11:08
+Diagnóza: I490 - Komorové kmitání (flutter) a míhání (fibrilace)
+Výsledek:
+Q_CVK:
+Příjem: 27.12.2024 Laboratorní číslo:KLO-06636
+Vyšetření: Centrální venozní katetr 
+Aerobní kultivace: 
+Nález: Bez průkazu mikroorganismů. 
+Strukturované výsledky:
+Centrální venozní katetrtext
+REPT_NTS_DTP</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="482204" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

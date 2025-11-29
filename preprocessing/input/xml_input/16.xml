@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="16_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="16">
+      <dsip:rodcis>1821663323</dsip:rodcis>
+      <dsip:jmeno>Jan</dsip:jmeno>
+      <dsip:prijmeni>Novák</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>M</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-11T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>1821663323</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>1821663323</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="RILMENIDIN TEVA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="NITRESAN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="CITALEC" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="BETALOC ZOK" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="TRITACE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="FURON" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PANTOMYL" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ENYGLID" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="SALAZOPYRIN EN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ADENURIC" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="JARDIANCE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="AXETINE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ELIQUIS" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="FYZIOLOGICKÝ ROZTOK VIAFLO" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="GLUKÓZA B. BRAUN 5%" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="NOVALGIN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PARACETAMOL KABI" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="CLEXANE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="DOBUTAMIN HAMELN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="RECOXA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="FENTANYL-RATIOPHARM" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PLASMALYTE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="MORPHIN BIOTIKA 1%" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="DICYNONE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="EXACYL" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PANTOPRAZOL OLIKLA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="3x TU EBR" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="2x ČMP" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="TAXIME" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.16.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-20T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-11T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-20T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-20T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">Pacient s nejasným novotvarem na levé plíci přijat pro hypotenzi, fisi s ROK a prekolapsový stav. Vstupně v lab. renální selhání, elevace zán. parametrů, neměřitelné hodnoty DDI. Doplněna scintirgafie plic, ta bez průkazu plicní embolie. Dále v průběhu rozvoj průjmů, odběr na RANA a CDI negativní.Zahájena empiricky atb terapie /cefuroxim/. V další průběhu nárůst zán. parametrů, odběr moči na kultivaci a hemokultur... Progrese N látek, doplněno urologické vyšetření- ren. insuf. s elevací N-látek, cystis renis bilat, nefrolithiasis l.sin. v.s. hydrocele magna testis bilat., vyloučena obstrukční příčina renálního selhání, dop. nezavádět PMK. Překlad na standardní oddělení. V průběhu progrese chronických bolestí zad, navýšení analgetické terapie včetně opiátů transdermální formou. Nárust renálních parametrů, redukce dávky atb a hydratace. Noční přechodná zmatenost medikamentózně upravena. Opak. hypoglykémie. Postupný pokles zánětlivých parametrů. Navýšen BB. Vzhledem k přetrvávajícím bolestem zad ambulance bolesti - dop. místo Fentanylu empl Transtec 35, v pátek odpoledne jsme neměli, tedy MO 5ml po 6 hod. Pro pokles v KO podána 1 TU EBR. 19.1.2025 v 7:00 opak masivní enterorhagie, hypotenze, konzultace sloužící int JIP lékař - přístup symptomatický, není indikováno navyšování péče, nevedla by ke zlepšení kvality života, in cursu již opioterapie, nyní tedy k podání 2 TU EBR a 2 ČMP, hemostyptika, bez p.o. medikace, při nedost. perif. přístupu k zavedení CVK. Dcera p. Petříková informována o zdrav. stavu a nejisté prognose. V kontrolní lab. elevace zánětlivých parametrů, záměna ATB, nově nasazen Taximed. I přes zavedenou terapii klinické zhoršení stavu. Dne 20.1.2025 20:55 nastává exitus letalis. Smrt konstatovala Dr. Zrzavá, rodina telefonicky informována.
+
+Biochemie:
+11.01.2025: MO 13.4 mmol/L | KR 156.0 umol/l | GFR 0.58 ml/s/1,73 m2 | KM 92.0 umol/l | NA 143.0 mmol/L | KA 4.15 mmol/L | CL 109.0 mmol/L | FIB4 2.93 - | BI 13.5 umol/l | AL 0.08 ukat/l | AS 0.35 ukat/l | GM 0.52 ukat/l | AF 2.37 ukat/l | CH 4.87 mmol/L | TR 1.29 mmol/L | GL 10.01 mmol/L | AB 34.7 g/L | CB 65.4 g/L | CRP 97.9 mg/L | TSH 4.42 mU/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | KOMENTÁŘ plazma (Li/Heparin) | REPT_NTS 12.01.2025: MO 14.9 mmol/L | KR 203.0 umol/l | GFR 0.42 ml/s/1,73 m2 | NA 141.0 mmol/L | KA 5.19 mmol/L | CL 109.0 mmol/L | CRP 108.5 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 13.01.2025: MO 18.1 mmol/L | KR 267.0 umol/l | GFR 0.3 ml/s/1,73 m2 | NA 141.0 mmol/L | KA 5.0 mmol/L | PCT 8.9 ug/l | CL 110.0 mmol/L | FIB4 4.04 - | BI 9.5 umol/l | AL 0.06 ukat/l | AS 0.24 ukat/l | GM 0.41 ukat/l | AF 1.66 ukat/l | CRP 198.8 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS | VÝSLEDKY text 14.01.2025: MO 20.2 mmol/L | KR 301.0 umol/l | GFR 0.26 ml/s/1,73 m2 | NA 138.0 mmol/L | KA 4.63 mmol/L | PCT 8.2 ug/l | CL 106.0 mmol/L | FIB4 3.29 - | BI 9.3 umol/l | AL 0.08 ukat/l | AS 0.23 ukat/l | GM 0.42 ukat/l | AF 1.72 ukat/l | CRP 239.2 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 16.01.2025: MO 25.2 mmol/L | KR 396.0 umol/l | GFR 0.19 ml/s/1,73 m2 | NA 139.0 mmol/L | KA 4.69 mmol/L | CL 108.0 mmol/L | CRP 155.4 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | DOORDINA text | REPT_NTS 18.01.2025: MO 25.7 mmol/L | KR 457.0 umol/l | GFR 0.16 ml/s/1,73 m2 | NA 137.0 mmol/L | KA 4.88 mmol/L | CL 108.0 mmol/L | CRP 88.4 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 20.01.2025: MO 31.7 mmol/L | KR 366.0 umol/l | GFR 0.21 ml/s/1,73 m2 | NA 137.0 mmol/L | KA 5.16 mmol/L | CL 106.0 mmol/L | CRP 240.1 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS | VÝSLEDKY text
+
+Hematologie:
+11.01.2025: WBC 12.1 x10^9/L | RBC 3.7 x10^12/L | HGB 112.0 g/L | HCT 37.4 % | MCV 101.4 fL | MCH 30.4 pg | MCHC 299.0 g/L | PLT 270.0 x10^9/L | PDW 13.0 fL | NRBC 0.01 x10^9/L | NRBC% 0.1 % | APTT-T 45.2 s | aPTT-R 1.35 1 | PT-INR 1.54 1 | PT-R 1.5 1 | PT-T 21.2 s | DDI &gt; 20.00 | REPT_NTS | VÝSLEDKY text 13.01.2025: WBC 10.4 x10^9/L | RBC 2.8 x10^12/L | HGB 86.0 g/L | HCT 28.8 % | MCV 101.8 fL | MCH 30.4 pg | MCHC 299.0 g/L | PLT 155.0 x10^9/L | PDW 12.5 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS 14.01.2025: WBC 9.2 x10^9/L | RBC 2.7 x10^12/L | HGB 84.0 g/L | HCT 27.3 % | MCV 99.6 fL | MCH 30.7 pg | MCHC 308.0 g/L | PLT 158.0 x10^9/L | PDW 12.5 fL | NRBC 0.01 x10^9/L | NRBC% 0.1 % | APTT-T 61.4 s | aPTT-R 1.83 1 | PT-INR 1.56 1 | PT-R 1.51 1 | PT-T 21.5 s | FIB 4.84 g/L | REPT_NTS 16.01.2025: WBC 10.0 x10^9/L | RBC 3.0 x10^12/L | HGB 90.0 g/L | HCT 29.6 % | MCV 99.7 fL | MCH 30.3 pg | MCHC 304.0 g/L | PLT 197.0 x10^9/L | PDW 13.2 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS 18.01.2025: WBC 11.6 x10^9/L | RBC 2.7 x10^12/L | HGB 81.0 g/L | HCT 26.9 % | MCV 99.6 fL | MCH 30.0 pg | MCHC 301.0 g/L | PLT 166.0 x10^9/L | PDW 13.2 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS 18.01.2025: B_BGAB0R A Rh(D) pozitivní | P_EABQ_* negativní | S_EABQ_A negativní 19.01.2025: WBC 26.7 x10^9/L | RBC 3.3 x10^12/L | HGB 100.0 g/L | HCT 32.3 % | MCV 97.3 fL | MCH 30.1 pg | MCHC 310.0 g/L | PLT 199.0 x10^9/L | PDW 13.9 fL | NRBC 0.0 | NRBC% 0.0 | NEUM 91.0 % | TYCM 3.0 % | LYM 2.0 % | MOM 4.0 % | EOM 0.0 | BAM 0.0 | MMYM 0.0 | MYM 0.0 | PMYM 0.0 | MYBLM 0.0 | PLBM 0.0 | PLYM 0.0 | NEDBBM 0.0 | NEDBLM 0.0 | NRBCM 0.0 | MLEU text | MERYM Beze změn | MPLTM Anizocytóza. | Podpis Lundová | DOORDINA text | REPT_NTS 19.01.2025: B_BGAB0R A Rh(D) pozitivní | Poznámka text 19.01.2025: WBC 37.6 x10^9/L | RBC 3.6 x10^12/L | HGB 108.0 g/L | HCT 33.6 % | MCV 93.9 fL | MCH 30.2 pg | MCHC 321.0 g/L | PLT 187.0 x10^9/L | PDW 13.9 fL | NRBC 0.01 x10^9/L | NRBC% 0.0 | APTT-T 45.8 s | aPTT-R 1.37 1 | PT-INR 1.2 1 | PT-R 1.19 1 | PT-T 16.8 s | REPT_NTS | VÝSLEDKY text 20.01.2025: WBC 40.6 x10^9/L | RBC 3.4 x10^12/L | HGB 101.0 g/L | HCT 31.0 % | MCV 90.6 fL | MCH 29.5 pg | MCHC 326.0 g/L | PLT 198.0 x10^9/L | PDW 13.6 fL | NRBC 0.01 x10^9/L | NRBC% 0.0 | APTT-T 46.6 s | aPTT-R 1.39 1 | PT-INR 1.36 1 | PT-R 1.33 1 | PT-T 18.9 s | REPT_NTS | STAB.VZO text | Poznámka text
+
+Mikrobiologie:
+Datum: 13.01.2025 07:00 Diagnóza: I959 - Hypotenze NS Výsledek: Q_STOLIC: Příjem: 13.01.2025 Laboratorní číslo:STO-00068 Vyšetření: Výtěr z konečníku Aerobní kultivace: Nález: Běžná flóra stolice     Strukturované výsledky: Výtěr z konečníkutext REPT_NTS_DTP   --------------------   Datum: 13.01.2025 07:02 Diagnóza: I959 - Hypotenze NS Výsledek: Q_STORAN: Příjem: 13.01.2025 Laboratorní číslo:STV-00032 Vyšetření: Přímý průkaz antigenů virů ve stolici: ROTAVIRUS: negativní ADENOVIRUS: negativní NOROVIRUS: negativní ASTROVIRUS: negativní MemoViry Omezení používaných testů: Vzorky je nutné odebírat v období výskytu symptomů ( průjem, zvracení). Negativní výsledek testů nevylučuje možnou infekci způsobenou viry. Důvodem může být přerušované vylučování viru, nízká virová nálož, špatný odběr vzorku nebo nevhodné transportní podmínky.     Strukturované výsledky: Přímý průkaz antigentext REPT_NTS_DTP   --------------------   Datum: 13.01.2025 07:03 Diagnóza: I959 - Hypotenze NS Výsledek: Q_CLD: Příjem: 13.01.2025 Laboratorní číslo:CLO-00014 Vyšetření: Přímý průkaz antigenu a toxinu Clostridium difficile ve stolici Antigen CLDI: negativní Toxin A/B CLDI: negativní MemoCD Upozornění: Test není vhodný k monitoraci léčby. Negativní výsledek může být způsoben malým množstvím antigenu či toxinů ve vzorku nebo nesprávným uchováním vzorku před doručením do laboratoře. Pokud není vzorek dopraven neprodleně po odběru, je nutné jej uchovat v chladničce a to max.72 hod.     Poznámka: Negativní výsledek může být způsoben malým množstvím antigenu či toxinů ve vzorku nebo nesprávným uchováním vzorku před doručením do laboratoře. Pokud není vzorek dopraven neprodleně po odběru, je nutné jej uchovat v chladničce a to max.72 hod.   Strukturované výsledky: Přímý průkaz antigentext Poznámkatext REPT_NTS_DTP   --------------------   Datum: 13.01.2025 11:31 Diagnóza: I959 - Hypotenze NS Výsledek: Q_HA1: Příjem: 13.01.2025 Laboratorní číslo:HEM-00134 Vyšetření: Hemokultivace aerobní odběr č.1 Nález: Bez průkazu mikroorganismů.     Strukturované výsledky: Hemokultivace aerobnítext REPT_NTS_DTP   --------------------   Datum: 13.01.2025 11:32 Diagnóza: I959 - Hypotenze NS Výsledek: Q_HA2: Příjem: 13.01.2025 Laboratorní číslo:HEM-00136 Vyšetření: Hemokultivace aerobní odběr č.2 Nález: Bez průkazu mikroorganismů.     Strukturované výsledky: Hemokultivace aerobnítext REPT_NTS_DTP   --------------------   Datum: 13.01.2025 11:33 Diagnóza: I959 - Hypotenze NS Výsledek: Q_HAN1: Příjem: 13.01.2025 Laboratorní číslo:HEM-00135 Vyšetření: Hemokultivace anaerobní odběr č.1 Nález: Bez průkazu mikroorganismů.     Strukturované výsledky: Hemokultivace anaerobnítext REPT_NTS_DTP   --------------------   Datum: 13.01.2025 11:34 Diagnóza: I959 - Hypotenze NS Výsledek: Q_HAN2: Příjem: 13.01.2025 Laboratorní číslo:HEM-00137 Vyšetření: Hemokultivace anaerobní odběr č.2 Nález: Bez průkazu mikroorganismů.     Strukturované výsledky: Hemokultivace anaerobnítext REPT_NTS_DTP</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="968248" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

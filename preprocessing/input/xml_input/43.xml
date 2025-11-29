@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="43_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="43">
+      <dsip:rodcis>3177977352</dsip:rodcis>
+      <dsip:jmeno>Jana</dsip:jmeno>
+      <dsip:prijmeni>Nováková</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>F</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-06T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>3177977352</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>3177977352</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PLASMALYTE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="DICLOABAK" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="MONOPOST" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="CORDARONE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="SORVASTA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="CONTROLOC" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="NOVALGIN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="CITALEC" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="BACLOFEN POLPHARMA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="CLEXANE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ANOPYRIN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="XARELTO" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="LEXAURIN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="DUPHALAC" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="QUETIAPINE POLPHARMA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="RIVODARON" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PANTOPRAZOL +PHARMA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="FYZIOLOGICKÝ ROZTOK VIAFLO" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="AMOKSIKLAV 1 G" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.43.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-20T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-06T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-20T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-20T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">pacientka přeložená z neurologie. Stp. akutní ischemické CMP v povodí ACI a ACM vlevo, rozvoj 5.12.2024, klinicky inkompletní syndrom dominantní medie (pohledová obrna doprava, skles pravého koutku, afázie, pravostranná hemiparéza velmi těžká na HK, na DK plegie), NIHSS 19. Na CT mozku nativně vs denzní ACM M1 vlevo, t.č. bez vykreslené ischemie či IC krvácení. Podána IVT. Indikována MT ve FN USA, při nástřiku uzávěr již rekanalizován. Na kontrolním CT 6.12. rozsáhlé čerstvé ischemické změny vlevo v povodí ACM, imprese levé postranní komory - NCH bez jasné indikace k dekompresní kraniektomii, následně klin. postupné zlepšování stavu. Lab. hypokalemie, hypofosfatemie, subst., hyperlipidemie - navýšen statin. V anamnéze paroxysmální fibrilace síní, indik. antikoagulační ter. - nasazeno Xarelto. Přeléčena pneumonie /Cefotaxim/. Pro intermitentně úzkostně depresivní ladění a plačtivost nově antidepresiva. Pro rozvoj spasticity myorelaxans. Během hospitalizace remise parezy pravé dolní končetiny do lehké, na horní končetině trvá funkční plegie. Zavedena logopedie - těžká expresivní fatická porucha, dysartrie, dysfagie, percepční funkce zachovány. Postupně zlepšení p.o. příjmu, NGS extrahována, pacientka přijímá stravu bez obtíží, tekutiny nutno zahušťovat. K další péči přeložena na rhb oddělení. Pacientka se s dopomocí posadí, sed s oporou. Nález na pravostr. končetinách přetrvává. Pacientka často spavá, spolupráce horší, výzvám většinou nevyhoví. Pokračováno v logopedii, nadále tekutá strava, kterou už není nutné zahušťovat. Někdy se pacientka zvládne najíst sama, jinak krmena. V kontrolních odběrech elevace CRP při uroinfektu, empiricky zaléčena ATB. Prostý snímek hrudníku bez infiltrace. Substituce hypokalémie. Příjem tekutin p.o. nedostatečný, nadále infuzní léčba. V kontrolních odběrech pokles CRP, pacientka afebrilní. K další péči přeložena po předchozí domluvě do LDN Nemocnice Valtice, za převzetí do péče děkujeme. O zdrav. stavu a překladu informován syn. 
+Obj TK a KP komp, afebrilní, posadí se s dopomocí. 
+Rozšířený barthelové test 20 bodů, základní 10 bodů.
+
+Biochemie:
+08.01.2025: MO 3.6 mmol/L | KR 60.0 umol/l | GFR 1.44 ml/s/1,73 m2 | NA 142.0 mmol/L | KA 3.7 mmol/L | CL 105.0 mmol/L | GL 5.03 mmol/L | CRP 1.1 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | UCOL žlutá | UCLA silně zak. | UPH 8.5 - | USH 1.011 - | UBILK 0.0 | UGK-S 0.0 | UAC 0.0 | UROB 1.0 arb.j. | UBIL 0.0 | ULEU 171.0 10^6/L | UERY 110.0 10^6/L | UEPI 3.0 10^6/L | UBAK něco | UHLEN oj. | REPT_NTS 
+16.01.2025: MO 3.7 mmol/L | KR 54.0 umol/l | GFR 1.49 ml/s/1,73 m2 | NA 141.0 mmol/L | KA 3.1 mmol/L | CL 104.0 mmol/L | GL 5.51 mmol/L | CRP 93.1 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 
+16.01.2025: UCOL jantarová | UCLA zakaleno | UPH 8.5 - | USH 1.01 - | UBILK 3.0 arb.j. | UGK-S 0.0 | UAC 0.0 | UROB 3.0 arb.j. | UBIL 0.0 | ULEU 213.0 10^6/L | UERY 10.0 10^6/L | UEPI 3.0 10^6/L | UKEPI 1.0 10^6/L | UBAK něco | UHLEN něco | UTRIP něco | REPT_NTS 
+18.01.2025: MO 3.6 mmol/L | KR 55.0 umol/l | GFR 1.48 ml/s/1,73 m2 | NA 142.0 mmol/L | KA 3.38 mmol/L | CL 107.0 mmol/L | CRP 67.2 mg/L | HEMOL 1.0 - | ICTER 0.0 | LIPEM 0.0 | UCOL žlutá | UCLA mírně zak. | UPH 6.5 - | USH 1.014 - | UBILK 3.0 arb.j. | UGK-S 0.0 | UAC 0.0 | UROB 4.0 arb.j. | UBIL 0.0 | ULEU 113.0 10^6/L | UERY 3218.0 10^6/L | UKEPI 1.0 10^6/L | UVALH 1.0 10^6/L | UHLEN něco | REPT_NTS 
+20.01.2025: MO 3.4 mmol/L | KR 56.0 umol/l | GFR 1.47 ml/s/1,73 m2 | NA 142.0 mmol/L | KA 3.23 mmol/L | CL 107.0 mmol/L | GL 4.54 mmol/L | CRP 17.0 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | UCOL sv. žlutá | UCLA bez zákalu | UPH 8.5 - | USH 1.01 - | UBILK 0.0 | UGK-S 0.0 | UAC 0.0 | UROB 2.0 arb.j. | UBIL 0.0 | ULEU 13.0 10^6/L | UERY 48.0 10^6/L | UKEPI &lt; 1 | UHLEN oj.
+
+Hematologie:
+08.01.2025: WBC 7.1 x10^9/L | RBC 4.9 x10^12/L | HGB 137.0 g/L | HCT 41.8 % | MCV 85.7 fL | MCH 28.1 pg | MCHC 328.0 g/L | PLT 232.0 x10^9/L | PDW 12.1 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS 
+16.01.2025: WBC 9.5 x10^9/L | RBC 4.5 x10^12/L | HGB 127.0 g/L | HCT 38.3 % | MCV 84.7 fL | MCH 28.1 pg | MCHC 332.0 g/L | PLT 217.0 x10^9/L | PDW 12.3 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS 
+18.01.2025: WBC 6.2 x10^9/L | RBC 4.5 x10^12/L | HGB 126.0 g/L | HCT 38.1 % | MCV 84.3 fL | MCH 27.9 pg | MCHC 331.0 g/L | PLT 251.0 x10^9/L | PCT 0.27 % | MPV 10.7 fL | RDW 13.2 % | NRBC 0.0 | NRBC% 0.0 | NE 59.6 % | LY 26.5 % | MON 10.6 % | EO 2.7 % | BA 0.6 % | NEABS 3.69 x10^9/L | LYABS 1.6 x10^9/L | MOABS 0.7 x10^9/L | EOABS 0.17 x10^9/L | BAABS 0.04 x10^9/L | REPT_NTS 
+20.01.2025: WBC 6.7 x10^9/L | RBC 4.3 x10^12/L | HGB 120.0 g/L | HCT 35.6 % | MCV 83.2 fL | MCH 28.0 pg | MCHC 337.0 g/L | PLT 282.0 x10^9/L | PCT 0.29 % | MPV 10.2 fL | RDW 13.2 % | NRBC 0.0 | NRBC% 0.0 | NE 54.8 % | LY 34.1 % | MON 6.6 % | EO 3.6 % | BA 0.9 % | NEABS 3.68 x10^9/L | LYABS 2.3 x10^9/L | MOABS 0.4 x10^9/L | EOABS 0.24 x10^9/L | BAABS 0.06 x10^9/L | NEUM dodáme | TYCM dodáme | LYM dodáme | MOM dodáme | EOM dodáme | BAM dodáme | MMYM dodáme | MYM dodáme | PMYM dodáme | MYBLM dodáme | PLBM dodáme | PLYM dodáme | NEDBBM dodáme | NEDBLM dodáme | NRBCM dodáme | MLEU dodáme | MERYM dodáme | MPLTM dodáme | Podpis dodáme | DOORDINA text | REPT_NTS
+
+Mikrobiologie:
+Datum: 08.01.2025 09:22
+Diagnóza: Z508 - Péče s použitím jiných rehabilitačních výkonů
+Výsledek:
+Q_MOČ-PM:
+Příjem: 08.01.2025 Laboratorní číslo:MOC-00184
+Vyšetření: Moč z PMK 
+Aerobní kultivace: 
+Nález: Enterococcus species (sk.D) &gt;10^5 CFU/mL
+Nález: Proteus mirabilis 10^4-10^5 CFU/mL
+Nález: Escherichia coli &gt;10^5 CFU/mL
+Susp. KONTAMINACE - zvažte prosím nový odběr vzorku.Nález a jeho kvantifikace nemusí být validní (důvodem může být osídlení a pomnožení mikroorganismů v PMK). Vhodné je porovnat výsledek kultivace s výsledkem vyšetření močového sedimentu na OKB.
+Poznámka:
+Susp. KONTAMINACE - zvažte prosím nový odběr vzorku.Nález a jeho kvantifikace nemusí být validní (důvodem může být osídlení a pomnožení mikroorganismů v PMK). Vhodné je porovnat výsledek kultivace s výsledkem vyšetření močového sedimentu na OKB. 
+Strukturované výsledky:
+Moč z perm.moč. katetrutext
+Poznámkatext
+REPT_NTS_DTP
+--------------------
+Datum: 16.01.2025 09:00
+Diagnóza: Z508 - Péče s použitím jiných rehabilitačních výkonů
+Výsledek:
+Q_MOČ-PM:
+Příjem: 16.01.2025 Laboratorní číslo:MOC-00396
+Vyšetření: Moč z PMK 
+Aerobní kultivace: 
+Nález: Enterococcus faecalis (sk.D) &gt;10^5 CFU/mL
+:
+Ampicillin CIT
+Norfloxacin CIT
+Nitrofurantoin (5) CIT
+Vancomycin CIT
+Teicoplanin CIT
+Imipenem ZDC
+Linezolid CIT
+5) Nitrofurantoin (pokud je uveden na výsledkovém listě) - platí pouze pro nekomplikované IMC.
+CIT=citlivé, ZDC=citlivé, při zvýšeném dávkovacím režimu nebo
+při koncentrování ATB v místě infekce. REZ=rezistentní,
+XX=výsledek pro konzultaci s ATB střediskem
+Nález: Proteus mirabilis &gt;10^5 CFU/mL
+:
+Ampicillin CIT
+Amoxicilin/klavul. p.o. (1) CIT
+Cefuroxim p.o. (3) CIT
+Cotrimoxazol CIT
+Norfloxacin CIT
+Ciprofloxacin CIT
+Nitrofurantoin (5) REZ
+Mecillinam p.o. (6) CIT
+Fosfomycin p.o. (4) XX
+Amoxicilin/klavul. i.v. (2) CIT
+Piperacillin/tazobactam CIT
+Cefotaxim CIT
+Ceftazidim CIT
+Gentamicin (7) CIT
+Amikacin (7) CIT
+1) Amoxicilin/klav. p.o. - platí pro p.o. aplikaci a pouze pro nekomplikované IMC.
+2) Amoxicilin/klav. i.v. (pokud je uveden na výsledkovém listě) - platí pro i.v. aplikaci u kompl.IMC a ostat.dg.
+3) Cefuroxim (pokud je uveden na výsledkovém listě) - platí pro p.o. aplikaci a pouze pro nekomplikované IMC.
+4) Fosfomycin (pokud je uveden na výsledkovém listě) - platí pro p.o. aplikaci a pouze pro nekomplikované IMC
+5) Nitrofurantoin (pokud je uveden na výsledkovém listě) - platí pouze pro nekomplikované IMC 
+6) Mecillinam (pokud je uveden na výsledkovém listě) - platí pouze pro nekomplikované IMC
+7) Gentamicin, Amikacin - u systémových infekcí musí být používán v kombinaci s jinými účinnými antibiotiky.
+CIT=citlivé, REZ=rezistentní, XX=výsledek pro konzultaci s ATB
+střediskem
+Nález: Escherichia coli &gt;10^5 CFU/mL
+:
+Ampicillin REZ
+Amoxicilin/klavul. p.o. (1) CIT
+Cefuroxim p.o. (3) CIT
+Cotrimoxazol CIT
+Norfloxacin CIT
+Ciprofloxacin CIT
+Nitrofurantoin (5) REZ
+Mecillinam p.o. (6) CIT
+Fosfomycin p.o. (4) CIT
+Amoxicilin/klavul. i.v. (2) CIT
+Piperacillin/tazobactam CIT
+Cefotaxim CIT
+Ceftazidim CIT
+Gentamicin (7) CIT
+Amikacin (7) CIT
+1) Amoxicilin/klav. p.o. - platí pro p.o. aplikaci a pouze pro nekomplikované IMC.
+2) Amoxicilin/klav. i.v. (pokud je uveden na výsledkovém listě) - platí pro i.v. aplikaci u kompl.IMC a ostat.dg.
+3) Cefuroxim (pokud je uveden na výsledkovém listě) - platí pro p.o. aplikaci a pouze pro nekomplikované IMC.
+4) Fosfomycin (pokud je uveden na výsledkovém listě) - platí pro p.o. aplikaci a pouze pro nekomplikované IMC
+5) Nitrofurantoin (pokud je uveden na výsledkovém listě) - platí pouze pro nekomplikované IMC 
+6) Mecillinam (pokud je uveden na výsledkovém listě) - platí pouze pro nekomplikované IMC
+7) Gentamicin, Amikacin - u systémových infekcí musí být používán v kombinaci s jinými účinnými antibiotiky.
+CIT=citlivé, REZ=rezistentní, XX=výsledek pro konzultaci s ATB
+střediskem
+Susp. KONTAMINACE - zvažte prosím nový odběr vzorku.Nález a jeho kvantifikace nemusí být validní (důvodem může být osídlení a pomnožení mikroorganismů v PMK). Vhodné je porovnat výsledek kultivace s výsledkem vyšetření močového sedimentu na OKB.
+Poznámka:
+Susp. KONTAMINACE - zvažte prosím nový odběr vzorku.Nález a jeho kvantifikace nemusí být validní (důvodem může být osídlení a pomnožení mikroorganismů v PMK). Vhodné je porovnat výsledek kultivace s výsledkem vyšetření močového sedimentu na OKB. 
+Strukturované výsledky:
+Moč z perm.moč. katetrutext
+Poznámkatext
+REPT_NTS_DTP</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="531632" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

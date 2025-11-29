@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="27_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="27">
+      <dsip:rodcis>9929684959</dsip:rodcis>
+      <dsip:jmeno>Jana</dsip:jmeno>
+      <dsip:prijmeni>Nováková</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>F</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2024-12-31T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>9929684959</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>9929684959</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="Kanavit i.m.(dle doporučení ČNeoS)
+AMPICILIN BBP i.v." typ_med="P">
+          <dsip:dat_od format="D">2024-12-31</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="GENTAMICIN B.BRAUN i.v." typ_med="P">
+          <dsip:dat_od format="D">2024-12-31</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ARDEANUTRISOL G 10% infuze i.v." typ_med="P">
+          <dsip:dat_od format="D">2024-12-31</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="Ophtalmo-Septonex gt" typ_med="P">
+          <dsip:dat_od format="D">2024-12-31</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="Tobrex gtt" typ_med="P">
+          <dsip:dat_od format="D">2024-12-31</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.27.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-06T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2024-12-31T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-06T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-06T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">Eutrofická donošená dívenka přijata první den života na oddělení patologických novorozenců pro incipientní známky infekce (dráždivost, tachykardie), pozitivita SAG při nedostatečné ATB profylaxi. V laboratorních parametrech hraniční IL-6, leukocytóza,hraniční pozitivita PAT, ostatní parametry bez posunů. Zahájena empiricky léčba dvojkombinací ATB /Ampicilin, Gentamicin/, přechodně podpořena infuzně. 3. dne pro negativní hemokulturu ukončena terapie Gentamicinem, Ampicilin ponechán celkem 5 dní. Ikterus bez nutnosti terapie.Pro konjunktivitidu aplikovány nejdříve oční kapky (Ophtalmo-Septonex), pro nedostatečný efekt  změněna na Tobrex. Na zavedené terapii dochází k postupné úpravě klinického stavu a normalizaci laboratorních parametrů.Pátý den přeložena k matce, dále péče v systému rooming-in.  Kojena, na hmotnosti přibývá. 7. den propuštěna v dobrém stavu do domácí péče,přetvává zatím sekrece z očí.
+
+Biochemie:
+31.12.2024: BI 17.0 umol/l | KOMENTÁŘ text | REPT_NTS | STAB.VZO text
+01.01.2025: MO 5.1 mmol/L | FIB4 0.0 | BI 93.1 umol/l | BP 11.9 umol/l | AL 0.43 ukat/l | AS 1.46 ukat/l | GM 3.8 ukat/l | AF 3.98 ukat/l | GL 2.9 mmol/L | IL6 44.6 ng/L | CRP 2.1 mg/L | HEMOL 0.0 | ICTER 2.0 - | LIPEM 0.0 | REPT_NTS 
+01.01.2025: BI 89.0 umol/l | KOMENTÁŘ text | REPT_NTS | STAB.VZO text
+02.01.2025: UCOL tm. žlutá | UCLA silně zak. | UPH 5.0 - | USH 1.023 - | UBILK 1.0 arb.j. | UGK-S 1.0 arb.j. | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 9.0 10^6/L | UERY 11.0 10^6/L | UEPI 803.0 10^6/L | UKEPI 22.0 10^6/L | UAS spousta | REPT_NTS 
+03.01.2025: MO 1.9 mmol/L | GL 4.01 mmol/L | CRP 1.7 mg/L | HEMOL 0.0 | ICTER 3.0 - | LIPEM 0.0 | UCOL žlutá | UCLA mírně zak. | UPH 6.5 - | USH 1.004 - | UBILK 1.0 arb.j. | UGK-S 0.0 | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 26.0 10^6/L | UERY 5.0 10^6/L | UEPI 297.0 10^6/L | UKEPI 4.0 10^6/L | REPT_NTS 
+06.01.2025: BI 162.6 umol/l | GL 3.93 mmol/L | CRP 0.6 mg/L | HEMOL 0.0 | ICTER 3.0 - | LIPEM 0.0 | REPT_NTS
+
+Hematologie:
+31.12.2024: KS: 0 Rh(D) pozitivní | PAT: Slabě POZ +
+31.12.2024: SYF negativní | RPR negativní | REPT_NTS 
+01.01.2025: WBC 39.2 x10^9/L | RBC 5.5 x10^12/L | HGB 187.0 g/L | HCT 54.7 % | MCV 99.8 fL | MCH 34.1 pg | MCHC 342.0 g/L | PLT 375.0 x10^9/L | PDW 12.6 fL | NRBC 0.04 x10^9/L | NRBC% 0.1 % | NEUM 69.0 % | TYCM 0.0 | LYM 16.0 % | MOM 14.0 % | EOM 1.0 % | BAM 0.0 | MMYM 0.0 | MYM 0.0 | PMYM 0.0 | MYBLM 0.0 | PLBM 0.0 | PLYM 0.0 | NEDBBM 0.0 | NEDBLM 0.0 | NRBCM 0.0 | MLEU Vakuolizace neutrofilů. | MERYM Polychromázie. | MPLTM Anizocytóza. | Podpis Jurčíková | REPT_NTS 
+03.01.2025: WBC 20.3 x10^9/L | RBC 5.6 x10^12/L | HGB 189.0 g/L | HCT 54.7 % | MCV 97.0 fL | MCH 33.5 pg | MCHC 346.0 g/L | PLT 429.0 x10^9/L | PDW 13.5 fL | NRBC 0.01 x10^9/L | NRBC% 0.0 | ERC(B)_E negativní | REPT_NTS 
+06.01.2025: WBC 16.6 x10^9/L | RBC 5.6 x10^12/L | HGB 187.0 g/L | HCT 53.0 % | MCV 95.0 fL | MCH 33.5 pg | MCHC 353.0 g/L | PLT 391.0 x10^9/L | PDW 13.9 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS
+
+Mikrobiologie:
+Datum: 01.01.2025 12:36
+Diagnóza: Z380 - Jediné dítě, narozené v nemocnici
+Výsledek:
+Q_UCHO:
+Příjem: 02.01.2025 Laboratorní číslo:KLO-00006
+Vyšetření: Výtěr z ucha 
+Aerobní kultivace: 
+Nález: Staphylococcus spp. (koaguláza negativní) po pomnožení
+--------------------
+Datum: 01.01.2025 12:40
+Diagnóza: Z380 - Jediné dítě, narozené v nemocnici
+Výsledek:
+Q_AXILA:
+Příjem: 02.01.2025 Laboratorní číslo:KLO-00007
+Vyšetření: Stěr z axily 
+Aerobní kultivace: 
+Nález: Escherichia coli +++
+--------------------
+Datum: 02.01.2025 05:04
+Diagnóza: Z380 - Jediné dítě, narozené v nemocnici
+Výsledek:
+Q_MOČ:
+Příjem: 02.01.2025 Laboratorní číslo:MOC-00007
+Vyšetření: Moč-střední proud 
+Aerobní kultivace: 
+Nález: Bez průkazu mikroorganismů.
+Hemokultura: předběžně negativní,koneční výsledek t.č. není k dispozici</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="942112" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>
