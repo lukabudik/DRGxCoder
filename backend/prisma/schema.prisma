@@ -1,0 +1,94 @@
+// Prisma schema for DRGxCoder
+// Database: Supabase PostgreSQL
+
+generator client {
+  provider             = "prisma-client-py"
+  interface            = "asyncio"
+  recursive_type_depth = 5
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ICD-10 Diagnosis Codes (38k codes)
+model DiagnosisCode {
+  id        String   @id @default(uuid())
+  code      String   @unique // e.g., "A000", "I21.9"
+  name      String   // Czech name
+  category  String?  // e.g., "Střevní infekční nemoci"
+  
+  // ICD-10 chapter for filtering (extracted from code)
+  // A00-B99 = "A-B", I00-I99 = "I", etc.
+  chapter   String   @db.VarChar(5)
+  
+  createdAt DateTime @default(now())
+  
+  @@index([chapter])
+  @@index([category])
+  @@map("diagnosis_codes")
+}
+
+// IcdCategory table removed - not needed for 2-step approach
+
+// Patient Cases
+model PatientCase {
+  id           String   @id @default(cuid())
+  pacId        String?  // Original patient ID (optional, not unique - can have multiple submissions)
+  
+  // Clinical data
+  clinicalText String   @db.Text
+  biochemistry String?  @db.Text
+  hematology   String?  @db.Text
+  microbiology String?  @db.Text
+  medication   String?  @db.Text
+  
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  
+  // Relations
+  predictions  Prediction[]
+  
+  @@map("patient_cases")
+}
+
+// Prediction Results
+model Prediction {
+  id              String   @id @default(cuid())
+  caseId          String
+  
+  // Step 1 Results: Selected 3-char codes
+  selectedCodes   Json     // Array of selected 3-char codes like ["I46", "G93", "N17"]
+  step1Reasoning  String?  @db.Text
+  
+  // Step 2 Results: Final predictions
+  mainCode        String   // e.g., "I460"
+  mainName        String
+  mainConfidence  Float
+  mainReasoning   String?  @db.Text
+  
+  secondaryCodes  Json     // Array of {code, name, confidence, reasoning}
+  
+  // Metadata
+  modelUsed       String   // "google/gemini-3-pro-preview"
+  processingTime  Int      // Total milliseconds
+  
+  // Validation & Feedback
+  validated       Boolean  @default(false)
+  validatedAt     DateTime?
+  validatedBy     String?
+  feedbackType    String?  // "approved" or "rejected"
+  corrections     Json?    // Structured correction data when rejected
+  feedbackComment String?  @db.Text  // Optional single comment for entire feedback
+  
+  createdAt       DateTime @default(now())
+  
+  // Relations
+  case            PatientCase @relation(fields: [caseId], references: [id], onDelete: Cascade)
+  
+  @@index([caseId])
+  @@index([validated])
+  @@map("predictions")
+}
