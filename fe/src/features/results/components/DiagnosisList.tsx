@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Card } from '../../../shared/ui/Card';
 import type { Diagnosis } from '../../../core/types';
 import styles from './Components.module.css';
 import clsx from 'clsx';
+import { useTranslation } from '../../../shared/i18n';
 
 interface DiagnosisListProps {
     diagnoses: Diagnosis[];
@@ -18,12 +19,13 @@ export const DiagnosisList: React.FC<DiagnosisListProps> = ({
     diagnoses,
     onHover,
     activeId,
-    title = 'Diagnoses (ICD-10)',
+    title,
     collapsible = true,
-    expandLabel = 'Show all',
-    collapseLabel = 'Show less'
+    expandLabel,
+    collapseLabel
 }) => {
     const [isExpanded, setIsExpanded] = React.useState(false);
+    const { t, locale } = useTranslation();
 
     const sortedDiagnoses = React.useMemo(() => {
         return [...diagnoses].sort((a, b) => (b.probability || 0) - (a.probability || 0));
@@ -31,17 +33,26 @@ export const DiagnosisList: React.FC<DiagnosisListProps> = ({
 
     const visibleDiagnoses = collapsible && !isExpanded ? sortedDiagnoses.slice(0, 1) : sortedDiagnoses;
     const hasMore = collapsible && diagnoses.length > 1;
+    const numberLocale = locale === 'cs' ? 'cs-CZ' : 'en-US';
+    const percentFormatter = useMemo(
+        () => new Intl.NumberFormat(numberLocale, { style: 'percent', maximumFractionDigits: 0 }),
+        [numberLocale],
+    );
+
+    const heading = title ?? t('results.diagnoses.defaultTitle');
+    const expandText = expandLabel ?? t('results.diagnoses.expand', { count: Math.max(diagnoses.length - 1, 0) });
+    const collapseText = collapseLabel ?? t('results.diagnoses.collapse');
 
     return (
         <Card className={styles.listCard}>
             <div className={styles.headerRow}>
-                <h3 className={styles.cardTitle}>{title}</h3>
+                <h3 className={styles.cardTitle}>{heading}</h3>
                 {hasMore && (
                     <button
                         className={styles.toggleButton}
                         onClick={() => setIsExpanded(!isExpanded)}
                     >
-                        {isExpanded ? collapseLabel : `${expandLabel} (${diagnoses.length - 1})`}
+                        {isExpanded ? collapseText : expandText}
                     </button>
                 )}
             </div>
@@ -57,7 +68,7 @@ export const DiagnosisList: React.FC<DiagnosisListProps> = ({
                             <span className={styles.code}>{d.code}</span>
                             {d.probability && (
                                 <span className={styles.probability}>
-                                    {(d.probability * 100).toFixed(0)}%
+                                    {percentFormatter.format(d.probability)}
                                 </span>
                             )}
                         </div>

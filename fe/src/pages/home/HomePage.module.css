@@ -34,6 +34,26 @@
     border: 1px solid var(--color-border);
 }
 
+.localeSwitcher {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.localeLabel {
+    margin: 0;
+}
+
+.localeSelect {
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-text-primary);
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+}
+
 .main {
     flex: 1;
     display: grid;

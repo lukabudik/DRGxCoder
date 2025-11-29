@@ -3,6 +3,7 @@ import { Card } from '../../../shared/ui/Card';
 import type { Procedure } from '../../../core/types';
 import styles from './Components.module.css';
 import clsx from 'clsx';
+import { useTranslation } from '../../../shared/i18n';
 
 interface ProcedureListProps {
     procedures: Procedure[];
@@ -11,9 +12,11 @@ interface ProcedureListProps {
 }
 
 export const ProcedureList: React.FC<ProcedureListProps> = ({ procedures, onHover, activeId }) => {
+    const { t } = useTranslation();
+
     return (
         <Card className={styles.listCard}>
-            <h3 className={styles.cardTitle}>Procedures</h3>
+            <h3 className={styles.cardTitle}>{t('results.procedures.title')}</h3>
             <div className={styles.list}>
                 {procedures.map((p) => (
                     <div
