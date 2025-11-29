@@ -84,16 +84,6 @@ export const analyzeText = async (text: string): Promise<CaseResult> => {
                 revenue: 5400,
                 cost: 3200,
 
-                // Metadata
-                metadata: {
-                    admissionDate: '2023-10-01',
-                    dischargeDate: '2023-10-05',
-                    department: 'Internal Medicine',
-                    payer: 'Medicare',
-                    status: 'Open',
-                    riskScore: 3
-                },
-
                 // Highlights
                 diagnoses: [
                     { id: 'd1', code: 'J18.9', name: 'Pneumonia, unspecified organism', probability: 0.92, source: 'ai', reason: 'Chest X-ray shows consolidation consistent with pneumonia.' },

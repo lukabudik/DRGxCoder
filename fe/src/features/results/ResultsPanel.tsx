@@ -3,7 +3,6 @@ import type { CaseResult } from '../../core/types';
 import { SummaryCard } from './components/SummaryCard';
 import { DiagnosisList } from './components/DiagnosisList';
 import { ProcedureList } from './components/ProcedureList';
-import { Card } from '../../shared/ui/Card';
 import styles from './ResultsPanel.module.css';
 
 interface ResultsPanelProps {
@@ -44,28 +43,6 @@ export const ResultsPanel: React.FC<ResultsPanelProps> = ({ result, onHover, act
                     activeId={activeId}
                 />
             )}
-
-            <Card className={styles.metadataCard}>
-                <h3 className={styles.cardTitle}>Metadata</h3>
-                <div className={styles.metadataGrid}>
-                    <div className={styles.metaItem}>
-                        <span className={styles.metaLabel}>Patient Age</span>
-                        <span className={styles.metaValue}>{result.patientAge} {result.patientAgeUnit}</span>
-                    </div>
-                    <div className={styles.metaItem}>
-                        <span className={styles.metaLabel}>Sex</span>
-                        <span className={styles.metaValue}>{result.patientSex === '1' ? 'Male' : 'Female'}</span>
-                    </div>
-                    <div className={styles.metaItem}>
-                        <span className={styles.metaLabel}>Dept</span>
-                        <span className={styles.metaValue}>{result.metadata.department}</span>
-                    </div>
-                    <div className={styles.metaItem}>
-                        <span className={styles.metaLabel}>Status</span>
-                        <span className={styles.metaValue}>{result.metadata.status}</span>
-                    </div>
-                </div>
-            </Card>
         </div>
     );
 };

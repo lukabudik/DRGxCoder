@@ -28,7 +28,6 @@ Clean structure for a SPA that calls a REST backend, processes and displays DRG 
   - `drgCode`, `drgName`, `reliabilityScore`, `los`, `rv`, `revenue`, `cost`.
   - `diagnoses`: `[{ id, code, name, probability?, source?, severity?, ccLevel? }]`.
   - `procedures`: `[{ id, code, name, probability?, source? }]`.
-  - `metadata`: `{ patientAge?, patientSex?, admissionDate?, dischargeDate?, department?, payer?, treatmentType?, status?, notes?, riskScore? }`.
   - `highlights?`: `[{ id, start, end }]` (offsets in the input text); for demo, generate randomly on the frontend.
 
 ## State & Interaction
@@ -52,7 +51,7 @@ Clean structure for a SPA that calls a REST backend, processes and displays DRG 
 4. Define domain types (`CaseResult`, `Diagnosis`, `Procedure`, `HighlightSpan`).
 5. Implement API client and hook `useAnalyzeText` (dummy endpoint for demo).
 6. Create `HighlightText` for the input area with visual highlights (overlay or inline `<pre>` + background).
-7. Compose `AnalyzerForm` (textarea + submit + status) and `ResultsPanel` (SummaryCard + DiagnosisList + ProcedureList + MetadataCard).
+7. Compose `AnalyzerForm` (textarea + submit + status) and `ResultsPanel` (SummaryCard + DiagnosisList + ProcedureList).
 8. Add random highlight mapping on result load (split text into sentences/paragraphs and assign to items).
 9. Wire empty/loading/error states and a demo note about mock highlighting.
 10. Add basic tests: empty state render, loading, show result, hover triggers highlight class.

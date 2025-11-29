@@ -91,16 +91,5 @@ export interface CaseResult extends CoderCaseData {
     revenue: number;
     cost: number;
 
-    // Metadata for display
-    metadata: {
-        admissionDate?: string;
-        dischargeDate?: string;
-        department?: string;
-        payer?: string;
-        status?: 'Closed' | 'Blocked' | 'Open';
-        notes?: string;
-        riskScore?: number;
-    };
-
     highlights: HighlightSpan[];
 }
