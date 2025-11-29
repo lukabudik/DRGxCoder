@@ -10,6 +10,7 @@ interface DiagnosisItem {
 
 interface DiagnosisSearchProps {
     onSelect: (diagnosis: Diagnosis) => void;
+    excludedCodes?: string[];
 }
 
 // Simple debounce hook implementation if not present
@@ -22,7 +23,7 @@ function useDebounceValue<T>(value: T, delay: number): T {
     return debouncedValue;
 }
 
-export const DiagnosisSearch: React.FC<DiagnosisSearchProps> = ({ onSelect }) => {
+export const DiagnosisSearch: React.FC<DiagnosisSearchProps> = ({ onSelect, excludedCodes = [] }) => {
     const { t } = useTranslation();
     const [query, setQuery] = useState('');
     const debouncedQuery = useDebounceValue(query, 300);
@@ -44,12 +45,15 @@ export const DiagnosisSearch: React.FC<DiagnosisSearchProps> = ({ onSelect }) =>
     const filteredResults = useMemo(() => {
         if (!debouncedQuery) return [];
         const lowerQuery = debouncedQuery.toLowerCase();
+        const excludedSet = new Set(excludedCodes);
+        
         return data.filter(
             (item) =>
-                item.code.toLowerCase().includes(lowerQuery) ||
-                item.name.toLowerCase().includes(lowerQuery)
+                !excludedSet.has(item.code) &&
+                (item.code.toLowerCase().includes(lowerQuery) ||
+                item.name.toLowerCase().includes(lowerQuery))
         ).slice(0, 50); // Limit results for performance
-    }, [debouncedQuery, data]);
+    }, [debouncedQuery, data, excludedCodes]);
 
     const handleSelect = (item: DiagnosisItem) => {
         onSelect({

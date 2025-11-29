@@ -47,6 +47,18 @@ export const ResultsPanel: React.FC<ResultsPanelProps> = ({
         setIsSearchOpen(true);
     };
 
+    const excludedCodes = React.useMemo(() => {
+        if (searchMode === 'secondary') {
+            const codes = new Set<string>();
+            // Exclude principal diagnosis
+            if (result.diagnoses.length > 0) codes.add(result.diagnoses[0].code);
+            // Exclude existing secondary diagnoses
+            result.otherDiagnoses.forEach(d => codes.add(d.code));
+            return Array.from(codes);
+        }
+        return [];
+    }, [result, searchMode]);
+
     return (
         <div className={styles.container}>
             <SummaryCard result={result} principalDiagnosis={principalDiagnosis} />
@@ -84,9 +96,9 @@ export const ResultsPanel: React.FC<ResultsPanelProps> = ({
             <Modal
                 isOpen={isSearchOpen}
                 onClose={() => setIsSearchOpen(false)}
-                title={searchMode === 'principal' ? t('results.search.modalTitle') : t('results.search.modalTitle')} // You might want a different title for secondary
+                title={searchMode === 'principal' ? t('results.search.modalTitle') : t('results.search.modalTitle')}
             >
-                <DiagnosisSearch onSelect={handleCustomSelect} />
+                <DiagnosisSearch onSelect={handleCustomSelect} excludedCodes={excludedCodes} />
             </Modal>
 
             <DiagnosisList
