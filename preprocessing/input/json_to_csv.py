@@ -7,6 +7,8 @@ from typing import List, Dict, Any
 def main():
     parser = argparse.ArgumentParser(description="Convert DRG JSON results to CSV")
     parser.add_argument("input_file", help="Input JSON file path")
+    parser.add_argument("--only_codes", action="store_true", help="Include only diagnosis codes, excluding names")
+    parser.add_argument("--remove_dots", action="store_true", help="Remove dots from diagnosis codes")
     
     args = parser.parse_args()
     
@@ -21,10 +23,14 @@ def main():
         return
 
     # Define headers
-    headers = ["patient id", "main diagnosis code", "main diagnosis name"]
+    headers = ["patient id", "main diagnosis code"]
+    if not args.only_codes:
+        headers.append("main diagnosis name")
+
     for i in range(1, 15):
         headers.append(f"secondary diagnosis {i} code")
-        headers.append(f"secondary diagnosis {i} name")
+        if not args.only_codes:
+            headers.append(f"secondary diagnosis {i} name")
 
     rows = []
     for item in data:
@@ -37,11 +43,13 @@ def main():
         if "error" in analysis:
             row["patient id"] = patient_id
             row["main diagnosis code"] = "ERROR"
-            row["main diagnosis name"] = analysis.get("error")
+            if not args.only_codes:
+                row["main diagnosis name"] = analysis.get("error")
             # Fill empty for secondary diagnoses
             for i in range(1, 15):
                 row[f"secondary diagnosis {i} code"] = ""
-                row[f"secondary diagnosis {i} name"] = ""
+                if not args.only_codes:
+                    row[f"secondary diagnosis {i} name"] = ""
             rows.append(row)
             continue
 
@@ -49,17 +57,28 @@ def main():
         secondary_diags = analysis.get("secondary_diagnoses", [])
         
         row["patient id"] = patient_id
-        row["main diagnosis code"] = main_diag.get("code", "")
-        row["main diagnosis name"] = main_diag.get("name", "")
+        
+        main_code = main_diag.get("code", "")
+        if args.remove_dots:
+            main_code = main_code.replace(".", "")
+        row["main diagnosis code"] = main_code
+        
+        if not args.only_codes:
+            row["main diagnosis name"] = main_diag.get("name", "")
 
         for i in range(1, 15):
             if i <= len(secondary_diags):
                 diag = secondary_diags[i-1]
-                row[f"secondary diagnosis {i} code"] = diag.get("code", "")
-                row[f"secondary diagnosis {i} name"] = diag.get("name", "")
+                sec_code = diag.get("code", "")
+                if args.remove_dots:
+                    sec_code = sec_code.replace(".", "")
+                row[f"secondary diagnosis {i} code"] = sec_code
+                if not args.only_codes:
+                    row[f"secondary diagnosis {i} name"] = diag.get("name", "")
             else:
                 row[f"secondary diagnosis {i} code"] = ""
-                row[f"secondary diagnosis {i} name"] = ""
+                if not args.only_codes:
+                    row[f"secondary diagnosis {i} name"] = ""
         
         rows.append(row)
 
