@@ -9,7 +9,7 @@ import { Card } from '../../shared/ui/Card';
 import { Skeleton } from '../../shared/ui/Skeleton';
 import { useTranslation, type Locale } from '../../shared/i18n';
 import styles from './HomePage.module.css';
-import type { CaseResult } from '../../core/types';
+import type { CaseResult, Diagnosis } from '../../core/types';
 
 export const HomePage: React.FC = () => {
     const [inputText, setInputText] = useState('');
@@ -38,6 +38,32 @@ export const HomePage: React.FC = () => {
         setInputText('');
         setResult(null);
         setActiveHighlightId(null);
+    };
+
+    const handlePrincipalChange = (newPrincipalId: string, customDiagnosis?: Diagnosis) => {
+        if (!result) return;
+
+        const newDiagnoses = [...result.diagnoses];
+
+        if (customDiagnosis) {
+            // Add custom diagnosis to the beginning
+            newDiagnoses.unshift(customDiagnosis);
+        } else {
+            const targetIndex = newDiagnoses.findIndex(d => d.id === newPrincipalId);
+            if (targetIndex > 0) {
+                const targetDiagnosis = newDiagnoses[targetIndex];
+                // Remove from current position
+                newDiagnoses.splice(targetIndex, 1);
+                // Insert at the beginning
+                newDiagnoses.unshift(targetDiagnosis);
+            }
+        }
+
+        setResult({
+            ...result,
+            diagnoses: newDiagnoses,
+            mainDiagnosis: newDiagnoses[0].code
+        });
     };
 
     return (
@@ -109,6 +135,7 @@ export const HomePage: React.FC = () => {
                             result={result}
                             onHover={setActiveHighlightId}
                             activeId={activeHighlightId}
+                            onPrincipalChange={handlePrincipalChange}
                         />
                     )}
 

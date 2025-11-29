@@ -65,6 +65,14 @@ export const cs = {
             potentialExpand: 'Zobrazit',
             potentialCollapse: 'Skrýt',
             potentialTitle: 'Potenciální hlavní diagnózy',
+            setPrincipal: 'Nastavit jako hlavní',
+        },
+        search: {
+            placeholder: 'Hledat podle kódu nebo názvu...',
+            noResults: 'Žádné diagnózy nenalezeny.',
+            startTyping: 'Začněte psát pro vyhledávání...',
+            modalTitle: 'Vybrat hlavní diagnózu',
+            customAction: 'Vybrat vlastní',
         },
         procedures: {
             title: 'Výkony',

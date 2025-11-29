@@ -67,6 +67,14 @@ export const en: TranslationSchema = {
             potentialExpand: 'Show',
             potentialCollapse: 'Hide',
             potentialTitle: 'Potential Principal Diagnoses',
+            setPrincipal: 'Set as Principal',
+        },
+        search: {
+            placeholder: 'Search by code or name...',
+            noResults: 'No diagnoses found.',
+            startTyping: 'Start typing to search...',
+            modalTitle: 'Select Principal Diagnosis',
+            customAction: 'Select Custom',
         },
         procedures: {
             title: 'Procedures',

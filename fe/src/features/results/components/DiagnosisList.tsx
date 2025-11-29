@@ -14,6 +14,8 @@ interface DiagnosisListProps {
     expandLabel?: string;
     collapseLabel?: string;
     hideHeader?: boolean;
+    onSetPrincipal?: (id: string) => void;
+    onSelectCustom?: () => void;
 }
 
 export const DiagnosisList: React.FC<DiagnosisListProps> = ({
@@ -24,7 +26,9 @@ export const DiagnosisList: React.FC<DiagnosisListProps> = ({
     collapsible = true,
     expandLabel,
     collapseLabel,
-    hideHeader = false
+    hideHeader = false,
+    onSetPrincipal,
+    onSelectCustom
 }) => {
     const [isExpanded, setIsExpanded] = React.useState(false);
     const { t, locale } = useTranslation();
@@ -44,6 +48,8 @@ export const DiagnosisList: React.FC<DiagnosisListProps> = ({
     const heading = title ?? t('results.diagnoses.defaultTitle');
     const expandText = expandLabel ?? t('results.diagnoses.expand', { count: Math.max(diagnoses.length - 1, 0) });
     const collapseText = collapseLabel ?? t('results.diagnoses.collapse');
+
+    const showCustomButton = onSelectCustom && (!collapsible || isExpanded);
 
     return (
         <Card className={styles.listCard}>
@@ -80,8 +86,25 @@ export const DiagnosisList: React.FC<DiagnosisListProps> = ({
                             <div className={styles.itemName}>{d.name}</div>
                             {d.reason && <div className={styles.itemReason}>{d.reason}</div>}
                         </div>
+                        {onSetPrincipal && (
+                            <button
+                                className={styles.actionButton}
+                                onClick={(e) => {
+                                    e.stopPropagation();
+                                    onSetPrincipal(d.id);
+                                }}
+                                title={t('results.diagnoses.setPrincipal')}
+                            >
+                                {t('results.diagnoses.setPrincipal')}
+                            </button>
+                        )}
                     </div>
                 ))}
+                {showCustomButton && (
+                    <button className={styles.customSelectButton} onClick={onSelectCustom}>
+                        + {t('results.search.customAction')}
+                    </button>
+                )}
             </div>
         </Card>
     );
