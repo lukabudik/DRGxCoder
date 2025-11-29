@@ -44,7 +44,7 @@ Tvůj úkol:
 3. Uveď důvod pro výběr hlavní diagnózy a odhadni pravděpodobnost správnosti (0-100%).
 4. Navrhni další potenciální hlavní diagnózy, pokud existují.
 5. Urči VEDLEJŠÍ DIAGNÓZY (maximálně 14).
-6. Uveď důvod pro každou vedlejší diagnózu a odhadni pravděpodobnost.
+6. Uveď důvod pro každou vedlejší diagnózu (případně tam i popiš jak se to vázalo k průběhu léčby a taky potenciální důvod proč by se tato diagnóza nemusela uznat) a odhadni pravděpodobnost.
 
 Výstup musí být POUZE validní JSON v následujícím formátu:
 {
