@@ -185,6 +185,29 @@
     line-height: 1.4;
 }
 
+.actionButton {
+    background: none;
+    border: none;
+    padding: var(--spacing-1) var(--spacing-2);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    height: 32px;
+}
+
+.listItem:hover .actionButton,
+.actionButton:focus {
+    opacity: 1;
+}
+
 .actionButton:hover {
     color: var(--color-primary);
     background-color: var(--color-surface);
