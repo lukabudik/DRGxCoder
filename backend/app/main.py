@@ -24,6 +24,7 @@ from app.database import (
     connect_db,
     disconnect_db,
     find_or_create_patient,
+    get_patient,
     create_case,
     get_case,
     list_cases,
@@ -277,6 +278,47 @@ async def create_prediction_endpoint(input: ClinicalInput):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+# ===== PATIENTS =====
+
+@app.get("/api/patients/{patient_id}")
+async def get_patient_detail(patient_id: str):
+    """Get patient with all their cases"""
+    try:
+        patient = await get_patient(patient_id)
+        
+        if not patient:
+            raise HTTPException(status_code=404, detail="Patient not found")
+        
+        return {
+            "id": patient.id,
+            "birth_number": patient.birthNumber,
+            "first_name": patient.firstName,
+            "last_name": patient.lastName,
+            "date_of_birth": patient.dateOfBirth,
+            "sex": patient.sex,
+            "country_of_residence": patient.countryOfResidence,
+            "created_at": patient.createdAt,
+            "cases": [
+                {
+                    "id": case.id,
+                    "pac_id": case.pacId,
+                    "hospital_patient_id": case.hospitalPatientId,
+                    "admission_date": case.admissionDate,
+                    "discharge_date": case.dischargeDate,
+                    "created_at": case.createdAt,
+                    "predictions": case.predictions,
+                }
+                for case in patient.cases
+            ] if patient.cases else []
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error getting patient: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 # ===== CASES =====
 
 @app.get("/api/cases", response_model=PaginatedCases)
@@ -316,9 +358,9 @@ async def get_cases(
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@app.get("/api/cases/{case_id}", response_model=CaseDetailResponse)
+@app.get("/api/cases/{case_id}")
 async def get_case_detail(case_id: str):
-    """Get case with all predictions"""
+    """Get case with all predictions and patient data"""
     try:
         case = await get_case(case_id)
         
@@ -326,37 +368,41 @@ async def get_case_detail(case_id: str):
             raise HTTPException(status_code=404, detail="Case not found")
         
         predictions = [
-            PredictionResponse(
-                prediction_id=pred.id,
-                case_id=case.id,
-                selected_codes=pred.selectedCodes,
-                step1_reasoning=pred.step1Reasoning or "",
-                main_diagnosis=DiagnosisCode(
-                    code=pred.mainCode,
-                    name=pred.mainName,
-                    confidence=pred.mainConfidence,
-                    reasoning=pred.mainReasoning,
-                ),
-                secondary_diagnoses=[DiagnosisCode(**d) for d in pred.secondaryCodes],
-                model_used=pred.modelUsed,
-                processing_time=pred.processingTime,
-                created_at=pred.createdAt,
-            )
+            {
+                "id": pred.id,
+                "case_id": case.id,
+                "main_code": pred.mainCode,
+                "main_name": pred.mainName,
+                "main_confidence": pred.mainConfidence,
+                "validated": pred.validated,
+                "created_at": pred.createdAt,
+            }
             for pred in case.predictions
         ]
         
-        return CaseDetailResponse(
-            id=case.id,
-            pac_id=case.pacId,
-            clinical_text=case.clinicalText,
-            biochemistry=case.biochemistry,
-            hematology=case.hematology,
-            microbiology=case.microbiology,
-            medication=case.medication,
-            created_at=case.createdAt,
-            predictions_count=len(predictions),
-            predictions=predictions,
-        )
+        return {
+            "id": case.id,
+            "pac_id": case.pacId,
+            "hospital_patient_id": case.hospitalPatientId,
+            "admission_date": case.admissionDate,
+            "discharge_date": case.dischargeDate,
+            "clinical_text": case.clinicalText,
+            "biochemistry": case.biochemistry,
+            "hematology": case.hematology,
+            "microbiology": case.microbiology,
+            "medication": case.medication,
+            "created_at": case.createdAt,
+            "predictions_count": len(predictions),
+            "predictions": predictions,
+            "patient": {
+                "id": case.patient.id,
+                "first_name": case.patient.firstName,
+                "last_name": case.patient.lastName,
+                "date_of_birth": case.patient.dateOfBirth,
+                "sex": case.patient.sex,
+                "birth_number": case.patient.birthNumber,
+            } if case.patient else None
+        }
         
     except HTTPException:
         raise
@@ -367,14 +413,14 @@ async def get_case_detail(case_id: str):
 
 # ===== PREDICTIONS =====
 
-@app.get("/api/predictions", response_model=PaginatedPredictions)
+@app.get("/api/predictions")
 async def get_predictions(
     page: int = Query(1, ge=1),
     limit: int = Query(20, ge=1, le=100),
     case_id: str = Query(None),
     validated: bool = Query(None),
 ):
-    """List predictions with filters"""
+    """List predictions with filters and nested case/patient data"""
     try:
         result = await list_predictions(
             page=page,
@@ -384,56 +430,91 @@ async def get_predictions(
         )
         
         predictions = [
-            PredictionListItem(
-                id=pred.id,
-                case_id=pred.caseId,
-                pac_id=pred.case.pacId if pred.case else None,
-                main_code=pred.mainCode,
-                main_name=pred.mainName,
-                main_confidence=pred.mainConfidence,
-                validated=pred.validated,
-                created_at=pred.createdAt,
-            )
+            {
+                "id": pred.id,
+                "case_id": pred.caseId,
+                "pac_id": pred.case.pacId if pred.case else None,
+                "main_code": pred.mainCode,
+                "main_name": pred.mainName,
+                "main_confidence": pred.mainConfidence,
+                "secondary_codes": pred.secondaryCodes if pred.secondaryCodes else [],
+                "validated": pred.validated,
+                "feedback_type": pred.feedbackType,
+                "created_at": pred.createdAt,
+                "case": {
+                    "id": pred.case.id if pred.case else None,
+                    "patient": {
+                        "id": pred.case.patient.id,
+                        "first_name": pred.case.patient.firstName,
+                        "last_name": pred.case.patient.lastName,
+                        "date_of_birth": pred.case.patient.dateOfBirth,
+                        "sex": pred.case.patient.sex,
+                    } if pred.case and pred.case.patient else None
+                } if pred.case else None
+            }
             for pred in result["predictions"]
         ]
         
-        return PaginatedPredictions(
-            predictions=predictions,
-            total=result["total"],
-            page=result["page"],
-            pages=result["pages"],
-        )
+        return {
+            "predictions": predictions,
+            "total": result["total"],
+            "page": result["page"],
+            "pages": result["pages"],
+        }
         
     except Exception as e:
         logger.error(f"Error listing predictions: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 
-@app.get("/api/predictions/{prediction_id}", response_model=PredictionResponse)
+@app.get("/api/predictions/{prediction_id}")
 async def get_prediction_detail(prediction_id: str):
-    """Get prediction details"""
+    """Get prediction details with nested case and patient data"""
     try:
         pred = await get_prediction(prediction_id)
         
         if not pred:
             raise HTTPException(status_code=404, detail="Prediction not found")
         
-        return PredictionResponse(
-            prediction_id=pred.id,
-            case_id=pred.caseId,
-            selected_codes=pred.selectedCodes,
-            step1_reasoning=pred.step1Reasoning or "",
-            main_diagnosis=DiagnosisCode(
-                code=pred.mainCode,
-                name=pred.mainName,
-                confidence=pred.mainConfidence,
-                reasoning=pred.mainReasoning,
-            ),
-            secondary_diagnoses=[DiagnosisCode(**d) for d in pred.secondaryCodes],
-            model_used=pred.modelUsed,
-            processing_time=pred.processingTime,
-            created_at=pred.createdAt,
-        )
+        return {
+            "prediction_id": pred.id,
+            "case_id": pred.caseId,
+            "pac_id": pred.case.pacId if pred.case else None,
+            "selected_codes": pred.selectedCodes,
+            "step1_reasoning": pred.step1Reasoning or "",
+            "main_diagnosis": {
+                "code": pred.mainCode,
+                "name": pred.mainName,
+                "confidence": pred.mainConfidence,
+                "reasoning": pred.mainReasoning,
+            },
+            "secondary_diagnoses": pred.secondaryCodes,
+            "model_used": pred.modelUsed,
+            "processing_time": pred.processingTime,
+            "validated": pred.validated,
+            "validated_at": pred.validatedAt,
+            "validated_by": pred.validatedBy,
+            "feedback_type": pred.feedbackType,
+            "feedback_comment": pred.feedbackComment,
+            "corrections": pred.corrections,
+            "created_at": pred.createdAt,
+            "case": {
+                "id": pred.case.id,
+                "clinical_text": pred.case.clinicalText,
+                "biochemistry": pred.case.biochemistry,
+                "hematology": pred.case.hematology,
+                "microbiology": pred.case.microbiology,
+                "medication": pred.case.medication,
+                "patient": {
+                    "id": pred.case.patient.id,
+                    "first_name": pred.case.patient.firstName,
+                    "last_name": pred.case.patient.lastName,
+                    "date_of_birth": pred.case.patient.dateOfBirth,
+                    "sex": pred.case.patient.sex,
+                    "birth_number": pred.case.patient.birthNumber,
+                } if pred.case.patient else None
+            } if pred.case else None
+        }
         
     except HTTPException:
         raise

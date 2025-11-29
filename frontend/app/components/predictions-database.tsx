@@ -43,12 +43,31 @@ type Prediction = {
   main_code: string;
   main_name: string;
   main_confidence: number;
+  secondary_codes?: Array<{
+    code: string;
+    name: string;
+    confidence: number;
+  }>;
   validated: boolean;
+  feedback_type?: 'approved' | 'rejected';
   created_at: string;
+  case?: {
+    id: string;
+    patient?: {
+      id: string;
+      first_name: string;
+      last_name: string;
+      date_of_birth: string;
+      sex: string;
+    };
+  };
 };
 
-const getStatusBadge = (validated: boolean) => {
+const getStatusBadge = (validated: boolean, feedbackType?: 'approved' | 'rejected') => {
   if (validated) {
+    if (feedbackType === 'rejected') {
+      return <Badge variant="destructive">Rejected</Badge>;
+    }
     return <Badge variant="success">Approved</Badge>;
   }
   return <Badge variant="default">Pending</Badge>;
@@ -85,11 +104,20 @@ export function PredictionsDatabase() {
 
   const { data: predictionsData, isLoading } = useQuery({
     queryKey: ['predictions'],
-    queryFn: () => api.listPredictions({ page: 1, limit: 50 }),
+    queryFn: async () => {
+      const result = await api.listPredictions({ page: 1, limit: 50 });
+      console.log('Predictions API response:', result);
+      if (result?.predictions) {
+        console.log('First prediction:', result.predictions[0]);
+      }
+      return result;
+    },
     refetchInterval: 10000,
   });
 
   const predictions = (predictionsData?.predictions || []) as Prediction[];
+  
+  console.log('Processed predictions:', predictions);
 
   // Define columns
   const columns = useMemo<ColumnDef<Prediction>[]>(
@@ -186,12 +214,29 @@ export function PredictionsDatabase() {
             </button>
           );
         },
-        cell: ({ row }) => (
-          <div className={styles.diagnosisCell}>
-            <code className={styles.codeCell}>{row.getValue('main_code')}</code>
-            <span className={styles.diagnosisName}>{row.original.main_name}</span>
-          </div>
-        ),
+        cell: ({ row }) => {
+          const secondaryCount = row.original.secondary_codes?.length || 0;
+          return (
+            <div className={styles.diagnosisCell}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <code className={styles.codeCell}>{row.getValue('main_code')}</code>
+                {secondaryCount > 0 && (
+                  <Badge 
+                    variant="secondary" 
+                    style={{ 
+                      fontSize: '0.7rem', 
+                      padding: '2px 6px',
+                      fontWeight: 600,
+                    }}
+                  >
+                    +{secondaryCount}
+                  </Badge>
+                )}
+              </div>
+              <span className={styles.diagnosisName}>{row.original.main_name}</span>
+            </div>
+          );
+        },
       },
       {
         accessorKey: 'main_confidence',
@@ -232,10 +277,11 @@ export function PredictionsDatabase() {
       {
         accessorKey: 'validated',
         header: 'Status',
-        cell: ({ row }) => getStatusBadge(row.getValue('validated')),
+        cell: ({ row }) => getStatusBadge(row.getValue('validated'), row.original.feedback_type),
         filterFn: (row, id, value) => {
           if (value === 'all') return true;
-          if (value === 'approved') return row.getValue(id) === true;
+          if (value === 'approved') return row.getValue(id) === true && row.original.feedback_type === 'approved';
+          if (value === 'rejected') return row.getValue(id) === true && row.original.feedback_type === 'rejected';
           if (value === 'pending') return row.getValue(id) === false;
           return true;
         },

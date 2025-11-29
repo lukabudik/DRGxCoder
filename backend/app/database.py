@@ -348,10 +348,16 @@ async def create_prediction(
 
 
 async def get_prediction(prediction_id: str):
-    """Get prediction by ID with case data"""
+    """Get prediction by ID with full nested case and patient data"""
     prediction = await db.prediction.find_unique(
         where={"id": prediction_id},
-        include={"case": True}
+        include={
+            "case": {
+                "include": {
+                    "patient": True
+                }
+            }
+        }
     )
     return prediction
 
@@ -362,7 +368,7 @@ async def list_predictions(
     case_id: Optional[str] = None,
     validated: Optional[bool] = None,
 ):
-    """List predictions with pagination and filters"""
+    """List predictions with pagination and filters - includes nested case and patient data"""
     skip = (page - 1) * limit
     
     where = {}
@@ -376,7 +382,13 @@ async def list_predictions(
         skip=skip,
         take=limit,
         order={"createdAt": "desc"},
-        include={"case": True}
+        include={
+            "case": {
+                "include": {
+                    "patient": True
+                }
+            }
+        }
     )
     
     total = await db.prediction.count(where=where)
