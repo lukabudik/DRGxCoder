@@ -64,6 +64,7 @@ export const cs = {
             collapse: 'Skrýt',
             potentialExpand: 'Zobrazit potenciál',
             potentialCollapse: 'Skrýt potenciál',
+            potentialTitle: 'Potenciální hlavní diagnózy',
         },
         procedures: {
             title: 'Výkony',
@@ -201,4 +202,4 @@ export const cs = {
             errorPrefix: 'Chyba: {{message}}',
         },
     },
-} as const;
+};

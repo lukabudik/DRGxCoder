@@ -5,3 +5,27 @@
     /* More spacing between sections */
     padding-bottom: var(--spacing-12);
 }
+
+.potentialContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4);
+}
+
+.potentialButton {
+    align-self: flex-start;
+    background: none;
+    border: 1px solid var(--color-border);
+    padding: var(--spacing-2) var(--spacing-4);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    border-radius: var(--radius-md);
+    transition: all 0.2s ease;
+}
+
+.potentialButton:hover {
+    background-color: var(--color-surface-hover);
+    color: var(--color-text-primary);
+    border-color: var(--color-text-secondary);
+}

@@ -66,6 +66,7 @@ export const en: TranslationSchema = {
             collapse: 'Hide',
             potentialExpand: 'Show potential',
             potentialCollapse: 'Hide potential',
+            potentialTitle: 'Potential Principal Diagnoses',
         },
         procedures: {
             title: 'Procedures',
@@ -203,4 +204,4 @@ export const en: TranslationSchema = {
             errorPrefix: 'Error: {{message}}',
         },
     },
-} as const;
+};

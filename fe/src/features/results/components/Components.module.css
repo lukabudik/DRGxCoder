@@ -26,6 +26,14 @@
     letter-spacing: -0.02em;
 }
 
+.summaryReason {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin-top: var(--spacing-2);
+    line-height: 1.5;
+    max-width: 90%;
+}
+
 .metricsGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);

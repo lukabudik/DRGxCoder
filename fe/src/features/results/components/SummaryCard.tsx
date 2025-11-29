@@ -1,14 +1,15 @@
 import React, { useMemo } from 'react';
 import { Card } from '../../../shared/ui/Card';
-import type { CaseResult } from '../../../core/types';
+import type { CaseResult, Diagnosis } from '../../../core/types';
 import { useTranslation } from '../../../shared/i18n';
 import styles from './Components.module.css';
 
 interface SummaryCardProps {
     result: CaseResult;
+    principalDiagnosis: Diagnosis;
 }
 
-export const SummaryCard: React.FC<SummaryCardProps> = ({ result }) => {
+export const SummaryCard: React.FC<SummaryCardProps> = ({ result, principalDiagnosis }) => {
     const { t, locale } = useTranslation();
 
     const numberLocale = locale === 'cs' ? 'cs-CZ' : 'en-US';
@@ -29,8 +30,11 @@ export const SummaryCard: React.FC<SummaryCardProps> = ({ result }) => {
         <Card className={styles.summaryCard}>
             <div className={styles.summaryHeader}>
                 <div>
-                    <div className={styles.drgLabel}>{t('results.summary.drgLabel', { code: result.drgCode })}</div>
-                    <h2 className={styles.drgName}>{result.drgName}</h2>
+                    <div className={styles.drgLabel}>{principalDiagnosis.code}</div>
+                    <h2 className={styles.drgName}>{principalDiagnosis.name}</h2>
+                    {principalDiagnosis.reason && (
+                        <div className={styles.summaryReason}>{principalDiagnosis.reason}</div>
+                    )}
                 </div>
             </div>
 

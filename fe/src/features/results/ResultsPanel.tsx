@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import type { CaseResult } from '../../core/types';
 import { SummaryCard } from './components/SummaryCard';
 import { DiagnosisList } from './components/DiagnosisList';
@@ -14,20 +14,37 @@ interface ResultsPanelProps {
 
 export const ResultsPanel: React.FC<ResultsPanelProps> = ({ result, onHover, activeId }) => {
     const { t } = useTranslation();
+    const [showPotential, setShowPotential] = useState(false);
+
+    const principalDiagnosis = result.diagnoses[0];
+    const potentialDiagnoses = result.diagnoses.slice(1);
 
     return (
         <div className={styles.container}>
-            <SummaryCard result={result} />
+            <SummaryCard result={result} principalDiagnosis={principalDiagnosis} />
 
-            <DiagnosisList
-                title={t('results.diagnoses.principal')}
-                diagnoses={result.diagnoses}
-                onHover={onHover}
-                activeId={activeId}
-                collapsible={true}
-                expandLabel={t('results.diagnoses.potentialExpand')}
-                collapseLabel={t('results.diagnoses.potentialCollapse')}
-            />
+            {potentialDiagnoses.length > 0 && (
+                <div className={styles.potentialContainer}>
+                    <button
+                        className={styles.potentialButton}
+                        onClick={() => setShowPotential(!showPotential)}
+                    >
+                        {showPotential
+                            ? t('results.diagnoses.potentialCollapse')
+                            : t('results.diagnoses.potentialExpand')}
+                    </button>
+
+                    {showPotential && (
+                        <DiagnosisList
+                            title={t('results.diagnoses.potentialTitle')}
+                            diagnoses={potentialDiagnoses}
+                            onHover={onHover}
+                            activeId={activeId}
+                            collapsible={false}
+                        />
+                    )}
+                </div>
+            )}
 
             {result.otherDiagnoses.length > 0 && (
                 <DiagnosisList
