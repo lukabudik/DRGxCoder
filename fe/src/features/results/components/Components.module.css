@@ -24,6 +24,17 @@
     font-weight: 600;
     color: var(--color-text-primary);
     letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-2);
+}
+
+.summaryReason {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    max-width: 90%;
+    padding-left: var(--spacing-3);
+    border-left: 2px solid var(--color-primary);
 }
 
 .metricsGrid {
@@ -54,6 +65,12 @@
     font-variant-numeric: tabular-nums;
 }
 
+.secondaryDiagnosesContainer {
+    margin-top: var(--spacing-8);
+    padding-top: var(--spacing-6);
+    border-top: 1px solid var(--color-border);
+}
+
 .listCard {
     display: flex;
     flex-direction: column;
@@ -68,48 +85,51 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: var(--spacing-2);
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: var(--spacing-2);
 }
 
 .cardTitle {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-sm);
     font-weight: 600;
-    color: var(--color-text-primary);
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     margin: 0;
 }
 
 .toggleButton {
     background: none;
     border: none;
-    padding: 4px 8px;
+    padding: 0;
     font-size: var(--font-size-sm);
-    color: var(--color-text-secondary);
+    color: var(--color-primary);
     cursor: pointer;
-    border-radius: 4px;
     transition: all 0.2s ease;
 }
 
 .toggleButton:hover {
-    background-color: var(--color-surface-hover);
-    color: var(--color-text-primary);
+    color: var(--color-primary-hover);
+    text-decoration: underline;
 }
 
 .list {
     display: flex;
     flex-direction: column;
-    gap: 1px;
+    gap: 0;
 }
 
 .listItem {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 1fr auto;
     gap: var(--spacing-3);
     padding: var(--spacing-3) var(--spacing-2);
     border-bottom: 1px solid var(--color-border);
     background-color: transparent;
     transition: all 0.2s ease;
     cursor: default;
-    border-radius: var(--radius-md);
+    align-items: start;
 }
 
 .listItem:last-child {
@@ -163,4 +183,80 @@
     font-size: var(--font-size-sm);
     color: var(--color-text-secondary);
     line-height: 1.4;
+}
+
+.actionButton {
+    background: none;
+    border: none;
+    padding: var(--spacing-1) var(--spacing-2);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    height: 32px;
+}
+
+.listItem:hover .actionButton,
+.actionButton:focus {
+    opacity: 1;
+}
+
+.actionButton:hover {
+    color: var(--color-primary);
+    background-color: var(--color-surface);
+    border-radius: var(--radius-sm);
+}
+
+.removeButton {
+    background: none;
+    border: none;
+    padding: var(--spacing-1);
+    color: var(--color-text-tertiary);
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listItem:hover .removeButton,
+.removeButton:focus {
+    opacity: 1;
+}
+
+.removeButton:hover {
+    color: var(--color-error);
+    background-color: var(--color-surface);
+    border-radius: var(--radius-sm);
+}
+
+.customSelectButton {
+    width: 100%;
+    text-align: left;
+    padding: var(--spacing-3) var(--spacing-2);
+    background: transparent;
+    border: none;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-2);
+}
+
+.customSelectButton:hover {
+    background-color: var(--color-surface-hover);
+    color: var(--color-primary-hover);
 }

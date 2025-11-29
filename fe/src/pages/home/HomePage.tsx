@@ -7,8 +7,9 @@ import { CoderForm } from '../../features/coder/CoderForm';
 import { Button } from '../../shared/ui/Button';
 import { Card } from '../../shared/ui/Card';
 import { Skeleton } from '../../shared/ui/Skeleton';
+import { useTranslation, type Locale } from '../../shared/i18n';
 import styles from './HomePage.module.css';
-import type { CaseResult } from '../../core/types';
+import type { CaseResult, Diagnosis } from '../../core/types';
 
 export const HomePage: React.FC = () => {
     const [inputText, setInputText] = useState('');
@@ -17,6 +18,7 @@ export const HomePage: React.FC = () => {
     const [showCoderForm, setShowCoderForm] = useState(false);
 
     const { mutate: analyze, isPending, error } = useAnalyzeText();
+    const { t, locale, setLocale, availableLocales } = useTranslation();
 
     const handleAnalyze = (text: string) => {
         setInputText(text);
@@ -28,17 +30,85 @@ export const HomePage: React.FC = () => {
         });
     };
 
+    const handleLocaleChange = (value: Locale) => {
+        setLocale(value);
+    };
+
     const handleClear = () => {
         setInputText('');
         setResult(null);
         setActiveHighlightId(null);
     };
 
+    const handlePrincipalChange = (newPrincipalId: string, customDiagnosis?: Diagnosis) => {
+        if (!result) return;
+
+        const newDiagnoses = [...result.diagnoses];
+
+        if (customDiagnosis) {
+            // Add custom diagnosis to the beginning
+            newDiagnoses.unshift(customDiagnosis);
+        } else {
+            const targetIndex = newDiagnoses.findIndex(d => d.id === newPrincipalId);
+            if (targetIndex > 0) {
+                const targetDiagnosis = newDiagnoses[targetIndex];
+                // Remove from current position
+                newDiagnoses.splice(targetIndex, 1);
+                // Insert at the beginning
+                newDiagnoses.unshift(targetDiagnosis);
+            }
+        }
+
+        // Ensure manual selections don't persist in potential list (index 1+)
+        const filteredDiagnoses = [
+            newDiagnoses[0],
+            ...newDiagnoses.slice(1).filter(d => !d.id.startsWith('custom-'))
+        ];
+
+        setResult({
+            ...result,
+            diagnoses: filteredDiagnoses,
+            mainDiagnosis: filteredDiagnoses[0].code
+        });
+    };
+
+    const handleAddSecondary = (diagnosis: Diagnosis) => {
+        if (!result) return;
+        setResult({
+            ...result,
+            otherDiagnoses: [...result.otherDiagnoses, diagnosis]
+        });
+    };
+
+    const handleRemoveSecondary = (id: string) => {
+        if (!result) return;
+        setResult({
+            ...result,
+            otherDiagnoses: result.otherDiagnoses.filter(d => d.id !== id)
+        });
+    };
+
     return (
         <div className={styles.container}>
             <header className={styles.header}>
-                <div className={styles.logo}>DRG Audit <span className={styles.badge}>Demo</span></div>
-                <Button variant="secondary" onClick={() => alert('Settings placeholder')}>Settings</Button>
+                <div className={styles.logo}>
+                    {t('common.appName')} <span className={styles.badge}>{t('common.demoBadge')}</span>
+                </div>
+                <div className={styles.localeSwitcher}>
+                    <label htmlFor="locale-select" className={styles.localeLabel}>{t('common.language.label')}</label>
+                    <select
+                        id="locale-select"
+                        className={styles.localeSelect}
+                        value={locale}
+                        onChange={(event) => handleLocaleChange(event.target.value as Locale)}
+                    >
+                        {availableLocales.map((code) => (
+                            <option key={code} value={code}>
+                                {code === 'cs' ? t('common.language.cs') : t('common.language.en')}
+                            </option>
+                        ))}
+                    </select>
+                </div>
             </header>
 
             <main className={styles.main}>
@@ -46,9 +116,9 @@ export const HomePage: React.FC = () => {
                     {result ? (
                         <Card className={styles.inputCard} padding="lg">
                             <div className={styles.inputHeader}>
-                                <h3 className={styles.cardTitle}>Analyzed Text</h3>
+                                <h3 className={styles.cardTitle}>{t('home.analyzedTitle')}</h3>
                                 <Button variant="secondary" onClick={handleClear} className={styles.clearBtn}>
-                                    Clear & New
+                                    {t('home.clear')}
                                 </Button>
                             </div>
                             <div className={styles.highlightContainer}>
@@ -76,9 +146,9 @@ export const HomePage: React.FC = () => {
 
                     {error && (
                         <Card className={styles.errorCard}>
-                            <h3 className={styles.errorTitle}>Analysis Failed</h3>
-                            <p>We couldn't process your request. Please try again.</p>
-                            <Button onClick={() => handleAnalyze(inputText)} variant="secondary">Retry</Button>
+                            <h3 className={styles.errorTitle}>{t('home.errorTitle')}</h3>
+                            <p>{t('home.errorDescription')}</p>
+                            <Button onClick={() => handleAnalyze(inputText)} variant="secondary">{t('home.retry')}</Button>
                         </Card>
                     )}
 
@@ -87,6 +157,9 @@ export const HomePage: React.FC = () => {
                             result={result}
                             onHover={setActiveHighlightId}
                             activeId={activeHighlightId}
+                            onPrincipalChange={handlePrincipalChange}
+                            onAddSecondary={handleAddSecondary}
+                            onRemoveSecondary={handleRemoveSecondary}
                         />
                     )}
 
@@ -94,14 +167,14 @@ export const HomePage: React.FC = () => {
                         <div className={styles.coderSection}>
                             <div className={styles.coderHeader}>
                                 <div>
-                                    <h3 className={styles.coderTitle}>Coder Repair</h3>
-                                    <p className={styles.coderHint}>Rozbalte, pokud chcete upravit hodnoty a odeslat opravu.</p>
+                                    <h3 className={styles.coderTitle}>{t('home.coder.title')}</h3>
+                                    <p className={styles.coderHint}>{t('home.coder.hint')}</p>
                                 </div>
                                 <Button
                                     variant="secondary"
                                     onClick={() => setShowCoderForm((prev) => !prev)}
                                 >
-                                    {showCoderForm ? 'Skrýt' : 'Zobrazit'}
+                                    {showCoderForm ? t('home.coder.hide') : t('home.coder.show')}
                                 </Button>
                             </div>
 
@@ -112,14 +185,14 @@ export const HomePage: React.FC = () => {
                     {!result && !isPending && !error && (
                         <div className={styles.emptyState}>
                             <div className={styles.emptyIllustration} />
-                            <p className={styles.emptyText}>Paste the epicrisis/discharge text and start analysis.</p>
+                            <p className={styles.emptyText}>{t('home.empty')}</p>
                         </div>
                     )}
                 </div>
             </main>
 
             <footer className={styles.footer}>
-                <p>Demo highlighting (mock) - Randomly generated for demonstration purposes.</p>
+                <p>{t('home.emptyFooter')}</p>
             </footer>
         </div>
     );

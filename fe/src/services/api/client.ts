@@ -45,11 +45,11 @@ export const analyzeText = async (text: string): Promise<CaseResult> => {
 
                 // Lists
                 otherDiagnoses: [
-                    { id: 'sd2', code: 'R06.02', name: 'Shortness of breath', probability: 0.88, source: 'ai', weight: 1, reason: 'Patient reported difficulty breathing upon admission.' },
-                    { id: 'sd3', code: 'E11.9', name: 'Type 2 diabetes mellitus without complications', probability: 0.75, source: 'human', weight: 1, reason: 'History of T2DM noted in patient records.' }
+                    { id: 'sd2', code: 'R06.02', name: 'Dušnost (dyspnoe)', probability: 0.88, source: 'ai', weight: 1, reason: 'Pacient uváděl potíže s dýcháním při příjmu.' },
+                    { id: 'sd3', code: 'E11.9', name: 'Diabetes mellitus 2. typu bez komplikací', probability: 0.75, source: 'human', weight: 1, reason: 'Anamnéza DM 2. typu zaznamenána v dokumentaci.' }
                 ],
                 procedures: [
-                    { id: 'p1', code: '3E0234Z', name: 'Introduction of Serum/Toxoid into Muscle', probability: 0.65, source: 'ai', amount: 1 }
+                    { id: 'p1', code: '3E0234Z', name: 'Aplikace séra/toxoidu do svalu', probability: 0.65, source: 'ai', amount: 1 }
                 ],
                 criticalItems: [],
 
@@ -77,7 +77,7 @@ export const analyzeText = async (text: string): Promise<CaseResult> => {
 
                 // Computed
                 drgCode: '194',
-                drgName: 'Simple Pneumonia & Pleurisy w/ CC',
+                drgName: 'Zánět plic a pohrudnice s CC',
                 reliabilityScore: 0.85,
                 los: 4.2,
                 rv: 1.2,
@@ -86,9 +86,9 @@ export const analyzeText = async (text: string): Promise<CaseResult> => {
 
                 // Highlights
                 diagnoses: [
-                    { id: 'd1', code: 'J18.9', name: 'Pneumonia, unspecified organism', probability: 0.92, source: 'ai', reason: 'Chest X-ray shows consolidation consistent with pneumonia.' },
-                    { id: 'd2', code: 'R06.02', name: 'Shortness of breath', probability: 0.88, source: 'ai', reason: 'Patient reported difficulty breathing upon admission.' },
-                    { id: 'd3', code: 'E11.9', name: 'Type 2 diabetes mellitus without complications', probability: 0.75, source: 'human', reason: 'History of T2DM noted in patient records.' }
+                    { id: 'd1', code: 'J18.9', name: 'Zánět plic‚ původce neurčen', probability: 0.92, source: 'ai', reason: 'RTG hrudníku prokazuje konsolidaci odpovídající pneumonii.' },
+                    { id: 'd2', code: 'R06.02', name: 'Dušnost (dyspnoe)', probability: 0.88, source: 'ai', reason: 'Pacient uváděl potíže s dýcháním při příjmu.' },
+                    { id: 'd3', code: 'E11.9', name: 'Diabetes mellitus 2. typu bez komplikací', probability: 0.75, source: 'human', reason: 'Anamnéza DM 2. typu zaznamenána v dokumentaci.' }
                 ],
                 highlights
             });

@@ -4,27 +4,28 @@ import { Card } from '../../shared/ui/Card';
 import { Button } from '../../shared/ui/Button';
 import type { CaseResult, CoderCaseData, Diagnosis, Procedure, CriticalItem } from '../../core/types';
 import { useSubmitRepair } from './useSubmitRepair';
+import { useTranslation, type TranslationKey } from '../../shared/i18n';
 import styles from './CoderForm.module.css';
 
 interface CoderFormProps {
     result: CaseResult;
 }
 
-const therapeuticKeys: Array<{ key: keyof CoderCaseData['therapeuticDays']; label: string }> = [
-    { key: 'radiation', label: 'Počet ozařovacích dnů' },
-    { key: 'liver', label: 'Dny s endoskopickým/radiologickým výkonem na játrech' },
-    { key: 'chest', label: 'Dny s operačním výkonem v dutině hrudní' },
-    { key: 'psychotherapy', label: 'Dny akutní psychiatrické péče' },
-    { key: 'chestDrainage', label: 'Dny s výkonem hrudní drenáže' },
-    { key: 'skull', label: 'Dny s výkonem na lebce nebo mozku' },
-    { key: 'eye', label: 'Dny s výkonem na oku' },
-    { key: 'burn', label: 'Ošetř. dny pro popáleninu/omrzlinu v CA' },
-    { key: 'heart', label: 'Dny s výkonem na srdci nebo aortě' },
-    { key: 'tissue', label: 'Dny s výkonem na měkkých/pojivových tkáních' },
-    { key: 'veins', label: 'Dny s výkonem na periferních cévách' },
-    { key: 'pelvis', label: 'Dny s operačním výkonem v dutině břišní/pánevní' },
-    { key: 'blood', label: 'Dny s eliminačními metodami krve' },
-    { key: 'orthopedic', label: 'Dny s ortopedickým operačním výkonem' },
+const therapeuticKeys: Array<{ key: keyof CoderCaseData['therapeuticDays']; labelKey: TranslationKey }> = [
+    { key: 'radiation', labelKey: 'coder.therapeuticDays.radiation' },
+    { key: 'liver', labelKey: 'coder.therapeuticDays.liver' },
+    { key: 'chest', labelKey: 'coder.therapeuticDays.chest' },
+    { key: 'psychotherapy', labelKey: 'coder.therapeuticDays.psychotherapy' },
+    { key: 'chestDrainage', labelKey: 'coder.therapeuticDays.chestDrainage' },
+    { key: 'skull', labelKey: 'coder.therapeuticDays.skull' },
+    { key: 'eye', labelKey: 'coder.therapeuticDays.eye' },
+    { key: 'burn', labelKey: 'coder.therapeuticDays.burn' },
+    { key: 'heart', labelKey: 'coder.therapeuticDays.heart' },
+    { key: 'tissue', labelKey: 'coder.therapeuticDays.tissue' },
+    { key: 'veins', labelKey: 'coder.therapeuticDays.veins' },
+    { key: 'pelvis', labelKey: 'coder.therapeuticDays.pelvis' },
+    { key: 'blood', labelKey: 'coder.therapeuticDays.blood' },
+    { key: 'orthopedic', labelKey: 'coder.therapeuticDays.orthopedic' },
 ];
 
 const buildTherapeuticDefaults = (data?: CoderCaseData['therapeuticDays']) =>
@@ -76,6 +77,7 @@ const buildDefaults = (result: CaseResult): CoderCaseData => {
 };
 
 export const CoderForm: React.FC<CoderFormProps> = ({ result }) => {
+    const { t } = useTranslation();
     const {
         register,
         control,
@@ -118,49 +120,49 @@ export const CoderForm: React.FC<CoderFormProps> = ({ result }) => {
         <Card className={styles.card}>
             <div className={styles.headerRow}>
                 <div>
-                    <p className={styles.kicker}>Coder repair</p>
-                    <h3 className={styles.heading}>Edit grouper inputs & send repair</h3>
-                    <p className={styles.subtext}>Fields mirror the CZ-DRG interactive classifier. Values below are fully editable.</p>
+                    <p className={styles.kicker}>{t('coder.header.kicker')}</p>
+                    <h3 className={styles.heading}>{t('coder.header.title')}</h3>
+                    <p className={styles.subtext}>{t('coder.header.subtitle')}</p>
                 </div>
                 <div className={styles.statusRow}>
-                    {isSuccess && <span className={styles.success}>Saved to server</span>}
-                    {error && <span className={styles.error}>Submission failed</span>}
+                    {isSuccess && <span className={styles.success}>{t('coder.header.success')}</span>}
+                    {error && <span className={styles.error}>{t('coder.header.error')}</span>}
                 </div>
             </div>
 
             <form className={styles.form} onSubmit={onSubmit}>
                 <div className={styles.section}>
                     <div className={styles.sectionHeader}>
-                        <h4 className={styles.sectionTitle}>Základní informace</h4>
-                        <p className={styles.helperText}>Hlavní diagnóza, ukončení hospitalizace a základní údaje o pacientovi.</p>
+                        <h4 className={styles.sectionTitle}>{t('coder.sections.basics.title')}</h4>
+                        <p className={styles.helperText}>{t('coder.sections.basics.helper')}</p>
                     </div>
                     <div className={styles.grid}>
                         <label className={styles.field}>
-                            <span className={styles.label}>Hlavní diagnóza případu*</span>
+                            <span className={styles.label}>{t('coder.fields.mainDiagnosis.label')}</span>
                             <input
                                 className={styles.input}
-                                placeholder="Např. J18.9"
+                                placeholder={t('coder.fields.mainDiagnosis.placeholder')}
                                 {...register('mainDiagnosis', { required: true })}
                             />
                         </label>
                         <label className={styles.field}>
-                            <span className={styles.label}>Ukončení hospitalizace (0-8, P)</span>
+                            <span className={styles.label}>{t('coder.fields.hospEnd.label')}</span>
                             <input
                                 className={styles.input}
-                                placeholder="1"
+                                placeholder={t('coder.fields.hospEnd.placeholder')}
                                 {...register('hospEnd', { required: true })}
                             />
                         </label>
                         <label className={styles.field}>
-                            <span className={styles.label}>Zdravotnické zařízení (IČZ)</span>
+                            <span className={styles.label}>{t('coder.fields.hospitalId.label')}</span>
                             <input
                                 className={styles.input}
-                                placeholder="12345678"
+                                placeholder={t('coder.fields.hospitalId.placeholder')}
                                 {...register('hospitalId', { required: true })}
                             />
                         </label>
                         <label className={styles.field}>
-                            <span className={styles.label}>Rok ukončení případu</span>
+                            <span className={styles.label}>{t('coder.fields.caseYear.label')}</span>
                             <input
                                 type="number"
                                 min={2000}
@@ -169,7 +171,7 @@ export const CoderForm: React.FC<CoderFormProps> = ({ result }) => {
                             />
                         </label>
                         <label className={styles.field}>
-                            <span className={styles.label}>Věk pacienta při přijetí</span>
+                            <span className={styles.label}>{t('coder.fields.patientAge.label')}</span>
                             <div className={styles.inlineInputs}>
                                 <input
                                     type="number"
@@ -178,33 +180,33 @@ export const CoderForm: React.FC<CoderFormProps> = ({ result }) => {
                                     {...register('patientAge', { valueAsNumber: true })}
                                 />
                                 <select className={styles.select} {...register('patientAgeUnit')}>
-                                    <option value="years">roky</option>
-                                    <option value="days">dny</option>
+                                    <option value="years">{t('coder.fields.patientAge.years')}</option>
+                                    <option value="days">{t('coder.fields.patientAge.days')}</option>
                                 </select>
                             </div>
                         </label>
                         <label className={styles.field}>
-                            <span className={styles.label}>Porodní hmotnost (g)</span>
+                            <span className={styles.label}>{t('coder.fields.patientWeight.label')}</span>
                             <input
                                 type="number"
                                 min={0}
                                 className={styles.input}
-                                placeholder="např. 3200"
+                                placeholder={t('coder.fields.patientWeight.placeholder')}
                                 {...register('patientWeight', {
                                     setValueAs: (value) => (value === '' ? undefined : Number(value)),
                                 })}
                             />
                         </label>
                         <label className={styles.field}>
-                            <span className={styles.label}>Pohlaví pacienta</span>
+                            <span className={styles.label}>{t('coder.fields.patientSex.label')}</span>
                             <select className={styles.select} {...register('patientSex', { required: true })}>
-                                <option value="">Vyberte</option>
-                                <option value="1">1 – Muž</option>
-                                <option value="2">2 – Žena</option>
+                                <option value="">{t('coder.fields.patientSex.placeholder')}</option>
+                                <option value="1">{t('coder.fields.patientSex.male')}</option>
+                                <option value="2">{t('coder.fields.patientSex.female')}</option>
                             </select>
                         </label>
                         <label className={styles.field}>
-                            <span className={styles.label}>Délka připojení k UPV (hodiny)</span>
+                            <span className={styles.label}>{t('coder.fields.ventilationHours.label')}</span>
                             <input
                                 type="number"
                                 min={0}
@@ -213,7 +215,7 @@ export const CoderForm: React.FC<CoderFormProps> = ({ result }) => {
                             />
                         </label>
                         <label className={styles.field}>
-                            <span className={styles.label}>Délka případu (dny)</span>
+                            <span className={styles.label}>{t('coder.fields.hospDays.label')}</span>
                             <input
                                 type="number"
                                 min={0}
@@ -222,7 +224,7 @@ export const CoderForm: React.FC<CoderFormProps> = ({ result }) => {
                             />
                         </label>
                         <label className={styles.field}>
-                            <span className={styles.label}>Přímé náklady HP (Kč)</span>
+                            <span className={styles.label}>{t('coder.fields.primaryExpenses.label')}</span>
                             <input
                                 type="number"
                                 min={0}
@@ -235,44 +237,44 @@ export const CoderForm: React.FC<CoderFormProps> = ({ result }) => {
 
                 <div className={styles.section}>
                     <div className={styles.sectionHeader}>
-                        <h4 className={styles.sectionTitle}>Vedlejší diagnózy</h4>
-                        <p className={styles.helperText}>Pořadí je důležité pro akutní rehabilitaci (2H1/2F1).</p>
+                        <h4 className={styles.sectionTitle}>{t('coder.sections.secondary.title')}</h4>
+                        <p className={styles.helperText}>{t('coder.sections.secondary.helper')}</p>
                     </div>
                     <div className={styles.rows}>
                         {diagnoses.fields.map((field, index) => (
                             <div key={field.fieldKey} className={styles.row}>
                                 <label className={styles.field}>
-                                    <span className={styles.label}>Kód</span>
+                                    <span className={styles.label}>{t('coder.fields.code')}</span>
                                     <input
                                         className={styles.input}
-                                        placeholder="např. E11.9"
+                                        placeholder={t('coder.fields.diagnosisCodePlaceholder')}
                                         {...register(`otherDiagnoses.${index}.code` as const)}
                                     />
                                 </label>
                                 <label className={styles.field}>
-                                    <span className={styles.label}>Název</span>
+                                    <span className={styles.label}>{t('coder.fields.name')}</span>
                                     <input
                                         className={styles.input}
-                                        placeholder="Popis diagnózy"
+                                        placeholder={t('coder.fields.diagnosisNamePlaceholder')}
                                         {...register(`otherDiagnoses.${index}.name` as const)}
                                     />
                                 </label>
                                 <label className={styles.field}>
-                                    <span className={styles.label}>Závažnost</span>
+                                    <span className={styles.label}>{t('coder.fields.severity.label')}</span>
                                     <select className={styles.select} {...register(`otherDiagnoses.${index}.ccLevel` as const)}>
-                                        <option value="">Neuvedeno</option>
-                                        <option value="0">0 – bez CC/MCC</option>
-                                        <option value="1">1 – CC</option>
-                                        <option value="2">2 – MCC</option>
+                                        <option value="">{t('coder.fields.severity.placeholder')}</option>
+                                        <option value="0">{t('coder.fields.severity.none')}</option>
+                                        <option value="1">{t('coder.fields.severity.cc')}</option>
+                                        <option value="2">{t('coder.fields.severity.mcc')}</option>
                                     </select>
                                 </label>
                                 <button
                                     type="button"
                                     className={styles.removeButton}
                                     onClick={() => diagnoses.remove(index)}
-                                    aria-label="Odebrat vedlejší diagnózu"
+                                    aria-label={t('coder.actions.removeDiagnosis')}
                                 >
-                                    Odebrat
+                                    {t('common.actions.remove')}
                                 </button>
                             </div>
                         ))}
@@ -291,36 +293,36 @@ export const CoderForm: React.FC<CoderFormProps> = ({ result }) => {
                             })
                         }
                     >
-                        Přidat vedlejší diagnózu
+                        {t('coder.actions.addDiagnosis')}
                     </Button>
                 </div>
 
                 <div className={styles.section}>
                     <div className={styles.sectionHeader}>
-                        <h4 className={styles.sectionTitle}>Výkony</h4>
-                        <p className={styles.helperText}>Kód výkonu, název a počet (množství).</p>
+                        <h4 className={styles.sectionTitle}>{t('coder.sections.procedures.title')}</h4>
+                        <p className={styles.helperText}>{t('coder.sections.procedures.helper')}</p>
                     </div>
                     <div className={styles.rows}>
                         {procedures.fields.map((field, index) => (
                             <div key={field.fieldKey} className={styles.row}>
                                 <label className={styles.field}>
-                                    <span className={styles.label}>Kód</span>
+                                    <span className={styles.label}>{t('coder.fields.code')}</span>
                                     <input
                                         className={styles.input}
-                                        placeholder="např. 3E0234Z"
+                                        placeholder={t('coder.fields.procedureCodePlaceholder')}
                                         {...register(`procedures.${index}.code` as const)}
                                     />
                                 </label>
                                 <label className={styles.field}>
-                                    <span className={styles.label}>Název</span>
+                                    <span className={styles.label}>{t('coder.fields.name')}</span>
                                     <input
                                         className={styles.input}
-                                        placeholder="Popis výkonu"
+                                        placeholder={t('coder.fields.procedureNamePlaceholder')}
                                         {...register(`procedures.${index}.name` as const)}
                                     />
                                 </label>
                                 <label className={styles.field}>
-                                    <span className={styles.label}>Počet</span>
+                                    <span className={styles.label}>{t('coder.fields.amount')}</span>
                                     <input
                                         type="number"
                                         min={0}
@@ -332,9 +334,9 @@ export const CoderForm: React.FC<CoderFormProps> = ({ result }) => {
                                     type="button"
                                     className={styles.removeButton}
                                     onClick={() => procedures.remove(index)}
-                                    aria-label="Odebrat výkon"
+                                    aria-label={t('coder.actions.removeProcedure')}
                                 >
-                                    Odebrat
+                                    {t('common.actions.remove')}
                                 </button>
                             </div>
                         ))}
@@ -353,19 +355,19 @@ export const CoderForm: React.FC<CoderFormProps> = ({ result }) => {
                             })
                         }
                     >
-                        Přidat výkon
+                        {t('coder.actions.addProcedure')}
                     </Button>
                 </div>
 
                 <div className={styles.section}>
                     <div className={styles.sectionHeader}>
-                        <h4 className={styles.sectionTitle}>Terapeutické dny</h4>
-                        <p className={styles.helperText}>Počty dnů podle požadovaných kategorií v interaktivním klasifikátoru.</p>
+                        <h4 className={styles.sectionTitle}>{t('coder.sections.therapeutic.title')}</h4>
+                        <p className={styles.helperText}>{t('coder.sections.therapeutic.helper')}</p>
                     </div>
                     <div className={styles.therapeuticGrid}>
-                        {therapeuticKeys.map(({ key, label }) => (
+                        {therapeuticKeys.map(({ key, labelKey }) => (
                             <label key={key} className={styles.field}>
-                                <span className={styles.label}>{label}</span>
+                                <span className={styles.label}>{t(labelKey)}</span>
                                 <input
                                     type="number"
                                     min={0}
@@ -381,21 +383,21 @@ export const CoderForm: React.FC<CoderFormProps> = ({ result }) => {
 
                 <div className={styles.section}>
                     <div className={styles.sectionHeader}>
-                        <h4 className={styles.sectionTitle}>Rehabilitace</h4>
-                        <p className={styles.helperText}>Příjmová lůžková odbornost 2H1 / 2F1 a počet rehab. dnů.</p>
+                        <h4 className={styles.sectionTitle}>{t('coder.sections.rehab.title')}</h4>
+                        <p className={styles.helperText}>{t('coder.sections.rehab.helper')}</p>
                     </div>
                     <div className={styles.grid}>
                         <label className={styles.field}>
-                            <span className={styles.label}>Příjmová odbornost</span>
+                            <span className={styles.label}>{t('coder.fields.rehabBedType.label')}</span>
                             <select className={styles.select} {...register('rehabilitation.bedType' as const)}>
-                                <option value="">Neuvedeno</option>
-                                <option value="2H1">2H1</option>
-                                <option value="2F1">2F1</option>
-                                <option value="1F1">1F1</option>
+                                <option value="">{t('coder.fields.rehabBedType.placeholder')}</option>
+                                <option value="2H1">{t('coder.fields.rehabBedType.h2')}</option>
+                                <option value="2F1">{t('coder.fields.rehabBedType.f2')}</option>
+                                <option value="1F1">{t('coder.fields.rehabBedType.f1')}</option>
                             </select>
                         </label>
                         <label className={styles.field}>
-                            <span className={styles.label}>Počet rehabilitačních dnů</span>
+                            <span className={styles.label}>{t('coder.fields.rehabDays.label')}</span>
                             <input
                                 type="number"
                                 min={0}
@@ -408,22 +410,22 @@ export const CoderForm: React.FC<CoderFormProps> = ({ result }) => {
 
                 <div className={styles.section}>
                     <div className={styles.sectionHeader}>
-                        <h4 className={styles.sectionTitle}>Zvlášť účtované kritické položky</h4>
-                        <p className={styles.helperText}>Kód kritické položky a množství.</p>
+                        <h4 className={styles.sectionTitle}>{t('coder.sections.critical.title')}</h4>
+                        <p className={styles.helperText}>{t('coder.sections.critical.helper')}</p>
                     </div>
                     <div className={styles.rows}>
                         {criticalItems.fields.map((field, index) => (
-                            <div key={field.fieldKey} className={styles.row}>
+                            <div key={field.fieldKey} className={styles.rowCritical}>
                                 <label className={styles.field}>
-                                    <span className={styles.label}>Kód</span>
+                                    <span className={styles.label}>{t('coder.fields.code')}</span>
                                     <input
                                         className={styles.input}
-                                        placeholder="Kód položky"
+                                        placeholder={t('coder.fields.criticalCodePlaceholder')}
                                         {...register(`criticalItems.${index}.code` as const)}
                                     />
                                 </label>
                                 <label className={styles.field}>
-                                    <span className={styles.label}>Množství</span>
+                                    <span className={styles.label}>{t('coder.fields.criticalAmount.label')}</span>
                                     <input
                                         type="number"
                                         min={0}
@@ -435,9 +437,9 @@ export const CoderForm: React.FC<CoderFormProps> = ({ result }) => {
                                     type="button"
                                     className={styles.removeButton}
                                     onClick={() => criticalItems.remove(index)}
-                                    aria-label="Odebrat kritickou položku"
+                                    aria-label={t('coder.actions.removeCritical')}
                                 >
-                                    Odebrat
+                                    {t('common.actions.remove')}
                                 </button>
                             </div>
                         ))}
@@ -454,14 +456,14 @@ export const CoderForm: React.FC<CoderFormProps> = ({ result }) => {
                             })
                         }
                     >
-                        Přidat kritickou položku
+                        {t('coder.actions.addCritical')}
                     </Button>
                 </div>
 
                 <div className={styles.footerActions}>
-                    {error && <span className={styles.error}>Chyba: {(error as Error).message}</span>}
+                    {error && <span className={styles.error}>{t('coder.footer.errorPrefix', { message: (error as Error).message })}</span>}
                     <Button type="submit" isLoading={isPending} disabled={isPending}>
-                        Odeslat opravu na server
+                        {t('coder.footer.submit')}
                     </Button>
                 </div>
             </form>
