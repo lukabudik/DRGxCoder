@@ -18,10 +18,24 @@ export const ResultsPanel: React.FC<ResultsPanelProps> = ({ result, onHover, act
             <SummaryCard result={result} />
 
             <DiagnosisList
+                title="Principal Diagnose (ICD-10)"
                 diagnoses={result.diagnoses}
                 onHover={onHover}
                 activeId={activeId}
+                collapsible={true}
+                expandLabel="Show potential"
+                collapseLabel="Hide potential"
             />
+
+            {result.otherDiagnoses.length > 0 && (
+                <DiagnosisList
+                    title="Secondary Diagnoses (ICD-10)"
+                    diagnoses={result.otherDiagnoses}
+                    onHover={onHover}
+                    activeId={activeId}
+                    collapsible={false}
+                />
+            )}
 
             {result.procedures.length > 0 && (
                 <ProcedureList
@@ -36,11 +50,11 @@ export const ResultsPanel: React.FC<ResultsPanelProps> = ({ result, onHover, act
                 <div className={styles.metadataGrid}>
                     <div className={styles.metaItem}>
                         <span className={styles.metaLabel}>Patient Age</span>
-                        <span className={styles.metaValue}>{result.metadata.patientAge}</span>
+                        <span className={styles.metaValue}>{result.patientAge} {result.patientAgeUnit}</span>
                     </div>
                     <div className={styles.metaItem}>
                         <span className={styles.metaLabel}>Sex</span>
-                        <span className={styles.metaValue}>{result.metadata.patientSex}</span>
+                        <span className={styles.metaValue}>{result.patientSex === '1' ? 'Male' : 'Female'}</span>
                     </div>
                     <div className={styles.metaItem}>
                         <span className={styles.metaLabel}>Dept</span>
