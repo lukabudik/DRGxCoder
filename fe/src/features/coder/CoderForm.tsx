@@ -415,7 +415,7 @@ export const CoderForm: React.FC<CoderFormProps> = ({ result }) => {
                     </div>
                     <div className={styles.rows}>
                         {criticalItems.fields.map((field, index) => (
-                            <div key={field.fieldKey} className={styles.row}>
+                            <div key={field.fieldKey} className={styles.rowCritical}>
                                 <label className={styles.field}>
                                     <span className={styles.label}>{t('coder.fields.code')}</span>
                                     <input
