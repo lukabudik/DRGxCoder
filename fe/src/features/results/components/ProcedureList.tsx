@@ -26,9 +26,6 @@ export const ProcedureList: React.FC<ProcedureListProps> = ({ procedures, onHove
                             <span className={styles.code}>{p.code}</span>
                         </div>
                         <div className={styles.itemName}>{p.name}</div>
-                        <div className={styles.itemMeta}>
-                            {p.probability && <span>Prob: {(p.probability * 100).toFixed(0)}%</span>}
-                        </div>
                     </div>
                 ))}
             </div>
