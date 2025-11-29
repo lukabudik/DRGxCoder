@@ -57,6 +57,7 @@ export const en: TranslationSchema = {
             rv: 'Relative value',
             revenue: 'Revenue',
             drgLabel: 'DRG {{code}}',
+            manualSelection: 'Manual selection',
         },
         diagnoses: {
             defaultTitle: 'Diagnoses (ICD-10)',

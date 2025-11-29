@@ -32,9 +32,13 @@ export const SummaryCard: React.FC<SummaryCardProps> = ({ result, principalDiagn
                 <div>
                     <div className={styles.drgLabel}>{principalDiagnosis.code}</div>
                     <h2 className={styles.drgName}>{principalDiagnosis.name}</h2>
-                    {principalDiagnosis.reason && (
-                        <div className={styles.summaryReason}>{principalDiagnosis.reason}</div>
-                    )}
+                    {(principalDiagnosis.id.startsWith('custom-') ? (
+                        <div className={styles.summaryReason}>{t('results.summary.manualSelection')}</div>
+                    ) : (
+                        principalDiagnosis.reason && (
+                            <div className={styles.summaryReason}>{principalDiagnosis.reason}</div>
+                        )
+                    ))}
                 </div>
             </div>
 

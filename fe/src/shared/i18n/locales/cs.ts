@@ -55,6 +55,7 @@ export const cs = {
             rv: 'Relativní hodnota',
             revenue: 'Příjem',
             drgLabel: 'DRG {{code}}',
+            manualSelection: 'Manuální výběr',
         },
         diagnoses: {
             defaultTitle: 'Diagnózy (ICD-10)',
