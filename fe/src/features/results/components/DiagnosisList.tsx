@@ -4,6 +4,7 @@ import type { Diagnosis } from '../../../core/types';
 import styles from './Components.module.css';
 import clsx from 'clsx';
 import { useTranslation } from '../../../shared/i18n';
+import { X } from 'lucide-react';
 
 interface DiagnosisListProps {
     diagnoses: Diagnosis[];
@@ -16,6 +17,8 @@ interface DiagnosisListProps {
     hideHeader?: boolean;
     onSetPrincipal?: (id: string) => void;
     onSelectCustom?: () => void;
+    onRemove?: (id: string) => void;
+    onAdd?: () => void;
 }
 
 export const DiagnosisList: React.FC<DiagnosisListProps> = ({
@@ -28,7 +31,9 @@ export const DiagnosisList: React.FC<DiagnosisListProps> = ({
     collapseLabel,
     hideHeader = false,
     onSetPrincipal,
-    onSelectCustom
+    onSelectCustom,
+    onRemove,
+    onAdd
 }) => {
     const [isExpanded, setIsExpanded] = React.useState(false);
     const { t, locale } = useTranslation();
@@ -50,6 +55,7 @@ export const DiagnosisList: React.FC<DiagnosisListProps> = ({
     const collapseText = collapseLabel ?? t('results.diagnoses.collapse');
 
     const showCustomButton = onSelectCustom && (!collapsible || isExpanded);
+    const showAddButton = onAdd && (!collapsible || isExpanded);
 
     return (
         <Card className={styles.listCard}>
@@ -86,23 +92,42 @@ export const DiagnosisList: React.FC<DiagnosisListProps> = ({
                             <div className={styles.itemName}>{d.name}</div>
                             {d.reason && <div className={styles.itemReason}>{d.reason}</div>}
                         </div>
-                        {onSetPrincipal && (
-                            <button
-                                className={styles.actionButton}
-                                onClick={(e) => {
-                                    e.stopPropagation();
-                                    onSetPrincipal(d.id);
-                                }}
-                                title={t('results.diagnoses.setPrincipal')}
-                            >
-                                {t('results.diagnoses.setPrincipal')}
-                            </button>
-                        )}
+                        <div className={styles.actions}>
+                            {onSetPrincipal && (
+                                <button
+                                    className={styles.actionButton}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        onSetPrincipal(d.id);
+                                    }}
+                                    title={t('results.diagnoses.setPrincipal')}
+                                >
+                                    {t('results.diagnoses.setPrincipal')}
+                                </button>
+                            )}
+                            {onRemove && (
+                                <button
+                                    className={styles.removeButton}
+                                    onClick={(e) => {
+                                        e.stopPropagation();
+                                        onRemove(d.id);
+                                    }}
+                                    title={t('results.diagnoses.remove')}
+                                >
+                                    <X size={16} />
+                                </button>
+                            )}
+                        </div>
                     </div>
                 ))}
                 {showCustomButton && (
                     <button className={styles.customSelectButton} onClick={onSelectCustom}>
                         + {t('results.search.customAction')}
+                    </button>
+                )}
+                {showAddButton && (
+                    <button className={styles.customSelectButton} onClick={onAdd}>
+                        + {t('results.diagnoses.addSecondary')}
                     </button>
                 )}
             </div>

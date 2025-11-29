@@ -67,6 +67,8 @@ export const cs = {
             potentialCollapse: 'Skrýt',
             potentialTitle: 'Potenciální hlavní diagnózy',
             setPrincipal: 'Nastavit jako hlavní',
+            addSecondary: 'Přidat vedlejší diagnózu',
+            remove: 'Odebrat',
         },
         search: {
             placeholder: 'Hledat podle kódu nebo názvu...',

@@ -72,6 +72,22 @@ export const HomePage: React.FC = () => {
         });
     };
 
+    const handleAddSecondary = (diagnosis: Diagnosis) => {
+        if (!result) return;
+        setResult({
+            ...result,
+            otherDiagnoses: [...result.otherDiagnoses, diagnosis]
+        });
+    };
+
+    const handleRemoveSecondary = (id: string) => {
+        if (!result) return;
+        setResult({
+            ...result,
+            otherDiagnoses: result.otherDiagnoses.filter(d => d.id !== id)
+        });
+    };
+
     return (
         <div className={styles.container}>
             <header className={styles.header}>
@@ -142,6 +158,8 @@ export const HomePage: React.FC = () => {
                             onHover={setActiveHighlightId}
                             activeId={activeHighlightId}
                             onPrincipalChange={handlePrincipalChange}
+                            onAddSecondary={handleAddSecondary}
+                            onRemoveSecondary={handleRemoveSecondary}
                         />
                     )}
 

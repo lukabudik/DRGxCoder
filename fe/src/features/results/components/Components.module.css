@@ -205,6 +205,30 @@
     border-radius: var(--radius-sm);
 }
 
+.removeButton {
+    background: none;
+    border: none;
+    padding: var(--spacing-1);
+    color: var(--color-text-tertiary);
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.listItem:hover .removeButton,
+.removeButton:focus {
+    opacity: 1;
+}
+
+.removeButton:hover {
+    color: var(--color-error);
+    background-color: var(--color-surface);
+    border-radius: var(--radius-sm);
+}
+
 .customSelectButton {
     width: 100%;
     text-align: left;

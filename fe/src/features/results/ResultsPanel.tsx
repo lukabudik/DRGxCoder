@@ -13,21 +13,38 @@ interface ResultsPanelProps {
     onHover: (id: string | null) => void;
     activeId: string | null;
     onPrincipalChange?: (newPrincipalId: string, customDiagnosis?: Diagnosis) => void;
+    onAddSecondary?: (diagnosis: Diagnosis) => void;
+    onRemoveSecondary?: (id: string) => void;
 }
 
-export const ResultsPanel: React.FC<ResultsPanelProps> = ({ result, onHover, activeId, onPrincipalChange }) => {
+export const ResultsPanel: React.FC<ResultsPanelProps> = ({ 
+    result, 
+    onHover, 
+    activeId, 
+    onPrincipalChange,
+    onAddSecondary,
+    onRemoveSecondary 
+}) => {
     const { t } = useTranslation();
     const [showPotential, setShowPotential] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
+    const [searchMode, setSearchMode] = useState<'principal' | 'secondary'>('principal');
 
     const principalDiagnosis = result.diagnoses[0];
     const potentialDiagnoses = result.diagnoses.slice(1);
 
     const handleCustomSelect = (diagnosis: Diagnosis) => {
-        if (onPrincipalChange) {
+        if (searchMode === 'principal' && onPrincipalChange) {
             onPrincipalChange(diagnosis.id, diagnosis);
+        } else if (searchMode === 'secondary' && onAddSecondary) {
+            onAddSecondary(diagnosis);
         }
         setIsSearchOpen(false);
+    };
+
+    const openSearch = (mode: 'principal' | 'secondary') => {
+        setSearchMode(mode);
+        setIsSearchOpen(true);
     };
 
     return (
@@ -59,7 +76,7 @@ export const ResultsPanel: React.FC<ResultsPanelProps> = ({ result, onHover, act
                         collapsible={false}
                         hideHeader={true}
                         onSetPrincipal={onPrincipalChange ? (id) => onPrincipalChange(id) : undefined}
-                        onSelectCustom={() => setIsSearchOpen(true)}
+                        onSelectCustom={() => openSearch('principal')}
                     />
                 )}
             </div>
@@ -67,20 +84,20 @@ export const ResultsPanel: React.FC<ResultsPanelProps> = ({ result, onHover, act
             <Modal
                 isOpen={isSearchOpen}
                 onClose={() => setIsSearchOpen(false)}
-                title={t('results.search.modalTitle')}
+                title={searchMode === 'principal' ? t('results.search.modalTitle') : t('results.search.modalTitle')} // You might want a different title for secondary
             >
                 <DiagnosisSearch onSelect={handleCustomSelect} />
             </Modal>
 
-            {result.otherDiagnoses.length > 0 && (
-                <DiagnosisList
-                    title={t('results.diagnoses.secondary')}
-                    diagnoses={result.otherDiagnoses}
-                    onHover={onHover}
-                    activeId={activeId}
-                    collapsible={false}
-                />
-            )}
+            <DiagnosisList
+                title={t('results.diagnoses.secondary')}
+                diagnoses={result.otherDiagnoses}
+                onHover={onHover}
+                activeId={activeId}
+                collapsible={false}
+                onRemove={onRemoveSecondary}
+                onAdd={() => openSearch('secondary')}
+            />
 
             {result.procedures.length > 0 && (
                 <ProcedureList

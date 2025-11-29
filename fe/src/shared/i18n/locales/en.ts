@@ -69,6 +69,8 @@ export const en: TranslationSchema = {
             potentialCollapse: 'Hide',
             potentialTitle: 'Potential Principal Diagnoses',
             setPrincipal: 'Set as Principal',
+            addSecondary: 'Add Secondary Diagnosis',
+            remove: 'Remove',
         },
         search: {
             placeholder: 'Search by code or name...',
