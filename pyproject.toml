@@ -23,4 +23,6 @@ dependencies = [
     "sentence-transformers>=5.1.2",
     "tqdm>=4.67.1",
     "uvicorn>=0.38.0",
+    "matplotlib>=3.10.7",
+    "seaborn>=0.13.2",
 ]
