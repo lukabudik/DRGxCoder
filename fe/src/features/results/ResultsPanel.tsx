@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import type { CaseResult, Diagnosis } from '../../core/types';
 import { SummaryCard } from './components/SummaryCard';
 import { DiagnosisList } from './components/DiagnosisList';
-import { ProcedureList } from './components/ProcedureList';
+// import { ProcedureList } from './components/ProcedureList';
 import { DiagnosisSearch } from './components/DiagnosisSearch';
 import { Modal } from '../../shared/ui/Modal';
 import styles from './ResultsPanel.module.css';
@@ -111,13 +111,13 @@ export const ResultsPanel: React.FC<ResultsPanelProps> = ({
                 onAdd={() => openSearch('secondary')}
             />
 
-            {result.procedures.length > 0 && (
+            {/* {result.procedures.length > 0 && (
                 <ProcedureList
                     procedures={result.procedures}
                     onHover={onHover}
                     activeId={activeId}
                 />
-            )}
+            )} */}
         </div>
     );
 };
