@@ -39,10 +39,12 @@ export const SummaryCard: React.FC<SummaryCardProps> = ({ result, principalDiagn
             </div>
 
             <div className={styles.metricsGrid}>
-                <div className={styles.metric}>
-                    <span className={styles.metricLabel}>{t('results.summary.reliability')}</span>
-                    <span className={styles.metricValue}>{percentFormatter.format(result.reliabilityScore)}</span>
-                </div>
+                {principalDiagnosis.source !== 'human' && (
+                    <div className={styles.metric}>
+                        <span className={styles.metricLabel}>{t('results.summary.reliability')}</span>
+                        <span className={styles.metricValue}>{percentFormatter.format(result.reliabilityScore)}</span>
+                    </div>
+                )}
                 <div className={styles.metric}>
                     <span className={styles.metricLabel}>{t('results.summary.los')}</span>
                     <span className={styles.metricValue}>{numberFormatter.format(result.los)} {t('results.summary.days')}</span>

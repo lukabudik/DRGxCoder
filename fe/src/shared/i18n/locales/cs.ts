@@ -73,6 +73,7 @@ export const cs = {
             startTyping: 'Začněte psát pro vyhledávání...',
             modalTitle: 'Vybrat hlavní diagnózu',
             customAction: 'Vybrat vlastní',
+            manualSelection: 'Manuální výběr',
         },
         procedures: {
             title: 'Výkony',

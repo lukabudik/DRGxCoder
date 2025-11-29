@@ -75,6 +75,7 @@ export const en: TranslationSchema = {
             startTyping: 'Start typing to search...',
             modalTitle: 'Select Principal Diagnosis',
             customAction: 'Select Custom',
+            manualSelection: 'Manual selection',
         },
         procedures: {
             title: 'Procedures',

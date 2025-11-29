@@ -59,10 +59,16 @@ export const HomePage: React.FC = () => {
             }
         }
 
+        // Ensure manual selections don't persist in potential list (index 1+)
+        const filteredDiagnoses = [
+            newDiagnoses[0],
+            ...newDiagnoses.slice(1).filter(d => !d.id.startsWith('custom-'))
+        ];
+
         setResult({
             ...result,
-            diagnoses: newDiagnoses,
-            mainDiagnosis: newDiagnoses[0].code
+            diagnoses: filteredDiagnoses,
+            mainDiagnosis: filteredDiagnoses[0].code
         });
     };
 

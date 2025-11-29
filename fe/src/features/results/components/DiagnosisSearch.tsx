@@ -58,7 +58,7 @@ export const DiagnosisSearch: React.FC<DiagnosisSearchProps> = ({ onSelect }) =>
             name: item.name,
             source: 'human',
             probability: 1,
-            reason: 'Manual selection'
+            reason: t('results.search.manualSelection')
         });
     };
 
