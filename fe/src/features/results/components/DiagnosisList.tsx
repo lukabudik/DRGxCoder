@@ -13,6 +13,7 @@ interface DiagnosisListProps {
     collapsible?: boolean;
     expandLabel?: string;
     collapseLabel?: string;
+    hideHeader?: boolean;
 }
 
 export const DiagnosisList: React.FC<DiagnosisListProps> = ({
@@ -22,7 +23,8 @@ export const DiagnosisList: React.FC<DiagnosisListProps> = ({
     title,
     collapsible = true,
     expandLabel,
-    collapseLabel
+    collapseLabel,
+    hideHeader = false
 }) => {
     const [isExpanded, setIsExpanded] = React.useState(false);
     const { t, locale } = useTranslation();
@@ -45,17 +47,19 @@ export const DiagnosisList: React.FC<DiagnosisListProps> = ({
 
     return (
         <Card className={styles.listCard}>
-            <div className={styles.headerRow}>
-                <h3 className={styles.cardTitle}>{heading}</h3>
-                {hasMore && (
-                    <button
-                        className={styles.toggleButton}
-                        onClick={() => setIsExpanded(!isExpanded)}
-                    >
-                        {isExpanded ? collapseText : expandText}
-                    </button>
-                )}
-            </div>
+            {!hideHeader && (
+                <div className={styles.headerRow}>
+                    <h3 className={styles.cardTitle}>{heading}</h3>
+                    {hasMore && (
+                        <button
+                            className={styles.toggleButton}
+                            onClick={() => setIsExpanded(!isExpanded)}
+                        >
+                            {isExpanded ? collapseText : expandText}
+                        </button>
+                    )}
+                </div>
+            )}
             <div className={styles.list}>
                 {visibleDiagnoses.map((d) => (
                     <div

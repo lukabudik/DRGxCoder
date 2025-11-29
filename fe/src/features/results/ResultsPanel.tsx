@@ -25,22 +25,25 @@ export const ResultsPanel: React.FC<ResultsPanelProps> = ({ result, onHover, act
 
             {potentialDiagnoses.length > 0 && (
                 <div className={styles.potentialContainer}>
-                    <button
-                        className={styles.potentialButton}
-                        onClick={() => setShowPotential(!showPotential)}
-                    >
-                        {showPotential
-                            ? t('results.diagnoses.potentialCollapse')
-                            : t('results.diagnoses.potentialExpand')}
-                    </button>
+                    <div className={styles.potentialHeader}>
+                        <h3 className={styles.potentialTitle}>{t('results.diagnoses.potentialTitle')}</h3>
+                        <button
+                            className={styles.potentialButton}
+                            onClick={() => setShowPotential(!showPotential)}
+                        >
+                            {showPotential
+                                ? t('results.diagnoses.potentialCollapse')
+                                : t('results.diagnoses.potentialExpand')}
+                        </button>
+                    </div>
 
                     {showPotential && (
                         <DiagnosisList
-                            title={t('results.diagnoses.potentialTitle')}
                             diagnoses={potentialDiagnoses}
                             onHover={onHover}
                             activeId={activeId}
                             collapsible={false}
+                            hideHeader={true}
                         />
                     )}
                 </div>

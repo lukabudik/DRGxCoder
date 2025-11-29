@@ -62,8 +62,8 @@ export const cs = {
             secondary: 'Vedlejší diagnózy (ICD-10)',
             expand: 'Zobrazit další ({{count}})',
             collapse: 'Skrýt',
-            potentialExpand: 'Zobrazit potenciál',
-            potentialCollapse: 'Skrýt potenciál',
+            potentialExpand: 'Zobrazit',
+            potentialCollapse: 'Skrýt',
             potentialTitle: 'Potenciální hlavní diagnózy',
         },
         procedures: {

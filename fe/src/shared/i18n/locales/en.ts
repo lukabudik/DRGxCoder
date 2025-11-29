@@ -64,8 +64,8 @@ export const en: TranslationSchema = {
             secondary: 'Secondary Diagnoses (ICD-10)',
             expand: 'Show more ({{count}})',
             collapse: 'Hide',
-            potentialExpand: 'Show potential',
-            potentialCollapse: 'Hide potential',
+            potentialExpand: 'Show',
+            potentialCollapse: 'Hide',
             potentialTitle: 'Potential Principal Diagnoses',
         },
         procedures: {
