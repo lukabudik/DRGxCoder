@@ -8,28 +8,40 @@ interface DiagnosisListProps {
     diagnoses: Diagnosis[];
     onHover: (id: string | null) => void;
     activeId: string | null;
+    title?: string;
+    collapsible?: boolean;
+    expandLabel?: string;
+    collapseLabel?: string;
 }
 
-export const DiagnosisList: React.FC<DiagnosisListProps> = ({ diagnoses, onHover, activeId }) => {
+export const DiagnosisList: React.FC<DiagnosisListProps> = ({
+    diagnoses,
+    onHover,
+    activeId,
+    title = 'Diagnoses (ICD-10)',
+    collapsible = true,
+    expandLabel = 'Show all',
+    collapseLabel = 'Show less'
+}) => {
     const [isExpanded, setIsExpanded] = React.useState(false);
 
     const sortedDiagnoses = React.useMemo(() => {
         return [...diagnoses].sort((a, b) => (b.probability || 0) - (a.probability || 0));
     }, [diagnoses]);
 
-    const visibleDiagnoses = isExpanded ? sortedDiagnoses : sortedDiagnoses.slice(0, 1);
-    const hasMore = diagnoses.length > 1;
+    const visibleDiagnoses = collapsible && !isExpanded ? sortedDiagnoses.slice(0, 1) : sortedDiagnoses;
+    const hasMore = collapsible && diagnoses.length > 1;
 
     return (
         <Card className={styles.listCard}>
             <div className={styles.headerRow}>
-                <h3 className={styles.cardTitle}>Diagnoses (ICD-10)</h3>
+                <h3 className={styles.cardTitle}>{title}</h3>
                 {hasMore && (
                     <button
                         className={styles.toggleButton}
                         onClick={() => setIsExpanded(!isExpanded)}
                     >
-                        {isExpanded ? 'Show less' : `Show all (${diagnoses.length})`}
+                        {isExpanded ? collapseLabel : `${expandLabel} (${diagnoses.length - 1})`}
                     </button>
                 )}
             </div>
