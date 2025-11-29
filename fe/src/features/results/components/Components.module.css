@@ -79,7 +79,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: var(--spacing-2);
+    margin-bottom: 0;
     border-bottom: 1px solid var(--color-border);
     padding-bottom: var(--spacing-2);
 }
@@ -123,10 +123,6 @@
     background-color: transparent;
     transition: all 0.2s ease;
     cursor: default;
-}
-
-.listItem:first-child {
-    padding-top: 0;
 }
 
 .listItem:last-child {
