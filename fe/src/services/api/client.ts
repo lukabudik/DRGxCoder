@@ -45,8 +45,8 @@ export const analyzeText = async (text: string): Promise<CaseResult> => {
 
                 // Lists
                 otherDiagnoses: [
-                    { id: 'd2', code: 'R06.02', name: 'Shortness of breath', probability: 0.88, source: 'ai', weight: 1, reason: 'Patient reported difficulty breathing upon admission.' },
-                    { id: 'd3', code: 'E11.9', name: 'Type 2 diabetes mellitus without complications', probability: 0.75, source: 'human', weight: 1, reason: 'History of T2DM noted in patient records.' }
+                    { id: 'sd2', code: 'R06.02', name: 'Shortness of breath', probability: 0.88, source: 'ai', weight: 1, reason: 'Patient reported difficulty breathing upon admission.' },
+                    { id: 'sd3', code: 'E11.9', name: 'Type 2 diabetes mellitus without complications', probability: 0.75, source: 'human', weight: 1, reason: 'History of T2DM noted in patient records.' }
                 ],
                 procedures: [
                     { id: 'p1', code: '3E0234Z', name: 'Introduction of Serum/Toxoid into Muscle', probability: 0.65, source: 'ai', amount: 1 }
