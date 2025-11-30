@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="6_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="6">
+      <dsip:rodcis>4527595815</dsip:rodcis>
+      <dsip:jmeno>Jan</dsip:jmeno>
+      <dsip:prijmeni>Novák</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>M</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-12T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>4527595815</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>4527595815</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PARALEN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-12</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="INFLANOR" typ_med="P">
+          <dsip:dat_od format="D">2025-01-12</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PARACETAMOL ACCORD" typ_med="P">
+          <dsip:dat_od format="D">2025-01-12</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PLASMALYTE S GLUKÓZOU" typ_med="P">
+          <dsip:dat_od format="D">2025-01-12</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PARALEN SUS" typ_med="P">
+          <dsip:dat_od format="D">2025-01-12</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.6.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-15T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-12T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-15T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-15T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">2-letý chlapec přivezený ZZS pro krátkodobé, nekomplikované febriní křeče při infektu HCD. Zahájena infuzní a symptomatická terapie. V laboratorním vyšetření bez elevace zánětlivých parametrů. Potvrzena pozitivita PCR chřipka typu A. V průběhu hospitalizace opakovaně febrilie s dobrou reakcí na antipyretika, bez dalšího výskytu křečí. Zachariáš dále stabilní, KP komp., kontrolní labor. vyšetření v normě, tělesná teplota v pásmu spíše subfebrilií, stravu toleruje, nezvrací. Schopen propuštění do domácí péče.
+
+Biochemie:
+12.01.2025: MO 4.3 mmol/L | KR 21.0 umol/l | NA 137.0 mmol/L | KA 4.6 mmol/L | CL 103.0 mmol/L | AL 0.34 ukat/l | GL 6.81 mmol/L | CRP 0.4 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS
+12.01.2025: UCOL sv. žlutá | UCLA bez zákalu | UPH 5.0 - | USH 1.023 - | UBILK 0.0 | UGK-S 0.0 | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 3.0 10^6/L | UERY 0.0 | UHLEN oj. | REPT_NTS
+15.01.2025: CRP 2.9 mg/L | KOMENTÁŘ text | REPT_NTS
+
+Hematologie:
+12.01.2025: WBC 15.2 x10^9/L | RBC 4.3 x10^12/L | HGB 110.0 g/L | HCT 34.1 % | MCV 79.3 fL | MCH 25.6 pg | MCHC 323.0 g/L | PLT 402.0 x10^9/L | PDW 10.6 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS
+15.01.2025: WBC 6.4 x10^9/L | RBC 4.4 x10^12/L | HGB 113.0 g/L | HCT 34.0 % | MCV 77.8 fL | MCH 25.9 pg | MCHC 332.0 g/L | PLT 161.0 x10^9/L | PDW 12.5 fL | NRBC 0.02 x10^9/L | NRBC% 0.3 % | Poznámka text
+
+Mikrobiologie:
+Datum: 13.01.2025 07:00 Diagnóza: R560 - Febrilní křeče
+Strukturované výsledky: Chřipka A pozitivní Chřipka B negativní RSV negativní</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="831324" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

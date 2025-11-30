@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="21_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="21">
+      <dsip:rodcis>8427671451</dsip:rodcis>
+      <dsip:jmeno>Jan</dsip:jmeno>
+      <dsip:prijmeni>Novák</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>M</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-14T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>8427671451</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>8427671451</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ARICEPT" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="DEPAKINE CHRONO" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="DETRALEX" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="KALNORMIN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="OMEPRAZOL MEDREG" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PRESTARIUM NEO" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="IMURAN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="TRITTICO AC" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PENTASA SACHET" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PANGROL" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ELIQUIS" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PYRIDOXIN LÉČIVA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ATORVASTATIN MEDREG" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="MAGNESII LACTICI 0" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="5 TBL. MEDICAMENTA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="NOVALGIN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="DASLODIL" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="DITHIADEN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="HYDROCORTISON VUAB" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PAMYCON" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="BURONIL" typ_med="P">
+          <dsip:dat_od format="D">2025-01-14</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.21.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-21T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-14T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-21T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-21T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">Pacient byl přijatý na kožní oddělení pro generalizovaný mikrobiální ekzém. 
+Lokální terapie zahájená aplikací kombinovaného externa s obsahem kortikoidu, empirického antibiotika a antimykotika. Na projevy ve kštici a na boltcích zvolena kortikoidní emulze. Suchá kůže podle potřeby promazávana indiferentním externem. Mykotické nehtové ploténky ošetřujeme antimykotickým roztokem. Systémově aplikujeme pulzy vysokých dávek kortikoidů i.v. - Hydrocortison, posílená PPI terapie. Pruritus tlumen kombinací antihistaminik.
+Ve vstupních laboratorních odběrech mírná elevace kreatininu, JS v normě, v Ig profilu elevace IgG, IgA, IgE, mírná anemie, v moči bez patologie. Vzhledem k elevaci PSA doplněno urologické konzílium - k došetření indikováno bioptické vyšetření prostaty - termín naplánován po ukončení hospitalizace na kožním oddělení. USG vyšetření ledvin - bez městnání, bez ložiskové patologie, bez lithiasy. Pro opakovaný výskyt nočního neklidu do terapie malá dávka antipsychotika. Obstipace řešena symptomaticky. Na zavedené terapii dochází k výrazné regresi projevů po těle, erytém probledl, otok LDK zcela ustoupil, kůže zklidněna.
+Pacienta propouštíme do domácí a ambultantní péče ve stabilizovaném stavu, afebrilného a KP kompenzovaného. 
+Lokální terapie za hospitalziace: Diprosone ung. + 3% chloramphenicol ung. + Clotrimazol crm., Locoid crelo, Ambiderman, Frazer sol.
+
+Biochemie:
+14.01.2025: MO 5.4 mmol/L | KR 107.0 umol/l | GFR 0.97 ml/s/1,73 m2 | NA 141.0 mmol/L | KA 4.96 mmol/L | CL 103.0 mmol/L | FIB4 1.6 - | BI 10.0 umol/l | AL 0.32 ukat/l | AS 0.44 ukat/l | GM 0.38 ukat/l | GL 5.41 mmol/L | CB 71.9 g/L | ALBU 0.53 1 | ALFA1 0.047 1 | ALFA2 0.124 1 | BETA1 0.077 1 | BETA2 0.047 1 | GAMA 0.175 1 | A/G 1.13 1 | IGA 3.78 g/L | IGG 14.22 g/L | IGM 0.63 g/L | IGE 459.0 kIU/L | CRP 12.5 mg/L | ASLO 120.0 kIU/L | PSAT 5.09 ug/L | AFP 4.6 kU/l | B2M 3.61 mg/L | CEA 5.5 ug/l | CA19-9 2.9 kU/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | UCOL jantarová | UCLA bez zákalu | UPH 5.0 - | USH 1.024 - | UBILK 0.0 | UGK-S 0.0 | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 3.0 10^6/L | UERY 3.0 10^6/L | UEPI 5.0 10^6/L | UHLEN četný | REPT_NTS
+
+Hematologie:
+14.01.2025: WBC 9.3 x10^9/L | RBC 3.7 x10^12/L | HGB 117.0 g/L | HCT 36.3 % | MCV 98.4 fL | MCH 31.7 pg | MCHC 322.0 g/L | PLT 282.0 x10^9/L | PDW 13.7 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS
+
+Mikrobiologie:
+Datum: 14.01.2025 10:00
+Diagnóza: L303 - Infekční dermatitida
+Výsledek:
+Q_KRK:
+Příjem: 14.01.2025 Laboratorní číslo:KLK-00233
+Vyšetření: Výtěr z krku 
+Aerobní kultivace: 
+Nález: Běžná orofaryngeální flóra 
+Strukturované výsledky:
+Výtěr z krkutext
+REPT_NTS_DTP
+--------------------
+Datum: 14.01.2025 10:00
+Diagnóza: L303 - Infekční dermatitida
+Výsledek:
+Q_NOS:
+Příjem: 14.01.2025 Laboratorní číslo:KLK-00234
+Vyšetření: Výtěr z nosu 
+Aerobní kultivace: 
+Nález: Staphylococcus aureus +
+:
+Oxacilin (1) CIT
+Clindamycin CIT
+Erytromycin (Azitromycin,Klaritromycin) CIT
+Cotrimoxazol CIT
+Tetracyklin CIT
+Ciprofloxacin ZDC
+Gentamicin (7) CIT
+Rifampicin CIT
+Tigecyclin CIT
+Moxifloxacin CIT
+Linezolid CIT
+Neomycin (lokál.apl.) CIT
+Bacitracin (lokál.apl.) XX
+Mupirocin (lokál.apl.) CIT
+1) Oxacilin - výsledek platí též pro Amoxicilin/klavulán.kys, Ampicilin/sulbactam a cefalosporiny 1. a 2.generace
+7) Gentamicin, Amikacin - u systémových infekcí musí být používány v kombinaci s jinými účinnými antibiotiky.
+CIT=citlivé, ZDC=citlivé, při zvýšeném dávkovacím režimu nebo
+při koncentrování ATB v místě infekce. REZ=rezistentní,
+XX=výsledek pro konzultaci s ATB střediskem
+Strukturované výsledky:
+Výtěr z nosutext
+REPT_NTS_DTP
+--------------------
+Datum: 14.01.2025 14:42
+Diagnóza: L303 - Infekční dermatitida
+Výsledek:
+Q_PROJEV:
+Příjem: 14.01.2025 Laboratorní číslo:KLO-00248
+Vyšetření: Stěr z projevů 
+Aerobní kultivace: 
+Nález: Staphylococcus aureus ++
+:
+Oxacilin (1) CIT
+Clindamycin CIT
+Erytromycin (Azitromycin,Klaritromycin) CIT
+Cotrimoxazol CIT
+Tetracyklin CIT
+Ciprofloxacin ZDC
+Gentamicin (7) CIT
+Rifampicin CIT
+Tigecyclin CIT
+Moxifloxacin CIT
+Linezolid CIT
+Gentamicin (lokál.apl.) CIT
+Tobramycin (lokál.apl.) CIT
+Neomycin (lokál.apl.) CIT
+Chloramfenikol (lokál.apl.) CIT
+Bacitracin (lokál.apl.) XX
+Mupirocin (lokál.apl.) CIT
+Kyselina fusid. (lokál.apl.) CIT
+1) Oxacilin - výsledek platí též pro Amoxicilin/klavulán.kys, Ampicilin/sulbactam a cefalosporiny 1. a 2.generace
+7) Gentamicin, Amikacin - u systémových infekcí musí být používány v kombinaci s jinými účinnými antibiotiky.
+CIT=citlivé, ZDC=citlivé, při zvýšeném dávkovacím režimu nebo
+při koncentrování ATB v místě infekce. REZ=rezistentní,
+XX=výsledek pro konzultaci s ATB střediskem
+Nález: Staphylococcus spp. (koaguláza negativní) ++
+Strukturované výsledky:
+Stěr z projevůtext
+REPT_NTS_DTP</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="928373" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

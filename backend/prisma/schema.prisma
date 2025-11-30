@@ -1,0 +1,107 @@
+generator client {
+  provider             = "prisma-client-py"
+  interface            = "asyncio"
+  recursive_type_depth = "5"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model DiagnosisCode {
+  id        String   @id @default(uuid())
+  code      String   @unique
+  name      String
+  category  String?
+  chapter   String   @db.VarChar(5)
+  createdAt DateTime @default(now())
+
+  @@index([chapter])
+  @@index([category])
+  @@map("diagnosis_codes")
+}
+
+model Patient {
+  id                 String        @id @default(cuid())
+  birthNumber        String        @unique
+  firstName          String
+  lastName           String
+  dateOfBirth        DateTime
+  sex                String
+  countryOfResidence String?
+  createdAt          DateTime      @default(now())
+  updatedAt          DateTime      @updatedAt
+  cases              PatientCase[]
+
+  @@index([lastName, firstName])
+  @@index([birthNumber])
+  @@map("patients")
+}
+
+model PatientCase {
+  id                String       @id @default(cuid())
+  patientId         String
+  pacId             String?
+  hospitalPatientId String?
+  admissionDate     DateTime?
+  dischargeDate     DateTime?
+  clinicalText      String
+  biochemistry      String?
+  hematology        String?
+  microbiology      String?
+  medication        String?
+  rawXml            String?
+  createdAt         DateTime     @default(now())
+  updatedAt         DateTime     @updatedAt
+  patient           Patient      @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  predictions       Prediction[]
+
+  @@index([patientId])
+  @@index([pacId])
+  @@map("patient_cases")
+}
+
+model Prediction {
+  id              String      @id @default(cuid())
+  caseId          String
+  selectedCodes   Json
+  step1Reasoning  String?
+  
+  // Current prediction (updated after corrections)
+  mainCode        String
+  mainName        String
+  mainConfidence  Float
+  mainReasoning   String?
+  secondaryCodes  Json
+  
+  // Original AI prediction (preserved when corrected)
+  originalMainCode        String?
+  originalMainName        String?
+  originalMainConfidence  Float?
+  originalSecondaryCodes  Json?
+  
+  modelUsed       String
+  processingTime  Int
+  status          String      @default("processing") // "processing", "completed", "failed"
+  
+  // Validation & corrections
+  validated       Boolean     @default(false)
+  validatedAt     DateTime?
+  validatedBy     String?
+  feedbackType    String?
+  corrected       Boolean     @default(false)
+  correctedAt     DateTime?
+  corrections     Json?
+  feedbackComment String?
+  
+  createdAt       DateTime    @default(now())
+  case            PatientCase @relation(fields: [caseId], references: [id], onDelete: Cascade)
+
+  @@index([caseId])
+  @@index([validated])
+  @@index([status])
+  @@index([corrected])
+  @@map("predictions")
+}

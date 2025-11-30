@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="25_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="25">
+      <dsip:rodcis>7984355052</dsip:rodcis>
+      <dsip:jmeno>Jana</dsip:jmeno>
+      <dsip:prijmeni>Nováková</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>F</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-06T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>7984355052</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>7984355052</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="KAPIDIN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="TEZEO" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="DEXAMED" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="KALIUM CHLORATUM BIOMEDICA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PANTOPRAZOLE ZENTIVA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="CLEXANE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="NEODOLPASSE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="NOVALGIN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ZOLPIDEM RATIOPHARM" typ_med="P">
+          <dsip:dat_od format="D">2025-01-06</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.25.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-12T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-06T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-12T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-12T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">Pacient, hypertonik,  ambulantne sledovaný u MUDr. Čípovej pre dlhodobý vertebrogénny algický syndóm charakteru LIS S1, L5 vľavo, chronickú frustnú parézu L5 vľavo a obmedzenú dynamiku L chrbtice. Pacient doposiaľ užíval len príležitostne analgetickú perorálnu terapiu (napr. Diclofenac), bol aj na neurochirrugcikej konzultácii v Brne ohľadom neurochirurgickej intervencie, ale doporučený konzervatívny postup. Od 11/2024 akútne zhoršenie chronických ťažkostí. Ambulantne mal realizované RTG LS chrbtice (2.12.2024) , kde popísaná osteochondróza L4.Realizované mal aj EMG ( 6/2022) s nálezom chronickej radikulopatie L5 vľavo, akútnej radikulopatie v jeho distálnej časti S1 vĺavo- senz. radikulopatia, bez akútnej motorickej lézie.Realizované MR chrbtice (6/2022), kde L4-L5 cirkulárna hernia 6mm, vľavo paramediálne je pokrytá osteofytom, kompresia L4 vľavo, kontakt s L5 bilaterálne, L5-S1 mediálna protúzia 3mm. Pacient bol prijatý ako algický stav. Zahájená bola infúzna analgetická terapia a antiedémová infúzna kortikoterapia. Nasadené mu boli aj gastroprotektíva, suplementácia kália a prevencia TECH. Vo vstupných laboratórnych parametroch mierna hepatopatia a hyperglykémia, inak v norme. Klinický stav pacienta sa po liečbe objektívne i subjektívne zlepšil. Pacientka afebrilného, KP kompenzovaného a poučeného prepúšťame do ambulantnej starostivosti s doporučením.
+
+Biochemie:
+07.01.2025: MO 5.0 mmol/L | KR 66.0 umol/l | GFR 1.62 ml/s/1,73 m2 | NA 136.0 mmol/L | KA 4.58 mmol/L | CL 100.0 mmol/L | FIB4 2.21 - | BI 31.5 umol/l | BP 4.6 umol/l | AL 1.42 ukat/l | AS 1.1 ukat/l | GM 0.88 ukat/l | AF 1.0 ukat/l | GL 7.42 mmol/L | CRP 5.1 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | UCOL žlutá | UCLA bez zákalu | UPH 6.5 - | USH 1.021 - | UBILK 0.0 | UGK-S 1.0 arb.j. | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 1.0 10^6/L | UERY 3.0 10^6/L | UEPI 1.0 10^6/L | UKEPI &lt; 1 | UHLEN oj. | DOORDINA text | REPT_NTS
+
+Hematologie:
+07.01.2025: WBC 10.2 x10^9/L | RBC 4.3 x10^12/L | HGB 141.0 g/L | HCT 42.1 % | MCV 98.8 fL | MCH 33.1 pg | MCHC 335.0 g/L | PLT 206.0 x10^9/L | PDW 12.3 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="541260" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

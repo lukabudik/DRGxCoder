@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="12_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="12">
+      <dsip:rodcis>6133948618</dsip:rodcis>
+      <dsip:jmeno>Jan</dsip:jmeno>
+      <dsip:prijmeni>Novák</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>M</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-08T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>6133948618</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>6133948618</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="NOVALGIN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="500MG/ML INJ SOL 5X5ML" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="1g" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="IMS/IVN PARACETAMOL KABI" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="10MG/ML INF SOL 10X50ML" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="1g" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="IVN DIPIDOLOR" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="7" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="5MG/ML INJ SOL 5X2ML" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="15 mg" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="SDR PANTOPRAZOLE ZENTIVA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="40MG INJ PLV SOL 10" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="8-20 hod" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="IVN CLEXANE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="4000IU(40MG)/0" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="4ML INJ SOL ISP 50X0" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="4ML I" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ve 20 hod" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="SDR/IVN/EAC PERINALON" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="8MG TBL NOB 100" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="1-0-0" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="POR DEGAN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="5MG/ML INJ SOL 50X2ML" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="8-16-24 hod" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="IVN ONDANSETRON KABI" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="2MG/ML INJ SOL 5X4ML" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="8mg/100FR" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="IVN BUSCOPAN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="20MG/ML INJ SOL 5X1ML" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="8-20 hod" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="IVN AMOXICILLIN/CLAVULANIC ACID OLIKLA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="1000MG/200MG INJ/INF PLV SOL 10" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="1" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="2g" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="IVN METRONIDAZOL B. BRAUN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="5MG/ML INF SOL 20X100ML" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="500mg" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="IVN HEMINEVRIN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="192MG CPS MOL 100" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="1-1-1-1" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="POR" typ_med="P">
+          <dsip:dat_od format="D">2025-01-08</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.12.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-17T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-08T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-17T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-17T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">pac. přeložený s FN USA I chir. klin. pro primar. pankreatitidu. Na odd. pokračováno v nastavené terapii, paranterální výživa,. Empiricky ATB /Amoxicilin + Metronidazol) jako prevence elevace zánětl. parametrů. Doplněno CT břicha, kde prosáknutí  peripankreatickyn jinak bez kolekcí či nekróz. Po nasazené th. postupné zlepšení klin. stavu a laborat. hodnot. Následná realimentace a zatěž stravou, bez problému. Aktuálně bez potíži, bolesti nemá, bez poruchy pasaže GIT, afebrilní, břicho měkké, nebolestivé, bez hmat. resi nebo zn. dražděni, KP- komp, afebrilní, anikter. Pro přetrvající vyšší glykemie doplněno diabetolog vyš., dop. Minidiab 0-0-1. Dále pro přechodnou hypertenzi provedeno inter. vyš., dop. Agen 5-10 mg/den, event. I malou dávku beta-blokátoru pro sinusovou tachykardii, např. Concor 2,5 mg 1/den. Po zbytek hosp. pac. více méně tlakově stabilní. Klinicky bez obtíží. Lab. pokles JS, AM, LIP i zánětl. markerů. Schopen dimise. Před dimisí ještě kont. diabetologické vyš.- glykémie stále neuspokojivé Minidiab navýšen na 1-0-1.
+
+Biochemie:
+08.01.2025: MO 1.5 mmol/L | KR 44.0 umol/l | GFR 2.15 ml/s/1,73 m2 | NA 137.0 mmol/L | KA 3.95 mmol/L | CL 100.0 mmol/L | FIB4 0.69 - | BI 16.5 umol/l | AL 0.42 ukat/l | AS 0.34 ukat/l | GM 3.08 ukat/l | AF 1.35 ukat/l | AM 2.11 ukat/l | LIP 8.66 ukat/l | GL 7.57 mmol/L | CRP 207.5 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS | VÝSLEDKY text 08.01.2025: UCOL sv. žlutá | UCLA bez zákalu | UPH 7.5 - | USH 1.011 - | UBILK 0.0 | UGK-S 1.0 arb.j. | UAC 2.0 arb.j. | UROB 0.0 | UBIL 0.0 | ULEU 3.0 10^6/L | UERY 0.0 | REPT_NTS 09.01.2025: MO 2.0 mmol/L | KR 37.0 umol/l | GFR 2.31 ml/s/1,73 m2 | NA 137.0 mmol/L | KA 3.76 mmol/L | PCT 0.24 ug/l | CL 101.0 mmol/L | FIB4 0.76 - | BI 11.8 umol/l | AL 0.33 ukat/l | AS 0.32 ukat/l | GM 2.81 ukat/l | AF 1.2 ukat/l | AM 1.49 ukat/l | LIP 5.0 ukat/l | GL 7.25 mmol/L | CRP 380.1 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | DOORDINA text | REPT_NTS | VÝSLEDKY text 10.01.2025: MO 2.7 mmol/L | KR 38.0 umol/l | GFR 2.28 ml/s/1,73 m2 | NA 136.0 mmol/L | KA 3.26 mmol/L | PCT 0.22 ug/l | CL 102.0 mmol/L | AM 0.62 ukat/l | LIP 1.84 ukat/l | CRP 382.9 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | DOORDINA text | REPT_NTS 11.01.2025: MO 3.6 mmol/L | KR 43.0 umol/l | GFR 2.17 ml/s/1,73 m2 | NA 138.0 mmol/L | KA 3.5 mmol/L | CL 103.0 mmol/L | BI 8.1 umol/l | AL 0.25 ukat/l | AS 0.26 ukat/l | GM 2.72 ukat/l | AF 1.21 ukat/l | AM 0.58 ukat/l | LIP 2.23 ukat/l | CRP 257.2 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS | VÝSLEDKY text 13.01.2025: NA 139.0 mmol/L | KA 3.95 mmol/L | PCT 0.09 ug/l | CL 103.0 mmol/L | FIB4 0.67 - | BI 6.9 umol/l | AL 0.39 ukat/l | AS 0.4 ukat/l | GM 2.96 ukat/l | AF 1.33 ukat/l | AM 0.55 ukat/l | LIP 1.36 ukat/l | GL 7.48 mmol/L | CRP 90.8 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 15.01.2025: MO 2.5 mmol/L | KR 46.0 umol/l | GFR 2.11 ml/s/1,73 m2 | NA 139.0 mmol/L | KA 4.44 mmol/L | CL 102.0 mmol/L | FIB4 0.52 - | BI 6.5 umol/l | AL 0.62 ukat/l | AS 0.51 ukat/l | GM 2.59 ukat/l | AF 1.16 ukat/l | AM 0.53 ukat/l | LIP 0.94 ukat/l | CRP 26.2 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 16.01.2025: KGH 67.0 mmol/mol | CPEP 428.0 pmol/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS
+
+Hematologie:
+08.01.2025: WBC 15.5 x10^9/L | RBC 4.9 x10^12/L | HGB 154.0 g/L | HCT 43.4 % | MCV 89.1 fL | MCH 31.6 pg | MCHC 355.0 g/L | PLT 279.0 x10^9/L | PDW 9.1 fL | NRBC 0.0 | NRBC% 0.0 | APTT-T 33.0 s | aPTT-R 0.98 1 | PT-INR 0.96 1 | PT-R 0.96 1 | PT-T 13.7 s | REPT_NTS 09.01.2025: WBC 16.2 x10^9/L | RBC 4.7 x10^12/L | HGB 144.0 g/L | HCT 42.6 % | MCV 91.0 fL | MCH 30.8 pg | MCHC 338.0 g/L | PLT 270.0 x10^9/L | PDW 9.8 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS 10.01.2025: WBC 12.7 x10^9/L | RBC 4.2 x10^12/L | HGB 132.0 g/L | HCT 37.9 % | MCV 89.6 fL | MCH 31.2 pg | MCHC 348.0 g/L | PLT 267.0 x10^9/L | PDW 9.7 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS 11.01.2025: WBC 10.4 x10^9/L | RBC 4.1 x10^12/L | HGB 126.0 g/L | HCT 36.8 % | MCV 90.2 fL | MCH 30.9 pg | MCHC 342.0 g/L | PLT 307.0 x10^9/L | PDW 9.6 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS 13.01.2025: WBC 7.4 x10^9/L | RBC 4.0 x10^12/L | HGB 125.0 g/L | HCT 36.1 % | MCV 90.5 fL | MCH 31.3 pg | MCHC 346.0 g/L | PLT 350.0 x10^9/L | PDW 9.2 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS 15.01.2025: WBC 6.6 x10^9/L | RBC 4.5 x10^12/L | HGB 138.0 g/L | HCT 40.3 % | MCV 89.4 fL | MCH 30.6 pg | MCHC 342.0 g/L | PLT 458.0 x10^9/L | PDW 9.5 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="956601" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

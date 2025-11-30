@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="14_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="14">
+      <dsip:rodcis>5972567380</dsip:rodcis>
+      <dsip:jmeno>Jan</dsip:jmeno>
+      <dsip:prijmeni>Novák</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>M</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2024-12-30T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>5972567380</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>5972567380</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="METFORMIN TEVA" typ_med="P">
+          <dsip:dat_od format="D">2024-12-30</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="BETAMED" typ_med="P">
+          <dsip:dat_od format="D">2024-12-30</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ATORVASTATIN MYLAN" typ_med="P">
+          <dsip:dat_od format="D">2024-12-30</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="BRETARIS GENUAIR" typ_med="P">
+          <dsip:dat_od format="D">2024-12-30</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="CLEXANE" typ_med="P">
+          <dsip:dat_od format="D">2024-12-30</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="AXETINE" typ_med="P">
+          <dsip:dat_od format="D">2024-12-30</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="KLACID" typ_med="P">
+          <dsip:dat_od format="D">2024-12-30</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="MUCOSOLVAN" typ_med="P">
+          <dsip:dat_od format="D">2024-12-30</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ERDOMED" typ_med="P">
+          <dsip:dat_od format="D">2024-12-30</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ATROVENT" typ_med="P">
+          <dsip:dat_od format="D">2024-12-30</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="NOVALGIN" typ_med="P">
+          <dsip:dat_od format="D">2024-12-30</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="MEDOXIN" typ_med="P">
+          <dsip:dat_od format="D">2024-12-30</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="DUPHALAC" typ_med="P">
+          <dsip:dat_od format="D">2024-12-30</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ZOLPIDEM MYLAN" typ_med="P">
+          <dsip:dat_od format="D">2024-12-30</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.14.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-20T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2024-12-30T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-20T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-20T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">Pacient prijat na inf odd pro vyrazný nález na snimku s febriliemi, po opakovaných kolapsích v domacím prostředí. Po přijeti nasazena atb lečba komunitni pneumonie, RTG nalez s nalezem mnohočetného meta postižení, po nasazeni kombinovaneho atb stav stabilizovan, pokles zanetlivých parametru, stav konzultován s onkologickou amb, doporučení převodu do paliativní peče.
+Rodina informována o zavažnosti zdravotniho stavu, proto domluvena další peče v Hospici Sv Štěpána v Litomeřicích. Pac ve stabilizovanem stavu převezen sanitnim vozerm
+
+Biochemie:
+30.12.2024: MO 6.4 mmol/L | KR 95.0 umol/l | GFR 1.13 ml/s/1,73 m2 | NA 139.0 mmol/L | KA 3.97 mmol/L | CL 100.0 mmol/L | FIB4 2.54 - | BI 11.1 umol/l | AL 0.52 ukat/l | AS 1.73 ukat/l | GM 0.76 ukat/l | AF 1.9 ukat/l | GL 5.36 mmol/L | CRP 137.1 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 
+01.01.2025: UCOL sv. žlutá | UCLA bez zákalu | UPH 6.5 - | USH 1.014 - | UBILK 1.0 arb.j. | UGK-S 0.0 | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 6.0 10^6/L | UERY 2.0 10^6/L | UEPI 1.0 10^6/L | UBAK něco | UHLEN oj. | REPT_NTS 
+02.01.2025: MO 4.6 mmol/L | KR 72.0 umol/l | GFR 1.46 ml/s/1,73 m2 | NA 140.0 mmol/L | KA 3.82 mmol/L | CL 103.0 mmol/L | CRP 74.7 mg/L | HEMOL 1.0 - | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 
+06.01.2025: MO 4.0 mmol/L | KR 74.0 umol/l | GFR 1.45 ml/s/1,73 m2 | NA 142.0 mmol/L | KA 4.37 mmol/L | CL 107.0 mmol/L | CRP 54.1 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 
+12.01.2025: MO 4.3 mmol/L | KR 75.0 umol/l | GFR 1.44 ml/s/1,73 m2 | NA 142.0 mmol/L | KA 3.85 mmol/L | CL 106.0 mmol/L | CRP 32.9 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS
+
+Hematologie:
+30.12.2024: WBC 16.7 x10^9/L | RBC 4.3 x10^12/L | HGB 138.0 g/L | HCT 41.4 % | MCV 95.8 fL | MCH 31.9 pg | MCHC 333.0 g/L | PLT 536.0 x10^9/L | PCT 0.5 % | MPV 9.3 fL | RDW 15.2 % | NRBC 0.0 | NRBC% 0.0 | NE 85.1 % | LY 7.6 % | MON 7.0 % | EO 0.0 | BA 0.3 % | APTT-T 32.9 s | aPTT-R 0.98 1 | NEABS 14.21 x10^9/L | LYABS 1.3 x10^9/L | MOABS 1.2 x10^9/L | EOABS 0.0 | BAABS 0.05 x10^9/L | NEUM 84.0 % | TYCM 0.0 | LYM 10.0 % | MOM 6.0 % | EOM 0.0 | BAM 0.0 | MMYM 0.0 | MYM 0.0 | PMYM 0.0 | MYBLM 0.0 | PLBM 0.0 | PLYM 0.0 | NEDBBM 0.0 | NEDBLM 0.0 | NRBCM 0.0 | MLEU text | MERYM Anizocytóza erytrocytů. | MPLTM Anizocytóza.¨,Makrotrombocyty. | PT-INR 1.0 1 | PT-R 1.0 1 | PT-T 14.2 s | DDI 3.79 mg/L FEU | Podpis Kolaczek | DOORDINA text | REPT_NTS 
+02.01.2025: WBC 11.3 x10^9/L | RBC 3.7 x10^12/L | HGB 117.0 g/L | HCT 35.9 % | MCV 98.1 fL | MCH 32.0 pg | MCHC 326.0 g/L | PLT 416.0 x10^9/L | PCT 0.41 % | MPV 10.0 fL | RDW 15.2 % | NRBC 0.0 | NRBC% 0.0 | NE 81.1 % | LY 10.0 % | MON 6.6 % | EO 1.7 % | BA 0.6 % | NEABS 9.18 x10^9/L | LYABS 1.1 x10^9/L | MOABS 0.8 x10^9/L | EOABS 0.19 x10^9/L | BAABS 0.07 x10^9/L | REPT_NTS 
+06.01.2025: WBC 10.0 x10^9/L | RBC 4.0 x10^12/L | HGB 124.0 g/L | HCT 38.4 % | MCV 96.5 fL | MCH 31.2 pg | MCHC 323.0 g/L | PLT 427.0 x10^9/L | PCT 0.45 % | MPV 10.5 fL | RDW 15.1 % | NRBC 0.01 x10^9/L | NRBC% 0.1 % | NE 67.5 % | LY 18.0 % | MON 7.7 % | EO 5.7 % | BA 1.1 % | NEABS 6.75 x10^9/L | LYABS 1.8 x10^9/L | MOABS 0.8 x10^9/L | EOABS 0.57 x10^9/L | BAABS 0.11 x10^9/L | REPT_NTS 
+12.01.2025: WBC 11.8 x10^9/L | RBC 3.9 x10^12/L | HGB 121.0 g/L | HCT 37.8 % | MCV 97.4 fL | MCH 31.2 pg | MCHC 320.0 g/L | PLT 461.0 x10^9/L | PCT 0.48 % | MPV 10.4 fL | RDW 15.4 % | NRBC 0.0 | NRBC% 0.0 | NE 73.8 % | LY 15.5 % | MON 6.6 % | EO 2.4 % | BA 1.7 % | NEABS 8.69 x10^9/L | LYABS 1.8 x10^9/L | MOABS 0.8 x10^9/L | EOABS 0.28 x10^9/L | BAABS 0.2 x10^9/L | REPT_NTS
+
+Mikrobiologie:
+Datum: 31.12.2024 07:00
+Diagnóza: J180 - Bronchopneumonie NS
+Výsledek:
+Q_SRPN:
+Příjem: 31.12.2024 Laboratorní číslo:PNE-00370
+Vyšetření: Přímý průkaz antigenu Streptococcus pneumoniae v moči 
+Antigen STREPTOCOCCUS PNEUMONIAE: negativní 
+MemoSRPN Omezení testu:
+Moč je nutné odebrat před aplikací antibiotika. Negativní výsledek nevylučuje počátek onemocnění, kdy je nízká koncentrace antigenu. Očkování pneumokokovou vakcínou může způsobovat falešně pozitivní výsledky.
+--------------------
+Datum: 31.12.2024 07:00
+Diagnóza: J180 - Bronchopneumonie NS
+Výsledek:
+Q_LEPN:
+Příjem: 31.12.2024 Laboratorní číslo:LEG-00264
+Vyšetření: Přímý průkaz antigenu Leginella pneumoniae v moči 
+Antigen LEGIONELLA pneumoniae: negativní 
+MemoLeg Omezení testu :
+NEGATIVNÍ výsledek testu nevylučuje možnost infekce Leg.pneumophila séroskupiny 1 a 6. Důvodem může být nízká koncentrace antigenu.
+POZITIVNÍ výsledek testu může svědčit o současné nebo proběhlé infekci. Vylučování antigenu Legionelly lze pozorovat 3 dny po začátku příznaků a může trvat až 1 rok po odeznění nemoci.
+--------------------
+Datum: 31.12.2024 07:00
+Diagnóza: J180 - Bronchopneumonie NS
+Výsledek:
+Strukturované výsledky:
+Chřipka Anegativní
+Chřipka Bnegativní
+RSVnegativní
+--------------------
+Datum: 31.12.2024 07:00
+Diagnóza: J180 - Bronchopneumonie NS
+Výsledek:
+Strukturované výsledky:
+SARS-CoV-2negativní</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="253242" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

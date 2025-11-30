@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="23_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="23">
+      <dsip:rodcis>5002236769</dsip:rodcis>
+      <dsip:jmeno>Jan</dsip:jmeno>
+      <dsip:prijmeni>Novák</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>M</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-20T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>5002236769</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>5002236769</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="TORECAN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-20</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="NOVALGIN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-20</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PRESTARIUM NEO COMBI" typ_med="P">
+          <dsip:dat_od format="D">2025-01-20</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ROSUCARD" typ_med="P">
+          <dsip:dat_od format="D">2025-01-20</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="KALIUM CHLORATUM BIOMEDICA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-20</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="CLEXANE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-20</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="DEXAMED" typ_med="P">
+          <dsip:dat_od format="D">2025-01-20</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="OMEPRAZOL STADA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-20</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PLASMALYTE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-20</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="DERIN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-20</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="FORTECORTIN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-20</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.23.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-24T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-20T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-24T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-24T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">Pacient přeložen z chirurgického oddělení nem. Hodonín, kde hospitalizován od 18.1. do 20.1. 2025, nově zjištěno v.s. metastatické postižení mozku- susp 3 mts. Dále na rtg plic susp. mts postižení, origo neznámé. Kdy subj. pacient udává poslední 2 týdny vertigo, bolesti hlavy mirně frontálně. CT mozek 18.1.2025: Bez známek akutního postraumatického krvácení či jednoznačné akutni ischemie, skelet kalvy a C páteře bez známek čerstvých traumat. změn. Dvě ložiska mozku periventrikulárně vpravo a jedno v mozečku vpravo, susp. pro mts-origo? Korová a periventrikulární atrofie mozku.
+Za hospitalizace v nem Hodonín vyšetřen neurologem, s nálezem: chron. intermitentni cefalgie F bilat. od 7/24, intermitentni vertigo při chůzi, zraková porucha /brýlová korekce s progresi/, obj. izokorie/pac. po operaci šedého zákalu bilat./, levostranná hemiparesa s prevalenci na LHK, kde stř. až těžšího st., na LDK lehkého až stř. st., chůze s lehkou paraparesou DKK, CT vyš dvě ložiska mozku periventrikulárně vpravo a jedno v mozečku vpravo, susp. pro mts. S doporučenim kortikoterapie, dále MR mozku a překlad na neurolog. odd nem Kyjov.
+Při překladu subj. mírná cefalea frontálně, v obj. neurol. nálezu lehká cent. lézen. VII a středně těžká levost. hemiparéza. 
+Zde doplněna časně MR mozku s k.l, kde potvrzeny 3 metastatické ložiska, nález inoperabilní. Dále doplěno Uz břicha, kde jako náhodný nález nalezono aneurysma subrenální aorty, zkonzultováno s chirurgem a cévním lékařem Dr. lžičařem, t.č. konzervativní postup. Dále doplněo CT plic, kde nález tumoru vpravo v horním laloku ventrobazálně v  obl. S3, nepravidelná nodularita vel. kolem 23x22x21 mm, pokontrastně se částečně sytí (ze 40 H asi na 75 H), dle vzhledu velmi suspektní z malignity, vpravo na přilehlém vedl. interlobiu drobné nodularity do 5 mm. Doplněno plicní konzilium ,dopor. viz výše. Nález konzultován s prim. Látalem z radiologie,CT biopsie objednána, pacient však t.č. zákrok odmítá. termín biopsie tedy zrušen. 
+Další řešení již cestou plicní ambulance. 
+Stran mozkových metastáz na zvážení paliativní RT. objednán na Masarykův onkologický ústav. na 3.2. 2025  v 12.00 hod. 
+Během pobytu rehabilitován, zvládá chůzi po chodbě s dopomocí chodítka. 
+během pobytu intermitetně noční neklid, během dne plné vědomí a spolupráce. Do medikace nasazen tedy quetiapin. 
+Při propuštění afebrilní, KP komn., eupnoe, TK 130/80mmHg, TF 96/min, při vědomí, orientován správně, t.č. klidný, spolupracující, řeč bez dysartrie a fatické poruchy, bez ikteru či cyanosy, zornice isokorické, reagují správně, bulby dotahují, bez nystagmu, lehká asymetrie levého ústného koutku, jazyk středem, patro sym., uvula nepřetahuje, čití sym., bez diplopie, n.V. nebol. vystupy, jazyk nepokousán. Krk: pohyblivost C pateře omezená do krajních poloh, šíje oponuje v.s spondylogenně,meningeální není, AS reg., dýchaní alv., poslechově tižší vpravo bazálně, břicho:v niveau, nebolestivé, bez rezistence, břišní reflexy sym., čití na trupu sym.,
+HKK: nastavené polohy drží, pozit. Dufour vlevo, stisk oslaben vlevo, špetku svede, sval.tonus symetrický, čití sym., reflexy C5/8 sym. nízké, pyramidové iritační jevy negat., lehká dystaxe vlevo při paréze, DKK: v Min. drží izolovaně vpravo, vlevo bržděný pokles, taxe nelze, Laségue bilat. negat., čití sym., areflexie bilat L5/S2 sym., Babinski pozit vlevo, Kernig neg., chůze s dopomocí chodítka, DKK bez otoků či známek zánětu, varixy klidné, pulsace na periferii hmatná.</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="616370" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

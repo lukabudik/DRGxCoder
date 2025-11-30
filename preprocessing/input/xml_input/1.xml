@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="1_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="1">
+      <dsip:rodcis>6469567539</dsip:rodcis>
+      <dsip:jmeno>Jana</dsip:jmeno>
+      <dsip:prijmeni>Nováková</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>F</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-11T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>6469567539</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>6469567539</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="AMOXICILLIN/CLAVULANIC ACID OLIKLA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PANTOPRAZOLE ZENTIVA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ACC INJEKT" typ_med="P">
+          <dsip:dat_od format="D">2025-01-11</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.1.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-12T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-11T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-12T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-12T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">Pacientka žijící v domě s ošetřovatelskou péčí. Chodící soběstačná. Dle ošetřovatelky 3 dny zhoršování stavu vědomí, polehává omezený kontakt. Dnes ráno apatická, dostala snad Nutridrink, poté desaturace. Volána záchranná služba. Po příjezdu pacientka ležící v posteli, somnoletní, na důrazný podnět probudná, výzvě nevyhoví, subfebrilní TT 37,3 st. C, zornice izokorické, oběhově hypotenze 91/51, Tf 112/min. SpO2 85%, snad bez lateralizace. Podán kyslík a následně pacienta dovezena na urgentní příjem Nem. Kyjov. Vzdledem k výše uvedenému přijata na ARO oddělení. Zde invazivně zajištěna, provedeno echokardiografické vyšetření, kde obraz selhání levé komory s nízkou ejekční frakcí. Pro hypotenzi a snízký stav cirkulujícího oběmu zahájena egresivní tekutinová resuscitace. Nasazena vazopresorická podpora Noradrenalinem. I přes doplnění intravaskulárního objemu se prohlubuje hypotenze, proto přistoupeno o rozšíření o vardessin. Dobutamin vzhledem k nově vzniklé Fisi s ROK nepodáván. Fisi oponována Cordaronem a Digoxinem. Při suspektní aspiraci podín empiricky amoxicilin. Vzhledem k srdečnímu selhání s nízkým srdečním výdejema vzniklou  spontánní koagulopatií INR 3,24 upuštěno od punkce výpotku vpravo, kde dle CT až 45 mm. Nicméne výpotek nelimituje pacietku ,v ASTRUPU normální pH s  hyperoxémií. Zdravotní stav s nepříznivou prognózou konzultován s dcerou. Vzhledem k předchorobí s výskytem demence, zhoršování zdravotního stavu a nemožnosti dostáhnout terapeutickými prostředky dostatečného srdecního výdeje rozdodnuto dále nenavyšovat terapii ve smyslu napojení na UPV, DNR, která nepovede k úzdravě pacientky. Stav progreduje do anergní hypotenze s exitem v 3:50 12.1.2025. Dceru se pokusíme telefonicky konzultovat v ranních hodiných.
+
+Biochemie:
+Všechny: 11.01.2025: NA 143.0 mmol/L | KA 5.27 mmol/L | CL 107.0 mmol/L | GL 6.56 mmol/L | ČAS_MĚŘ. 10:30 | TYP_ODB arteriální 11.01.2025: MO 18.2 mmol/L | KR 149.0 umol/l | GFR 0.48 ml/s/1,73 m2 | KM 635.0 umol/l | NA 147.0 mmol/L | KA 4.24 mmol/L | PCT 1.13 ug/l | CL 111.0 mmol/L | CA 2.01 mmol/L | CA-KOR 2.36 mmol/L | PA 1.35 mmol/L | MG 1.04 mmol/L | FIB4 10.62 - | BI 59.6 umol/l | BP 22.2 umol/l | AL 0.94 ukat/l | AS 1.64 ukat/l | GM 0.76 ukat/l | AF 1.37 ukat/l | AM &lt; 0.20 | BNP 7941.0 ng/L | TNI 124.0 ng/L | MYO 242.7 ug/l | CKMBM 2.4 ug/l | CK 1.83 ukat/l | CH 2.6 mmol/L | GL 6.12 mmol/L | PLAC 2.47 mmol/L | PREA dodáme | AB 26.0 g/L | CB 47.3 g/L | CRP 30.8 mg/L | TSH 5.11 mU/L | FT3 3.32 pmol/L | FT4 11.2 pmol/L | HEMOL 0.0 | ICTER 1.0 - | LIPEM 0.0 | PHEMOL1 0.0 | PICTER1 1.0 - | PLIPEM1 0.0 | KPH 7.414 - | KPC 4.36 kPa | KPO 33.19 kPa | KAC 20.4 mmol/L | KBE -3.1 mmol/L | KSB -4.2 mmol/L | KSC 21.8 mmol/L | KSA 99.8 % | SODIK 147.0 mmol/L | CLKOR 106.0 mmol/L | UAKOR 12.5 mmol/L | PI 2.46 mmol/L | ALBI 7.3 g/L | SID 30.2 mmol/L | AG 19.8 mmol/L | AGKOR 23.3 mmol/L | ČAS_MĚŘ. 10:28 | DOORDINA text | KOMENTÁŘ plazma (Li/Heparin) | TYP_ODB arteriální | VÝSLEDKY text 11.01.2025: UCOL tm.jantar | UCLA zakaleno | UPH 5.0 - | USH 1.018 - | UBILK 3.0 arb.j. | UGK-S 0.0 | UAC 0.0 | UROB 2.0 arb.j. | UBIL 0.0 | ULEU 1948.0 10^6/L | UERY 638.0 10^6/L | UEPI 34.0 10^6/L | UKEPI 27.0 10^6/L | UBAK něco | UHLEN spousta | KOMENTÁŘ text | REPT_NTS 11.01.2025: NA 145.0 mmol/L | KA 4.69 mmol/L | CL 108.0 mmol/L | CAI 1.054 mmol/L | GL 18.31 mmol/L | PLAC 7.1 mmol/L | KPH 7.374 - | KPC 3.16 kPa | KPO 10.72 kPa | KAC 13.5 mmol/L | KBE -9.5 mmol/L | KSB -11.7 mmol/L | KSC 16.7 mmol/L | KSA 95.0 % | ČAS_MĚŘ. 15:53 | TYP_ODB arteriální 11.01.2025: NA 146.0 mmol/L | KA 4.15 mmol/L | CL 107.0 mmol/L | GL 9.68 mmol/L | PLAC 6.02 mmol/L | KPH 7.38 - | KPC 3.45 kPa | KPO 19.62 kPa | KAC 15.0 mmol/L | KBE -8.2 mmol/L | KSB -10.1 mmol/L | KSC 17.8 mmol/L | KSA 99.1 % | ČAS_MĚŘ. 18:53 | TYP_ODB arteriální
+
+Hematologie:
+Všechny: 11.01.2025: WBC 6.0 x10^9/L | RBC 4.3 x10^12/L | HGB 136.0 g/L | HCT 41.1 % | MCV 95.6 fL | MCH 31.6 pg | MCHC 331.0 g/L | PLT 95.0 x10^9/L | PCT 0.11 % | MPV 11.6 fL | RDW 17.8 % | NRBC 0.02 x10^9/L | NRBC% 0.3 % | NE 85.9 % | LY 7.4 % | MON 6.7 % | EO 0.0 | BA 0.0 | APTT-T 42.3 s | aPTT-R 1.26 1 | NEABS 5.13 x10^9/L | LYABS 0.4 x10^9/L | MOABS 0.4 x10^9/L | EOABS 0.0 | BAABS 0.0 | NEUM dodáme | TYCM dodáme | LYM dodáme | MOM dodáme | EOM dodáme | BAM dodáme | MMYM dodáme | MYM dodáme | PMYM dodáme | MYBLM dodáme | PLBM dodáme | PLYM dodáme | NEDBBM dodáme | NEDBLM dodáme | NRBCM dodáme | MLEU dodáme | MERYM dodáme | MPLTM dodáme | PT-INR 3.24 1 | PT-R 2.97 1 | PT-T 42.1 s | FIB 1.67 g/L | DDI &gt; 20.00 | Podpis dodáme | DOORDINA text | REPT_NTS | VÝSLEDKY text | Poznámka text
+
+Mikrobiologie:
+Q_MOČ-PM: Příjem: 11.01.2025 Laboratorní číslo:MOC-00270 Vyšetření: Moč z PMK Aerobní kultivace: Nález: Streptococcus agalactiae (ß-hem. streptokok sk. B) 10^4-10^5 CFU/mL Streptococcus agalactiae může asymptomaticky kolonizovat pohlavní trakt ženy, zvažte proto možnou kontaminaci moče vzniklou při odběru vzorku. : Penicilin CIT Cotrimoxazol CIT Nitrofurantoin (5) CIT Vancomycin CIT Teicoplanin CIT 5) Nitrofurantoin (pokud je uveden na výsledkovém listě) - platí pouze pro nekomplikované IMC. CIT=citlivé, REZ=rezistentní, XX=výsledek pro konzultaci s ATB střediskem Nález: Escherichia coli &gt;10^5 CFU/mL : Ampicillin REZ Amoxicilin/klavul. p.o. (1) CIT Cefuroxim p.o. (3) CIT Cotrimoxazol CIT Norfloxacin CIT Ciprofloxacin CIT Nitrofurantoin (5) CIT Mecillinam p.o. (6) CIT Fosfomycin p.o. (4) CIT Amoxicilin/klavul. i.v. (2) CIT Piperacillin/tazobactam CIT Cefotaxim CIT Ceftazidim CIT Gentamicin (7) CIT Amikacin (7) CIT Meropenem CIT Ertapenem XX Cefepim CIT Ceftazidim/avibactam CIT Fosfomycin i.v. XX XX =výsledek pro konzultaci s ATB střediskem 1) Amoxicilin/klav. p.o. - platí pro p.o. aplikaci a pouze pro nekomplikované IMC. 2) Amoxicilin/klav. i.v. (pokud je uveden na výsledkovém listě) - platí pro i.v. aplikaci u kompl.IMC a ostat.dg. 3) Cefuroxim (pokud je uveden na výsledkovém listě) - platí pro p.o. aplikaci a pouze pro nekomplikované IMC. 4) Fosfomycin (pokud je uveden na výsledkovém listě) - platí pro p.o. aplikaci a pouze pro nekomplikované IMC 5) Nitrofurantoin (pokud je uveden na výsledkovém listě) - platí pouze pro nekomplikované IMC 6) Mecillinam (pokud je uveden na výsledkovém listě) - platí pouze pro nekomplikované IMC 7) Gentamicin, Amikacin - u systémových infekcí musí být používán v kombinaci s jinými účinnými antibiotiky. CIT=citlivé, REZ=rezistentní, XX=výsledek pro konzultaci s ATB střediskem Nález a jeho kvantifikace nemusí být validní (důvodem může být osídlení a pomnožení mikroorganismů v PMK). Vhodné je porovnat výsledek kultivace s výsledkem vyšetření močového sedimentu na OKB. bv+c Poznámka: Nález a jeho kvantifikace nemusí být validní (důvodem může být osídlení a pomnožení mikroorganismů v PMK). Vhodné je porovnat výsledek kultivace s výsledkem vyšetření močového sedimentu na OKB. bv+c 
+Q_MRSA-P: Příjem: 11.01.2025 Laboratorní číslo:KLO-00198 Vyšetření: Stěr z perinea (+MRSA) Aerobní kultivace: Nález: Běžná flóra stolice Cílená kultivace MRSA: Nález: NEGATIVNÍ Cílená kultivace VRE: Nález: NEGATIVNÍ vsstupní screeing Poznámka: vsstupní screeing 
+Q_KRK: Příjem: 11.01.2025 Laboratorní číslo:KLK-00187 Vyšetření: Výtěr z krku Aerobní kultivace: Nález: Běžná orofaryngeální flóra Nález: Staphylococcus aureus +++ Výsledek vyšetření citlivosti k antibiotikům - viz následující vzorek. Cílená kultivace MRSA: Nález: NEGATIVNÍ vstupní screening Poznámka: vstupní screening 
+Q_NOS: Příjem: 11.01.2025 Laboratorní číslo:KLK-00188 Vyšetření: Výtěr z nosu Aerobní kultivace: Nález: Staphylococcus aureus +++ Kmen vykazuje mechanismus indukované rezistence ke klindamycinu. Ke krátkodobé léčbě infekcí kůže a měkkých tkání jej lze použít, neboť při této léčbě se nepředpokládá vznik konstitutivní rezistence. : Oxacilin (1) CIT Clindamycin XX Erytromycin (Azitromycin,Klaritromycin) REZ Cotrimoxazol CIT Tetracyklin CIT Ciprofloxacin ZDC Gentamicin (7) CIT Rifampicin CIT Tigecyclin CIT Moxifloxacin CIT Linezolid CIT XX =výsledek pro konzultaci s ATB střediskem 1) Oxacilin - výsledek platí též pro Amoxicilin/klavulán.kys, Ampicilin/sulbactam a cefalosporiny 1. a 2.generace 7) Gentamicin, Amikacin - u systémových infekcí musí být používány v kombinaci s jinými účinnými antibiotiky. CIT=citlivé, ZDC=citlivé, při zvýšeném dávkovacím režimu nebo při koncentrování ATB v místě infekce. REZ=rezistentní, XX=výsledek pro konzultaci s ATB střediskem Cílená kultivace MRSA: Nález: NEGATIVNÍ vstupní screening Poznámka: vstupní screening</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="887488" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

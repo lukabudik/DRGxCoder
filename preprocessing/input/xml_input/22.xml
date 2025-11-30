@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="22_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="22">
+      <dsip:rodcis>7710740222</dsip:rodcis>
+      <dsip:jmeno>Jan</dsip:jmeno>
+      <dsip:prijmeni>Novák</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>M</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-02T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>7710740222</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>7710740222</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="KALNORMIN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="FURORESE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="DESLORATADINE ACTAVIS" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="DITHIADEN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="LOKREN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="SIOFOR PROLONG" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="GODASAL" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ALOPURINOL SANDOZ" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="MERTENIL" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="EZETROL" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="AMLORATIO" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PRESTARIUM NEO FORTE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ATROVENT N" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PARAMEGAL" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="VIDISIC" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="OMEPRAZOL STADA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="HYDROCORTISON VUAB" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="LAGOSA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ACIDUM FOLICUM LÉČIVA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="TREXAN NEO" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PREDNISON LÉČIVA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-02</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.22.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-16T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-02T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-16T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-16T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">Pacient byl přijat na kožní oddělení k přeléční recidivy generalizované psoriázy po těle a v obličeji. V úvodu hospitalizace zahájena terapie oleokoupelemi, následně aplikováno externum obsahujcící kortikoid ve vazelíně. Systémově aplikovány kortikoidy i.v., clona PPI. K mytí kštice ichtamolový šampon. Vstupní laboratoř s chronickou anémií, hyperglykémií při postprandiálním odběru. Elevované jaterní hodnoty vs. po předchozí terapii Prednisonem, do medikace přidány hepatoprotektiva. V moči výrazná leukocyturie a přítomny i nějaké erytrocyty. CRP 68,4. Moč odeslána ke kultivačnímu vyšetření. Dále výrazněji elevovaný kreatinin. Zatím přistoupeno k p.o. rehydrataci z důvodu chronického srdečního selhávání.  V kontrolních odběrech renální parametry úpravou, mineralogram v normě, CRP se spontánním poklesem. V moči nález Pseudomonas aeruginosa &lt;10^4 CFU/mL, vzhledem k absenci klinických příznaků uroinfektu a nízkému CRP, ATB terapie nebyla indikována. Po vysazení systémových kortikoidů došlo k oživení lokálního nálezu, zahájená systémová imunosupresivní terapie - metotrexát. Per os kortikoterapie s postupnou detrakcí. Kontrolní odběry s mírnou progresí renální insuficience, jaterní parametry se lepší, krevní obraz s mírnou leukocytózou, anémie chronická - stacionární hodnoty. V den dimise po těle přetrvává generalizované šupení, mírný erytém.
+Pacient byl propuštěn do domácí a ambulantní péče ve stabilizovaném stavu, afebrilní a oběhově kompenzován.
+Lokální terapie: Balneum Hermal F, Diproson ung.+Vaselina alba, Locoid ung.+ Vaselina alba,  Locoid crelo, Šampon s ichtamolem
+
+Biochemie:
+02.01.2025: MO 6.1 mmol/L | KR 216.0 umol/l | GFR 0.41 ml/s/1,73 m2 | NA 139.0 mmol/L | KA 4.72 mmol/L | CL 101.0 mmol/L | FIB4 3.36 - | BI 13.4 umol/l | AL 1.19 ukat/l | AS 1.09 ukat/l | GM 4.53 ukat/l | GL 8.88 mmol/L | CRP 68.4 mg/L | ASLO 85.0 kIU/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | UCOL jantarová | UCLA mírně zak. | UPH 5.0 - | USH 1.018 - | UBILK 1.0 arb.j. | UGK-S 0.0 | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 345.0 10^6/L | UERY 21.0 10^6/L | UEPI 2.0 10^6/L | UKEPI 2.0 10^6/L | UBAK něco | UVALH 18.0 10^6/L | UHLEN něco | REPT_NTS 
+04.01.2025: MO 8.9 mmol/L | KR 131.0 umol/l | GFR 0.75 ml/s/1,73 m2 | NA 142.0 mmol/L | KA 4.31 mmol/L | CL 107.0 mmol/L | CRP 25.2 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 
+07.01.2025: MO 7.5 mmol/L | KR 97.0 umol/l | GFR 1.08 ml/s/1,73 m2 | NA 142.0 mmol/L | KA 4.02 mmol/L | CL 107.0 mmol/L | FIB4 1.49 - | BI 7.7 umol/l | BP 2.2 umol/l | AL 1.11 ukat/l | AS 0.52 ukat/l | GM 3.44 ukat/l | AF 3.18 ukat/l | CRP 5.2 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | AHAVM &lt; 0.10 | AHAV &lt; 0.10 | AHCV 0.02 index | DOORDINA text | REPT_NTS
+
+Hematologie:
+02.01.2025: WBC 9.5 x10^9/L | RBC 3.8 x10^12/L | HGB 111.0 g/L | HCT 34.6 % | MCV 92.0 fL | MCH 29.5 pg | MCHC 321.0 g/L | PLT 176.0 x10^9/L | PDW 14.0 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS 
+04.01.2025: WBC 6.1 x10^9/L | RBC 3.4 x10^12/L | HGB 100.0 g/L | HCT 31.6 % | MCV 92.9 fL | MCH 29.4 pg | MCHC 316.0 g/L | PLT 170.0 x10^9/L | PDW 16.6 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS 
+07.01.2025: WBC 7.4 x10^9/L | RBC 3.7 x10^12/L | HGB 109.0 g/L | HCT 33.7 % | MCV 91.1 fL | MCH 29.5 pg | MCHC 323.0 g/L | PLT 196.0 x10^9/L | PDW 14.9 fL | NRBC 0.0 | NRBC% 0.0 | HBsAg negativní | REPT_NTS
+
+Mikrobiologie:
+Datum: 03.01.2025 07:00
+Diagnóza: L400 - Běžná lupénka [psoriasis vulgaris]
+Výsledek:
+Q_MOČ:
+Příjem: 03.01.2025 Laboratorní číslo:MOC-00063
+Vyšetření: Moč-střední proud 
+Aerobní kultivace: 
+Nález: Streptococcus agalactiae (ß-hem. streptokok sk. B) &gt;10^5 CFU/mL
+:
+Penicilin CIT
+Cotrimoxazol CIT
+Nitrofurantoin (5) CIT
+5) Nitrofurantoin (pokud je uveden na výsledkovém listě) - platí pouze pro nekomplikované IMC.
+CIT=citlivé, REZ=rezistentní, XX=výsledek pro konzultaci s ATB
+střediskem
+Nález: Staphylococcus spp. (koaguláza negativní) &lt;10^4 CFU/mL
+Strukturované výsledky:
+Moč-střední proudtext
+REPT_NTS_DTP</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="444378" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

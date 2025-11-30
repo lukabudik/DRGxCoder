@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="30_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="30">
+      <dsip:rodcis>3025494156</dsip:rodcis>
+      <dsip:jmeno>Jan</dsip:jmeno>
+      <dsip:prijmeni>Novák</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>M</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-23T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>3025494156</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>3025494156</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="BETALOC ZOK" typ_med="P">
+          <dsip:dat_od format="D">2025-01-23</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="FURON" typ_med="P">
+          <dsip:dat_od format="D">2025-01-23</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="GOPTEN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-23</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="SORTIS" typ_med="P">
+          <dsip:dat_od format="D">2025-01-23</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="PREDUCTAL MR" typ_med="P">
+          <dsip:dat_od format="D">2025-01-23</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ALOPURINOL SANDOZ" typ_med="P">
+          <dsip:dat_od format="D">2025-01-23</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="XARELTO" typ_med="P">
+          <dsip:dat_od format="D">2025-01-23</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="CLEXANE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-23</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="AGAPURIN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-23</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="AESCIN TEVA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-23</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="ASCORUTIN" typ_med="P">
+          <dsip:dat_od format="D">2025-01-23</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="VEROSPIRON" typ_med="P">
+          <dsip:dat_od format="D">2025-01-23</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="COTRIMOXAZOL AL FORTE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-23</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.30.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-30T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-23T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-30T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-30T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">* Pacient přijat akutně pro vs occlusio r. inferioris venae centralis retinae oc.dx.
+* vstupně provedeny lab. odběry - CRP 8,7; DDI hraniční, leukocyturie - doplněn kontrolní odběr moči + kultivace viz výše - v moči nález Klebsiella pneumoniae 10^4-10^5 CFU/mL -  proto zahájena celk. ATB terapie Cotrimoxazol 800mg/160mg tbl.p.o. 
+* doplněn RTG hrudníku, prováděny interní konsilia - viz výše, pro dekomp. hypertenzi do medikace nově Verospiron 25mg od 27.1.
+* doplněno ORL konsilium pro nedoslýchavost levého ucha viz výše
+* provedeno CT mozku a angio karotid - viz výše - bilat. hypodenzní lemy v okolí postranních komor, bilat. lakun. infarkty v BG,
+širší postranní komory při atrofii; CTA přívodných mozk. tepen - horší kontrastní náplň tepen -  bilat. až cirkul. AS pláty v bifurkacích, bilat. bez významnější stenozy, intrakraniálně výraznější AS pláty v karot. sifonech, v oblasti Will. okruhu hypoplazie A1 úseku ACA,
+nezobrazeny zadní komunikanty, jinak nález přiměřený.
+* 24.1. doplněna arteriolokonstrikce r.inf. VCR oc.dx. - foto fundu ODS, zde arteriolokonstrikce dolní temp. a. ve vzd. 1PD od papily OD: 5bb - 375mW - 200um - 20ms; Laserový fotokoagulátor Iridex Pascal, výrobní číslo: 80056523
+* doplněn perimetr full test:OD skotom horní poloviny zorného pole, oj skotomy i v dolní polovině, ztráty fixace 61%, falešná negativita 48%; OS skotom horní a nasální poloviny zorného pole, oj skotomy temp., ztráty fixace 87%, falešná negat. 26%
+* doplněna fluorescenční angiografie:
+foto fundu ODS, 
+po standartní premedikaci Dithiaden tbl 2mg p.o. 1x a Prednison tbl 20mg p.o. 1x provedena FAG se zaměřením na OD:
+OD: A plnění od 14s, plnění dolní temp. vény lehce pomalší, dokončeno v 38s, od makuly temp. dole pokračující hypofluorescence odpovídající hemoragii, makula s MA, u dolní temp. arkády kolaterály v.s., peripapilárně jemně hyperfluorescnce - v.s. window defekty, periferie temp. se zdá ischemie; OS jemně hyperfluorescene kolem papily; MUDr. Rumíšková
+* doplněno kožní konsilium pro nález na nehtech DKK viz výše - dop. pravidelná pedikúra, dále pravidelná dezinfekce obuvi, ponožky máchat v octové vodě, prát na 60C, na nehty aplikovat 3xtýdně Amorolfin lak. KO zde d.p., Léčba bude trvat cca 1rok.
+* 29.1. aplikováno anti-VEGF (V) do oc.dx. 
+* během hospitalizace zahájena celk. antikoagulační terapie Clexane 0,6ml inj.s.c. 2xd, Xarelto dočasně ex, dále celk. vazodilatační terapie Agapurin inf. iv., podáváno 7 dní, pacient terapii toleroval. 
+****************************************************************************
+V průběhu hospitalizace monitorován TK: 206/71...180/70..150/75; 150/100...177/66...198/100; 177/85..178/85..182/76; 180/80..140/70..185/75...180/87;180/100..167/99..250/80; 200/80...200/80...170/95...190/116; 198/84...186/97...134/100; 220/90.. mmHg
+Při propuštění:
+VOD prsty z 40cm
+Tonopen: 11,14 mmHg
+Status praesens:
+OD: zevně klidné, spojivky temp. se sufuzí vs po inj. jinak klidné, nařaseny, spoj .vak čistý, rohovka hladká, lesklá, transp., přední komora lehce mělčí, čirá, duhovka klidná, zornice okrouhlá, v arteficiální mydriáze, čočka in situ, zkalena kataraktou nukleárně
+na fundu OD papila ohraničená, v niveau, růžová, podél dolní tempor. arkády rozsáhlé splývající hemoragie zasahující až do makuly, arterioly úzké, napřímené, ale plněné, fen. kř. +, retina do periferie bpn, leží
+OS: přední segment klidný, na fundu idem při příjmu
+Pacient propuštěn v celkově uspokojivém stavu, kardiopulmonálně kompenzován, do domácí péče a ambulantních kontrol se zavedenou medikací a níže uvedeným doporučením.
+Pacient poučen o svém zdravotním stavu, prognóze i postupu další léčby.
+
+Biochemie:
+23.01.2025: MO 6.5 mmol/L | KR 82.0 umol/l | GFR 1.31 ml/s/1,73 m2 | KM 375.0 umol/l | NA 138.0 mmol/L | KA 4.48 mmol/L | CL 105.0 mmol/L | FIB4 2.83 - | BI 13.4 umol/l | AL 0.3 ukat/l | AS 0.39 ukat/l | GM 0.9 ukat/l | AF 1.38 ukat/l | CH 3.93 mmol/L | HDL 1.7 mmol/L | LDL 2.01 mmol/L | TR 0.94 mmol/L | NONHDL 2.23 mmol/L | HCY 19.7 umol/l | GL 6.0 mmol/L | AB 42.2 g/L | CRP 8.7 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | UCOL žlutá | UCLA mírně zak. | UPH 5.0 - | USH 1.017 - | UBILK 3.0 arb.j. | UGK-S 0.0 | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 169.0 10^6/L | UERY 4.0 10^6/L | UEPI 1.0 10^6/L | UKEPI 2.0 10^6/L | UBAK četné | UHLEN četný | REPT_NTS 
+27.01.2025: UCOL tm.jantar | UCLA zakaleno | UPH 5.0 - | USH 1.009 - | UBILK 0.0 | UGK-S 0.0 | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 125.0 10^6/L | UERY 4.0 10^6/L | UKEPI 18.0 10^6/L | UHLEN oj. | REPT_NTS
+
+Hematologie:
+23.01.2025: APTT-T 32.6 s | aPTT-R 0.97 1 | PT-INR 1.03 1 | PT-R 1.03 1 | PT-T 14.7 s | FIB 3.52 g/L | DDI 0.54 mg/L FEU | AT 90.0 % | REPT_NTS 
+23.01.2025: WBC 8.9 x10^9/L | RBC 4.8 x10^12/L | HGB 148.0 g/L | HCT 44.3 % | MCV 92.5 fL | MCH 30.9 pg | MCHC 334.0 g/L | PLT 153.0 x10^9/L | PDW 12.8 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS 
+29.01.2025: AXA 0.68 IU/mL | REPT_NTS
+
+Mikrobiologie:
+Datum: 27.01.2025 12:45
+Diagnóza: H348 - Jiné sítnicové cévní uzávěry
+Výsledek:
+Q_MOČ:
+Příjem: 27.01.2025 Laboratorní číslo:MOC-00703
+Vyšetření: Moč-střední proud 
+Aerobní kultivace: 
+Nález: Klebsiella pneumoniae 10^4-10^5 CFU/mL
+:
+Ampicillin REZ
+Amoxicilin/klavul. p.o. (1) CIT
+Cefuroxim p.o. (3) CIT
+Cotrimoxazol CIT
+Norfloxacin CIT
+Ciprofloxacin CIT
+Nitrofurantoin (5) XX
+Mecillinam p.o. (6) CIT
+Fosfomycin p.o. (4) XX
+Amoxicilin/klavul. i.v. (2) CIT
+Piperacillin/tazobactam CIT
+Cefotaxim CIT
+Ceftazidim CIT
+Gentamicin (7) CIT
+Amikacin (7) CIT
+1) Amoxicilin/klav. p.o. - platí pro p.o. aplikaci a pouze pro nekomplikované IMC.
+2) Amoxicilin/klav. i.v. (pokud je uveden na výsledkovém listě) - platí pro i.v. aplikaci u kompl.IMC a ostat.dg.
+3) Cefuroxim (pokud je uveden na výsledkovém listě) - platí pro p.o. aplikaci a pouze pro nekomplikované IMC.
+4) Fosfomycin (pokud je uveden na výsledkovém listě) - platí pro p.o. aplikaci a pouze pro nekomplikované IMC
+5) Nitrofurantoin (pokud je uveden na výsledkovém listě) - platí pouze pro nekomplikované IMC 
+6) Mecillinam (pokud je uveden na výsledkovém listě) - platí pouze pro nekomplikované IMC
+7) Gentamicin, Amikacin - u systémových infekcí musí být používán v kombinaci s jinými účinnými antibiotiky.
+CIT=citlivé, REZ=rezistentní, XX=výsledek pro konzultaci s ATB
+střediskem
+BV+C
+Poznámka:
+BV+C 
+Strukturované výsledky:
+Moč-střední proudtext
+Poznámkatext
+REPT_NTS_DTP</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="594178" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

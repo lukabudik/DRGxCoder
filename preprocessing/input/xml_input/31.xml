@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="31_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="31">
+      <dsip:rodcis>0774607410</dsip:rodcis>
+      <dsip:jmeno>Jan</dsip:jmeno>
+      <dsip:prijmeni>Novák</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>M</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-10T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>0774607410</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>0774607410</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="SOLU-MEDROL" typ_med="P">
+          <dsip:dat_od format="D">2025-01-10</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="KALIUM CHLORATUM BIOMEDICA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-10</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="OMEPRAZOL STADA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-10</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="DEXAMETHASONE WZF POLFA" typ_med="P">
+          <dsip:dat_od format="D">2025-01-10</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="METFORMIN VIATRIS" typ_med="P">
+          <dsip:dat_od format="D">2025-01-10</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="TOUJEO" typ_med="P">
+          <dsip:dat_od format="D">2025-01-10</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="FLAREX" typ_med="P">
+          <dsip:dat_od format="D">2025-01-10</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.31.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-14T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-10T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-14T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-14T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">Pacient přijat pro zadní skleritidu pravého oka k terapii a došetření za hospitalizace.
+* Vstupně provedeny základní odběry, které s hyperglykemií a zvýšeným kreatininem, jinak v normě, FW 12/28.
+* Zahájena celková kortikoterapie Solu-medrol inf. iv. celkem podáno 490mg, pacient léčbu toleroval.
+* Opakovaně za hospitalizace prováděn UZV Bscan - poseldní nález - OD fakický bulbus zvyklé konf, ve sklivci hyperechogenity odp. synchisis scintilans, skléra stac., ablace ZSM sítnice leží
+* Za hospitalizace monitorován glykemický profil a dle něj adekvátně upravována inzulinoterapie. Glykemie se pohybovaly od 16,6 - 6,6mmol/l. Vhodná kontrola u svého diabtologa po propuštění.
+Pacient terapii toleroval dobře, se subjektivním i objektivním zlepšení nálezu. Uzavřeno jako skleritida OD V plánu prednisone tbl.p.o., 20mg denně a lokální kortikoterapie, pro zvýšený nitrooční tlak během hospitalizace i lokálně antigalukomatika do oc. dx.
+****************************************************************************
+V průběhu hospitalizace monitorován TK: 168/92; 143/77; 135/77; 137/64; 132/71mmHg
+Status praesens při propuštění:
+VOD 0,63; stenop 0,8
+Tonopen:23;16mmHg
+Status praesens:
+OD: zevně klidné, spojivky klidné, rohovka hladká, endotel klidný, pk střední čirá, iris klidná, zornice v AM, čočka in situ, zkalena kortikonukleárně, ve sklivci cholesterolové krystalky, na fundu papila ohraničená, makula s def RPE a disgrupacemi pigm, sítnice leí, cévy plěnné
+OS: přední segment klidný, na fundu idem při příjmu
+Pacient propuštěn v celkově uspokojivém stavu, kardiopulmonálně kompenzován,
+do domácí péče a ambulantních kontrol se zavedenou medikací a níže
+uvedeným doporučením.
+Pacient poučen o svém zdravotním stavu, prognóze i postupu další léčby.
+
+Biochemie:
+10.01.2025: MO 6.1 mmol/L | KR 124.0 umol/l | GFR 0.78 ml/s/1,73 m2 | KM 351.0 umol/l | NA 139.0 mmol/L | KA 4.06 mmol/L | CL 105.0 mmol/L | FIB4 1.61 - | BI 11.1 umol/l | AL 0.21 ukat/l | AS 0.27 ukat/l | GM 0.73 ukat/l | AF 1.3 ukat/l | CH 4.48 mmol/L | HDL 1.37 mmol/L | LDL 2.69 mmol/L | TR 2.78 mmol/L | NONHDL 3.11 mmol/L | GL 16.62 mmol/L | AB 45.1 g/L | CRP 0.8 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | UCOL sv. žlutá | UCLA bez zákalu | UPH 9.0 - | USH 1.009 - | UBILK 0.0 | UGK-S 3.0 arb.j. | UAC 0.0 | UROB 0.0 | UBIL 0.0 | ULEU 142.0 10^6/L | UERY 7.0 10^6/L | REPT_NTS | VÝSLEDKY text
+
+Hematologie:
+10.01.2025: WBC 6.1 x10^9/L | RBC 4.1 x10^12/L | HGB 148.0 g/L | HCT 41.6 % | MCV 102.7 fL | MCH 36.5 pg | MCHC 356.0 g/L | PLT 228.0 x10^9/L | PCT 0.22 % | MPV 9.6 fL | RDW 12.9 % | NRBC 0.0 | NRBC% 0.0 | NE 61.1 % | LY 27.0 % | MON 8.5 % | EO 3.1 % | BA 0.3 % | NEABS 3.74 x10^9/L | LYABS 1.6 x10^9/L | MOABS 0.5 x10^9/L | EOABS 0.19 x10^9/L | BAABS 0.02 x10^9/L | REPT_NTS</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="350943" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>

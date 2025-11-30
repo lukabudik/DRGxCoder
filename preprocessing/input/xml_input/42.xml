@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ds:dasta bin_priloha="T" dat_vb="2025-11-29T18:43:50" id_soubor="STAPRO__|Medea|2025-11-29T18:43:50" ozn_soub="42_SAMPLE" potvrzeni="P" typ_odesm="PP" ur="R" verze_ds="04.26.01" verze_nclp="02.83.01" xmlns:ds="urn:cz-mzcr:ns:dasta:ds4:ds_dasta" xmlns:dsip="urn:cz-mzcr:ns:dasta:ds4:ds_ip" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cz-mzcr:ns:dasta:ds4:ds_dasta http://ciselniky.dasta.mzcr.cz/xmlschema/ds_dasta-4.03.26.xsd urn:cz-mzcr:ns:dasta:ds4:ds_ip http://ciselniky.dasta.mzcr.cz/xmlschema/ds_ip-4.14.01.xsd">
+  <ds:zdroj_is kod_firmy="STAPRO__" kod_prog="Medea" liccis_prog="89301000" verze_prog="3.50"/>
+  <ds:pm>
+    <ds:as poradi="1" typ="I">
+      
+      
+    </ds:as>
+  </ds:pm>
+  
+  <ds:is ico="00098892" icz="89301000" pcz="000">
+    <ds:as typ="I">
+      
+    </ds:as>
+    <dsip:ip id_pac="42">
+      <dsip:rodcis>1708888365</dsip:rodcis>
+      <dsip:jmeno>Jana</dsip:jmeno>
+      <dsip:prijmeni>Nováková</dsip:prijmeni>
+      
+      <dsip:dat_dn format="D">1975-05-20</dsip:dat_dn>
+      
+      <dsip:stat_pris>CZE</dsip:stat_pris>
+      <dsip:sex>F</dsip:sex>
+      
+      
+      <dsip:ipi_o cis_is="1379535"/>
+      
+      
+      
+      <dsip:pv_pac dat_ab="2025-01-05T00:00:00" typ_pv="ZP">
+        <dsip:pv_zp>
+          <dsip:cispoj>1708888365</dsip:cispoj>
+          <dsip:kodpoj>111</dsip:kodpoj>
+        </dsip:pv_zp>
+      </dsip:pv_pac>
+      <dsip:p ind_oprav_sd="N">
+        <dsip:cispoj>1708888365</dsip:cispoj>
+        <dsip:kodpoj>111</dsip:kodpoj>
+        <dsip:typpoj>1</dsip:typpoj>
+        
+        
+        <dsip:dat_od format="D">1992-01-01</dsip:dat_od>
+        
+      </dsip:p>
+      
+      
+      
+      
+      
+      <dsip:le>
+        <dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="LEXANE" typ_med="P">
+          <dsip:dat_od format="D">2025-01-05</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="TARDYFERON" typ_med="P">
+          <dsip:dat_od format="D">2025-01-05</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez><dsip:lez cis_kod_lek="DLP" ind_oprav_sd="N" kod_lek="0000000" nazev_lek="IBUMAX" typ_med="P">
+          <dsip:dat_od format="D">2025-01-05</dsip:dat_od>
+          <dsip:rozpis_v>1-0-0</dsip:rozpis_v>
+          <dsip:autor>MUDr. Sample Doctor</dsip:autor>
+        </dsip:lez>
+      </dsip:le>
+      
+      <dsip:ku>
+        <dsip:ku_z fazespec="ZF" idku="STAPRO.MEDEA.89301000.AR.42.0" typku="H.PROPZ" typkuspeclok="hosp">
+          <dsip:nazev>Propouštěcí zpráva</dsip:nazev>
+          <dsip:dat_prov>2025-01-09T12:00:00</dsip:dat_prov>
+          <dsip:dat_real_od>2025-01-05T08:00:00</dsip:dat_real_od>
+          <dsip:dat_real_do>2025-01-09T10:00:00</dsip:dat_real_do>
+          <dsip:dat_vydani>2025-01-09T11:00:00</dsip:dat_vydani>
+          <dsip:p_pracoviste icp="89301141" icz="89301000" kod_lok="6115" ns="1412" odb="7F5">
+            <dsip:nazev>OC Lůžkové oddělení</dsip:nazev>
+               <ds:a typ="7">
+                 <ds:jmeno>OC Lůžkové oddělení</ds:jmeno>
+                 <ds:as typ="I">
+                   <ds:vnitrni>6115</ds:vnitrni>
+                 </ds:as>
+               </ds:a>
+          </dsip:p_pracoviste>
+          
+          <dsip:p_pracovnik id_pracovnik="69025">
+             <dsip:titul_pred>MUDr.</dsip:titul_pred>
+             <dsip:jmeno>Michal</dsip:jmeno>
+             <dsip:prijmeni>Harazin</dsip:prijmeni>
+          </dsip:p_pracovnik>
+      
+          <dsip:text>
+            <dsip:ptext xml:space="preserve">Rodička přijata pro spontánní odtok plodové vody, s odstupem samovolně nastupují nepravidelné vydatné tonizace. ATB profylaxe lege artis. Na přání rodičky EDA s ústupem tonizací, poté po domluvě podpora děložní činnosti uterotoniky, záhy však nasupuje dyskoordinovaná hyperonická děložní činnost, vyčerpaná rodička. Ukončení porodu per SC. Po operaci monitorace na JIP, poté přeložena na standardní lůžko porodního oddělení, kde další průběh bez vážnějších komplikací. Mírná pooperační anemie sanována preparáty železa. Břicho měkké, nebolestivé, laparotomie se hojí per primam, děloha se zavinuje, nekrvácí. Poučena a propuštěna do domácí péče. Pro Rh inkompatibilitu podána profylaxe Igamad 1500IU i.m., pacientka poučena
+
+Biochemie:
+05.01.2025: MO 4.3 mmol/L | KR 52.0 umol/l | GFR 2.16 ml/s/1,73 m2 | KM 293.0 umol/l | NA 136.0 mmol/L | KA 3.81 mmol/L | CL 107.0 mmol/L | FIB4 0.65 - | BI 5.9 umol/l | AL 0.16 ukat/l | AS 0.3 ukat/l | GM 0.12 ukat/l | AF 3.86 ukat/l | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 
+05.01.2025: CRP 3.2 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | REPT_NTS 
+06.01.2025: MO 3.2 mmol/L | NA 137.0 mmol/L | KA 4.06 mmol/L | CL 106.0 mmol/L | CRP 28.4 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0 | DOORDINA text | REPT_NTS 
+09.01.2025: CRP 43.5 mg/L | HEMOL 0.0 | ICTER 0.0 | LIPEM 0.0
+
+Hematologie:
+05.01.2025: WBC 13.2 x10^9/L | RBC 4.0 x10^12/L | HGB 111.0 g/L | HCT 34.4 % | MCV 86.6 fL | MCH 28.0 pg | MCHC 323.0 g/L | PLT 203.0 x10^9/L | PDW 22.0 fL | NRBC 0.0 | NRBC% 0.0 | APTT-T 28.3 s | aPTT-R 0.84 1 | PT-INR 0.95 1 | PT-R 0.96 1 | PT-T 13.6 s | REPT_NTS 
+05.01.2025: WBC 18.9 x10^9/L | RBC 3.9 x10^12/L | HGB 110.0 g/L | HCT 33.2 % | MCV 84.5 fL | MCH 28.0 pg | MCHC 331.0 g/L | PLT 204.0 x10^9/L | PDW 18.4 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS 
+05.01.2025: B_BGAB0R 0 Rh(D) negativní
+05.01.2025: P_EABQ_* negativní | S_EABQ_A negativní
+06.01.2025: WBC 26.4 x10^9/L | RBC 4.0 x10^12/L | HGB 111.0 g/L | HCT 33.4 % | MCV 83.9 fL | MCH 27.9 pg | MCHC 332.0 g/L | PLT 231.0 x10^9/L | PDW 20.9 fL | NRBC 0.0 | NRBC% 0.0 | NEUM 87.0 % | TYCM 0.0 | LYM 7.0 % | MOM 6.0 % | EOM 0.0 | BAM 0.0 | MMYM 0.0 | MYM 0.0 | PMYM 0.0 | MYBLM 0.0 | PLBM 0.0 | PLYM 0.0 | NEDBBM 0.0 | NEDBLM 0.0 | NRBCM 0.0 | MLEU Beze změn | MERYM text | MPLTM Anizocytóza. | Podpis Lundová | DOORDINA text | REPT_NTS 
+09.01.2025: WBC 10.4 x10^9/L | RBC 3.8 x10^12/L | HGB 104.0 g/L | HCT 33.0 % | MCV 88.0 fL | MCH 27.7 pg | MCHC 315.0 g/L | PLT 290.0 x10^9/L | PDW 15.1 fL | NRBC 0.0 | NRBC% 0.0 | REPT_NTS</dsip:ptext>
+            
+          </dsip:text>
+          <dsip:dg_vys typ_dg="T">
+            <dsip:diag poradi="1">R000</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Main</dsip:spec_dg>
+          </dsip:dg_vys><dsip:dg_vys typ_dg="P">
+            <dsip:diag poradi="2">R001</dsip:diag>
+            <dsip:spec_dg>Sample Diagnosis Secondary</dsip:spec_dg>
+          </dsip:dg_vys>
+          
+          <dsip:kuzAny cislo_chor="011201" pcsled="11124840" typ_ukonceni_hosp="1">
+          </dsip:kuzAny>
+        </dsip:ku_z>
+      </dsip:ku>
+    </dsip:ip>
+  </ds:is>
+</ds:dasta>
