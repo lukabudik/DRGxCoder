@@ -32,6 +32,7 @@ from app.database import (
     get_prediction,
     list_predictions,
     submit_prediction_feedback,
+    update_prediction_status,
     search_codes,
     get_code_by_code,
     get_predictions_by_code,
@@ -146,49 +147,79 @@ async def create_prediction_from_xml(xml_content: str = Body(..., media_type="te
             raw_xml=parsed.raw_xml,
         )
         
-        # Step 4: Run prediction with patient context
-        result = await predict_diagnosis(
-            clinical_text=parsed.clinical_text,
-            patient_age=patient_age,
-            patient_sex=patient.sex,
-            pac_id=parsed.pac_id,
-            biochemistry=parsed.biochemistry,
-            hematology=parsed.hematology,
-            microbiology=parsed.microbiology,
-            medication=parsed.medication,
-        )
-        
-        # Step 5: Save prediction
-        main_diag = result["step2"]["main_diagnosis"]
-        secondary_diags = result["step2"].get("secondary_diagnoses", [])
-        
+        # Step 3.5: Create placeholder prediction with "processing" status
         prediction_id = await create_prediction(
             case_id=case_id,
-            selected_codes=result["step1"]["selected_codes"],
-            step1_reasoning=result["step1"]["reasoning"],
-            main_code=main_diag["code"],
-            main_name=main_diag["name"],
-            main_confidence=main_diag["confidence"],
-            main_reasoning=main_diag.get("reasoning"),
-            secondary_codes=secondary_diags,
-            model_used=result["model_used"],
-            processing_time=result["processing_time"],
+            selected_codes=[],
+            step1_reasoning="",
+            main_code="",
+            main_name="Processing...",
+            main_confidence=0.0,
+            main_reasoning="",
+            secondary_codes=[],
+            model_used="",
+            processing_time=0,
+            status="processing",
         )
+        logger.info(f"Created placeholder prediction {prediction_id} with status=processing")
         
-        # Get prediction with created_at
-        pred = await get_prediction(prediction_id)
-        
-        return PredictionResponse(
-            prediction_id=prediction_id,
-            case_id=case_id,
-            selected_codes=result["step1"]["selected_codes"],
-            step1_reasoning=result["step1"]["reasoning"],
-            main_diagnosis=DiagnosisCode(**main_diag),
-            secondary_diagnoses=[DiagnosisCode(**d) for d in secondary_diags],
-            model_used=result["model_used"],
-            processing_time=result["processing_time"],
-            created_at=pred.createdAt,
-        )
+        # Step 4: Run prediction with patient context
+        try:
+            result = await predict_diagnosis(
+                clinical_text=parsed.clinical_text,
+                patient_age=patient_age,
+                patient_sex=patient.sex,
+                pac_id=parsed.pac_id,
+                biochemistry=parsed.biochemistry,
+                hematology=parsed.hematology,
+                microbiology=parsed.microbiology,
+                medication=parsed.medication,
+            )
+            
+            # Step 5: Update prediction with actual results and status=completed
+            main_diag = result["step2"]["main_diagnosis"]
+            secondary_diags = result["step2"].get("secondary_diagnoses", [])
+            
+            # Update the prediction with actual data using the connected db  
+            from app.database import db
+            import json
+            
+            await db.prediction.update(
+                where={"id": prediction_id},
+                data={
+                    "selectedCodes": json.dumps(result["step1"]["selected_codes"]),
+                    "step1Reasoning": result["step1"]["reasoning"],
+                    "mainCode": main_diag["code"],
+                    "mainName": main_diag["name"],
+                    "mainConfidence": main_diag["confidence"],
+                    "mainReasoning": main_diag.get("reasoning"),
+                    "secondaryCodes": json.dumps(secondary_diags),
+                    "modelUsed": result["model_used"],
+                    "processingTime": result["processing_time"],
+                    "status": "completed",
+                }
+            )
+            logger.info(f"Updated prediction {prediction_id} to status=completed")
+            
+            # Get updated prediction with created_at
+            pred = await get_prediction(prediction_id)
+            
+            return PredictionResponse(
+                prediction_id=prediction_id,
+                case_id=case_id,
+                selected_codes=result["step1"]["selected_codes"],
+                step1_reasoning=result["step1"]["reasoning"],
+                main_diagnosis=DiagnosisCode(**main_diag),
+                secondary_diagnoses=[DiagnosisCode(**d) for d in secondary_diags],
+                model_used=result["model_used"],
+                processing_time=result["processing_time"],
+                created_at=pred.createdAt,
+            )
+        except Exception as prediction_error:
+            # Mark prediction as failed
+            await update_prediction_status(prediction_id, "failed")
+            logger.error(f"Prediction generation failed: {prediction_error}")
+            raise
         
     except ValueError as e:
         logger.error(f"XML parsing error: {e}")

@@ -53,6 +53,7 @@ type Prediction = {
   }>;
   validated: boolean;
   feedback_type?: 'approved' | 'rejected';
+  status?: string; // "processing", "completed", "failed"
   created_at: string;
   case?: {
     id: string;
@@ -123,8 +124,6 @@ export function PredictionsDatabase() {
     },
   });
 
-  const isGenerating = predictMutation.isPending;
-
   const { data: predictionsData, isLoading } = useQuery({
     queryKey: ['predictions'],
     queryFn: async () => {
@@ -141,6 +140,12 @@ export function PredictionsDatabase() {
   const predictions = (predictionsData?.predictions || []) as Prediction[];
 
   console.log('Processed predictions:', predictions);
+
+  // Count how many predictions are still processing from the backend
+  const processingCount = predictions.filter(p => p.status === "processing").length;
+  const isGenerating = predictMutation.isPending || processingCount > 0;
+
+  console.log('Processing predictions:', processingCount, 'isGenerating:', isGenerating);
 
   const handleQuickApprove = async (id: string, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -559,20 +564,22 @@ export function PredictionsDatabase() {
                     </TableCell>
                   </TableRow>
                 ) : (
-                  table.getRowModel().rows.map((row) => (
-                    <TableRow
-                      key={row.id}
-                      data-state={row.getIsSelected() && 'selected'}
-                      onClick={() => setSelectedPredictionId(row.original.id)}
-                      className={styles.clickableRow}
-                    >
-                      {row.getVisibleCells().map((cell) => (
-                        <TableCell key={cell.id}>
-                          {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                        </TableCell>
-                      ))}
-                    </TableRow>
-                  ))
+                  table.getRowModel().rows
+                    .filter((row) => row.original.status !== "processing") // Don't show processing rows - skeleton represents them
+                    .map((row) => (
+                      <TableRow
+                        key={row.id}
+                        data-state={row.getIsSelected() && 'selected'}
+                        onClick={() => setSelectedPredictionId(row.original.id)}
+                        className={styles.clickableRow}
+                      >
+                        {row.getVisibleCells().map((cell) => (
+                          <TableCell key={cell.id}>
+                            {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                          </TableCell>
+                        ))}
+                      </TableRow>
+                    ))
                 )}
               </TableBody>
             </Table>

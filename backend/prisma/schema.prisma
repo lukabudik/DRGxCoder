@@ -1,10 +1,7 @@
-// Prisma schema for DRGxCoder
-// Database: Supabase PostgreSQL
-
 generator client {
   provider             = "prisma-client-py"
   interface            = "asyncio"
-  recursive_type_depth = 5
+  recursive_type_depth = "5"
 }
 
 datasource db {
@@ -13,117 +10,83 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
-// ICD-10 Diagnosis Codes (38k codes)
 model DiagnosisCode {
   id        String   @id @default(uuid())
-  code      String   @unique // e.g., "A000", "I21.9"
-  name      String   // Czech name
-  category  String?  // e.g., "Střevní infekční nemoci"
-  
-  // ICD-10 chapter for filtering (extracted from code)
-  // A00-B99 = "A-B", I00-I99 = "I", etc.
+  code      String   @unique
+  name      String
+  category  String?
   chapter   String   @db.VarChar(5)
-  
   createdAt DateTime @default(now())
-  
+
   @@index([chapter])
   @@index([category])
   @@map("diagnosis_codes")
 }
 
-// IcdCategory table removed - not needed for 2-step approach
-
-// Patients (demographics stored once, linked to multiple cases)
 model Patient {
-  id                  String    @id @default(cuid())
-  birthNumber         String    @unique  // Rodné číslo (Czech birth number) - primary identifier
-  firstName           String
-  lastName            String
-  dateOfBirth         DateTime
-  sex                 String    // "M" or "F"
-  countryOfResidence  String?   // ISO country code (e.g., "CZE")
-  
-  // Relations
-  cases               PatientCase[]
-  
-  createdAt           DateTime  @default(now())
-  updatedAt           DateTime  @updatedAt
-  
+  id                 String        @id @default(cuid())
+  birthNumber        String        @unique
+  firstName          String
+  lastName           String
+  dateOfBirth        DateTime
+  sex                String
+  countryOfResidence String?
+  createdAt          DateTime      @default(now())
+  updatedAt          DateTime      @updatedAt
+  cases              PatientCase[]
+
   @@index([lastName, firstName])
   @@index([birthNumber])
   @@map("patients")
 }
 
-// Patient Cases (hospital admissions/episodes linked to patient)
 model PatientCase {
-  id              String    @id @default(cuid())
-  patientId       String    // FK to Patient
-  
-  // Hospital-specific identifiers for this case
-  pacId           String?   // Hospital admission ID (from insurance)
-  hospitalPatientId String? // Hospital's internal patient ID (id_pac from XML)
-  
-  // Admission details
-  admissionDate   DateTime?
-  dischargeDate   DateTime?
-  
-  // Clinical data (specific to this case/admission)
-  clinicalText    String    @db.Text
-  biochemistry    String?   @db.Text
-  hematology      String?   @db.Text
-  microbiology    String?   @db.Text
-  medication      String?   @db.Text
-  
-  // Raw XML for reference and audit
-  rawXml          String?   @db.Text
-  
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
-  
-  // Relations
-  patient         Patient      @relation(fields: [patientId], references: [id], onDelete: Cascade)
-  predictions     Prediction[]
-  
+  id                String       @id @default(cuid())
+  patientId         String
+  pacId             String?
+  hospitalPatientId String?
+  admissionDate     DateTime?
+  dischargeDate     DateTime?
+  clinicalText      String
+  biochemistry      String?
+  hematology        String?
+  microbiology      String?
+  medication        String?
+  rawXml            String?
+  createdAt         DateTime     @default(now())
+  updatedAt         DateTime     @updatedAt
+  patient           Patient      @relation(fields: [patientId], references: [id], onDelete: Cascade)
+  predictions       Prediction[]
+
   @@index([patientId])
   @@index([pacId])
   @@map("patient_cases")
 }
 
-// Prediction Results
 model Prediction {
-  id              String   @id @default(cuid())
+  id              String      @id @default(cuid())
   caseId          String
-  
-  // Step 1 Results: Selected 3-char codes
-  selectedCodes   Json     // Array of selected 3-char codes like ["I46", "G93", "N17"]
-  step1Reasoning  String?  @db.Text
-  
-  // Step 2 Results: Final predictions
-  mainCode        String   // e.g., "I460"
+  selectedCodes   Json
+  step1Reasoning  String?
+  mainCode        String
   mainName        String
   mainConfidence  Float
-  mainReasoning   String?  @db.Text
-  
-  secondaryCodes  Json     // Array of {code, name, confidence, reasoning}
-  
-  // Metadata
-  modelUsed       String   // "google/gemini-3-pro-preview"
-  processingTime  Int      // Total milliseconds
-  
-  // Validation & Feedback
-  validated       Boolean  @default(false)
+  mainReasoning   String?
+  secondaryCodes  Json
+  modelUsed       String
+  processingTime  Int
+  status          String      @default("processing") // "processing", "completed", "failed"
+  validated       Boolean     @default(false)
   validatedAt     DateTime?
   validatedBy     String?
-  feedbackType    String?  // "approved" or "rejected"
-  corrections     Json?    // Structured correction data when rejected
-  feedbackComment String?  @db.Text  // Optional single comment for entire feedback
-  
-  createdAt       DateTime @default(now())
-  
-  // Relations
+  feedbackType    String?
+  corrections     Json?
+  feedbackComment String?
+  createdAt       DateTime    @default(now())
   case            PatientCase @relation(fields: [caseId], references: [id], onDelete: Cascade)
-  
+
   @@index([caseId])
   @@index([validated])
+  @@index([status])
   @@map("predictions")
 }

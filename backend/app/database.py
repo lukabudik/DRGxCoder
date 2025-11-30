@@ -325,6 +325,7 @@ async def create_prediction(
     secondary_codes: List[Dict],
     model_used: str,
     processing_time: int,
+    status: str = "completed",  # Default to completed for backward compatibility
 ) -> str:
     """Create a new prediction, returns prediction ID"""
     import json
@@ -341,9 +342,10 @@ async def create_prediction(
             "secondaryCodes": json.dumps(secondary_codes),  # Convert list to JSON string
             "modelUsed": model_used,
             "processingTime": processing_time,
+            "status": status,
         }
     )
-    logger.info(f"Created prediction: {prediction.id}")
+    logger.info(f"Created prediction: {prediction.id} with status: {status}")
     return prediction.id
 
 
@@ -399,6 +401,16 @@ async def list_predictions(
         "page": page,
         "pages": (total + limit - 1) // limit
     }
+
+
+async def update_prediction_status(prediction_id: str, status: str):
+    """Update prediction status (processing, completed, failed)"""
+    prediction = await db.prediction.update(
+        where={"id": prediction_id},
+        data={"status": status}
+    )
+    logger.info(f"Updated prediction {prediction_id} status to: {status}")
+    return prediction
 
 
 async def submit_prediction_feedback(
