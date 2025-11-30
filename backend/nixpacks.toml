@@ -7,8 +7,10 @@ cmds = ["uv sync --locked --no-dev --no-install-project"]
 [phases.build]
 cmds = [
   "prisma generate",
-  "prisma py fetch"
+  "prisma py fetch",
+  "mkdir -p /app/.prisma",
+  "cp -r /root/.cache/prisma-python/binaries /app/.prisma/"
 ]
 
 [start]
-cmd = "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+cmd = "PRISMA_QUERY_ENGINE_BINARY=/app/.prisma/binaries/5.17.0/393aa359c9ad4a4bb28630fb5613f9c281cde053/prisma-query-engine-debian-openssl-3.0.x uvicorn app.main:app --host 0.0.0.0 --port $PORT"
