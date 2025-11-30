@@ -114,7 +114,9 @@ export function PredictionsDatabase() {
       return api.predictFromXml(xmlContent);
     },
     onSuccess: () => {
+      // Invalidate and refetch to start polling
       queryClient.invalidateQueries({ queryKey: ['predictions'] });
+      queryClient.refetchQueries({ queryKey: ['predictions'] });
       // We don't close the dialog automatically here, as per user request.
     },
     onError: (error) => {
@@ -127,24 +129,26 @@ export function PredictionsDatabase() {
     queryKey: ['predictions'],
     queryFn: async () => {
       const result = await api.listPredictions({ page: 1, limit: 50 });
-      console.log('Predictions API response:', result);
-      if (result?.predictions) {
-        console.log('First prediction:', result.predictions[0]);
-      }
       return result;
     },
-    refetchInterval: 10000,
+    refetchInterval: 5000, // Simple polling every 5 seconds
   });
 
   const predictions = (predictionsData?.predictions || []) as Prediction[];
 
-  console.log('Processed predictions:', predictions);
-
+  // Filter out processing predictions entirely - they shouldn't be in the table
+  const completedPredictions = useMemo(
+    () => predictions.filter(p => p.status === "completed"),
+    [predictions]
+  );
+  
   // Count how many predictions are still processing from the backend
-  const processingCount = predictions.filter(p => p.status === "processing").length;
+  const processingCount = useMemo(
+    () => predictions.filter(p => p.status === "processing").length,
+    [predictions]
+  );
+  
   const isGenerating = predictMutation.isPending || processingCount > 0;
-
-  console.log('Processing predictions:', processingCount, 'isGenerating:', isGenerating);
 
   const handleQuickApprove = async (id: string, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -401,7 +405,7 @@ export function PredictionsDatabase() {
   );
 
   const table = useReactTable({
-    data: predictions,
+    data: completedPredictions,
     columns,
     onSortingChange: setSorting,
     onColumnFiltersChange: setColumnFilters,
@@ -553,16 +557,14 @@ export function PredictionsDatabase() {
                   </TableCell>
                 </TableRow>
               )}
-              {predictions.length === 0 && !isGenerating ? (
+              {completedPredictions.length === 0 && !isGenerating ? (
                 <TableRow>
                   <TableCell colSpan={columns.length} className="h-24 text-center">
                     No results.
                   </TableCell>
                 </TableRow>
               ) : (
-                table.getRowModel().rows
-                  .filter((row) => row.original.status !== "processing") // Don't show processing rows - skeleton represents them
-                  .map((row) => (
+                table.getRowModel().rows.map((row) => (
                     <TableRow
                       key={row.id}
                       data-state={row.getIsSelected() && 'selected'}
@@ -586,7 +588,7 @@ export function PredictionsDatabase() {
         open={isNewDialogOpen}
         onOpenChange={setIsNewDialogOpen}
         onSubmit={(file) => predictMutation.mutate(file)}
-        isPending={isGenerating}
+        isPending={predictMutation.isPending}
       />
       <PredictionDetailSheet
         predictionId={selectedPredictionId}

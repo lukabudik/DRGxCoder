@@ -96,6 +96,11 @@ export function PredictionDetailSheet({ predictionId, open, onOpenChange }: Pred
         <p className={styles.description}>
           View and manage the AI-predicted diagnosis codes for this case
         </p>
+        {prediction && (
+          <p style={{ fontSize: '0.75rem', color: '#666', marginTop: '4px' }}>
+            Prediction ID: {prediction.prediction_id || predictionId}
+          </p>
+        )}
         
         {/* Navigation Links */}
         {(patient || caseData) && (
@@ -157,10 +162,6 @@ export function PredictionDetailSheet({ predictionId, open, onOpenChange }: Pred
                   </div>
                 </>
               )}
-              <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>Case ID</span>
-                <span className={styles.metaValue}>#{prediction.case_id?.slice(0, 12)}</span>
-              </div>
               <div className={styles.metaItem}>
                 <span className={styles.metaLabel}>Status</span>
                 <Badge variant={prediction.validated ? 'success' : 'default'}>

@@ -77,10 +77,10 @@ model Prediction {
   secondaryCodes  Json
   
   // Original AI prediction (preserved when corrected)
-  originalMainCode        String?
-  originalMainName        String?
-  originalMainConfidence  Float?
-  originalSecondaryCodes  Json?
+  originalMainCode        String? @map("original_main_code")
+  originalMainName        String? @map("original_main_name")
+  originalMainConfidence  Float?  @map("original_main_confidence")
+  originalSecondaryCodes  Json?   @map("original_secondary_codes")
   
   modelUsed       String
   processingTime  Int
@@ -92,7 +92,7 @@ model Prediction {
   validatedBy     String?
   feedbackType    String?
   corrected       Boolean     @default(false)
-  correctedAt     DateTime?
+  correctedAt     DateTime?   @map("corrected_at")
   corrections     Json?
   feedbackComment String?
   

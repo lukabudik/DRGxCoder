@@ -474,6 +474,8 @@ async def get_predictions(
                 "secondary_codes": pred.secondaryCodes if pred.secondaryCodes else [],
                 "validated": pred.validated,
                 "feedback_type": pred.feedbackType,
+                "corrected": pred.corrected,  # Include corrected flag for badge
+                "status": pred.status,  # Include status field
                 "created_at": pred.createdAt,
                 "case": {
                     "id": pred.case.id if pred.case else None,
@@ -510,6 +512,30 @@ async def get_prediction_detail(prediction_id: str):
         if not pred:
             raise HTTPException(status_code=404, detail="Prediction not found")
         
+        # Parse JSON fields
+        import json
+        secondary_diagnoses = pred.secondaryCodes
+        if isinstance(secondary_diagnoses, str):
+            secondary_diagnoses = json.loads(secondary_diagnoses)
+        
+        # Handle original fields if corrected
+        original_main_diagnosis = None
+        original_secondary_diagnoses = None
+        
+        if pred.corrected and pred.originalMainCode:
+            original_main_diagnosis = {
+                "code": pred.originalMainCode,
+                "name": pred.originalMainName,
+                "confidence": pred.originalMainConfidence,
+            }
+            
+            if pred.originalSecondaryCodes:
+                original_secondary = pred.originalSecondaryCodes
+                if isinstance(original_secondary, str):
+                    original_secondary_diagnoses = json.loads(original_secondary)
+                else:
+                    original_secondary_diagnoses = original_secondary
+        
         return {
             "prediction_id": pred.id,
             "case_id": pred.caseId,
@@ -522,13 +548,17 @@ async def get_prediction_detail(prediction_id: str):
                 "confidence": pred.mainConfidence,
                 "reasoning": pred.mainReasoning,
             },
-            "secondary_diagnoses": pred.secondaryCodes,
+            "secondary_diagnoses": secondary_diagnoses,
+            "original_main_diagnosis": original_main_diagnosis,
+            "original_secondary_diagnoses": original_secondary_diagnoses,
             "model_used": pred.modelUsed,
             "processing_time": pred.processingTime,
             "validated": pred.validated,
             "validated_at": pred.validatedAt,
             "validated_by": pred.validatedBy,
             "feedback_type": pred.feedbackType,
+            "corrected": pred.corrected,
+            "corrected_at": pred.correctedAt,
             "feedback_comment": pred.feedbackComment,
             "corrections": pred.corrections,
             "created_at": pred.createdAt,
@@ -592,35 +622,64 @@ async def submit_feedback_endpoint(
                 "corrected_secondary": [c.dict() for c in feedback.corrected_secondary] if feedback.corrected_secondary else [],
             }
         
-        # Handle rejection with corrections
-        if feedback.feedback_type == "rejected" and feedback.corrected_main_code:
+        # Handle rejection with corrections (either main or secondary or both)
+        if feedback.feedback_type == "rejected" and (feedback.corrected_main_code or feedback.corrected_secondary):
             logger.info(f"Applying corrections to prediction {prediction_id}")
             
-            # Preserve original AI prediction
-            original_secondary = prediction["secondary_diagnoses"] if isinstance(prediction.get("secondary_diagnoses"), list) else []
+            # Get prediction data - handle both dict and Prisma model
+            import json
+            
+            if isinstance(prediction, dict):
+                # Already a dict from get_prediction
+                main_code = prediction["main_diagnosis"]["code"]
+                main_name = prediction["main_diagnosis"]["name"]
+                main_confidence = prediction["main_diagnosis"]["confidence"]
+                original_secondary = prediction.get("secondary_diagnoses", [])
+            else:
+                # Prisma model object - use direct attribute access
+                main_code = prediction.mainCode
+                main_name = prediction.mainName
+                main_confidence = prediction.mainConfidence
+                
+                # Parse secondary codes JSON
+                secondary_data = prediction.secondaryCodes
+                if isinstance(secondary_data, str):
+                    original_secondary = json.loads(secondary_data)
+                elif isinstance(secondary_data, list):
+                    original_secondary = secondary_data
+                else:
+                    original_secondary = []
             
             # Build corrected secondary codes
-            corrected_secondary_list = []
+            # If no corrections provided, keep the original secondary codes
             if feedback.corrected_secondary:
                 corrected_secondary_list = build_corrected_secondary(
                     original_secondary,
                     [c.dict() for c in feedback.corrected_secondary]
                 )
+            else:
+                # No corrections to secondary - keep originals
+                corrected_secondary_list = original_secondary
+            
+            # Determine what to update
+            # If main code corrected, use corrected values; otherwise keep originals
+            final_main_code = feedback.corrected_main_code if feedback.corrected_main_code else main_code
+            final_main_name = feedback.corrected_main_name if feedback.corrected_main_code else main_name
             
             # Update prediction: corrections become current, original preserved
             pred = await db.prediction.update(
                 where={"id": prediction_id},
                 data={
                     # Preserve original AI prediction
-                    "originalMainCode": prediction["main_diagnosis"]["code"],
-                    "originalMainName": prediction["main_diagnosis"]["name"],
-                    "originalMainConfidence": prediction["main_diagnosis"]["confidence"],
-                    "originalSecondaryCodes": original_secondary,
+                    "originalMainCode": main_code,
+                    "originalMainName": main_name,
+                    "originalMainConfidence": main_confidence,
+                    "originalSecondaryCodes": json.dumps(original_secondary),  # Must be JSON string
                     
-                    # Update current with corrections
-                    "mainCode": feedback.corrected_main_code,
-                    "mainName": feedback.corrected_main_name,
-                    "secondaryCodes": corrected_secondary_list,
+                    # Update current with corrections (or keep original if not corrected)
+                    "mainCode": final_main_code,
+                    "mainName": final_main_name,
+                    "secondaryCodes": json.dumps(corrected_secondary_list),  # Must be JSON string
                     
                     # Metadata
                     "corrected": True,
@@ -629,12 +688,16 @@ async def submit_feedback_endpoint(
                     "validatedAt": datetime.now(),
                     "validatedBy": feedback.validated_by,
                     "feedbackType": feedback.feedback_type,
-                    "corrections": corrections_detail,
+                    "corrections": json.dumps(corrections_detail) if corrections_detail else None,  # Must be JSON string
                     "feedbackComment": feedback.feedback_comment,
                 }
             )
             
-            logger.info(f"Corrections applied: {prediction['main_diagnosis']['code']} → {feedback.corrected_main_code}")
+            # Log what was corrected
+            if feedback.corrected_main_code:
+                logger.info(f"Main diagnosis corrected: {main_code} → {feedback.corrected_main_code}")
+            if feedback.corrected_secondary:
+                logger.info(f"Secondary codes corrected: {len(feedback.corrected_secondary)} changes")
         
         else:
             # Approved or rejected without corrections - use existing function
