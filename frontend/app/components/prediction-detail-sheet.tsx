@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/badge';
 import { SimpleSidebar } from './simple-sidebar';
 import styles from './prediction-detail-sheet.module.css';
 import { useEffect, useState } from 'react';
+import { AlertCircle, ChevronDown, ChevronUp } from 'lucide-react';
 
 interface PredictionDetailSheetProps {
   predictionId: string | null;
@@ -20,6 +21,7 @@ export function PredictionDetailSheet({ predictionId, open, onOpenChange }: Pred
   const [isApproving, setIsApproving] = useState(false);
   const [feedbackComment, setFeedbackComment] = useState('');
   const [validatedBy, setValidatedBy] = useState('');
+  const [showAiOriginal, setShowAiOriginal] = useState(false);
   
   const { data: prediction, isLoading, error, refetch } = useQuery({
     queryKey: ['prediction', predictionId],
@@ -84,8 +86,8 @@ export function PredictionDetailSheet({ predictionId, open, onOpenChange }: Pred
     }
   }, [prediction, error]);
 
-  const patient = prediction?.case?.patient;
-  const caseData = prediction?.case;
+  const patient = (prediction as any)?.case?.patient;
+  const caseData = (prediction as any)?.case;
 
   return (
     <SimpleSidebar isOpen={open} onClose={() => onOpenChange(false)}>
@@ -140,17 +142,17 @@ export function PredictionDetailSheet({ predictionId, open, onOpenChange }: Pred
               <div className={styles.metaItem}>
                 <span className={styles.metaLabel}>Patient</span>
                 <span className={styles.metaValue}>
-                  {prediction.case?.patient 
-                    ? `${prediction.case.patient.last_name}, ${prediction.case.patient.first_name}`
+                  {(prediction as any).case?.patient 
+                    ? `${(prediction as any).case.patient.last_name}, ${(prediction as any).case.patient.first_name}`
                     : prediction.pac_id || 'N/A'}
                 </span>
               </div>
-              {prediction.case?.patient && (
+              {(prediction as any).case?.patient && (
                 <>
                   <div className={styles.metaItem}>
                     <span className={styles.metaLabel}>Age / Sex</span>
                     <span className={styles.metaValue}>
-                      {Math.floor((new Date().getTime() - new Date(prediction.case.patient.date_of_birth).getTime()) / (1000 * 60 * 60 * 24 * 365.25))} / {prediction.case.patient.sex}
+                      {Math.floor((new Date().getTime() - new Date((prediction as any).case.patient.date_of_birth).getTime()) / (1000 * 60 * 60 * 24 * 365.25))} / {(prediction as any).case.patient.sex}
                     </span>
                   </div>
                 </>
@@ -189,9 +191,34 @@ export function PredictionDetailSheet({ predictionId, open, onOpenChange }: Pred
               </div>
             )}
 
+            {/* Correction Banner */}
+            {prediction.corrected && (
+              <div style={{
+                padding: '12px 14px',
+                background: '#fef3c7',
+                border: '2px solid #f59e0b',
+                borderRadius: '6px',
+                marginBottom: '16px',
+                display: 'flex',
+                alignItems: 'start',
+                gap: '10px'
+              }}>
+                <AlertCircle size={18} style={{color: '#f59e0b', flexShrink: 0, marginTop: '2px'}} />
+                <div style={{fontSize: '0.875rem'}}>
+                  <strong style={{color: '#92400e'}}>This prediction was corrected</strong>
+                  <div style={{color: '#78350f'}}>
+                    by {prediction.validated_by} on{' '}
+                    {prediction.corrected_at && new Date(prediction.corrected_at).toLocaleDateString()}
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Main Diagnosis */}
             <div className={styles.section}>
-              <h3 className={styles.sectionTitle}>Main Diagnosis</h3>
+              <h3 className={styles.sectionTitle}>
+                {prediction.corrected ? 'Current Diagnosis (After Correction)' : 'Main Diagnosis'}
+              </h3>
               <div className={styles.diagnosis}>
                 <div className={styles.diagnosisHeader}>
                   <code className={styles.diagnosisCode}>{prediction.main_diagnosis?.code}</code>
@@ -206,6 +233,82 @@ export function PredictionDetailSheet({ predictionId, open, onOpenChange }: Pred
                 )}
               </div>
             </div>
+
+            {/* Show AI's Original Prediction (if corrected) */}
+            {prediction.corrected && prediction.original_main_diagnosis && (
+              <div className={styles.section}>
+                <button
+                  onClick={() => setShowAiOriginal(!showAiOriginal)}
+                  style={{
+                    width: '100%',
+                    padding: '10px 12px',
+                    background: 'var(--color-surface, #f9fafb)',
+                    border: '1px solid var(--color-border, #e5e7eb)',
+                    borderRadius: '6px',
+                    fontSize: '0.875rem',
+                    fontWeight: 500,
+                    color: 'var(--color-text-primary)',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: '8px',
+                    transition: 'background 0.2s'
+                  }}
+                  onMouseOver={(e) => e.currentTarget.style.background = '#e5e7eb'}
+                  onMouseOut={(e) => e.currentTarget.style.background = '#f9fafb'}
+                >
+                  {showAiOriginal ? (
+                    <>
+                      <ChevronUp size={16} />
+                      Hide AI's Original Prediction
+                    </>
+                  ) : (
+                    <>
+                      <ChevronDown size={16} />
+                      Show AI's Original Prediction
+                    </>
+                  )}
+                </button>
+
+                {showAiOriginal && (
+                  <div style={{marginTop: '12px', display: 'flex', flexDirection: 'column', gap: '12px'}}>
+                    <div style={{
+                      padding: '12px',
+                      background: '#fff7ed',
+                      border: '1px solid #fed7aa',
+                      borderRadius: '6px'
+                    }}>
+                      <h4 style={{fontSize: '0.75rem', fontWeight: 600, color: '#9a3412', marginBottom: '8px', textTransform: 'uppercase'}}>
+                        AI Predicted:
+                      </h4>
+                      <div className={styles.diagnosisHeader}>
+                        <code className={styles.diagnosisCode}>{prediction.original_main_diagnosis.code}</code>
+                        <Badge variant="secondary">
+                          {Math.round((prediction.original_main_diagnosis.confidence || 0) * 100)}%
+                        </Badge>
+                      </div>
+                      <p className={styles.diagnosisName}>{prediction.original_main_diagnosis.name}</p>
+                    </div>
+
+                    <div style={{
+                      padding: '12px',
+                      background: '#f0fdf4',
+                      border: '1px solid #bbf7d0',
+                      borderRadius: '6px'
+                    }}>
+                      <h4 style={{fontSize: '0.75rem', fontWeight: 600, color: '#166534', marginBottom: '8px', textTransform: 'uppercase'}}>
+                        User Corrected To:
+                      </h4>
+                      <div className={styles.diagnosisHeader}>
+                        <code className={styles.diagnosisCode}>{prediction.main_diagnosis.code}</code>
+                      </div>
+                      <p className={styles.diagnosisName}>{prediction.main_diagnosis.name}</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
 
             {/* Secondary Diagnoses */}
             {prediction.secondary_diagnoses && prediction.secondary_diagnoses.length > 0 && (

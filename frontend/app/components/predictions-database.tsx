@@ -333,7 +333,7 @@ export function PredictionsDatabase() {
       {
         accessorKey: 'validated',
         header: 'Status',
-        cell: ({ row }) => getStatusBadge(row.getValue('validated'), row.original.feedback_type),
+        cell: ({ row }) => getStatusBadge(row.getValue('validated'), row.original.feedback_type, (row.original as any).corrected),
         filterFn: (row, id, value) => {
           if (value === 'all') return true;
           if (value === 'approved') return row.getValue(id) === true && row.original.feedback_type === 'approved';

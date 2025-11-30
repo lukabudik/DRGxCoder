@@ -257,17 +257,16 @@ Ovlivňují léčbu pacienta takovým způsobem, že je potřebný kterýkoliv z
 6. Pro každou vedlejší diagnózu uveď důvod (vždy také jak se vázala k přímo k průběhu léčby a potenciální důvod proč by se nemusela uznat) a odhadni pravděpodobnost
 
 # Výstupní formát (JSON)
+# DŮLEŽITÉ: Vrať POUZE kódy diagnóz, ne názvy. Názvy budou automaticky doplněny z databáze.
 {
     "main_diagnosis": {
         "code": "I460",
-        "name": "Srdeční zástava s úspěšnou resuscitací",
         "confidence": 0.95,
         "reasoning": "Pacient byl přijat s náhlou srdeční zástavou, úspěšná resuscitace po 8 minutách. Elevace troponinu potvrzuje srdeční příhodu jako primární důvod hospitalizace."
     },
     "other_potential_main_diagnoses": [
         {
             "code": "I219",
-            "name": "Akutní infarkt myokardu, nespecifikovaný",
             "confidence": 0.30,
             "reasoning": "Elevace troponinu naznačuje možný infarkt, ale primární příčinou hospitalizace byla srdeční zástava"
         }
@@ -275,7 +274,6 @@ Ovlivňují léčbu pacienta takovým způsobem, že je potřebný kterýkoliv z
     "secondary_diagnoses": [
         {
             "code": "G931",
-            "name": "Anoxické poškození mozku",
             "confidence": 0.87,
             "reasoning": "CT prokázalo anoxické poškození mozku po srdeční zástavě. Vyžadovalo zvýšenou neurologickou péči a monitorování. Mohlo by být zpochybněno pokud by nebylo jasně dokumentováno v CT nálezu."
         }
@@ -311,6 +309,44 @@ Tvá úloha:
     secondary = response.get("secondary_diagnoses", [])
     
     logger.info(f"Step 2: Main={main.get('code')}, Other potential={len(other_potential)}, Secondary={len(secondary)}")
+    
+    # Enrich codes with official names from database
+    from app.database import enrich_code
+    
+    # Enrich main diagnosis
+    logger.info(f"Enriching main diagnosis code: {main.get('code')}")
+    main_enriched = await enrich_code(main.get("code", ""))
+    if not main_enriched:
+        logger.error(f"Invalid main diagnosis code from LLM: {main.get('code')}")
+        raise ValueError(f"Invalid diagnosis code returned by LLM: {main.get('code')}")
+    
+    main["name"] = main_enriched["name"]  # Use official DB name
+    logger.info(f"Main diagnosis enriched: {main['code']} - {main['name']}")
+    
+    # Enrich other potential diagnoses
+    enriched_other = []
+    for other in other_potential:
+        other_enriched = await enrich_code(other.get("code", ""))
+        if other_enriched:
+            other["name"] = other_enriched["name"]
+            enriched_other.append(other)
+        else:
+            logger.warning(f"Skipping invalid potential diagnosis code from LLM: {other.get('code')}")
+    
+    # Enrich secondary diagnoses
+    enriched_secondary = []
+    for sec in secondary:
+        sec_enriched = await enrich_code(sec.get("code", ""))
+        if sec_enriched:
+            sec["name"] = sec_enriched["name"]
+            enriched_secondary.append(sec)
+        else:
+            logger.warning(f"Skipping invalid secondary diagnosis code from LLM: {sec.get('code')}")
+    
+    other_potential = enriched_other
+    secondary = enriched_secondary
+    
+    logger.info(f"Enrichment complete: Main={main['code']}, Other={len(other_potential)}, Secondary={len(secondary)}")
     
     return response
 

@@ -5,7 +5,7 @@ import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { api } from '@/lib/api';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { User, Calendar, FileText, Activity, Edit2, X } from 'lucide-react';
+import { User, Calendar, FileText, Activity, Edit2, X, ChevronDown } from 'lucide-react';
 import { CodeSearch } from '../components/code-search';
 import styles from './approve.module.css';
 
@@ -27,6 +27,20 @@ export default function ApprovePage() {
   const [editedMainCode, setEditedMainCode] = useState('');
   const [editedMainName, setEditedMainName] = useState('');
   const [editedSecondary, setEditedSecondary] = useState<EditedDiagnosis[]>([]);
+  
+  // Collapsible sections state
+  const [collapsed, setCollapsed] = useState({
+    patient: false,
+    case: false,
+    clinical: true,
+    biochemistry: true,
+    hematology: true,
+    microbiology: true,
+  });
+  
+  const toggleSection = (section: keyof typeof collapsed) => {
+    setCollapsed(prev => ({ ...prev, [section]: !prev[section] }));
+  };
 
   // Fetch unvalidated predictions
   const { data: predictionsData, isLoading } = useQuery({
@@ -151,11 +165,49 @@ export default function ApprovePage() {
       return;
     }
 
+    // STEP 1: Validate all codes exist in database
+    const allCodes = [editedMainCode, ...editedSecondary.map(d => d.code)].filter(Boolean);
+    
+    try {
+      const validation = await api.validateCodes(allCodes);
+      const invalid = validation.filter(v => !v.valid);
+      
+      if (invalid.length > 0) {
+        alert(`Invalid diagnosis codes found:\n\n${invalid.map(v => `${v.code}: ${v.error}`).join('\n')}\n\nPlease select valid codes from the dropdown.`);
+        return;
+      }
+      
+      // Update names with official DB names
+      const mainValidation = validation.find(v => v.code === editedMainCode);
+      if (mainValidation && mainValidation.name) {
+        setEditedMainName(mainValidation.name);
+      }
+      
+      // Update secondary names
+      const updatedSecondary = editedSecondary.map(sec => {
+        const val = validation.find(v => v.code === sec.code);
+        return {
+          ...sec,
+          name: val?.name || sec.name
+        };
+      });
+      setEditedSecondary(updatedSecondary);
+      
+    } catch (err) {
+      alert('Failed to validate codes: ' + (err instanceof Error ? err.message : 'Unknown error'));
+      return;
+    }
+
     setIsSubmitting(true);
     try {
       // Build corrected_secondary array tracking changes
       const originalSecondary = predictionDetail?.secondary_diagnoses || [];
-      const correctedSecondary = [];
+      const correctedSecondary: Array<{
+        action: 'added' | 'removed' | 'modified' | 'kept';
+        code: string;
+        name: string;
+        original_code?: string;
+      }> = [];
 
       // Check for modifications and additions
       for (const edited of editedSecondary) {
@@ -166,7 +218,7 @@ export default function ApprovePage() {
           if (edited.originalCode !== edited.code) {
             // Modified
             correctedSecondary.push({
-              action: 'modified',
+              action: 'modified' as const,
               code: edited.code,
               name: edited.name,
               original_code: edited.originalCode,
@@ -174,7 +226,7 @@ export default function ApprovePage() {
           } else {
             // No change, but include for completeness
             correctedSecondary.push({
-              action: 'kept',
+              action: 'kept' as const,
               code: edited.code,
               name: edited.name,
             });
@@ -182,7 +234,7 @@ export default function ApprovePage() {
         } else {
           // Added new
           correctedSecondary.push({
-            action: 'added',
+            action: 'added' as const,
             code: edited.code,
             name: edited.name,
           });
@@ -196,7 +248,7 @@ export default function ApprovePage() {
         );
         if (!stillExists) {
           correctedSecondary.push({
-            action: 'removed',
+            action: 'removed' as const,
             code: original.code,
             name: original.name,
           });
@@ -208,7 +260,12 @@ export default function ApprovePage() {
         feedback_type: 'rejected',
         corrected_main_code: editedMainCode,
         corrected_main_name: editedMainName,
-        corrected_secondary: correctedSecondary,
+        corrected_secondary: correctedSecondary.filter(c => c.action !== 'kept') as Array<{
+          action: 'added' | 'removed' | 'modified';
+          code: string;
+          name: string;
+          original_code?: string;
+        }>,
         feedback_comment: comment,
       });
 
@@ -268,8 +325,8 @@ export default function ApprovePage() {
     );
   }
 
-  const patient = predictionDetail?.case?.patient;
-  const caseData = predictionDetail?.case;
+  const patient = (predictionDetail as any)?.case?.patient;
+  const caseData = (predictionDetail as any)?.case;
 
   return (
     <div className={styles.container}>
@@ -304,10 +361,12 @@ export default function ApprovePage() {
             {/* Patient Info */}
             {patient && (
               <div className={styles.section}>
-                <div className={styles.sectionHeader}>
-                  <User size={18} />
+                <div className={styles.sectionHeader} onClick={() => toggleSection('patient')}>
+                  <User size={16} />
                   <h2>Patient Information</h2>
+                  <ChevronDown size={16} className={`${styles.collapseIcon} ${collapsed.patient ? styles.collapsed : ''}`} />
                 </div>
+                {!collapsed.patient && (
                 <div className={styles.patientInfo}>
                   <div className={styles.infoRow}>
                     <span className={styles.label}>Name:</span>
@@ -326,16 +385,19 @@ export default function ApprovePage() {
                     <span className={styles.value}>{patient.birth_number}</span>
                   </div>
                 </div>
+                )}
               </div>
             )}
 
             {/* Case Info */}
             {caseData && (
               <div className={styles.section}>
-                <div className={styles.sectionHeader}>
-                  <Calendar size={18} />
+                <div className={styles.sectionHeader} onClick={() => toggleSection('case')}>
+                  <Calendar size={16} />
                   <h2>Case Information</h2>
+                  <ChevronDown size={16} className={`${styles.collapseIcon} ${collapsed.case ? styles.collapsed : ''}`} />
                 </div>
+                {!collapsed.case && (
                 <div className={styles.caseInfo}>
                   {caseData.admission_date && (
                     <div className={styles.infoRow}>
@@ -354,58 +416,71 @@ export default function ApprovePage() {
                     </div>
                   )}
                 </div>
+                )}
               </div>
             )}
 
             {/* Clinical Text */}
             {caseData?.clinical_text && (
               <div className={styles.section}>
-                <div className={styles.sectionHeader}>
-                  <FileText size={18} />
+                <div className={styles.sectionHeader} onClick={() => toggleSection('clinical')}>
+                  <FileText size={16} />
                   <h2>Clinical Text</h2>
+                  <ChevronDown size={16} className={`${styles.collapseIcon} ${collapsed.clinical ? styles.collapsed : ''}`} />
                 </div>
+                {!collapsed.clinical && (
                 <div className={styles.clinicalText}>
                   {caseData.clinical_text}
                 </div>
+                )}
               </div>
             )}
 
             {/* Biochemistry */}
             {caseData?.biochemistry && (
               <div className={styles.section}>
-                <div className={styles.sectionHeader}>
-                  <Activity size={18} />
+                <div className={styles.sectionHeader} onClick={() => toggleSection('biochemistry')}>
+                  <Activity size={16} />
                   <h2>Biochemistry</h2>
+                  <ChevronDown size={16} className={`${styles.collapseIcon} ${collapsed.biochemistry ? styles.collapsed : ''}`} />
                 </div>
+                {!collapsed.biochemistry && (
                 <div className={styles.labData}>
                   {caseData.biochemistry}
                 </div>
+                )}
               </div>
             )}
 
             {/* Hematology */}
             {caseData?.hematology && (
               <div className={styles.section}>
-                <div className={styles.sectionHeader}>
-                  <Activity size={18} />
+                <div className={styles.sectionHeader} onClick={() => toggleSection('hematology')}>
+                  <Activity size={16} />
                   <h2>Hematology</h2>
+                  <ChevronDown size={16} className={`${styles.collapseIcon} ${collapsed.hematology ? styles.collapsed : ''}`} />
                 </div>
+                {!collapsed.hematology && (
                 <div className={styles.labData}>
                   {caseData.hematology}
                 </div>
+                )}
               </div>
             )}
 
             {/* Microbiology */}
             {caseData?.microbiology && (
               <div className={styles.section}>
-                <div className={styles.sectionHeader}>
-                  <Activity size={18} />
+                <div className={styles.sectionHeader} onClick={() => toggleSection('microbiology')}>
+                  <Activity size={16} />
                   <h2>Microbiology</h2>
+                  <ChevronDown size={16} className={`${styles.collapseIcon} ${collapsed.microbiology ? styles.collapsed : ''}`} />
                 </div>
+                {!collapsed.microbiology && (
                 <div className={styles.labData}>
                   {caseData.microbiology}
                 </div>
+                )}
               </div>
             )}
           </div>
@@ -416,18 +491,11 @@ export default function ApprovePage() {
           <div className={styles.panelContent}>
             {/* Edit Mode Indicator */}
             {isEditMode && (
-              <div style={{
-                padding: '12px 16px',
-                background: '#fef3c7',
-                border: '1px solid #f59e0b',
-                borderRadius: '8px',
-                marginBottom: '16px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px'
-              }}>
-                <Edit2 size={18} style={{ color: '#f59e0b' }} />
-                <span style={{ fontWeight: 600, color: '#92400e' }}>EDIT MODE</span>
+              <div className={styles.editModeCard}>
+                <div className={styles.editModeHeader}>
+                  <Edit2 size={16} />
+                  <span>EDITING MODE - Make corrections below</span>
+                </div>
               </div>
             )}
 
@@ -448,14 +516,10 @@ export default function ApprovePage() {
                         placeholder="Search code (e.g., I50)"
                         autoFocus
                       />
-                      <label className={styles.inputLabel} style={{ marginTop: '12px' }}>Name:</label>
-                      <input
-                        type="text"
-                        value={editedMainName}
-                        onChange={(e) => setEditedMainName(e.target.value)}
-                        className={styles.input}
-                        placeholder="Diagnosis name"
-                      />
+                      <label className={styles.inputLabel} style={{ marginTop: '10px' }}>Name (from database):</label>
+                      <div className={`${styles.readOnlyField} ${editedMainName ? styles.filled : ''}`}>
+                        {editedMainName || 'Select a code above to see the official name'}
+                      </div>
                     </div>
                   ) : (
                     <div className={styles.mainDiagnosis}>
@@ -482,40 +546,27 @@ export default function ApprovePage() {
                   {isEditMode ? (
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                       {editedSecondary.map((diag, idx) => (
-                        <div key={idx} style={{
-                          padding: '12px',
-                          background: 'var(--color-surface, #f9fafb)',
-                          border: '1px solid var(--color-border, #e5e7eb)',
-                          borderRadius: '6px'
-                        }}>
-                          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'start', marginBottom: '8px' }}>
-                            <label className={styles.inputLabel}>Code:</label>
-                            <button
-                              onClick={() => handleRemoveSecondary(idx)}
-                              style={{
-                                background: 'none',
-                                border: 'none',
-                                color: '#ef4444',
-                                cursor: 'pointer',
-                                padding: '4px',
-                              }}
-                            >
-                              <X size={18} />
-                            </button>
-                          </div>
+                        <div key={idx} className={styles.secondaryEditItem}>
+                          <button
+                            className={styles.removeBtn}
+                            onClick={() => handleRemoveSecondary(idx)}
+                            aria-label="Remove diagnosis"
+                            type="button"
+                          >
+                            <X size={14} />
+                          </button>
+                          
+                          <label className={styles.inputLabel}>Code:</label>
                           <CodeSearch
                             value={diag.code}
                             onSelect={(code, name) => handleUpdateSecondary(idx, code, name)}
                             placeholder="Search code"
                           />
-                          <label className={styles.inputLabel} style={{ marginTop: '8px' }}>Name:</label>
-                          <input
-                            type="text"
-                            value={diag.name}
-                            onChange={(e) => handleUpdateSecondary(idx, diag.code, e.target.value)}
-                            className={styles.input}
-                            placeholder="Diagnosis name"
-                          />
+                          
+                          <label className={styles.inputLabel} style={{ marginTop: '8px' }}>Name (from database):</label>
+                          <div className={`${styles.readOnlyField} ${diag.name ? styles.filled : ''}`}>
+                            {diag.name || 'Select a code above'}
+                          </div>
                         </div>
                       ))}
                       <Button

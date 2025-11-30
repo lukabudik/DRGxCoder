@@ -51,9 +51,13 @@ export interface Prediction {
   selected_codes: string[];
   step1_reasoning: string;
   
-  // Step 2 - Main diagnosis
+  // Step 2 - Current diagnosis (updated after corrections)
   main_diagnosis: DiagnosisCode;
   secondary_diagnoses: DiagnosisCode[];
+  
+  // Original AI prediction (preserved when corrected)
+  original_main_diagnosis?: DiagnosisCode;
+  original_secondary_diagnoses?: DiagnosisCode[];
   
   // Metadata
   model_used: string;
@@ -62,6 +66,8 @@ export interface Prediction {
   validated_at?: string;
   validated_by?: string;
   feedback_type?: 'approved' | 'rejected';
+  corrected?: boolean;
+  corrected_at?: string;
   feedback_comment?: string;
   corrections?: any;
   created_at: string;

@@ -34,8 +34,11 @@ from app.database import (
     submit_prediction_feedback,
     update_prediction_status,
     search_codes,
+    validate_codes,
+    enrich_code,
     get_code_by_code,
     get_predictions_by_code,
+    db,
 )
 from app.services import predict_diagnosis
 from app.parsers import parse_medical_xml
@@ -564,17 +567,24 @@ async def submit_feedback_endpoint(
     
     - approved: Coder agrees with prediction, no changes needed
     - rejected: Coder made corrections to improve accuracy
-    - Both can include optional comments and rating
+      When rejected, corrections become the NEW current prediction,
+      and original AI prediction is preserved in originalMain* fields
     """
     try:
+        from datetime import datetime
+        from app.corrections import build_corrected_secondary
+        
         # Validate feedback type
         if feedback.feedback_type not in ["approved", "rejected"]:
             raise HTTPException(400, "feedback_type must be 'approved' or 'rejected'")
         
-        # Build corrections object if rejected
-        corrections = None
+        # Get current prediction
+        prediction = await get_prediction(prediction_id)
+        
+        # Build corrections object for detailed change tracking
+        corrections_detail = None
         if feedback.feedback_type == "rejected":
-            corrections = {
+            corrections_detail = {
                 "corrected_main": {
                     "code": feedback.corrected_main_code,
                     "name": feedback.corrected_main_name,
@@ -582,13 +592,59 @@ async def submit_feedback_endpoint(
                 "corrected_secondary": [c.dict() for c in feedback.corrected_secondary] if feedback.corrected_secondary else [],
             }
         
-        pred = await submit_prediction_feedback(
-            prediction_id=prediction_id,
-            validated_by=feedback.validated_by,
-            feedback_type=feedback.feedback_type,
-            corrections=corrections,
-            feedback_comment=feedback.feedback_comment,
-        )
+        # Handle rejection with corrections
+        if feedback.feedback_type == "rejected" and feedback.corrected_main_code:
+            logger.info(f"Applying corrections to prediction {prediction_id}")
+            
+            # Preserve original AI prediction
+            original_secondary = prediction["secondary_diagnoses"] if isinstance(prediction.get("secondary_diagnoses"), list) else []
+            
+            # Build corrected secondary codes
+            corrected_secondary_list = []
+            if feedback.corrected_secondary:
+                corrected_secondary_list = build_corrected_secondary(
+                    original_secondary,
+                    [c.dict() for c in feedback.corrected_secondary]
+                )
+            
+            # Update prediction: corrections become current, original preserved
+            pred = await db.prediction.update(
+                where={"id": prediction_id},
+                data={
+                    # Preserve original AI prediction
+                    "originalMainCode": prediction["main_diagnosis"]["code"],
+                    "originalMainName": prediction["main_diagnosis"]["name"],
+                    "originalMainConfidence": prediction["main_diagnosis"]["confidence"],
+                    "originalSecondaryCodes": original_secondary,
+                    
+                    # Update current with corrections
+                    "mainCode": feedback.corrected_main_code,
+                    "mainName": feedback.corrected_main_name,
+                    "secondaryCodes": corrected_secondary_list,
+                    
+                    # Metadata
+                    "corrected": True,
+                    "correctedAt": datetime.now(),
+                    "validated": True,
+                    "validatedAt": datetime.now(),
+                    "validatedBy": feedback.validated_by,
+                    "feedbackType": feedback.feedback_type,
+                    "corrections": corrections_detail,
+                    "feedbackComment": feedback.feedback_comment,
+                }
+            )
+            
+            logger.info(f"Corrections applied: {prediction['main_diagnosis']['code']} → {feedback.corrected_main_code}")
+        
+        else:
+            # Approved or rejected without corrections - use existing function
+            pred = await submit_prediction_feedback(
+                prediction_id=prediction_id,
+                validated_by=feedback.validated_by,
+                feedback_type=feedback.feedback_type,
+                corrections=corrections_detail,
+                feedback_comment=feedback.feedback_comment,
+            )
         
         return {
             "id": pred.id,
@@ -596,6 +652,7 @@ async def submit_feedback_endpoint(
             "feedback_type": pred.feedbackType,
             "validated_by": pred.validatedBy,
             "validated_at": pred.validatedAt,
+            "corrected": getattr(pred, 'corrected', False),
         }
         
     except HTTPException:
@@ -628,6 +685,23 @@ async def search_diagnosis_codes(
         
     except Exception as e:
         logger.error(f"Error searching codes: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/codes/validate")
+async def validate_diagnosis_codes(codes: List[str] = Body(...)):
+    """
+    Validate if diagnosis codes exist in database and return official names
+    
+    Request body: List of code strings
+    Returns: List of validation results
+    """
+    try:
+        results = await validate_codes(codes)
+        return results
+        
+    except Exception as e:
+        logger.error(f"Error validating codes: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
 

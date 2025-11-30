@@ -68,25 +68,40 @@ model Prediction {
   caseId          String
   selectedCodes   Json
   step1Reasoning  String?
+  
+  // Current prediction (updated after corrections)
   mainCode        String
   mainName        String
   mainConfidence  Float
   mainReasoning   String?
   secondaryCodes  Json
+  
+  // Original AI prediction (preserved when corrected)
+  originalMainCode        String?
+  originalMainName        String?
+  originalMainConfidence  Float?
+  originalSecondaryCodes  Json?
+  
   modelUsed       String
   processingTime  Int
   status          String      @default("processing") // "processing", "completed", "failed"
+  
+  // Validation & corrections
   validated       Boolean     @default(false)
   validatedAt     DateTime?
   validatedBy     String?
   feedbackType    String?
+  corrected       Boolean     @default(false)
+  correctedAt     DateTime?
   corrections     Json?
   feedbackComment String?
+  
   createdAt       DateTime    @default(now())
   case            PatientCase @relation(fields: [caseId], references: [id], onDelete: Cascade)
 
   @@index([caseId])
   @@index([validated])
   @@index([status])
+  @@index([corrected])
   @@map("predictions")
 }

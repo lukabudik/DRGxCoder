@@ -99,6 +99,63 @@ async def search_codes(query: str, limit: int = 50) -> List[Dict]:
     ]
 
 
+async def validate_codes(codes: List[str]) -> List[Dict]:
+    """
+    Validate if codes exist in database and return official names
+    
+    Args:
+        codes: List of diagnosis codes to validate
+        
+    Returns:
+        List of dicts with: {code, valid, name, error}
+    """
+    results = []
+    
+    for code in codes:
+        db_code = await db.diagnosiscode.find_unique(
+            where={"code": code}
+        )
+        
+        if db_code:
+            results.append({
+                "code": code,
+                "valid": True,
+                "name": db_code.name,
+                "error": None
+            })
+        else:
+            results.append({
+                "code": code,
+                "valid": False,
+                "name": None,
+                "error": "Code not found in database"
+            })
+            logger.warning(f"Invalid code: {code}")
+    
+    return results
+
+
+async def enrich_code(code: str) -> Dict:
+    """
+    Get official name for a diagnosis code from database
+    
+    Args:
+        code: Diagnosis code
+        
+    Returns:
+        Dict with code and name, or None if not found
+    """
+    db_code = await db.diagnosiscode.find_unique(
+        where={"code": code}
+    )
+    
+    if db_code:
+        return {"code": db_code.code, "name": db_code.name}
+    else:
+        logger.warning(f"Code not found in DB: {code}")
+        return None
+
+
 async def get_predictions_by_code(code: str, page: int = 1, limit: int = 20):
     """Get all predictions that use a specific diagnosis code (main or secondary)"""
     skip = (page - 1) * limit
