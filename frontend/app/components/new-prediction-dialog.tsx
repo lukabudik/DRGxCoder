@@ -16,30 +16,19 @@ import styles from './new-prediction-dialog.module.css';
 interface NewPredictionDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  onSubmit: (file: File) => void;
+  isPending: boolean;
 }
 
-export function NewPredictionDialog({ open, onOpenChange }: NewPredictionDialogProps) {
+export function NewPredictionDialog({
+  open,
+  onOpenChange,
+  onSubmit,
+  isPending
+}: NewPredictionDialogProps) {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [dragActive, setDragActive] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const queryClient = useQueryClient();
-
-  const predictMutation = useMutation({
-    mutationFn: async (file: File) => {
-      // Read XML file content
-      const xmlContent = await file.text();
-      // Send raw XML to backend for parsing
-      return api.predictFromXml(xmlContent);
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['predictions'] });
-      setSelectedFile(null);
-      onOpenChange(false);
-    },
-    onError: (error) => {
-      console.error('Prediction failed:', error);
-    },
-  });
 
   const handleFileSelect = (file: File) => {
     if (file && file.name.endsWith('.xml')) {
@@ -69,15 +58,19 @@ export function NewPredictionDialog({ open, onOpenChange }: NewPredictionDialogP
     }
   };
 
-  const onSubmit = () => {
+  const handleSubmit = () => {
     if (selectedFile) {
-      predictMutation.mutate(selectedFile);
+      onSubmit(selectedFile);
     }
   };
 
   const handleClose = () => {
-    setSelectedFile(null);
-    onOpenChange(false);
+    if (!isPending) {
+      setSelectedFile(null);
+      onOpenChange(false);
+    } else {
+      onOpenChange(false);
+    }
   };
 
   return (
@@ -128,14 +121,14 @@ export function NewPredictionDialog({ open, onOpenChange }: NewPredictionDialogP
               <button
                 onClick={() => setSelectedFile(null)}
                 className={styles.removeButton}
-                disabled={predictMutation.isPending}
+                disabled={isPending}
               >
                 <X size={18} />
               </button>
             </div>
           )}
 
-          {predictMutation.isPending && (
+          {isPending && (
             <div className={styles.processingNote}>
               <p>Processing prediction... This will take approximately 2 minutes.</p>
               <p className={styles.processingHint}>You can close this modal and continue working.</p>
@@ -147,16 +140,16 @@ export function NewPredictionDialog({ open, onOpenChange }: NewPredictionDialogP
               type="button"
               variant="secondary"
               onClick={handleClose}
-              disabled={predictMutation.isPending}
+              disabled={isPending}
             >
               Cancel
             </Button>
             <Button
-              onClick={onSubmit}
-              isLoading={predictMutation.isPending}
-              disabled={!selectedFile || predictMutation.isPending}
+              onClick={handleSubmit}
+              isLoading={isPending}
+              disabled={!selectedFile || isPending}
             >
-              {predictMutation.isPending ? 'Processing...' : 'Generate Prediction'}
+              {isPending ? 'Processing...' : 'Generate Prediction'}
             </Button>
           </div>
         </div>

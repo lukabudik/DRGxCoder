@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { useQuery } from '@tanstack/react-query';
+import { useRouter } from 'next/navigation';
+import { useQuery, useQueryClient, useMutation } from '@tanstack/react-query';
 import {
   ColumnDef,
   ColumnFiltersState,
@@ -35,6 +36,8 @@ import {
 import { NewPredictionDialog } from './new-prediction-dialog';
 import { PredictionDetailSheet } from './prediction-detail-sheet';
 import { SearchFilters } from './search-filters';
+import { TableSkeleton } from '@/components/ui/table-skeleton';
+import { Skeleton } from '@/components/ui/skeleton';
 import styles from './predictions-database.module.css';
 
 type Prediction = {
@@ -66,7 +69,7 @@ type Prediction = {
 const getStatusBadge = (validated: boolean, feedbackType?: 'approved' | 'rejected') => {
   if (validated) {
     if (feedbackType === 'rejected') {
-      return <Badge variant="destructive">Rejected</Badge>;
+      return <Badge variant="error">Rejected</Badge>;
     }
     return <Badge variant="success">Approved</Badge>;
   }
@@ -102,6 +105,26 @@ export function PredictionsDatabase() {
   const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});
   const [rowSelection, setRowSelection] = useState({});
 
+  const queryClient = useQueryClient();
+  const router = useRouter();
+
+  const predictMutation = useMutation({
+    mutationFn: async (file: File) => {
+      const xmlContent = await file.text();
+      return api.predictFromXml(xmlContent);
+    },
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['predictions'] });
+      // We don't close the dialog automatically here, as per user request.
+    },
+    onError: (error) => {
+      console.error('Prediction failed:', error);
+      alert('Prediction failed: ' + (error instanceof Error ? error.message : 'Unknown error'));
+    },
+  });
+
+  const isGenerating = predictMutation.isPending;
+
   const { data: predictionsData, isLoading } = useQuery({
     queryKey: ['predictions'],
     queryFn: async () => {
@@ -116,10 +139,39 @@ export function PredictionsDatabase() {
   });
 
   const predictions = (predictionsData?.predictions || []) as Prediction[];
-  
+
   console.log('Processed predictions:', predictions);
 
-  // Define columns
+  const handleQuickApprove = async (id: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    const validatorName = localStorage.getItem('validator_name');
+
+    if (!validatorName) {
+      alert('Please open the prediction details first to set your name.');
+      setSelectedPredictionId(id);
+      return;
+    }
+
+    try {
+      await api.submitFeedback(id, {
+        validated_by: validatorName,
+        feedback_type: 'approved',
+      });
+      queryClient.invalidateQueries({ queryKey: ['predictions'] });
+    } catch (err) {
+      alert('Failed to approve: ' + (err instanceof Error ? err.message : 'Unknown error'));
+    }
+  };
+
+  const handleQuickReject = async (id: string, caseId: string | undefined, e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (caseId) {
+      router.push(`/cases/${caseId}`);
+    } else {
+      setSelectedPredictionId(id);
+    }
+  };
+
   const columns = useMemo<ColumnDef<Prediction>[]>(
     () => [
       {
@@ -166,7 +218,7 @@ export function PredictionsDatabase() {
           const patient = row.original.case?.patient;
           if (!patient?.date_of_birth) return <span style={{ color: 'var(--color-text-secondary)' }}>-</span>;
           const age = Math.floor(
-            (new Date().getTime() - new Date(patient.date_of_birth).getTime()) / 
+            (new Date().getTime() - new Date(patient.date_of_birth).getTime()) /
             (1000 * 60 * 60 * 24 * 365.25)
           );
           return (
@@ -221,10 +273,10 @@ export function PredictionsDatabase() {
               <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                 <code className={styles.codeCell}>{row.getValue('main_code')}</code>
                 {secondaryCount > 0 && (
-                  <Badge 
-                    variant="secondary" 
-                    style={{ 
-                      fontSize: '0.7rem', 
+                  <Badge
+                    variant="default"
+                    style={{
+                      fontSize: '0.7rem',
                       padding: '2px 6px',
                       fontWeight: 600,
                     }}
@@ -325,21 +377,11 @@ export function PredictionsDatabase() {
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                <DropdownMenuItem
-                  onClick={() => {
-                    console.log('Approve', row.original.id);
-                    // TODO: Call approve API
-                  }}
-                >
+                <DropdownMenuItem onClick={(e) => handleQuickApprove(row.original.id, e)}>
                   <Check size={14} className="text-green-600" />
                   <span>Approve</span>
                 </DropdownMenuItem>
-                <DropdownMenuItem
-                  onClick={() => {
-                    console.log('Reject', row.original.id);
-                    // TODO: Call reject API
-                  }}
-                >
+                <DropdownMenuItem onClick={(e) => handleQuickReject(row.original.id, row.original.case?.id, e)}>
                   <X size={14} className="text-red-600" />
                   <span>Reject</span>
                 </DropdownMenuItem>
@@ -351,7 +393,7 @@ export function PredictionsDatabase() {
         enableHiding: false,
       },
     ],
-    []
+    [queryClient, router]
   );
 
   const table = useReactTable({
@@ -455,15 +497,7 @@ export function PredictionsDatabase() {
         )}
 
         {isLoading ? (
-          <div className={styles.loading}>Loading predictions...</div>
-        ) : predictions.length === 0 ? (
-          <div className={styles.empty}>
-            <p>No predictions yet. Create your first one!</p>
-            <Button onClick={() => setIsNewDialogOpen(true)} className="mt-4">
-              <Plus className="h-4 w-4 mr-2" />
-              New Prediction
-            </Button>
-          </div>
+          <TableSkeleton />
         ) : (
           <div className={styles.tableContainer}>
             <Table>
@@ -481,7 +515,50 @@ export function PredictionsDatabase() {
                 ))}
               </TableHeader>
               <TableBody>
-                {table.getRowModel().rows?.length ? (
+                {isGenerating && (
+                  <TableRow key="skeleton-loader">
+                    <TableCell>
+                      <div style={{ width: '16px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                    </TableCell>
+                    <TableCell>
+                      <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+                        <div style={{ width: '96px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                        <div style={{ width: '64px', height: '12px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <div style={{ width: '32px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                    </TableCell>
+                    <TableCell>
+                      <div style={{ width: '32px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                    </TableCell>
+                    <TableCell>
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                        <div style={{ width: '48px', height: '20px', backgroundColor: '#d1d5db', borderRadius: '9999px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                        <div style={{ width: '192px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                      </div>
+                    </TableCell>
+                    <TableCell>
+                      <div style={{ width: '48px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                    </TableCell>
+                    <TableCell>
+                      <div style={{ width: '80px', height: '20px', backgroundColor: '#d1d5db', borderRadius: '9999px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                    </TableCell>
+                    <TableCell>
+                      <div style={{ width: '96px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                    </TableCell>
+                    <TableCell>
+                      <div style={{ width: '32px', height: '32px', backgroundColor: '#d1d5db', borderRadius: '6px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                    </TableCell>
+                  </TableRow>
+                )}
+                {predictions.length === 0 && !isGenerating ? (
+                  <TableRow>
+                    <TableCell colSpan={columns.length} className="h-24 text-center">
+                      No results.
+                    </TableCell>
+                  </TableRow>
+                ) : (
                   table.getRowModel().rows.map((row) => (
                     <TableRow
                       key={row.id}
@@ -496,12 +573,6 @@ export function PredictionsDatabase() {
                       ))}
                     </TableRow>
                   ))
-                ) : (
-                  <TableRow>
-                    <TableCell colSpan={columns.length} className="h-24 text-center">
-                      No results.
-                    </TableCell>
-                  </TableRow>
                 )}
               </TableBody>
             </Table>
@@ -509,7 +580,12 @@ export function PredictionsDatabase() {
         )}
       </main>
 
-      <NewPredictionDialog open={isNewDialogOpen} onOpenChange={setIsNewDialogOpen} />
+      <NewPredictionDialog
+        open={isNewDialogOpen}
+        onOpenChange={setIsNewDialogOpen}
+        onSubmit={(file) => predictMutation.mutate(file)}
+        isPending={isGenerating}
+      />
       <PredictionDetailSheet
         predictionId={selectedPredictionId}
         open={!!selectedPredictionId}
