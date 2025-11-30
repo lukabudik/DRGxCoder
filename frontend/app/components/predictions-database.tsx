@@ -36,7 +36,6 @@ import {
 import { NewPredictionDialog } from './new-prediction-dialog';
 import { PredictionDetailSheet } from './prediction-detail-sheet';
 import { SearchFilters } from './search-filters';
-import { TableSkeleton } from '@/components/ui/table-skeleton';
 import { Skeleton } from '@/components/ui/skeleton';
 import styles from './predictions-database.module.css';
 
@@ -501,90 +500,86 @@ export function PredictionsDatabase() {
           </div>
         )}
 
-        {isLoading ? (
-          <TableSkeleton />
-        ) : (
-          <div className={styles.tableContainer}>
-            <Table>
-              <TableHeader>
-                {table.getHeaderGroups().map((headerGroup) => (
-                  <TableRow key={headerGroup.id}>
-                    {headerGroup.headers.map((header) => (
-                      <TableHead key={header.id}>
-                        {header.isPlaceholder
-                          ? null
-                          : flexRender(header.column.columnDef.header, header.getContext())}
-                      </TableHead>
-                    ))}
-                  </TableRow>
-                ))}
-              </TableHeader>
-              <TableBody>
-                {isGenerating && (
-                  <TableRow key="skeleton-loader">
-                    <TableCell>
-                      <div style={{ width: '16px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
-                    </TableCell>
-                    <TableCell>
-                      <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-                        <div style={{ width: '96px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
-                        <div style={{ width: '64px', height: '12px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      <div style={{ width: '32px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
-                    </TableCell>
-                    <TableCell>
-                      <div style={{ width: '32px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
-                    </TableCell>
-                    <TableCell>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                        <div style={{ width: '48px', height: '20px', backgroundColor: '#d1d5db', borderRadius: '9999px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
-                        <div style={{ width: '192px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
-                      </div>
-                    </TableCell>
-                    <TableCell>
-                      <div style={{ width: '48px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
-                    </TableCell>
-                    <TableCell>
-                      <div style={{ width: '80px', height: '20px', backgroundColor: '#d1d5db', borderRadius: '9999px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
-                    </TableCell>
-                    <TableCell>
+        <div className={styles.tableContainer}>
+          <Table>
+            <TableHeader>
+              {table.getHeaderGroups().map((headerGroup) => (
+                <TableRow key={headerGroup.id}>
+                  {headerGroup.headers.map((header) => (
+                    <TableHead key={header.id}>
+                      {header.isPlaceholder
+                        ? null
+                        : flexRender(header.column.columnDef.header, header.getContext())}
+                    </TableHead>
+                  ))}
+                </TableRow>
+              ))}
+            </TableHeader>
+            <TableBody>
+              {isGenerating && (
+                <TableRow key="skeleton-loader">
+                  <TableCell>
+                    <div style={{ width: '16px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                  </TableCell>
+                  <TableCell>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
                       <div style={{ width: '96px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
-                    </TableCell>
-                    <TableCell>
-                      <div style={{ width: '32px', height: '32px', backgroundColor: '#d1d5db', borderRadius: '6px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
-                    </TableCell>
-                  </TableRow>
-                )}
-                {predictions.length === 0 && !isGenerating ? (
-                  <TableRow>
-                    <TableCell colSpan={columns.length} className="h-24 text-center">
-                      No results.
-                    </TableCell>
-                  </TableRow>
-                ) : (
-                  table.getRowModel().rows
-                    .filter((row) => row.original.status !== "processing") // Don't show processing rows - skeleton represents them
-                    .map((row) => (
-                      <TableRow
-                        key={row.id}
-                        data-state={row.getIsSelected() && 'selected'}
-                        onClick={() => setSelectedPredictionId(row.original.id)}
-                        className={styles.clickableRow}
-                      >
-                        {row.getVisibleCells().map((cell) => (
-                          <TableCell key={cell.id}>
-                            {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                          </TableCell>
-                        ))}
-                      </TableRow>
-                    ))
-                )}
-              </TableBody>
-            </Table>
-          </div>
-        )}
+                      <div style={{ width: '64px', height: '12px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                    </div>
+                  </TableCell>
+                  <TableCell>
+                    <div style={{ width: '32px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                  </TableCell>
+                  <TableCell>
+                    <div style={{ width: '32px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                  </TableCell>
+                  <TableCell>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                      <div style={{ width: '48px', height: '20px', backgroundColor: '#d1d5db', borderRadius: '9999px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                      <div style={{ width: '192px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                    </div>
+                  </TableCell>
+                  <TableCell>
+                    <div style={{ width: '48px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                  </TableCell>
+                  <TableCell>
+                    <div style={{ width: '80px', height: '20px', backgroundColor: '#d1d5db', borderRadius: '9999px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                  </TableCell>
+                  <TableCell>
+                    <div style={{ width: '96px', height: '16px', backgroundColor: '#d1d5db', borderRadius: '4px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                  </TableCell>
+                  <TableCell>
+                    <div style={{ width: '32px', height: '32px', backgroundColor: '#d1d5db', borderRadius: '6px', animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' }} />
+                  </TableCell>
+                </TableRow>
+              )}
+              {predictions.length === 0 && !isGenerating ? (
+                <TableRow>
+                  <TableCell colSpan={columns.length} className="h-24 text-center">
+                    No results.
+                  </TableCell>
+                </TableRow>
+              ) : (
+                table.getRowModel().rows
+                  .filter((row) => row.original.status !== "processing") // Don't show processing rows - skeleton represents them
+                  .map((row) => (
+                    <TableRow
+                      key={row.id}
+                      data-state={row.getIsSelected() && 'selected'}
+                      onClick={() => setSelectedPredictionId(row.original.id)}
+                      className={styles.clickableRow}
+                    >
+                      {row.getVisibleCells().map((cell) => (
+                        <TableCell key={cell.id}>
+                          {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                        </TableCell>
+                      ))}
+                    </TableRow>
+                  ))
+              )}
+            </TableBody>
+          </Table>
+        </div>
       </main>
 
       <NewPredictionDialog

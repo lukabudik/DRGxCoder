@@ -7,8 +7,8 @@ export function TableSkeleton() {
                 <Skeleton className="h-8 w-[250px]" />
                 <Skeleton className="ml-auto h-8 w-[100px]" />
             </div>
-            <div className="rounded-md border">
-                <div className="h-12 border-b px-4 flex items-center gap-4">
+            <div className="rounded-md border border-gray-200 bg-white">
+                <div className="h-12 border-b border-gray-200 px-4 flex items-center gap-4">
                     <Skeleton className="h-4 w-4" />
                     <Skeleton className="h-4 w-[150px]" />
                     <Skeleton className="h-4 w-[100px]" />
@@ -17,7 +17,7 @@ export function TableSkeleton() {
                     <Skeleton className="ml-auto h-4 w-[100px]" />
                 </div>
                 {Array.from({ length: 5 }).map((_, i) => (
-                    <div key={i} className="h-16 border-b px-4 flex items-center gap-4">
+                    <div key={i} className="h-16 border-b border-gray-200 px-4 flex items-center gap-4">
                         <Skeleton className="h-4 w-4" />
                         <Skeleton className="h-4 w-[150px]" />
                         <Skeleton className="h-4 w-[100px]" />
